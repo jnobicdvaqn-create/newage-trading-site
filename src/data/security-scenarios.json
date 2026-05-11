@@ -1,0 +1,686 @@
+[
+  {
+    "id": "home",
+    "nameEn": "Home Security",
+    "nameZh": "家庭安防",
+    "nameRu": "Домашняя безопасность",
+    "icon": "🏠",
+    "descEn": "Protect your family and property with a comprehensive home security system.",
+    "descZh": "通过全面的家庭安防系统保护您的家人和财产。",
+    "descRu": "Защитите семью и имущество с помощью комплексной системы безопасности.",
+    "challengesEn": [
+      "Nighttime visibility",
+      "Package theft",
+      "Unauthorized entry",
+      "Pet-friendly detection",
+      "Remote monitoring"
+    ],
+    "challengesZh": [
+      "夜间可视",
+      "包裹盗窃",
+      "非法入侵",
+      "宠物识别",
+      "远程监控"
+    ],
+    "challengesRu": [
+      "Ночная видимость",
+      "Кража посылок",
+      "Несанкционированный вход",
+      "Датчик для питомцев",
+      "Удалённый мониторинг"
+    ],
+    "recommended": [
+      "ip-camera-4mp",
+      "nvr-8ch",
+      "alarm-panel"
+    ],
+    "cameraCountEn": "4–8 cameras",
+    "cameraCountZh": "4-8 个摄像头",
+    "cameraCountRu": "4-8 камер",
+    "storageEn": "8-channel NVR with 2TB HDD",
+    "storageZh": "8 路 NVR + 2TB 硬盘",
+    "storageRu": "8-канальный NVR с HDD 2TB",
+    "costEn": "$800 – $2,500",
+    "costZh": "$800 – $2,500",
+    "costRu": "$800 – $2,500",
+    "tipsEn": [
+      "Mount cameras at 2.5–3m height",
+      "Cover all entry points",
+      "Use IP67 weatherproof cameras outdoors",
+      "Place NVR in a secure location",
+      "Connect to UPS for power-failure protection"
+    ],
+    "tipsZh": [
+      "摄像头安装高度 2.5-3 米",
+      "覆盖所有出入口",
+      "室外使用 IP67 防水摄像头",
+      "NVR 放置在安全位置",
+      "连接 UPS 防止断电"
+    ],
+    "tipsRu": [
+      "Установите камеры на высоте 2.5-3м",
+      "Покройте все точки входа",
+      "Используйте IP67 камеры на улице",
+      "Разместите NVR в безопасном месте",
+      "Подключите к UPS"
+    ],
+    "name": "Home Security",
+    "desc": "Protect your family and property with a comprehensive home security system.",
+    "cameraCount": "4–8 cameras",
+    "storage": "8-channel NVR with 2TB HDD",
+    "cost": "$800 – $2,500",
+    "challenges": [
+      "Nighttime visibility",
+      "Package theft",
+      "Unauthorized entry",
+      "Pet-friendly detection",
+      "Remote monitoring"
+    ],
+    "tips": [
+      "Mount cameras at 2.5–3m height",
+      "Cover all entry points",
+      "Use IP67 weatherproof cameras outdoors",
+      "Place NVR in a secure location",
+      "Connect to UPS for power-failure protection"
+    ]
+  },
+  {
+    "id": "office",
+    "nameEn": "Office & Commercial",
+    "nameZh": "办公与商业",
+    "nameRu": "Офис и коммерция",
+    "icon": "🏢",
+    "descEn": "Secure your business premises with integrated surveillance, access control, and alarm systems.",
+    "descZh": "通过集成监控、门禁和报警系统保障您的商业场所安全。",
+    "descRu": "Защитите бизнес с помощью интегрированного видеонаблюдения, контроля доступа и сигнализации.",
+    "challengesEn": [
+      "Employee access management",
+      "After-hours security",
+      "Visitor management",
+      "Data room protection",
+      "Insurance compliance"
+    ],
+    "challengesZh": [
+      "员工出入管理",
+      "非工作时间安全",
+      "访客管理",
+      "机房保护",
+      "保险合规"
+    ],
+    "challengesRu": [
+      "Управление доступом сотрудников",
+      "Безопасность после работы",
+      "Управление посетителями",
+      "Защита серверной",
+      "Страховые требования"
+    ],
+    "recommended": [
+      "ip-camera-8mp",
+      "nvr-16ch",
+      "access-control",
+      "alarm-panel"
+    ],
+    "cameraCountEn": "8–32 cameras",
+    "cameraCountZh": "8-32 个摄像头",
+    "cameraCountRu": "8-32 камер",
+    "storageEn": "16-channel NVR with 4TB HDD",
+    "storageZh": "16 路 NVR + 4TB 硬盘",
+    "storageRu": "16-канальный NVR с HDD 4TB",
+    "costEn": "$3,000 – $15,000",
+    "costZh": "$3,000 – $15,000",
+    "costRu": "$3,000 – $15,000",
+    "tipsEn": [
+      "Install cameras at reception, corridors, server rooms",
+      "Deploy access control at main entrance",
+      "Set up different access levels",
+      "Enable motion detection for after-hours",
+      "Integrate with fire alarm system"
+    ],
+    "tipsZh": [
+      "前台、走廊、机房安装摄像头",
+      "主入口部署门禁系统",
+      "设置不同权限级别",
+      "非工作时间启用移动侦测",
+      "与消防系统联动"
+    ],
+    "tipsRu": [
+      "Установите камеры на ресепшене, в коридорах, серверных",
+      "Разместите контроль доступа на входе",
+      "Настройте уровни доступа",
+      "Включите детекцию движения",
+      "Интегрируйте с пожарной сигнализацией"
+    ],
+    "name": "Office & Commercial",
+    "desc": "Secure your business premises with integrated surveillance, access control, and alarm systems.",
+    "cameraCount": "8–32 cameras",
+    "storage": "16-channel NVR with 4TB HDD",
+    "cost": "$3,000 – $15,000",
+    "challenges": [
+      "Employee access management",
+      "After-hours security",
+      "Visitor management",
+      "Data room protection",
+      "Insurance compliance"
+    ],
+    "tips": [
+      "Install cameras at reception, corridors, server rooms",
+      "Deploy access control at main entrance",
+      "Set up different access levels",
+      "Enable motion detection for after-hours",
+      "Integrate with fire alarm system"
+    ]
+  },
+  {
+    "id": "school",
+    "nameEn": "School & Campus",
+    "nameZh": "学校与园区",
+    "nameRu": "Школа и кампус",
+    "icon": "🏫",
+    "descEn": "Create a safe learning environment with campus-wide surveillance and emergency response.",
+    "descZh": "通过校园全覆盖监控和应急响应创建安全的学习环境。",
+    "descRu": "Создайте безопасную среду обучения с видеонаблюдением по всему кампусу.",
+    "challengesEn": [
+      "Large area coverage",
+      "Student safety",
+      "Perimeter intrusion",
+      "Emergency lockdown",
+      "Bullying prevention"
+    ],
+    "challengesZh": [
+      "大面积覆盖",
+      "学生安全",
+      "周界入侵",
+      "紧急封锁",
+      "防止欺凌"
+    ],
+    "challengesRu": [
+      "Покрытие большой территории",
+      "Безопасность студентов",
+      "Проникновение по периметру",
+      "Экстренная блокировка",
+      "Предотвращение буллинга"
+    ],
+    "recommended": [
+      "ptz-camera",
+      "ip-camera-8mp",
+      "nvr-16ch",
+      "alarm-panel"
+    ],
+    "cameraCountEn": "16–64 cameras",
+    "cameraCountZh": "16-64 个摄像头",
+    "cameraCountRu": "16-64 камер",
+    "storageEn": "32-channel NVR with 8TB HDD",
+    "storageZh": "32 路 NVR + 8TB 硬盘",
+    "storageRu": "32-канальный NVR с HDD 8TB",
+    "costEn": "$8,000 – $40,000",
+    "costZh": "$8,000 – $40,000",
+    "costRu": "$8,000 – $40,000",
+    "tipsEn": [
+      "Cover entrances, hallways, cafeteria, playground",
+      "Use PTZ for large open areas",
+      "Install emergency call stations",
+      "Set up automated lockdown triggers",
+      "Avoid cameras in restrooms"
+    ],
+    "tipsZh": [
+      "覆盖入口、走廊、食堂、操场",
+      "大区域使用 PTZ 球机",
+      "安装紧急呼叫站",
+      "设置自动封锁触发",
+      "避免在洗手间安装"
+    ],
+    "tipsRu": [
+      "Покройте входы, коридоры, столовую, площадку",
+      "Используйте PTZ для больших зон",
+      "Установите станции экстренного вызова",
+      "Настройте автоматическую блокировку",
+      "Не ставьте камеры в туалетах"
+    ],
+    "name": "School & Campus",
+    "desc": "Create a safe learning environment with campus-wide surveillance and emergency response.",
+    "cameraCount": "16–64 cameras",
+    "storage": "32-channel NVR with 8TB HDD",
+    "cost": "$8,000 – $40,000",
+    "challenges": [
+      "Large area coverage",
+      "Student safety",
+      "Perimeter intrusion",
+      "Emergency lockdown",
+      "Bullying prevention"
+    ],
+    "tips": [
+      "Cover entrances, hallways, cafeteria, playground",
+      "Use PTZ for large open areas",
+      "Install emergency call stations",
+      "Set up automated lockdown triggers",
+      "Avoid cameras in restrooms"
+    ]
+  },
+  {
+    "id": "factory",
+    "nameEn": "Factory & Industrial",
+    "nameZh": "工厂与工业",
+    "nameRu": "Завод и промышленность",
+    "icon": "🏭",
+    "descEn": "Monitor production lines, warehouse operations, and loading docks with industrial-grade systems.",
+    "descZh": "用工业级系统监控生产线、仓库和装卸平台。",
+    "descRu": "Контролируйте производственные линии, склады и погрузочные зоны с промышленными системами.",
+    "challengesEn": [
+      "Dust and humidity",
+      "Large warehouse coverage",
+      "Forklift monitoring",
+      "Theft prevention",
+      "Safety compliance"
+    ],
+    "challengesZh": [
+      "粉尘和潮湿",
+      "大仓库覆盖",
+      "叉车监控",
+      "防盗",
+      "安全合规"
+    ],
+    "challengesRu": [
+      "Пыль и влажность",
+      "Покрытие большого склада",
+      "Мониторинг погрузчиков",
+      "Предотвращение краж",
+      "Соответствие безопасности"
+    ],
+    "recommended": [
+      "bullet-camera",
+      "ip-camera-8mp",
+      "nvr-16ch",
+      "access-control"
+    ],
+    "cameraCountEn": "16–100+ cameras",
+    "cameraCountZh": "16-100+ 个摄像头",
+    "cameraCountRu": "16-100+ камер",
+    "storageEn": "32–64 channel NVR with 16TB HDD",
+    "storageZh": "32-64 路 NVR + 16TB 硬盘",
+    "storageRu": "32-64 канальный NVR с HDD 16TB",
+    "costEn": "$10,000 – $80,000",
+    "costZh": "$10,000 – $80,000",
+    "costRu": "$10,000 – $80,000",
+    "tipsEn": [
+      "Use explosion-proof cameras in hazardous areas",
+      "Install anti-vibration mounts",
+      "Deploy thermal cameras for fire detection",
+      "Track vehicles at loading docks",
+      "Use PoE switches for long distances"
+    ],
+    "tipsZh": [
+      "危险区域使用防爆摄像头",
+      "安装防振支架",
+      "部署热成像摄像头检测火灾",
+      "装卸平台监控车辆",
+      "远距离使用 PoE 交换机"
+    ],
+    "tipsRu": [
+      "Используйте взрывозащищённые камеры",
+      "Установите антивибрационные крепления",
+      "Разверните тепловизоры",
+      "Отслеживайте транспорт на погрузке",
+      "Используйте PoE коммутаторы"
+    ],
+    "name": "Factory & Industrial",
+    "desc": "Monitor production lines, warehouse operations, and loading docks with industrial-grade systems.",
+    "cameraCount": "16–100+ cameras",
+    "storage": "32–64 channel NVR with 16TB HDD",
+    "cost": "$10,000 – $80,000",
+    "challenges": [
+      "Dust and humidity",
+      "Large warehouse coverage",
+      "Forklift monitoring",
+      "Theft prevention",
+      "Safety compliance"
+    ],
+    "tips": [
+      "Use explosion-proof cameras in hazardous areas",
+      "Install anti-vibration mounts",
+      "Deploy thermal cameras for fire detection",
+      "Track vehicles at loading docks",
+      "Use PoE switches for long distances"
+    ]
+  },
+  {
+    "id": "warehouse",
+    "nameEn": "Warehouse & Logistics",
+    "nameZh": "仓储与物流",
+    "nameRu": "Склад и логистика",
+    "icon": "📦",
+    "descEn": "Track inventory movement, prevent shrinkage, and monitor loading operations.",
+    "descZh": "跟踪库存移动，防止损耗，监控装卸作业。",
+    "descRu": "Отслеживайте движение товаров, предотвращайте потери, контролируйте погрузку.",
+    "challengesEn": [
+      "Inventory shrinkage",
+      "Loading dock security",
+      "High rack visibility",
+      "Night shift monitoring",
+      "24/7 recording"
+    ],
+    "challengesZh": [
+      "库存损耗",
+      "装卸安全",
+      "高货架可视",
+      "夜班监控",
+      "24/7 录像"
+    ],
+    "challengesRu": [
+      "Потери инвентаря",
+      "Безопасность погрузки",
+      "Видимость высоких стеллажей",
+      "Мониторинг ночной смены",
+      "Запись 24/7"
+    ],
+    "recommended": [
+      "bullet-camera",
+      "nvr-16ch",
+      "ip-camera-4mp"
+    ],
+    "cameraCountEn": "8–48 cameras",
+    "cameraCountZh": "8-48 个摄像头",
+    "cameraCountRu": "8-48 камер",
+    "storageEn": "16-channel NVR with 8TB HDD",
+    "storageZh": "16 路 NVR + 8TB 硬盘",
+    "storageRu": "16-канальный NVR с HDD 8TB",
+    "costEn": "$4,000 – $25,000",
+    "costZh": "$4,000 – $25,000",
+    "costRu": "$4,000 – $25,000",
+    "tipsEn": [
+      "Cover all aisle intersections",
+      "Install cameras at every loading bay",
+      "Use wide-angle for large areas",
+      "Enable AI-based people counting",
+      "Set up geofencing alerts"
+    ],
+    "tipsZh": [
+      "覆盖所有通道交叉口",
+      "每个装卸位安装摄像头",
+      "大区域使用广角",
+      "启用 AI 人数统计",
+      "设置电子围栏告警"
+    ],
+    "tipsRu": [
+      "Покройте все перекрёстки проходов",
+      "Установите камеры на каждом доке",
+      "Используйте широкоугольные",
+      "Включите AI подсчёт людей",
+      "Настройте геозоны"
+    ],
+    "name": "Warehouse & Logistics",
+    "desc": "Track inventory movement, prevent shrinkage, and monitor loading operations.",
+    "cameraCount": "8–48 cameras",
+    "storage": "16-channel NVR with 8TB HDD",
+    "cost": "$4,000 – $25,000",
+    "challenges": [
+      "Inventory shrinkage",
+      "Loading dock security",
+      "High rack visibility",
+      "Night shift monitoring",
+      "24/7 recording"
+    ],
+    "tips": [
+      "Cover all aisle intersections",
+      "Install cameras at every loading bay",
+      "Use wide-angle for large areas",
+      "Enable AI-based people counting",
+      "Set up geofencing alerts"
+    ]
+  },
+  {
+    "id": "retail",
+    "nameEn": "Retail & Shopfront",
+    "nameZh": "零售与店铺",
+    "nameRu": "Ритейл и магазины",
+    "icon": "🛍️",
+    "descEn": "Reduce shoplifting, monitor customer flow, and protect staff with retail-focused systems.",
+    "descZh": "减少盗窃，监控客流量，保护员工。",
+    "descRu": "Снизьте кражи, контролируйте поток покупателей, защитите персонал.",
+    "challengesEn": [
+      "Shoplifting",
+      "Cash register monitoring",
+      "Customer counting",
+      "Staff safety",
+      "After-hours break-in"
+    ],
+    "challengesZh": [
+      "偷盗",
+      "收银台监控",
+      "客流统计",
+      "员工安全",
+      "非营业时间入侵"
+    ],
+    "challengesRu": [
+      "Кражи в магазине",
+      "Мониторинг касс",
+      "Подсчёт покупателей",
+      "Безопасность персонала",
+      "Ночное проникновение"
+    ],
+    "recommended": [
+      "ip-camera-4mp",
+      "nvr-8ch",
+      "alarm-panel"
+    ],
+    "cameraCountEn": "4–16 cameras",
+    "cameraCountZh": "4-16 个摄像头",
+    "cameraCountRu": "4-16 камер",
+    "storageEn": "8-channel NVR with 2TB HDD",
+    "storageZh": "8 路 NVR + 2TB 硬盘",
+    "storageRu": "8-канальный NVR с HDD 2TB",
+    "costEn": "$1,500 – $8,000",
+    "costZh": "$1,500 – $8,000",
+    "costRu": "$1,500 – $8,000",
+    "tipsEn": [
+      "Cover entrance, checkout, stock room",
+      "Position camera above cash register",
+      "Use discreet dome cameras",
+      "Enable people-counting analytics",
+      "Set up smartphone alerts"
+    ],
+    "tipsZh": [
+      "覆盖入口、收银台、仓库",
+      "收银台上方安装摄像头",
+      "使用隐蔽半球摄像头",
+      "启用客流分析",
+      "设置手机告警"
+    ],
+    "tipsRu": [
+      "Покройте вход, кассу, складскую",
+      "Камера над кассой",
+      "Используйте скрытые купольные",
+      "Включите аналитику подсчёта",
+      "Настройте уведомления"
+    ],
+    "name": "Retail & Shopfront",
+    "desc": "Reduce shoplifting, monitor customer flow, and protect staff with retail-focused systems.",
+    "cameraCount": "4–16 cameras",
+    "storage": "8-channel NVR with 2TB HDD",
+    "cost": "$1,500 – $8,000",
+    "challenges": [
+      "Shoplifting",
+      "Cash register monitoring",
+      "Customer counting",
+      "Staff safety",
+      "After-hours break-in"
+    ],
+    "tips": [
+      "Cover entrance, checkout, stock room",
+      "Position camera above cash register",
+      "Use discreet dome cameras",
+      "Enable people-counting analytics",
+      "Set up smartphone alerts"
+    ]
+  },
+  {
+    "id": "hospital",
+    "nameEn": "Hospital & Healthcare",
+    "nameZh": "医院与医疗",
+    "nameRu": "Больница и медицина",
+    "icon": "🏥",
+    "descEn": "Ensure patient safety, secure pharmaceutical storage, and manage visitor access.",
+    "descZh": "保障患者安全，药品存储安全，管理访客出入。",
+    "descRu": "Обеспечьте безопасность пациентов, защиту лекарств и контроль посетителей.",
+    "challengesEn": [
+      "Patient wandering",
+      "Drug storage security",
+      "Visitor management",
+      "Emergency response",
+      "Privacy compliance"
+    ],
+    "challengesZh": [
+      "患者走失",
+      "药品存储安全",
+      "访客管理",
+      "应急响应",
+      "隐私合规"
+    ],
+    "challengesRu": [
+      "Блуждание пациентов",
+      "Безопасность лекарств",
+      "Управление посетителями",
+      "Экстренный ответ",
+      "Конфиденциальность"
+    ],
+    "recommended": [
+      "ip-camera-4mp",
+      "ip-camera-8mp",
+      "access-control",
+      "nvr-16ch"
+    ],
+    "cameraCountEn": "16–64 cameras",
+    "cameraCountZh": "16-64 个摄像头",
+    "cameraCountRu": "16-64 камер",
+    "storageEn": "32-channel NVR with 8TB HDD",
+    "storageZh": "32 路 NVR + 8TB 硬盘",
+    "storageRu": "32-канальный NVR с HDD 8TB",
+    "costEn": "$8,000 – $50,000",
+    "costZh": "$8,000 – $50,000",
+    "costRu": "$8,000 – $50,000",
+    "tipsEn": [
+      "Cover entrances, pharmacy, ICU corridors",
+      "Use access control for pharmacy",
+      "Install panic buttons at nurse stations",
+      "Avoid cameras in patient rooms",
+      "Integrate with nurse call system"
+    ],
+    "tipsZh": [
+      "覆盖入口、药房、ICU 走廊",
+      "药房使用门禁",
+      "护士站安装紧急按钮",
+      "病房内避免安装摄像头",
+      "与护士呼叫系统联动"
+    ],
+    "tipsRu": [
+      "Покройте входы, аптеку, коридоры ICU",
+      "Контроль доступа в аптеку",
+      "Тревожные кнопки у медсестёр",
+      "Не ставьте камеры в палатах",
+      "Интегрируйте с вызовом медсестры"
+    ],
+    "name": "Hospital & Healthcare",
+    "desc": "Ensure patient safety, secure pharmaceutical storage, and manage visitor access.",
+    "cameraCount": "16–64 cameras",
+    "storage": "32-channel NVR with 8TB HDD",
+    "cost": "$8,000 – $50,000",
+    "challenges": [
+      "Patient wandering",
+      "Drug storage security",
+      "Visitor management",
+      "Emergency response",
+      "Privacy compliance"
+    ],
+    "tips": [
+      "Cover entrances, pharmacy, ICU corridors",
+      "Use access control for pharmacy",
+      "Install panic buttons at nurse stations",
+      "Avoid cameras in patient rooms",
+      "Integrate with nurse call system"
+    ]
+  },
+  {
+    "id": "parking",
+    "nameEn": "Parking Lot & Garage",
+    "nameZh": "停车场与车库",
+    "nameRu": "Парковка и гараж",
+    "icon": "🅿️",
+    "descEn": "Monitor vehicle entry/exit, prevent theft, and manage capacity with LPR cameras.",
+    "descZh": "监控车辆出入，防盗，用车牌识别摄像头管理容量。",
+    "descRu": "Контролируйте въезд/выезд, предотвращайте кражи, управляйте ёмкостью с LPR камерами.",
+    "challengesEn": [
+      "Vehicle theft",
+      "Hit-and-run incidents",
+      "Capacity management",
+      "Low-light conditions",
+      "License plate capture"
+    ],
+    "challengesZh": [
+      "车辆盗窃",
+      "肇事逃逸",
+      "容量管理",
+      "弱光环境",
+      "车牌识别"
+    ],
+    "challengesRu": [
+      "Кража автомобилей",
+      "Скрытые ДТП",
+      "Управление ёмкостью",
+      "Условия слабого освещения",
+      "Распознавание номеров"
+    ],
+    "recommended": [
+      "bullet-camera",
+      "ptz-camera",
+      "nvr-8ch"
+    ],
+    "cameraCountEn": "4–24 cameras",
+    "cameraCountZh": "4-24 个摄像头",
+    "cameraCountRu": "4-24 камер",
+    "storageEn": "8-channel NVR with 4TB HDD",
+    "storageZh": "8 路 NVR + 4TB 硬盘",
+    "storageRu": "8-канальный NVR с HDD 4TB",
+    "costEn": "$2,000 – $12,000",
+    "costZh": "$2,000 – $12,000",
+    "costRu": "$2,000 – $12,000",
+    "tipsEn": [
+      "Install LPR cameras at entry/exit",
+      "Use PTZ for large areas",
+      "Ensure strong IR for nighttime",
+      "Deploy vandal-proof cameras at ground level",
+      "Consider solar-powered for remote lots"
+    ],
+    "tipsZh": [
+      "出入口安装车牌识别摄像头",
+      "大区域使用 PTZ",
+      "确保夜间红外效果",
+      "地面使用防破坏摄像头",
+      "偏远地区考虑太阳能"
+    ],
+    "tipsRu": [
+      "Установите LPR камеры на въезде",
+      "Используйте PTZ для больших зон",
+      "Обеспечьте ИК для ночи",
+      "Антивандальные камеры на уровне",
+      "Рассмотрите солнечные для удалённых"
+    ],
+    "name": "Parking Lot & Garage",
+    "desc": "Monitor vehicle entry/exit, prevent theft, and manage capacity with LPR cameras.",
+    "cameraCount": "4–24 cameras",
+    "storage": "8-channel NVR with 4TB HDD",
+    "cost": "$2,000 – $12,000",
+    "challenges": [
+      "Vehicle theft",
+      "Hit-and-run incidents",
+      "Capacity management",
+      "Low-light conditions",
+      "License plate capture"
+    ],
+    "tips": [
+      "Install LPR cameras at entry/exit",
+      "Use PTZ for large areas",
+      "Ensure strong IR for nighttime",
+      "Deploy vandal-proof cameras at ground level",
+      "Consider solar-powered for remote lots"
+    ]
+  }
+]

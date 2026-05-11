@@ -1,0 +1,258 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import FAQ from '@components/FAQ.astro';
+import CTASection from '@components/CTASection.astro';
+import type { Locale } from '@i18n/types';
+import cars from '@data/cars.json';
+import countries from '@data/countries.json';
+import { tData, tArr, label } from '@lib/i18n-data';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  return langs.flatMap(lang =>
+    cars.map(car => ({
+      params: { lang, id: car.id },
+      props: { car, lang },
+    }))
+  );
+}
+
+const { car, lang } = Astro.props as { car: typeof cars[0]; lang: Locale };
+const related = cars.filter(c => c.category === car.category && c.id !== car.id).slice(0, 4);
+
+const carName = tData(car, 'name', lang);
+const carDesc = tData(car, 'description', lang);
+const carType = tData(car, 'type', lang);
+const carCategory = tData(car, 'category', lang);
+const carEngine = tData(car, 'engine', lang);
+const carHighlights = tArr(car, 'highlights', lang);
+const carUseCases = tArr(car, 'useCases', lang);
+
+const cifEstimates = countries.map(c => ({
+  country: c.name,
+  fob: `$${car.price.toLocaleString()}`,
+  freight: c.id === 'georgia' ? '$1,200' : c.id === 'russia' ? '$1,800' : c.id === 'uae' ? '$900' : c.id === 'kazakhstan' ? '$2,200' : c.id === 'azerbaijan' ? '$1,400' : c.id === 'armenia' ? '$1,500' : c.id === 'uzbekistan' ? '$2,400' : '$1,600',
+  insurance: `$${Math.round(car.price * 0.003)}`,
+  duty: c.importTax,
+}));
+
+const faqItems = lang === 'zh' ? [
+  { question: `${carName} 到格鲁吉亚的 CIF 价格是多少？`, answer: `${carName} 到格鲁吉亚巴统的 CIF 价格约为 $${(car.price + 1200 + Math.round(car.price * 0.003)).toLocaleString()}。包含 FOB 工厂价（$${car.price.toLocaleString()}）、海运费（约 $1,200 滚装船）和海运保险（约 $${Math.round(car.price * 0.003)}）。根据中格自贸协定，电动车进口关税为 0%。` },
+  { question: `从中国运输 ${carName} 需要多长时间？`, answer: `从中国港口（宁波/上海）到格鲁吉亚巴统的运输时间约为 25-35 天（滚装船）。集装箱运输需要 30-40 天。我们处理所有出口报关文件。` },
+  { question: `${carName} 可以出口吗？`, answer: `是的，${carName} 完全可以出口。我们直接从授权经销商采购，可提供所有必要的出口文件，包括原产地证、商业发票和装箱单。` },
+  { question: `${carName} 的保修是怎样的？`, answer: `${carName} 享有厂家标准保修（通常电池 6 年/15 万公里，整车 4 年/10 万公里）。国际保修服务取决于 ${carName} 在您所在国家的服务网络。我们可以安排延保选项。` },
+  { question: `出口前可以定制 ${carName} 吗？`, answer: `可以，我们提供出口前定制服务，包括颜色选择、内饰升级、附加配件和当地市场适配。定制需要额外 5-10 个工作日。请联系我们了解可选配置。` },
+] : lang === 'ru' ? [
+  { question: `Какова CIF цена ${carName} в Грузию?`, answer: `CIF цена ${carName} в Батуми, Грузия составляет примерно $${(car.price + 1200 + Math.round(car.price * 0.003)).toLocaleString()}. Включает цену FOB ($${car.price.toLocaleString()}), морской фрахт (~$1,200 RORO) и морскую страховку (~$${Math.round(car.price * 0.003)}). Импортная пошлина в Грузии для электромобилей — 0%.` },
+  { question: `Сколько времени занимает доставка ${carName} из Китая?`, answer: `Доставка ${carName} из китайских портов (Нинбо/Шанхай) в Батуми занимает примерно 25–35 дней через RORO. Контейнерная доставка — 30–40 дней. Мы оформляем все таможенные документы.` },
+  { question: `Доступен ли ${carName} для экспорта?`, answer: `Да, ${carName} полностью доступен для международного экспорта. Мы работаем напрямую с авторизованными дилерами и предоставляем все необходимые экспортные документы.` },
+  { question: `Какая гарантия на ${carName}?`, answer: `${carName} поставляется со стандартной гарантией производителя (обычно 6 лет/150 000 км на батарею, 4 года/100 000 км на автомобиль).` },
+  { question: `Можно ли кастомизировать ${carName} перед экспортом?`, answer: `Да, мы предлагаем кастомизацию: выбор цвета,升级 интерьера, дополнительные аксессуары. Кастомизация добавляет 5–10 рабочих дней.` },
+] : [
+  { question: `What is the CIF price of ${carName} to Georgia?`, answer: `The CIF price of ${carName} to Batumi, Georgia is approximately $${(car.price + 1200 + Math.round(car.price * 0.003)).toLocaleString()}. This includes FOB factory price ($${car.price.toLocaleString()}), ocean freight (~$1,200 RORO), and marine insurance (~$${Math.round(car.price * 0.003)}). Import duty in Georgia is 0% for EVs.` },
+  { question: `How long does it take to ship ${carName} from China?`, answer: `Shipping from Chinese ports (Ningbo/Shanghai) to Batumi, Georgia takes approximately 25–35 days via RORO. Container shipping takes 30–40 days. We handle all customs documentation.` },
+  { question: `Is ${carName} available for export?`, answer: `Yes, ${carName} is fully available for international export. We source directly from authorized dealers and provide all necessary export documentation including Certificate of Origin, commercial invoice, and packing list.` },
+  { question: `What warranty does ${carName} come with?`, answer: `${carName} comes with the manufacturer's standard warranty (typically 6 years/150,000 km for the battery, 4 years/100,000 km for the vehicle). International warranty service depends on ${car.brand}'s presence in your country.` },
+  { question: `Can I customize ${carName} before export?`, answer: `Yes, we offer pre-export customization including color selection, interior trim upgrades, additional accessories, and local market adaptations. Customization adds 5–10 business days.` },
+];
+
+const schemaData = {
+  "@type": "Product",
+  "name": `${carName} — Export from China`,
+  "brand": { "@type": "Brand", "name": car.brand },
+  "description": carDesc,
+  "image": car.image,
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": car.price,
+    "highPrice": car.price * 1.2,
+    "offerCount": "1",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+const carPageTitle = lang === 'zh' ? `${carName} 价格与出口 — CIF 报价 | NewAge Trading` : lang === 'ru' ? `${carName} Цена и экспорт — CIF | NewAge Trading` : `${carName} Price & Export — CIF Quote | NewAge Trading`;
+const carPageDesc = lang === 'zh' ? `购买 ${carName} 中国出口。FOB 价格 $${car.price.toLocaleString()}，CIF 格鲁吉亚 $${(car.price + 1200).toLocaleString()}。${carType}，${carEngine}。免费出口报价。` : lang === 'ru' ? `Купить ${carName} из Китая. Цена FOB $${car.price.toLocaleString()}, CIF Грузия $${(car.price + 1200).toLocaleString()}. ${carType}, ${carEngine}.` : `Buy ${carName} from China. FOB price $${car.price.toLocaleString()}, CIF Georgia $${(car.price + 1200).toLocaleString()}. ${carType}, ${carEngine}.`;
+---
+
+<BaseLayout
+  title={carPageTitle}
+  description={carPageDesc}
+  lang={lang}
+  schema={schemaData}
+>
+  <Breadcrumb crumbs={[
+    { name: label('home', lang), path: `/${lang}/` },
+    { name: label('cars', lang), path: `/${lang}/cars/` },
+    { name: carName, path: `/${lang}/cars/price/${car.id}/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#1e3a5f] to-[#0f2440] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-[#c4a35a] text-[#1e3a5f] px-3 py-1 rounded-full text-sm font-bold mb-4">{carCategory}</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">{carName}</h1>
+          <p class="text-xl text-gray-300 mb-6">{carDesc}</p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="bg-white/10 rounded-lg px-4 py-3">
+              <div class="text-sm text-gray-400">{label('fobPrice', lang)}</div>
+              <div class="text-2xl font-bold text-[#c4a35a]">{car.priceRange}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-4 py-3">
+              <div class="text-sm text-gray-400">{label('type', lang)}</div>
+              <div class="text-lg font-semibold">{carType}</div>
+            </div>
+            {car.range && (
+              <div class="bg-white/10 rounded-lg px-4 py-3">
+                <div class="text-sm text-gray-400">{lang === 'zh' ? '续航' : lang === 'ru' ? 'Запас хода' : 'Range'}</div>
+                <div class="text-lg font-semibold">{car.range}</div>
+              </div>
+            )}
+          </div>
+          <a href={`/${lang}/contact/`} class="inline-block bg-[#c4a35a] hover:bg-[#d4b36a] text-[#1e3a5f] font-bold px-8 py-3 rounded-lg transition-colors">{label('getQuote', lang)}</a>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <img src={car.image} alt={carName} class="max-h-[300px] object-contain rounded-lg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('technicalSpecs', lang)}</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-4 text-[#1e3a5f]">{label('general', lang)}</h3>
+          <table class="w-full">
+            <tbody>
+              <tr class="border-b"><td class="py-3 text-gray-600">{label('brand', lang)}</td><td class="py-3 font-semibold text-right">{car.brand}</td></tr>
+              <tr class="border-b"><td class="py-3 text-gray-600">{label('model', lang)}</td><td class="py-3 font-semibold text-right">{car.model}</td></tr>
+              <tr class="border-b"><td class="py-3 text-gray-600">{label('type', lang)}</td><td class="py-3 font-semibold text-right">{carType}</td></tr>
+              <tr class="border-b"><td class="py-3 text-gray-600">{label('category', lang)}</td><td class="py-3 font-semibold text-right">{carCategory}</td></tr>
+              <tr class="border-b"><td class="py-3 text-gray-600">{label('seats', lang)}</td><td class="py-3 font-semibold text-right">{car.seats}</td></tr>
+              <tr><td class="py-3 text-gray-600">{label('engine', lang)}</td><td class="py-3 font-semibold text-right">{carEngine}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="bg-gray-50 rounded-xl p-6 mb-6">
+            <h3 class="font-bold text-lg mb-4 text-[#1e3a5f]">{label('keyHighlights', lang)}</h3>
+            <ul class="space-y-3">
+              {carHighlights.map(h => (
+                <li class="flex items-start gap-3">
+                  <span class="text-[#c4a35a] mt-0.5">✓</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-4 text-[#1e3a5f]">{label('idealFor', lang)}</h3>
+            <ul class="space-y-2">
+              {carUseCases.map(uc => (
+                <li class="flex items-start gap-3">
+                  <span class="text-[#2563eb]">→</span>
+                  <span>{uc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIF Price Table -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-4">{label('cifPricing', lang)} — {carName}</h2>
+      <p class="text-gray-600 mb-8">{label('cifSub', lang)}</p>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-xl shadow-sm overflow-hidden">
+          <thead class="bg-[#1e3a5f] text-white">
+            <tr>
+              <th class="px-6 py-4 text-left">{label('destination', lang)}</th>
+              <th class="px-6 py-4 text-right">{label('fobPrice', lang)}</th>
+              <th class="px-6 py-4 text-right">{label('oceanFreight', lang)}</th>
+              <th class="px-6 py-4 text-right">{label('insurance', lang)}</th>
+              <th class="px-6 py-4 text-left">{label('importDuty', lang)}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cifEstimates.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-6 py-4 font-semibold">{row.country}</td>
+                <td class="px-6 py-4 text-right">{row.fob}</td>
+                <td class="px-6 py-4 text-right">{row.freight}</td>
+                <td class="px-6 py-4 text-right">{row.insurance}</td>
+                <td class="px-6 py-4">{row.duty}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 mt-4">{label('priceNote', lang)}</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('faq', lang)}</h2>
+      <div class="space-y-4">
+        {faqItems.map(item => (
+          <details class="bg-gray-50 rounded-xl overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:bg-gray-100 transition-colors flex justify-between items-center">
+              {item.question}
+              <span class="text-[#c4a35a] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <!-- Related Models -->
+  {related.length > 0 && (
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('similarModels', lang)}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {related.map(r => {
+            const rName = tData(r, 'name', lang);
+            const rType = tData(r, 'type', lang);
+            const rCat = tData(r, 'category', lang);
+            return (
+              <a href={`/${lang}/cars/price/${r.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6 group">
+                <div class="mb-4 text-center">
+                  <img src={r.image} alt={rName} class="h-24 w-full object-contain mx-auto" />
+                </div>
+                <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors">{rName}</h3>
+                <p class="text-sm text-gray-600 mt-1">{rType} • {rCat}</p>
+                <p class="text-[#c4a35a] font-bold mt-2">{r.priceRange}</p>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTASection />
+</BaseLayout>

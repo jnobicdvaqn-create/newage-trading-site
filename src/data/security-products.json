@@ -1,0 +1,314 @@
+[
+  {
+    "id": "ip-camera-4mp",
+    "brand": "Hikvision",
+    "name": "4MP Indoor/Outdoor Dual-Light Network Camera",
+    "nameRu": "4Мп внутренняя/наружная сетевая камера с двойным освещением",
+    "model": "DS-2CD2447G2-L",
+    "spec": "4MP, 2.8mm, 30m IR, IP67, PoE",
+    "features": [
+      "AcuSense智能侦测",
+      "双光/红外切换",
+      "IP67防水防尘"
+    ],
+    "featuresZh": [
+      "AcuSense智能侦测",
+      "双光/红外切换",
+      "IP67防水防尘"
+    ],
+    "featuresRu": [
+      "Интеллектуальное обнаружение AcuSense",
+      "Переключение двойного освещения/ИК",
+      "Защита IP67"
+    ],
+    "priceUsd": 68,
+    "nameEn": "4MP Indoor/Outdoor Dual-Light Network Camera",
+    "nameZh": "4MP室内外双光网络摄像机"
+  },
+  {
+    "id": "ip-camera-8mp",
+    "brand": "Hikvision",
+    "name": "8MP Ultra HD Panoramic Network Camera",
+    "nameRu": "8Мп сверхчёткая панорамная камера",
+    "model": "DS-2CD3T87WD-L",
+    "spec": "8MP, 4mm, 80m IR, PoE",
+    "features": [
+      "3840×2160超高清",
+      "Smart IR智能补光",
+      "H.265+编码"
+    ],
+    "featuresZh": [
+      "3840×2160超高清",
+      "Smart IR智能补光",
+      "H.265+编码"
+    ],
+    "featuresRu": [
+      "3840×2160 сверхвысокое разрешение",
+      "Smart IR интеллектуальная подсветка",
+      "Кодирование H.265+"
+    ],
+    "priceUsd": 115,
+    "nameEn": "8MP Ultra HD Panoramic Network Camera",
+    "nameZh": "8MP超高清全景摄像机"
+  },
+  {
+    "id": "bullet-camera",
+    "brand": "Dahua",
+    "name": "5MP IR Bullet Network Camera",
+    "nameRu": "5Мп сетевая камера-пуля с ИК-подсветкой",
+    "model": "IPC-HFW5449T1-AS-LED",
+    "spec": "5MP, 6mm, 120m IR, IP67",
+    "features": [
+      "AI目标检测",
+      "120m夜间补光",
+      "ePoE远距离传输"
+    ],
+    "featuresZh": [
+      "AI目标检测",
+      "120m夜间补光",
+      "ePoE远距离传输"
+    ],
+    "featuresRu": [
+      "ИИ-обнаружение целей",
+      "Ночная подсветка 120м",
+      "ePoE дальняя передача"
+    ],
+    "priceUsd": 89,
+    "nameEn": "5MP IR Bullet Network Camera",
+    "nameZh": "5MP红外网络枪机"
+  },
+  {
+    "id": "ptz-camera",
+    "brand": "Dahua",
+    "name": "4K Smart PTZ Dome Camera",
+    "nameRu": "4K интеллектуальная PTZ купольная камера",
+    "model": "SD5043XA-HNR",
+    "spec": "4K, 25×光学变倍, 200m IR",
+    "features": [
+      "自动跟踪",
+      "25倍变倍",
+      "智能防抖"
+    ],
+    "featuresZh": [
+      "自动跟踪",
+      "25倍变倍",
+      "智能防抖"
+    ],
+    "featuresRu": [
+      "Автоматическое отслеживание",
+      "25-кратное увеличение",
+      "Интеллектуальная стабилизация"
+    ],
+    "priceUsd": 420,
+    "nameEn": "4K Smart PTZ Dome Camera",
+    "nameZh": "4K智能PTZ球机"
+  },
+  {
+    "id": "fisheye-camera",
+    "brand": "Hikvision",
+    "name": "12MP 360° Fisheye Camera",
+    "nameRu": "12Мп панорамная камера «рыбий глаз»",
+    "model": "DS-2CD6362-I",
+    "spec": "12MP, 1.16mm, 360°全景, PoE",
+    "features": [
+      "360°全景无死角",
+      "多种展开模式",
+      "电子PTZ"
+    ],
+    "featuresZh": [
+      "360°全景无死角",
+      "多种展开模式",
+      "电子PTZ"
+    ],
+    "featuresRu": [
+      "360° панорама без слепых зон",
+      "Несколько режимов развёртки",
+      "Электронный PTZ"
+    ],
+    "priceUsd": 260,
+    "nameEn": "12MP 360° Fisheye Camera",
+    "nameZh": "12MP全景鱼眼摄像机"
+  },
+  {
+    "id": "nvr-16ch",
+    "brand": "Hikvision",
+    "name": "16-Channel NVR Network Video Recorder",
+    "nameRu": "16-канальный сетевой видеорегистратор NVR",
+    "model": "DS-7616NI-M2",
+    "spec": "16CH, 4K输出, 80Mbps, H.265",
+    "features": [
+      "支持16路4K解码",
+      "ANPR车牌识别",
+      "2×SATA 10TB"
+    ],
+    "featuresZh": [
+      "支持16路4K解码",
+      "ANPR车牌识别",
+      "2×SATA 10TB"
+    ],
+    "featuresRu": [
+      "16 каналов 4K декодирования",
+      "Распознавание номеров ANPR",
+      "2×SATA до 10ТБ"
+    ],
+    "priceUsd": 380,
+    "nameEn": "16-Channel NVR Network Video Recorder",
+    "nameZh": "16路NVR网络录像机"
+  },
+  {
+    "id": "nvr-32ch",
+    "brand": "Dahua",
+    "name": "32-Channel AI NVR Recorder",
+    "nameRu": "32-канальный AI-NVR видеорегистратор",
+    "model": "DHI-NVR5232-4KS2",
+    "spec": "32CH, 4K HDMI, 320Mbps",
+    "features": [
+      "32路IPC接入",
+      "AI元数据分析",
+      "RAID0/1/5"
+    ],
+    "featuresZh": [
+      "32路IPC接入",
+      "AI元数据分析",
+      "RAID0/1/5"
+    ],
+    "featuresRu": [
+      "32 канала IPC",
+      "Анализ метаданных ИИ",
+      "RAID 0/1/5"
+    ],
+    "priceUsd": 540,
+    "nameEn": "32-Channel AI NVR Recorder",
+    "nameZh": "32路AI-NVR录像机"
+  },
+  {
+    "id": "access-control",
+    "brand": "ZKTeco",
+    "name": "Face Recognition Access Control Terminal",
+    "nameRu": "Контроль доступа с распознаванием лиц",
+    "model": "FaceDepot 7B",
+    "spec": "7寸屏, 2000人脸库, IP65",
+    "features": [
+      "口罩识别",
+      "温度检测",
+      "WiFi+4G可选"
+    ],
+    "featuresZh": [
+      "口罩识别",
+      "温度检测",
+      "WiFi+4G可选"
+    ],
+    "featuresRu": [
+      "Распознавание в маске",
+      "Измерение температуры",
+      "WiFi+4G (опционально)"
+    ],
+    "priceUsd": 215,
+    "nameEn": "Face Recognition Access Control Terminal",
+    "nameZh": "人脸识别门禁一体机"
+  },
+  {
+    "id": "turnstile",
+    "brand": "ZKTeco",
+    "name": "Swing Barrier Turnstile (Smart Gate)",
+    "nameRu": "Поворотный шлюз (интеллектуальный проходной)",
+    "model": "TS3000",
+    "spec": "不锈钢, 翼闸, TCP/IP, RFID",
+    "features": [
+      "双向通行",
+      "消防联动自动打开",
+      "防夹功能"
+    ],
+    "featuresZh": [
+      "双向通行",
+      "消防联动自动打开",
+      "防夹功能"
+    ],
+    "featuresRu": [
+      "Двусторонний проход",
+      "Автооткрытие при пожаре",
+      "Защита от защемления"
+    ],
+    "priceUsd": 680,
+    "nameEn": "Swing Barrier Turnstile (Smart Gate)",
+    "nameZh": "摆闸 (智能通道闸)"
+  },
+  {
+    "id": "vibration-sensor",
+    "brand": "Hikvision",
+    "name": "Fiber Optic Vibration Detection Sensor",
+    "nameRu": "Оптоволоконный вибрационный детектор безопасности",
+    "model": "DS-PF-E0200",
+    "spec": "2km探测距离, IP67, 周界防区",
+    "features": [
+      "光纤传感无源设计",
+      "智能模式过滤误报",
+      "2km单防区"
+    ],
+    "featuresZh": [
+      "光纤传感无源设计",
+      "智能模式过滤误报",
+      "2km单防区"
+    ],
+    "featuresRu": [
+      "Пассивная оптоволоконная конструкция",
+      "Фильтрация ложных срабатываний",
+      "Одна зона 2км"
+    ],
+    "priceUsd": 1200,
+    "nameEn": "Fiber Optic Vibration Detection Sensor",
+    "nameZh": "光纤振动安防探测器"
+  },
+  {
+    "id": "alarm-panel",
+    "brand": "DSC",
+    "name": "Wireless Alarm Control Panel",
+    "nameRu": "Беспроводная централь управления сигнализацией",
+    "model": "PowerSeries Neo HS2032",
+    "spec": "32分区, 无线+有线, 3G/4G",
+    "features": [
+      "手机APP远程控制",
+      "32无线防区",
+      "语音播报"
+    ],
+    "featuresZh": [
+      "手机APP远程控制",
+      "32无线防区",
+      "语音播报"
+    ],
+    "featuresRu": [
+      "Удалённое управление через приложение",
+      "32 беспроводные зоны",
+      "Голосовое оповещение"
+    ],
+    "priceUsd": 195,
+    "nameEn": "Wireless Alarm Control Panel",
+    "nameZh": "无线报警控制主机"
+  },
+  {
+    "id": "body-camera",
+    "brand": "Hikvision",
+    "name": "Body-Worn Camera (Law Enforcement)",
+    "nameRu": "Нательная камера для правоохранителей",
+    "model": "DS-MCH403-M",
+    "spec": "4K录像, 1080P实时传输, 128GB, IP68",
+    "features": [
+      "星光夜视",
+      "GPS定位",
+      "一键SOS"
+    ],
+    "featuresZh": [
+      "星光夜视",
+      "GPS定位",
+      "一键SOS"
+    ],
+    "featuresRu": [
+      "Звёздное ночное видение",
+      "GPS-позиционирование",
+      "Кнопка SOS"
+    ],
+    "priceUsd": 310,
+    "nameEn": "Body-Worn Camera (Law Enforcement)",
+    "nameZh": "执法记录仪"
+  }
+]

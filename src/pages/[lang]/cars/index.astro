@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ProductCard from '@components/ProductCard.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import cars from '@data/cars.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const byCategory = {
+  EV: cars.filter(c => c.category === 'EV'),
+  PHEV: cars.filter(c => c.category === 'PHEV'),
+  EREV: cars.filter(c => c.category === 'EREV'),
+  ICE: cars.filter(c => c.category === 'ICE'),
+};
+const categories = ['EV', 'PHEV', 'EREV', 'ICE'] as const;
+---
+
+<BaseLayout
+  title={t('cars.title', lang)}
+  description={t('cars.subtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.cars', lang), path: `/${lang}/cars/` },
+  ]}
+  schema={{
+    "@type": "CollectionPage",
+    "name": "Chinese Automobile Export - NewAge Trading",
+    "description": t('cars.subtitle', lang)
+  }}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.cars', lang), path: `/${lang}/cars/` },
+  ]} />
+
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('cars.title', lang)}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('cars.subtitle', lang)}</p>
+    </div>
+  </section>
+
+  <section class="container-section">
+    {categories.map(cat => {
+      const items = byCategory[cat];
+      if (items.length === 0) return null;
+      return (
+        <div class="mb-16 last:mb-0">
+          <h2 class="text-2xl font-bold mb-2">{cat}</h2>
+          <p class="text-muted mb-6">
+            {cat === 'EV' ? 'Electric Vehicles — zero emissions, high performance' :
+             cat === 'PHEV' ? 'Plug-in Hybrid Electric Vehicles — best of both worlds' :
+             cat === 'EREV' ? 'Extended Range Electric Vehicles — no range anxiety' :
+             'Internal Combustion Engine — proven reliability'}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {items.map(car => (
+              <ProductCard
+                product={car as any}
+                href={`/${lang}/cars/price/${car.id}/`}
+                badge={car.category}
+              />
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </section>
+
+  <!-- Export Guide Link Section -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">{t('cars.guideTitle', lang)}</h2>
+      <p class="text-muted max-w-2xl mx-auto mb-8">
+        Learn about import regulations, taxes, and procedures for each target market.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`/${lang}/cars/guide/georgia/`} class="btn-outline">Georgia</a>
+        <a href={`/${lang}/cars/guide/russia/`} class="btn-outline">Russia</a>
+        <a href={`/${lang}/cars/guide/uae/`} class="btn-outline">UAE</a>
+        <a href={`/${lang}/cars/guide/kazakhstan/`} class="btn-outline">Kazakhstan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container-section">
+    <h2 class="text-3xl font-bold text-center mb-8">{t('cars.faqTitle', lang)}</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <a href={`/${lang}/cars/faq/is-it-legal-to-import-chinese-cars/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
+        <span class="font-medium">Is it legal to import Chinese cars to Georgia?</span>
+      </a>
+      <a href={`/${lang}/cars/faq/byd-warranty-international/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
+        <span class="font-medium">Does BYD offer international warranty coverage?</span>
+      </a>
+      <a href={`/${lang}/cars/faq/shipping-time-china-to-georgia/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
+        <span class="font-medium">How long does shipping from China to Georgia take?</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

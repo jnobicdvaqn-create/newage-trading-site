@@ -1,0 +1,261 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTASection from '@components/CTASection.astro';
+import type { Locale } from '@i18n/types';
+import cars from '@data/cars.json';
+import { tData, tArr, label } from '@lib/i18n-data';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  const allPairs = [
+    ['byd-han', 'byd-seal'],
+    ['byd-seal', 'xpeng-p7'],
+    ['byd-atto3', 'mg4-ev'],
+    ['byd-song-plus', 'geely-monjaro'],
+    ['greatwall-p300', 'changan-deepal-s7'],
+    ['byd-dolphin', 'mg4-ev'],
+    ['nio-et5', 'xpeng-p7'],
+    ['li-auto-l9', 'geely-monjaro'],
+    ['byd-han', 'nio-et5'],
+    ['byd-qin-plus', 'mg5-ev'],
+  ];
+  const paths: { params: { lang: Locale; pair: string }; props: { lang: Locale; carA: typeof cars[0]; carB: typeof cars[0] } }[] = [];
+  for (const lang of langs) {
+    for (const pair of allPairs) {
+      const carA = cars.find(c => c.id === pair[0])!;
+      const carB = cars.find(c => c.id === pair[1])!;
+      paths.push({
+        params: { lang, pair: pair[0] + '-vs-' + pair[1] },
+        props: { lang, carA, carB },
+      });
+    }
+  }
+  return paths;
+}
+
+const { lang, carA, carB } = Astro.props as { lang: Locale; carA: typeof cars[0]; carB: typeof cars[0] };
+
+const nameA = tData(carA, 'name', lang);
+const nameB = tData(carB, 'name', lang);
+const catA = tData(carA, 'category', lang);
+const catB = tData(carB, 'category', lang);
+const engA = tData(carA, 'engine', lang);
+const engB = tData(carB, 'engine', lang);
+const rangeA = tData(carA, 'range', lang);
+const rangeB = tData(carB, 'range', lang);
+const hlA = tArr(carA, 'highlights', lang);
+const hlB = tArr(carB, 'highlights', lang);
+
+const specsLabels = lang === 'zh'
+  ? ['车型', '动力类型', '发动机/动力', '座位数', '续航', 'FOB 价格']
+  : lang === 'ru'
+  ? ['Тип', 'Категория', 'Двигатель', 'Сиденья', 'Запас хода', 'Цена FOB']
+  : ['Type', 'Category', 'Engine / Powertrain', 'Seats', 'Range', 'FOB Price'];
+
+const specs = [
+  { label: specsLabels[0], a: tData(carA, 'type', lang), b: tData(carB, 'type', lang) },
+  { label: specsLabels[1], a: catA, b: catB },
+  { label: specsLabels[2], a: engA, b: engB },
+  { label: specsLabels[3], a: String(carA.seats), b: String(carB.seats) },
+  { label: specsLabels[4], a: rangeA || 'N/A', b: rangeB || 'N/A' },
+  { label: specsLabels[5], a: carA.priceRange, b: carB.priceRange },
+];
+
+const priceDiff = carA.price - carB.price;
+const cheaperCar = priceDiff <= 0 ? carA : carB;
+const costlierCar = priceDiff > 0 ? carA : carB;
+const cheaperName = tData(cheaperCar, 'name', lang);
+const costlierName = tData(costlierCar, 'name', lang);
+
+const hlLabel = lang === 'zh' ? '核心亮点' : lang === 'ru' ? 'Основные преимущества' : 'Highlights';
+
+const pageTitle = lang === 'zh' ? `${nameA} vs ${nameB} — 对比中国出口汽车 | NewAge Trading` : lang === 'ru' ? `${nameA} vs ${nameB} — Сравнение авто из Китая | NewAge Trading` : `${nameA} vs ${nameB} — Compare Chinese Cars | NewAge Trading`;
+const pageDesc = lang === 'zh' ? `${nameA} vs ${nameB}：价格、配置、续航全面对比。中国出口汽车最佳选择。` : lang === 'ru' ? `${nameA} vs ${nameB}: сравнение цен, характеристик и запаса хода. Лучшие китайские авто для экспорта.` : `${nameA} vs ${nameB}: compare price, specs, range. Best Chinese cars for export.`;
+
+const heroSub = lang === 'zh' ? '逐项对比，帮助您选择最适合出口的中国汽车。两款均可立即订购。' : lang === 'ru' ? 'Построчное сравнение, чтобы помочь вам выбрать лучший китайский автомобиль для экспорта. Оба доступны для немедленного заказа.' : 'Side-by-side comparison to help you choose the right Chinese car for export. Both available for immediate order.';
+
+const priceVerdict = lang === 'zh'
+  ? `<strong class="text-[#c4a35a]">${cheaperName}</strong> FOB 起价更低（${cheaperCar.priceRange}），性价比更高。<strong>${costlierName}</strong>（${costlierCar.priceRange}）则提供不同的价值主张。`
+  : lang === 'ru'
+  ? `<strong class="text-[#c4a35a]">${cheaperName}</strong> начинается с более низкой цены FOB ${cheaperCar.priceRange}, что делает его более бюджетным вариантом. <strong>${costlierName}</strong> по цене ${costlierCar.priceRange} предлагает другое соотношение цены и качества.`
+  : `The <strong class="text-[#c4a35a]">${cheaperName}</strong> starts at a lower FOB price of ${cheaperCar.priceRange}, making it the more budget-friendly option. The <strong>${costlierName}</strong> at ${costlierCar.priceRange} offers a different value proposition.`;
+
+const faqItems = lang === 'zh'
+  ? [
+    { question: `${nameA} 和 ${nameB} 哪个更好？`, answer: `两款都是优秀的出口车型。${nameA}（${engA}）在 ${hlA[0]} 方面表现出色，而 ${nameB}（${engB}）则以 ${hlB[0]} 脱颖而出。最佳选择取决于您的预算、续航需求和目标市场偏好。请联系我们获取详细对比报告。` },
+    { question: '哪款进口成本更低？', answer: `${cheaperName} 的 FOB 价格更低（${cheaperCar.priceRange}），相比 ${costlierName}（${costlierCar.priceRange}）。但总进口成本还取决于运输方式、目的港和当地关税。我们可提供两款车的完整 CIF 报价。` },
+    { question: `能同时进口 ${carA.brand} 和 ${carB.brand} 的车吗？`, answer: `当然可以。我们从中国所有主要制造商采购，包括 ${carA.brand} 和 ${carB.brand}。混合品牌订单完全没问题。` },
+    { question: '哪个中国品牌在格鲁吉亚更受欢迎？', answer: `${carA.brand} 和 ${carB.brand} 在格鲁吉亚的市场份额都在增长。BYD 目前在电动车领域领先。请联系我们获取最新销售数据和建议。` },
+  ]
+  : lang === 'ru'
+  ? [
+    { question: `Что лучше: ${nameA} или ${nameB}?`, answer: `Оба отличные автомобили для экспорта. ${nameA} (${engA}) выделяется благодаря ${hlA[0]}, а ${nameB} (${engB}) — благодаря ${hlB[0]}. Лучший выбор зависит от бюджета, требований к запасу хода и предпочтений целевого рынка.` },
+    { question: 'Какой дешевле импортировать?', answer: `${cheaperName} имеет более низкую цену FOB — ${cheaperCar.priceRange}, по сравнению с ${costlierName} (${costlierCar.priceRange}). Общая стоимость импорта зависит от способа доставки и пошлин.` },
+    { question: `Можно ли импортировать оба бренда ${carA.brand} и ${carB.brand}?`, answer: `Конечно. Мы работаем со всеми крупными китайскими производителями, включая ${carA.brand} и ${carB.brand}. Смешанные заказы приветствуются.` },
+    { question: 'Какой бренд популярнее в Грузии?', answer: `${carA.brand} и ${carB.brand} набирают популярность в Грузии. BYD лидирует в сегменте электромобилей.` },
+  ]
+  : [
+    { question: `Which is better: ${nameA} or ${nameB}?`, answer: `Both are excellent vehicles for export. The ${nameA} (${engA}) excels with ${hlA[0]}, while the ${nameB} (${engB}) stands out with ${hlB[0]}. Your best choice depends on budget, range requirements, and target market preferences. Contact us for a detailed comparison.` },
+    { question: 'Which is cheaper to import?', answer: `The ${cheaperName} has a lower FOB price at ${cheaperCar.priceRange}, compared to the ${costlierName} at ${costlierCar.priceRange}. However, total import cost also depends on shipping method, destination port, and local import duties.` },
+    { question: `Can I import both ${carA.brand} and ${carB.brand} cars from China?`, answer: `Absolutely. We source from all major Chinese manufacturers including ${carA.brand} and ${carB.brand}. Mixed-brand orders are welcome.` },
+    { question: 'Which Chinese car brand is more popular in Georgia?', answer: `Both ${carA.brand} and ${carB.brand} are gaining popularity in Georgia. BYD currently leads in the EV segment. Contact us for the latest sales data.` },
+  ];
+
+const pageSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": `${nameA} vs ${nameB} Comparison`,
+});
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+  }))
+});
+
+const specLabel = lang === 'zh' ? '规格' : lang === 'ru' ? 'Характеристики' : 'Specification';
+const detailsLabel = lang === 'zh' ? '详情' : lang === 'ru' ? 'Подробнее' : 'Details';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDesc}
+  lang={lang}
+>
+  <Breadcrumb crumbs={[
+    { name: label('home', lang), path: '/' + lang + '/' },
+    { name: label('cars', lang), path: '/' + lang + '/cars/' },
+    { name: `${carA.brand} vs ${carB.brand}`, path: '/' + lang + '/cars/compare/' + carA.id + '-vs-' + carB.id + '/' },
+  ]} />
+
+  <script type="application/ld+json" set:html={pageSchema} is:raw />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-[#1e3a5f] via-[#2563eb] to-[#1e3a5f] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">
+        {nameA} <span class="text-[#c4a35a]">vs</span> {nameB}
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{heroSub}</p>
+    </div>
+  </section>
+
+  <!-- Visual Comparison -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="text-center p-8 bg-blue-50 rounded-2xl">
+          <span class="text-6xl block mb-4">🚗</span>
+          <h2 class="text-xl font-bold text-[#1e3a5f]">{nameA}</h2>
+          <p class="text-2xl font-bold text-[#c4a35a] mt-2">{carA.priceRange}</p>
+          <span class="inline-block mt-2 bg-[#1e3a5f] text-white text-xs px-3 py-1 rounded-full">{catA}</span>
+        </div>
+        <div class="text-center">
+          <span class="text-5xl font-bold text-[#c4a35a]">VS</span>
+        </div>
+        <div class="text-center p-8 bg-amber-50 rounded-2xl">
+          <span class="text-6xl block mb-4">🚗</span>
+          <h2 class="text-xl font-bold text-[#1e3a5f]">{nameB}</h2>
+          <p class="text-2xl font-bold text-[#c4a35a] mt-2">{carB.priceRange}</p>
+          <span class="inline-block mt-2 bg-[#1e3a5f] text-white text-xs px-3 py-1 rounded-full">{catB}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spec Comparison Table -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('headToHead', lang)}</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-xl shadow-sm overflow-hidden">
+          <thead class="bg-[#1e3a5f] text-white">
+            <tr>
+              <th class="px-6 py-4 text-left">{specLabel}</th>
+              <th class="px-6 py-4 text-center">{nameA}</th>
+              <th class="px-6 py-4 text-center">{nameB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {specs.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-6 py-4 font-semibold text-gray-700">{row.label}</td>
+                <td class="px-6 py-4 text-center">{row.a}</td>
+                <td class="px-6 py-4 text-center">{row.b}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Comparison -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('keyHighlights', lang)}</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-blue-50 rounded-xl p-8">
+          <h3 class="text-xl font-bold text-[#1e3a5f] mb-4">{nameA} {hlLabel}</h3>
+          <ul class="space-y-3">
+            {hlA.map(h => (
+              <li class="flex items-start gap-3">
+                <span class="text-[#c4a35a] font-bold">✓</span>
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-amber-50 rounded-xl p-8">
+          <h3 class="text-xl font-bold text-[#1e3a5f] mb-4">{nameB} {hlLabel}</h3>
+          <ul class="space-y-3">
+            {hlB.map(h => (
+              <li class="flex items-start gap-3">
+                <span class="text-[#c4a35a] font-bold">✓</span>
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Analysis -->
+  <section class="py-16 bg-[#1e3a5f] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">{lang === 'zh' ? '价格结论' : lang === 'ru' ? 'Ценовой вердикт' : 'Price Verdict'}</h2>
+      <p class="text-xl text-gray-300 mb-8" set:html={priceVerdict} />
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={'/' + lang + '/cars/price/' + carA.id + '/'} class="bg-[#c4a35a] hover:bg-[#d4b36a] text-[#1e3a5f] font-bold px-6 py-3 rounded-lg transition-colors">{nameA} {detailsLabel} →</a>
+        <a href={'/' + lang + '/cars/price/' + carB.id + '/'} class="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-lg transition-colors border border-white/30">{nameB} {detailsLabel} →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('faq', lang)}</h2>
+      <div class="space-y-4">
+        {faqItems.map(item => (
+          <details class="bg-gray-50 rounded-xl overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:bg-gray-100 transition-colors flex justify-between items-center">
+              {item.question}
+              <span class="text-[#c4a35a] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={faqSchema} is:raw />
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>
