@@ -1,0 +1,139 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import blogPosts from '@data/blog-posts.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+// Sort posts by date (newest first)
+const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+// Get localized title/excerpt
+function getTitle(post: any, l: Locale): string {
+  return l === 'zh' ? post.titleZh : l === 'ru' ? post.titleRu : post.title;
+}
+function getExcerpt(post: any, l: Locale): string {
+  return l === 'zh' ? post.excerptZh : l === 'ru' ? post.excerptRu : post.excerpt;
+}
+
+// Category labels
+const categoryLabels: Record<string, Record<Locale, string>> = {
+  cars: { en: 'Car Export', zh: '汽车出口', ru: 'Автоэкспорт' },
+  lingerie: { en: 'Lingerie OEM', zh: '内衣OEM', ru: 'Белье OEM' },
+  security: { en: 'Security', zh: '安防', ru: 'Безопасность' },
+  trade: { en: 'Trade Guide', zh: '贸易指南', ru: 'Торговля' },
+  logistics: { en: 'Logistics', zh: '物流', ru: 'Логистика' },
+};
+---
+
+<BaseLayout
+  title={t('blog.title', lang)}
+  description={t('blog.subtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.blog', lang), path: `/${lang}/blog/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.blog', lang), path: `/${lang}/blog/` },
+  ]} />
+
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('blog.title', lang)}</h1>
+      <p class="text-xl text-gray-300">{t('blog.subtitle', lang)}</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="container-section">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sortedPosts.map((post) => (
+          <article class="group flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-white transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-primary)]/10">
+            <!-- Cover Image -->
+            <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+              {post.coverImage ? (
+                <img src={post.coverImage} alt={getTitle(post, lang)} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              ) : (
+                <div class="flex h-full items-center justify-center">
+                  <svg class="h-16 w-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  </svg>
+                </div>
+              )}
+              <!-- Category Badge -->
+              <span class="absolute left-3 top-3 rounded-full bg-[var(--color-primary)] px-3 py-1 text-xs font-semibold text-white">
+                {categoryLabels[post.category]?.[lang] || post.category}
+              </span>
+            </div>
+
+            <!-- Content -->
+            <div class="flex flex-1 flex-col p-6">
+              <!-- Meta -->
+              <div class="flex items-center gap-3 text-xs text-muted mb-3">
+                <time datetime={post.date}>
+                  {new Date(post.date).toLocaleDateString(lang === 'zh' ? 'zh-CN' : lang === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <span>·</span>
+                <span>{post.readTime}</span>
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-lg font-bold font-[var(--font-heading)] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
+                {getTitle(post, lang)}
+              </h3>
+
+              <!-- Excerpt -->
+              <p class="mt-3 text-sm text-[var(--color-text-light)] line-clamp-3">
+                {getExcerpt(post, lang)}
+              </p>
+
+              <!-- Tags -->
+              <div class="mt-auto pt-4 flex flex-wrap gap-2">
+                {post.tags.slice(0, 3).map(tag => (
+                  <span class="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Read More -->
+              <a href={`/${lang}/blog/${post.id}/`} class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]">
+                {lang === 'zh' ? '阅读全文' : lang === 'ru' ? 'Читать далее' : 'Read More'}
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">{lang === 'zh' ? '需要更多贸易资讯？' : lang === 'ru' ? 'Нужна дополнительная информация?' : 'Need More Trade Insights?'}</h2>
+      <p class="text-muted max-w-2xl mx-auto mb-8">
+        {lang === 'zh' ? '联系我们的专业团队，获取个性化采购方案和市场分析。' : lang === 'ru' ? 'Свяжитесь с нашей командой экспертов для персонального плана закупок и анализа рынка.' : 'Contact our expert team for personalized sourcing strategies and market analysis.'}
+      </p>
+      <a href={`/${lang}/contact/`} class="btn-primary">
+        {lang === 'zh' ? '联系我们' : lang === 'ru' ? 'Связаться' : 'Contact Us'}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

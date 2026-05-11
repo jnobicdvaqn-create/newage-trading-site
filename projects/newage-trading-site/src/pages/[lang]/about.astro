@@ -1,0 +1,106 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const values = [
+  { title: t('about.valueIntegrity', lang), desc: t('about.valueIntegrityDesc', lang) },
+  { title: t('about.valueQuality', lang), desc: t('about.valueQualityDesc', lang) },
+  { title: t('about.valueInnovation', lang), desc: t('about.valueInnovationDesc', lang) },
+];
+---
+
+<BaseLayout
+  title={t('about.title', lang)}
+  description={t('about.subtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.about', lang), path: `/${lang}/about/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.about', lang), path: `/${lang}/about/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('about.title', lang)}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('about.subtitle', lang)}</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="container-section">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-6">{t('about.mission', lang)}</h2>
+      <p class="text-lg text-muted leading-relaxed">{t('about.missionText', lang)}</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">{t('about.story', lang)}</h2>
+          <p class="text-muted leading-relaxed">{t('about.storyText', lang)}</p>
+        </div>
+        <div class="bg-surface-dark rounded-xl aspect-[4/3] flex items-center justify-center">
+          <span class="text-6xl font-bold text-accent/30">NT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="container-section">
+    <h2 class="text-3xl font-bold text-center mb-12">{t('about.values', lang)}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {values.map(v => (
+        <div class="text-center p-8 rounded-xl bg-surface">
+          <h3 class="text-xl font-semibold mb-4">{v.title}</h3>
+          <p class="text-muted">{v.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">{t('about.numbers', lang)}</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">500+</div>
+          <div class="text-gray-400">{t('about.clients', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">30+</div>
+          <div class="text-gray-400">{t('about.countries', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">8+</div>
+          <div class="text-gray-400">{t('about.years', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">50K+</div>
+          <div class="text-gray-400">{t('about.products', lang)}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

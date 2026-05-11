@@ -1,0 +1,194 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import blogPosts from '@data/blog-posts.json';
+
+export function getStaticPaths() {
+  const paths: { params: { lang: string; slug: string } }[] = [];
+  for (const lang of ['en', 'ru', 'zh']) {
+    for (const post of blogPosts) {
+      paths.push({ params: { lang, slug: post.id } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params as { lang: Locale; slug: string };
+const post = blogPosts.find(p => p.id === slug);
+
+if (!post) {
+  return Astro.redirect(`/${lang}/blog/`);
+}
+
+// Get localized content
+function getTitle(post: any, l: Locale): string {
+  return l === 'zh' ? post.titleZh : l === 'ru' ? post.titleRu : post.title;
+}
+function getExcerpt(post: any, l: Locale): string {
+  return l === 'zh' ? post.excerptZh : l === 'ru' ? post.excerptRu : post.excerpt;
+}
+function getContentBlocks(post: any, l: Locale): any[] {
+  return post.content?.[l] || post.content?.['en'] || [];
+}
+
+// Category labels
+const categoryLabels: Record<string, Record<Locale, string>> = {
+  cars: { en: 'Car Export', zh: '汽车出口', ru: 'Автоэкспорт' },
+  lingerie: { en: 'Lingerie OEM', zh: '内衣OEM', ru: 'Белье OEM' },
+  security: { en: 'Security', zh: '安防', ru: 'Безопасность' },
+  trade: { en: 'Trade Guide', zh: '贸易指南', ru: 'Торговля' },
+  logistics: { en: 'Logistics', zh: '物流', ru: 'Логистика' },
+};
+
+// Find related posts (same category, different from current)
+const relatedPosts = blogPosts
+  .filter(p => p.category === post.category && p.id !== post.id)
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={`${getTitle(post, lang)} | NewAge Trading`}
+  description={getExcerpt(post, lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.blog', lang), path: `/${lang}/blog/` },
+    { name: getTitle(post, lang), path: `/${lang}/blog/${post.id}/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.blog', lang), path: `/${lang}/blog/` },
+    { name: getTitle(post, lang), path: `/${lang}/blog/${post.id}/` },
+  ]} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Post Header -->
+    <header class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="rounded-full bg-[var(--color-primary)] px-3 py-1 text-xs font-semibold text-white">
+          {categoryLabels[post.category]?.[lang] || post.category}
+        </span>
+        <time datetime={post.date} class="text-sm text-muted">
+          {new Date(post.date).toLocaleDateString(lang === 'zh' ? 'zh-CN' : lang === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        <span class="text-sm text-muted">· {post.readTime}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold font-[var(--font-heading)] text-[var(--color-text)] mb-4">
+        {getTitle(post, lang)}
+      </h1>
+      <p class="text-lg text-muted leading-relaxed">
+        {getExcerpt(post, lang)}
+      </p>
+      {post.coverImage && (
+        <div class="mt-6 rounded-xl overflow-hidden">
+          <img src={post.coverImage} alt={getTitle(post, lang)} class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+      )}
+    </header>
+
+    <!-- Post Body -->
+    <div class="prose prose-lg max-w-none">
+      {getContentBlocks(post, lang).map((block: any) => {
+        if (block.type === 'heading') {
+          const Tag = `h${block.level}` as keyof JSX.Element;
+          return <Tag class="text-2xl font-bold text-[var(--color-text)] mt-10 mb-4">{block.text}</Tag>;
+        }
+        if (block.type === 'paragraph') {
+          return <p class="text-base text-[var(--color-text-light)] leading-relaxed mb-6">{block.text}</p>;
+        }
+        if (block.type === 'list') {
+          return (
+            <ul class="space-y-3 mb-6">
+              {block.items.map((item: string) => (
+                <li class="flex items-start gap-3 text-[var(--color-text-light)]">
+                  <svg class="mt-1 h-5 w-5 shrink-0 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        if (block.type === 'table') {
+          return (
+            <div class="overflow-x-auto mb-8 rounded-xl border border-[var(--color-border)]">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    {block.headers.map((h: string) => (
+                      <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-500">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 bg-white">
+                  {block.rows.map((row: string[]) => (
+                    <tr>
+                      {row.map((cell: string) => (
+                        <td class="px-4 py-3 text-sm text-[var(--color-text-light)]">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+        return null;
+      })}
+    </div>
+
+    <!-- Tags -->
+    <div class="mt-12 pt-8 border-t border-[var(--color-border)]">
+      <div class="flex flex-wrap gap-2">
+        {post.tags.map(tag => (
+          <span class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">
+            #{tag}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 rounded-xl bg-primary p-8 text-center text-white">
+      <h3 class="text-2xl font-bold mb-3">
+        {lang === 'zh' ? '需要专业采购支持？' : lang === 'ru' ? 'Нужна профессиональная поддержка?' : 'Need Professional Sourcing Support?'}
+      </h3>
+      <p class="text-gray-300 mb-6">
+        {lang === 'zh' ? '我们的专家团队可以帮助您找到最佳供应商、协商价格并安排运输。' : lang === 'ru' ? 'Наша команда экспертов поможет найти лучших поставщиков, договориться о ценах и организовать доставку.' : 'Our expert team can help you find the best suppliers, negotiate prices, and arrange shipping.'}
+      </p>
+      <a href={`/${lang}/contact/`} class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-[var(--color-primary)] transition-colors hover:bg-gray-100">
+        {lang === 'zh' ? '获取报价' : lang === 'ru' ? 'Получить цитату' : 'Get a Free Quote'}
+      </a>
+    </div>
+  </article>
+
+  <!-- Related Posts -->
+  {relatedPosts.length > 0 && (
+    <section class="bg-surface py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold mb-8 text-center">
+          {lang === 'zh' ? '相关文章' : lang === 'ru' ? 'Похожие статьи' : 'Related Posts'}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {relatedPosts.map(rp => (
+            <a href={`/${lang}/blog/${rp.id}/`} class="group rounded-xl border border-[var(--color-border)] bg-white p-6 transition-all hover:shadow-lg">
+              <span class="text-xs font-semibold text-[var(--color-primary)]">
+                {categoryLabels[rp.category]?.[lang] || rp.category}
+              </span>
+              <h3 class="mt-2 text-base font-bold group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
+                {getTitle(rp, lang)}
+              </h3>
+              <p class="mt-2 text-sm text-muted line-clamp-2">
+                {getExcerpt(rp, lang)}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

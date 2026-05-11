@@ -1,0 +1,236 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const models = [
+  { name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', icon: '🚗', category: 'fuel' },
+  { name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', icon: '🚗', category: 'fuel' },
+  { name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', icon: '🚗', category: 'fuel' },
+  { name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', icon: '🛻', category: 'truck' },
+  { name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', icon: '🛻', category: 'truck' },
+  { name: 'BYD E6 / Aion S', nameZh: '比亚迪E6 / 广汽埃安', nameRu: 'BYD E6 / Aion S', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', icon: '⚡', category: 'ev' },
+];
+
+const countries = [
+  { name: 'Nigeria', nameZh: '尼日利亚', nameRu: 'Нигерия', priority: 5, cert: 'SONCAP', reason: 'Largest population, biggest demand' },
+  { name: 'Ghana', nameZh: '加纳', nameRu: 'Гана', priority: 5, cert: 'None required', reason: 'Friendly policy, smooth clearance' },
+  { name: 'Kenya', nameZh: '肯尼亚', nameRu: 'Кения', priority: 4, cert: 'PVOC', reason: 'East Africa hub, mature market' },
+  { name: 'Egypt', nameZh: '埃及', nameRu: 'Египет', priority: 3, cert: 'GOEIC', reason: '100M+ population, NEV tariff-free' },
+  { name: 'Ivory Coast', nameZh: '科特迪瓦', nameRu: 'Кот-д\'Ивуар', priority: 2, cert: 'Pre-shipment', reason: 'Francophone West Africa' },
+  { name: 'Senegal', nameZh: '塞内加尔', nameRu: 'Сенегал', priority: 2, cert: 'Pre-shipment', reason: 'Francophone West Africa' },
+];
+
+const steps = [
+  { title: 'Qualification & Certification', titleZh: '资质与认证', titleRu: 'Квалификация и сертификация', desc: 'Verify export qualification and obtain target country certifications (SONCAP, PVOC, etc.)', descZh: '确认出口资质，办理目标国认证（SONCAP/PVOC等）', descRu: 'Проверьте квалификацию экспорта и получите сертификацию', icon: '📋' },
+  { title: 'Vehicle Sourcing & Inspection', titleZh: '车辆采购与检测', titleRu: 'Закупка и проверка', desc: 'Source vehicles from verified suppliers, conduct thorough inspection and battery health check', descZh: '从认证供应商采购，进行全面检测和电池健康检查', descRu: 'Закупка у проверенных поставщиков, полная проверка', icon: '🔍' },
+  { title: 'Shipping & Customs', titleZh: '运输与清关', titleRu: 'Доставка и таможня', desc: 'Arrange RoRo or container shipping, handle export/import customs clearance', descZh: '安排滚装船或集装箱运输，办理进出口清关', descRu: 'Организация доставки и таможенного оформления', icon: '🚢' },
+  { title: 'Delivery & After-Sales', titleZh: '交付与售后', titleRu: 'Доставка и послепродажное обслуживание', desc: 'Local partner delivery, spare parts supply, and after-sales support', descZh: '本地合作伙伴交付、配件供应和售后支持', descRu: 'Доставка местным партнером, запчасти, поддержка', icon: '🤝' },
+];
+
+const paymentMethods = [
+  { method: 'Letter of Credit (L/C)', methodZh: '信用证 (L/C)', methodRu: 'Аккредитив (L/C)', desc: 'Bank guarantee, safest', descZh: '银行兜底，最安全', descRu: 'Банковская гарантия', priority: '✅ First Choice', priorityZh: '✅ 首选', priorityRu: '✅ Первый выбор' },
+  { method: 'T/T (Pre-payment)', methodZh: 'T/T 预付款', methodRu: 'T/T (Предоплата)', desc: '100% before shipment', descZh: '发货前全款，适合老客户', descRu: '100% предоплата', priority: '⚠️ Conditional', priorityZh: '⚠️ 有条件', priorityRu: '⚠️ С условиями' },
+  { method: 'T/T (Post-payment)', methodZh: 'T/T 后付款', methodRu: 'T/T (Постоплата)', desc: 'Payment after delivery', descZh: '后付款，拖欠风险高', descRu: 'Оплата после', priority: '❌ Avoid', priorityZh: '❌ 避免', priorityRu: '❌ Избегать' },
+];
+---
+
+<BaseLayout
+  title={t('usedCars.heroTitle', lang)}
+  description={t('usedCars.heroSubtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.usedCars', lang), path: `/${lang}/used-cars/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.usedCars', lang), path: `/${lang}/used-cars/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('usedCars.heroTitle', lang)}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('usedCars.heroSubtitle', lang)}</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '获取免费报价' : lang === 'ru' ? 'Получить报价' : 'Get Free Quote'}</a>
+        <a href={`/${lang}/cars/`} class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-white hover:text-[var(--color-primary)]">{lang === 'zh' ? '查看新车出口' : lang === 'ru' ? 'Новые автомобили' : 'View New Car Export'}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policy Advantage -->
+  <section class="container-section">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-[var(--color-text)] mb-4">{t('usedCars.policyTitle', lang)}</h2>
+          <p class="text-[var(--color-text-light)] text-lg leading-relaxed mb-6">{t('usedCars.policyText', lang)}</p>
+          <div class="space-y-4">
+            {[
+              { label: lang === 'zh' ? '关税税率' : lang === 'ru' ? 'Тариф' : 'Tariff Rate', before: '20%-70%', after: lang === 'zh' ? '0%（零关税）' : lang === 'ru' ? '0% (нулевой)' : '0% (Zero)' },
+              { label: lang === 'zh' ? '单车利润' : lang === 'ru' ? 'Прибыль' : 'Per-Car Profit', before: '¥3,000', after: '¥8,000+' },
+              { label: lang === 'zh' ? '覆盖国家' : lang === 'ru' ? 'Страны' : 'Countries', before: '—', after: '53' },
+            ].map((item) => (
+              <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+                <span class="font-medium text-[var(--color-text)]">{item.label}</span>
+                <div class="flex items-center gap-4">
+                  <span class="text-red-500 line-through">{item.before}</span>
+                  <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                  <span class="text-green-600 font-bold">{item.after}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+            <div class="text-center p-8">
+              <div class="text-6xl mb-4">🌍</div>
+              <div class="text-3xl font-bold text-[var(--color-primary)]">53</div>
+              <div class="text-lg text-[var(--color-text-light)] mt-2">{lang === 'zh' ? '非洲国家' : lang === 'ru' ? 'стран Африки' : 'African Countries'}</div>
+              <div class="mt-6 p-4 rounded-xl bg-white shadow-lg">
+                <div class="text-sm text-[var(--color-text-light)]">{lang === 'zh' ? '70-80% 交易量是二手车' : lang === 'ru' ? '70-80% сделок — подержанные' : '70-80% of transactions are used cars'}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best-Selling Models -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[var(--color-text)] mb-2">{t('usedCars.modelsTitle', lang)}</h2>
+        <p class="text-[var(--color-text-light)]">{t('usedCars.modelsSubtitle', lang)}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {models.map((model) => (
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border)] hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div class="text-4xl mb-4">{model.icon}</div>
+            <h3 class="text-xl font-bold text-[var(--color-text)] mb-1">{lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}</h3>
+            <div class="text-sm text-muted mb-3">{model.year} · {model.price}</div>
+            <p class="text-[var(--color-text-light)] text-sm">{lang === 'zh' ? model.reasonZh : lang === 'ru' ? model.reasonRu : model.reason}</p>
+            <div class="mt-4 flex items-center gap-2">
+              <span class={`px-2 py-0.5 rounded-full text-xs font-medium ${model.category === 'fuel' ? 'bg-green-100 text-green-700' : model.category === 'truck' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>
+                {model.category === 'fuel' ? (lang === 'zh' ? '燃油刚需' : lang === 'ru' ? 'Топливный' : 'Fuel') : model.category === 'truck' ? (lang === 'zh' ? '皮卡/轻卡' : lang === 'ru' ? 'Пикап' : 'Pickup') : (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Countries -->
+  <section class="container-section">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[var(--color-text)] mb-2">{t('usedCars.countriesTitle', lang)}</h2>
+        <p class="text-[var(--color-text-light)]">{t('usedCars.countriesSubtitle', lang)}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {countries.map((c) => (
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border)]">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-xl font-bold text-[var(--color-text)]">{lang === 'zh' ? c.nameZh : lang === 'ru' ? c.nameRu : c.name}</h3>
+              <span class="text-lg">{'⭐'.repeat(c.priority)}</span>
+            </div>
+            <p class="text-[var(--color-text-light)] text-sm mb-3">{c.reason}</p>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-muted">{lang === 'zh' ? '认证：' : lang === 'ru' ? 'Сертификация: ' : 'Cert: '}</span>
+              <span class="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 font-medium">{c.cert}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Process -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[var(--color-text)] mb-2">{lang === 'zh' ? '📋 出口流程' : lang === 'ru' ? '📋 Процесс экспорта' : '📋 Export Process'}</h2>
+        <p class="text-[var(--color-text-light)]">{lang === 'zh' ? '从资质认证到本地交付的全流程服务' : lang === 'ru' ? 'Полный цикл от сертификации до доставки' : 'Full service from certification to local delivery'}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {steps.map((step, i) => (
+          <div class="relative">
+            <div class="bg-white rounded-xl p-6 border border-[var(--color-border)] text-center">
+              <div class="text-4xl mb-4">{step.icon}</div>
+              <div class="text-sm font-medium text-[var(--color-primary)] mb-1">{lang === 'zh' ? `第${i + 1}步` : lang === 'ru' ? `Шаг ${i + 1}` : `Step ${i + 1}`}</div>
+              <h3 class="text-lg font-bold text-[var(--color-text)] mb-2">{lang === 'zh' ? step.titleZh : lang === 'ru' ? step.titleRu : step.title}</h3>
+              <p class="text-[var(--color-text-light)] text-sm">{lang === 'zh' ? step.descZh : lang === 'ru' ? step.descRu : step.desc}</p>
+            </div>
+            {i < steps.length - 1 && (
+              <div class="hidden lg:block absolute top-1/2 -right-3 text-[var(--color-primary)]">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification & Payment -->
+  <section class="container-section">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="bg-white rounded-xl p-8 border border-[var(--color-border)]">
+          <h3 class="text-2xl font-bold text-[var(--color-text)] mb-4">{lang === 'zh' ? '📜 认证支持' : lang === 'ru' ? '📜 Сертификация' : '📜 Certification'}</h3>
+          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '非洲各国对进口汽车有严格的认证要求。没有认证就发货会导致车辆到港被扣，罚款+仓储费一单亏损十万起步。我们提供全套认证代办服务。' : lang === 'ru' ? 'Африканские страны требуют строгую сертификацию. Без сертификации товар будет задержан в порту.' : 'African countries have strict certification requirements. Shipping without certification results in cargo seizure at port.'}</p>
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50"><tr><th class="px-4 py-2 text-left">{lang === 'zh' ? '国家' : lang === 'ru' ? 'Страна' : 'Country'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '认证' : lang === 'ru' ? 'Сертификация' : 'Certification'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '周期' : lang === 'ru' ? 'Срок' : 'Timeline'}</th></tr></thead>
+            <tbody class="divide-y">
+              <tr><td class="px-4 py-2">Nigeria</td><td class="px-4 py-2">SONCAP</td><td class="px-4 py-2">2-4 weeks</td></tr>
+              <tr><td class="px-4 py-2">Kenya</td><td class="px-4 py-2">PVOC</td><td class="px-4 py-2">2-3 weeks</td></tr>
+              <tr><td class="px-4 py-2">Egypt</td><td class="px-4 py-2">GOEIC</td><td class="px-4 py-2">3-4 weeks</td></tr>
+              <tr><td class="px-4 py-2">South Africa</td><td class="px-4 py-2">SABS</td><td class="px-4 py-2">4-6 weeks</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-white rounded-xl p-8 border border-[var(--color-border)]">
+          <h3 class="text-2xl font-bold text-[var(--color-text)] mb-4">{lang === 'zh' ? '💰 安全收款' : lang === 'ru' ? '💰 Безопасные платежи' : '💰 Secure Payment'}</h3>
+          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '非洲多国货币波动剧烈，外汇紧张。部分国家后付款拖欠三个月至半年是常态。我们建议以下收款方式：' : lang === 'ru' ? 'Валюты африканских стран нестабильны. Мы рекомендуем следующие способы оплаты:' : 'African currencies are volatile. We recommend the following payment methods:'}</p>
+          <div class="space-y-3">
+            {paymentMethods.map((p) => (
+              <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                <div>
+                  <div class="font-medium text-[var(--color-text)]">{lang === 'zh' ? p.methodZh : lang === 'ru' ? p.methodRu : p.method}</div>
+                  <div class="text-sm text-[var(--color-text-light)]">{lang === 'zh' ? p.descZh : lang === 'ru' ? p.descRu : p.desc}</div>
+                </div>
+                <span class="text-sm font-medium">{lang === 'zh' ? p.priorityZh : lang === 'ru' ? p.priorityRu : p.priority}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">{t('usedCars.ctaTitle', lang)}</h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{t('usedCars.ctaText', lang)}</p>
+      <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '立即联系' : lang === 'ru' ? 'Связаться' : 'Contact Us'}</a>
+    </div>
+  </section>
+</BaseLayout>

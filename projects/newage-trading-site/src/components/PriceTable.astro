@@ -1,0 +1,68 @@
+---
+export interface Props {
+  headers: string[];
+  rows: string[][];
+  caption?: string;
+  highlightIndex?: number;
+  lang?: "en" | "ru" | "zh";
+}
+
+const {
+  headers,
+  rows,
+  caption,
+  highlightIndex,
+} = Astro.props;
+---
+
+<div class="overflow-x-auto rounded-xl border border-[var(--color-border)] bg-white">
+  <table class="w-full text-left text-sm">
+    {caption && (
+      <caption class="border-b border-[var(--color-border)] bg-[var(--color-bg)] px-6 py-3 text-left text-sm font-semibold text-[var(--color-text)]">
+        {caption}
+      </caption>
+    )}
+
+    <thead>
+      <tr class="border-b border-[var(--color-border)] bg-[var(--color-bg)]">
+        {headers.map((header, i) => (
+          <th
+            scope="col"
+            class={`px-6 py-4 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-light)] ${
+              i === 0 ? "text-left" : "text-center"
+            }`}
+          >
+            {header}
+          </th>
+        ))}
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-[var(--color-border)]">
+      {rows.map((row, rowIndex) => (
+        <tr
+          class={`transition-colors hover:bg-[var(--color-bg)] ${
+            highlightIndex === rowIndex
+              ? "bg-[var(--color-accent)]/5 ring-2 ring-inset ring-[var(--color-accent)]/30"
+              : ""
+          }`}
+        >
+          {row.map((cell, cellIndex) => (
+            cellIndex === 0 ? (
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-[var(--color-text)]"
+              >
+                {cell}
+              </th>
+            ) : (
+              <td class="px-6 py-4 text-center text-[var(--color-text-light)]">
+                {cell}
+              </td>
+            )
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

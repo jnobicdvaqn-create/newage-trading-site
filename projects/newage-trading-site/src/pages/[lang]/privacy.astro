@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const sections = [
+  { title: t('privacy.section1Title', lang), content: t('privacy.section1Content', lang) },
+  { title: t('privacy.section2Title', lang), content: t('privacy.section2Content', lang) },
+  { title: t('privacy.section3Title', lang), content: t('privacy.section3Content', lang) },
+  { title: t('privacy.section4Title', lang), content: t('privacy.section4Content', lang) },
+  { title: t('privacy.section5Title', lang), content: t('privacy.section5Content', lang) },
+  { title: t('privacy.section6Title', lang), content: t('privacy.section6Content', lang) },
+];
+---
+
+<BaseLayout
+  title={t('nav.privacy', lang)}
+  description={t('privacy.description', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.privacy', lang), path: `/${lang}/privacy/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.privacy', lang), path: `/${lang}/privacy/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl font-bold text-white mb-4">{t('nav.privacy', lang)}</h1>
+      <p class="text-lg text-gray-300">{t('privacy.lastUpdated', lang)}</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="container-section max-w-4xl mx-auto">
+    <div class="prose max-w-none">
+      {sections.map(section => (
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4 text-primary">{section.title}</h2>
+          <p class="text-muted leading-relaxed whitespace-pre-line">{section.content}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 p-6 rounded-xl bg-surface border border-gray-200">
+      <h3 class="text-lg font-semibold mb-3">{t('privacy.contactTitle', lang)}</h3>
+      <p class="text-muted">{t('privacy.contactContent', lang)}</p>
+      <p class="mt-2">
+        <a href="mailto:felipeche01manager@YUNBSAOtrade.onmicrosoft.com" class="text-accent hover:underline">
+          felipeche01manager@YUNBSAOtrade.onmicrosoft.com
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

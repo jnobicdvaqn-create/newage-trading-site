@@ -1,0 +1,240 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTASection from '@components/CTASection.astro';
+import type { Locale } from '@i18n/types';
+import fabrics from '@data/fabrics.json';
+import { tData, tArr, label } from '@lib/i18n-data';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  return langs.flatMap(lang =>
+    fabrics.map(fabric => ({
+      params: { lang, id: fabric.id },
+      props: { fabric, lang },
+    }))
+  );
+}
+
+const { fabric, lang } = Astro.props as { fabric: typeof fabrics[0]; lang: Locale };
+const otherFabrics = fabrics.filter(f => f.id !== fabric.id).slice(0, 6);
+
+const fabricName = tData(fabric, 'name', lang);
+const fabricDesc = tData(fabric, 'description', lang);
+const fabricCat = tData(fabric, 'category', lang);
+const fabricProps = tArr(fabric, 'properties', lang);
+const fabricUseCases = tArr(fabric, 'useCases', lang);
+
+const faqItems = lang === 'zh' ? [
+  { question: `${fabricName} 面料最适合做什么内衣？`, answer: `${fabricName} 适用于${fabricUseCases.join('、')}。${fabricDesc} 主要特性包括：${fabricProps.join('、')}。` },
+  { question: `${fabricName} 内衣 OEM 的起订量是多少？`, answer: `${fabricName} 内衣的最低起订量为 ${fabric.moq}。建议首批订单选择 2-3 个核心款式。` },
+  { question: `${fabricName} 内衣每件多少钱？`, answer: `${fabricName} 内衣 OEM 价格区间为 ${fabric.priceRange}，具体取决于设计复杂度、订单数量和细节工艺。超过 1000 件可享受批量折扣。` },
+  { question: `${fabricName} 面料有哪些认证？`, answer: `${fabricName} 面料具有以下认证：${(fabric.certifications || []).join('、')}。这些认证确保面料符合国际安全和可持续性标准。` },
+  { question: `${fabricName} 内衣的生产周期是多久？`, answer: `${fabricName} 内衣的生产周期约为 ${fabric.leadTime}，包括面料采购、裁剪、缝制、质检和包装。加急订单（15-20 天）可在标准设计基础上加收 10-15% 费用。` },
+] : lang === 'ru' ? [
+  { question: `Для какого белья подходит ткань ${fabricName}?`, answer: `${fabricName} идеально подходит для: ${fabricUseCases.join(', ')}. ${fabricDesc} Основные свойства: ${fabricProps.join(', ')}.` },
+  { question: `Каков MOQ для белья из ${fabricName}?`, answer: `Минимальный заказ для ${fabricName} — ${fabric.moq}. Рекомендуем начать с 2-3 базовых моделей.` },
+  { question: `Сколько стоит белье из ${fabricName}?`, answer: `Цена OEM белья из ${fabricName}: ${fabric.priceRange} за штуку, в зависимости от дизайна и количества. Скидки при заказе от 1000 штук.` },
+  { question: `Какие сертификаты у ткани ${fabricName}?`, answer: `Ткань ${fabricName} имеет сертификаты: ${(fabric.certifications || []).join(', ')}.` },
+  { question: `Какой срок производства белья из ${fabricName}?`, answer: `Срок производства: ${fabric.leadTime}, включая sourcing, раскрой, пошив, контроль качества и упаковку.` },
+] : [
+  { question: `What is ${fabricName} fabric best for in underwear?`, answer: `${fabricName} is ideal for ${fabricUseCases.join(', ')}. ${fabricDesc} Key properties include: ${fabricProps.join(', ')}.` },
+  { question: `What is the MOQ for ${fabricName} underwear OEM?`, answer: `The minimum order quantity for ${fabricName} underwear is ${fabric.moq}. We recommend starting with 2–3 core styles for your first order.` },
+  { question: `How much does ${fabricName} underwear cost per piece?`, answer: `${fabricName} underwear OEM pricing ranges from ${fabric.priceRange} per piece. Volume discounts apply for orders above 1,000 pieces.` },
+  { question: `What certifications does ${fabricName} fabric have?`, answer: `Our ${fabricName} fabrics come with: ${(fabric.certifications || []).join(', ')}. These ensure international safety and sustainability standards.` },
+  { question: `What is the lead time for ${fabricName} underwear production?`, answer: `Production lead time for ${fabricName} underwear is approximately ${fabric.leadTime}. Rush orders (15–20 days) available at 10–15% surcharge.` },
+];
+
+const oemSteps = lang === 'zh' ? [
+  { step: '01', title: '设计沟通', desc: '提供设计稿、尺码表和面料偏好' },
+  { step: '02', title: '打样', desc: `7-10 天完成 ${fabricName} 样品` },
+  { step: '03', title: '确认', desc: '审核样品，确认规格和价格' },
+  { step: '04', title: '大货生产', desc: `批量生产：${fabric.leadTime}` },
+  { step: '05', title: '质检发货', desc: 'AQL 检验、包装、出口运输' },
+] : lang === 'ru' ? [
+  { step: '01', title: 'Дизайн', desc: 'Предоставьте дизайн, размерную таблицу и предпочтения по ткани' },
+  { step: '02', title: 'Образец', desc: `Образцы ${fabricName} за 7-10 дней` },
+  { step: '03', title: 'Подтверждение', desc: 'Проверка образцов, подтверждение спецификаций' },
+  { step: '04', title: 'Производство', desc: `Массовое производство: ${fabric.leadTime}` },
+  { step: '05', title: 'Контроль и доставка', desc: 'Инспекция AQL, упаковка, экспорт' },
+] : [
+  { step: '01', title: 'Design Brief', desc: 'Share your design, size chart, and fabric preferences' },
+  { step: '02', title: 'Sampling', desc: `${fabricName} samples produced in 7–10 days` },
+  { step: '03', title: 'Approval', desc: 'Review samples, confirm specs and pricing' },
+  { step: '04', title: 'Production', desc: `Bulk production: ${fabric.leadTime}` },
+  { step: '05', title: 'QC & Ship', desc: 'AQL inspection, packaging, export shipping' },
+];
+---
+
+<BaseLayout
+  title={`${fabricName} 内衣 OEM — ${fabricCat} 面料定制 | NewAge Trading`}
+  description={`中国 OEM ${fabricName} 内衣。${fabric.priceRange}/件，起订量 ${fabric.moq}。${fabricDesc}`}
+  lang={lang}
+  schema={{
+    "@type": "Product",
+    "name": `${fabricName} Underwear — OEM Manufacturing`,
+    "description": fabricDesc,
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": fabric.priceRange.split('–')[0]?.replace(/[^0-9.]/g, '') || '2',
+      "highPrice": fabric.priceRange.split('–')[1]?.replace(/[^0-9.]/g, '') || '8',
+    }
+  }}
+>
+  <Breadcrumb crumbs={[
+    { name: label('home', lang), path: `/${lang}/` },
+    { name: label('lingerie', lang), path: `/${lang}/lingerie/` },
+    { name: `${fabricName} ${lang === 'zh' ? '面料' : lang === 'ru' ? 'Ткань' : 'Fabric'}`, path: `/${lang}/lingerie/fabric/${fabric.id}/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#c4a35a] to-[#a08030] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-white/20 px-3 py-1 rounded-full text-sm font-bold mb-4">{fabricCat}</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">{fabricName} {lang === 'zh' ? '内衣' : lang === 'ru' ? 'Бельё' : 'Underwear'}</h1>
+          <p class="text-lg text-white/80 mb-6">{fabricDesc}</p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-white/60">{label('priceRange', lang)}</div>
+              <div class="text-xl font-bold">{fabric.priceRange}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-white/60">{label('moq', lang)}</div>
+              <div class="text-lg font-semibold">{fabric.moq}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-white/60">{label('leadTime', lang)}</div>
+              <div class="text-lg font-semibold">{fabric.leadTime}</div>
+            </div>
+          </div>
+          <a href={`/${lang}/contact/`} class="inline-block bg-[#1e3a5f] hover:bg-[#0f2440] text-white font-bold px-8 py-3 rounded-lg transition-colors">{label('requestOEM', lang)}</a>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <div class="text-center">
+            <span class="text-8xl block mb-4">👗</span>
+            <p class="text-white/60 text-sm">{fabricName} — {fabricCat}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('fabricProps', lang)}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {fabricProps.map(prop => (
+          <div class="bg-amber-50 rounded-xl p-5 flex items-center gap-3">
+            <span class="text-[#c4a35a] text-xl">✦</span>
+            <span class="font-medium text-gray-700">{prop}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('applications', lang)}</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {fabricUseCases.map(uc => (
+          <div class="bg-white rounded-xl p-5 flex items-start gap-3 shadow-sm">
+            <span class="text-[#2563eb]">→</span>
+            <span class="text-gray-700">{uc}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OEM Process -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-12 text-center">{label('oemProcess', lang)}</h2>
+      <div class="grid md:grid-cols-5 gap-4">
+        {oemSteps.map(s => (
+          <div class="text-center">
+            <div class="w-12 h-12 bg-[#1e3a5f] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">{s.step}</div>
+            <h3 class="font-bold text-[#1e3a5f] mb-1 text-sm">{s.title}</h3>
+            <p class="text-xs text-gray-600">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('certifications', lang)}</h2>
+      <div class="flex flex-wrap gap-4">
+        {(fabric.certifications || []).map(cert => (
+          <div class="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
+            <span class="text-[#c4a35a] text-xl">🏅</span>
+            <span class="font-semibold text-gray-700">{cert}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare Fabrics -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '对比其他面料' : lang === 'ru' ? 'Сравните другие ткани' : 'Compare Other Fabrics'}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherFabrics.map(f => {
+          const fName = tData(f, 'name', lang);
+          const fCat = tData(f, 'category', lang);
+          const fProps = tArr(f, 'properties', lang);
+          return (
+            <a href={`/${lang}/lingerie/fabric/${f.id}/`} class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow group">
+              <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors">{fName}</h3>
+              <p class="text-sm text-gray-500 mt-1">{fCat}</p>
+              <p class="text-[#c4a35a] font-semibold mt-2 text-sm">{f.priceRange}/pc</p>
+              <div class="flex flex-wrap gap-1 mt-3">
+                {fProps.slice(0, 3).map(p => (
+                  <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">{p}</span>
+                ))}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('faq', lang)}</h2>
+      <div class="space-y-4">
+        {faqItems.map(item => (
+          <details class="bg-white rounded-xl overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:bg-gray-50 transition-colors flex justify-between items-center">
+              {item.question}
+              <span class="text-[#c4a35a] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

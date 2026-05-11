@@ -1,0 +1,124 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import fabrics from '@data/fabrics.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const oemSteps = [
+  { step: '01', title: t('lingerie.oemStep1', lang), desc: t('lingerie.oemStep1Desc', lang) },
+  { step: '02', title: t('lingerie.oemStep2', lang), desc: t('lingerie.oemStep2Desc', lang) },
+  { step: '03', title: t('lingerie.oemStep3', lang), desc: t('lingerie.oemStep3Desc', lang) },
+  { step: '04', title: t('lingerie.oemStep4', lang), desc: t('lingerie.oemStep4Desc', lang) },
+];
+---
+
+<BaseLayout
+  title={t('lingerie.title', lang)}
+  description={t('lingerie.subtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.lingerie', lang), path: `/${lang}/lingerie/` },
+  ]}
+  schema={{
+    "@type": "CollectionPage",
+    "name": "Lingerie OEM Manufacturing - NewAge Trading",
+    "description": t('lingerie.subtitle', lang)
+  }}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.lingerie', lang), path: `/${lang}/lingerie/` },
+  ]} />
+
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('lingerie.title', lang)}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('lingerie.subtitle', lang)}</p>
+    </div>
+  </section>
+
+  <!-- OEM Process -->
+  <section class="container-section">
+    <h2 class="text-3xl font-bold text-center mb-12">{t('lingerie.oemTitle', lang)}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {oemSteps.map(step => (
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-accent">{step.step}</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">{step.title}</h3>
+          <p class="text-sm text-muted">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Fabric Catalog -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-4">{t('lingerie.fabricTitle', lang)}</h2>
+      <p class="text-muted text-center max-w-2xl mx-auto mb-12">
+        {t('lingerie.fabricSubtitle', lang)}
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {fabrics.map(fabric => (
+          <a
+            href={`/${lang}/lingerie/fabric/${fabric.id}/`}
+            class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-accent/30"
+          >
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-lg font-semibold">{lang === 'zh' ? fabric.nameZh : lang === 'ru' ? fabric.nameRu : fabric.name}</h3>
+              <span class="text-xs bg-accent/10 text-accent px-2 py-1 rounded">{lang === 'zh' ? fabric.categoryZh : lang === 'ru' ? fabric.categoryRu : fabric.category}</span>
+            </div>
+            <p class="text-sm text-muted line-clamp-2 mb-3">{lang === 'zh' ? fabric.descriptionZh : lang === 'ru' ? fabric.descriptionRu : fabric.description}</p>
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              {(lang === 'zh' ? fabric.propertiesZh : lang === 'ru' ? fabric.propertiesRu : fabric.properties).slice(0, 3).map(p => (
+                <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{p}</span>
+              ))}
+            </div>
+            <p class="text-sm font-medium text-primary">
+              <span class="text-muted font-normal">MOQ:</span> {fabric.moq}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOQ Info -->
+  <section class="container-section">
+    <div class="max-w-3xl mx-auto bg-primary rounded-xl p-8 text-white text-center">
+      <h2 class="text-2xl font-bold mb-4">{t('lingerie.moqTitle', lang)}</h2>
+      <p class="text-gray-300 mb-6">
+        {t('lingerie.moqText', lang)}
+      </p>
+      <a href={`/${lang}/contact/`} class="btn-primary">{t('lingerie.ctaTitle', lang)}</a>
+    </div>
+  </section>
+
+  <!-- Manufacturer Cities -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">{t('lingerie.mfgTitle', lang)}</h2>
+      <p class="text-muted mb-8">{t('lingerie.mfgSubtitle', lang)}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`/${lang}/lingerie/manufacturer/guangzhou/`} class="btn-outline">{t('lingerie.guangzhou', lang)}</a>
+        <a href={`/${lang}/lingerie/manufacturer/shenzhen/`} class="btn-outline">{t('lingerie.shenzhen', lang)}</a>
+        <a href={`/${lang}/lingerie/manufacturer/shanghai/`} class="btn-outline">{t('lingerie.shanghai', lang)}</a>
+        <a href={`/${lang}/lingerie/manufacturer/hangzhou/`} class="btn-outline">{t('lingerie.hangzhou', lang)}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

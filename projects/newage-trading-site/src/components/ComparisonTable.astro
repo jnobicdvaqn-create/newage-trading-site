@@ -1,0 +1,45 @@
+---
+export interface Column {
+  header: string;
+  key: string;
+}
+
+export interface Row {
+  label: string;
+  values: Record<string, string>;
+}
+
+export interface Props {
+  title: string;
+  columns: Column[];
+  rows: Row[];
+}
+
+const { title, columns, rows } = Astro.props;
+---
+
+<div class="my-8">
+  <h3 class="text-xl font-semibold mb-4">{title}</h3>
+  <div class="overflow-x-auto rounded-xl border border-gray-200">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th class="px-4 py-3 text-left font-medium">Feature</th>
+          {columns.map(col => (
+            <th class="px-4 py-3 text-left font-medium">{col.header}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, i) => (
+          <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+            <td class="px-4 py-3 font-medium text-primary">{row.label}</td>
+            {columns.map(col => (
+              <td class="px-4 py-3 text-muted">{row.values[col.key] || '-'}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>

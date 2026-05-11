@@ -1,0 +1,65 @@
+---
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  items: FaqItem[];
+  title?: string;
+  lang?: "en" | "ru" | "zh";
+}
+
+const { items, title, lang = "en" } = Astro.props;
+const id = `faq-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<!-- Schema.org FAQPage JSON-LD -->
+<script define:vars={{ items }} type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+})}>
+</script>
+
+<section class="py-16">
+  <div class="mx-auto max-w-3xl px-6">
+    {title && (
+      <h2 class="mb-10 text-center text-3xl font-bold font-[var(--font-heading)] text-[var(--color-text)]">
+        {title}
+      </h2>
+    )}
+
+    <div class="space-y-3">
+      {items.map((item, index) => (
+        <details
+          class="group overflow-hidden rounded-xl border border-[var(--color-border)] bg-white transition-all open:border-[var(--color-primary)]/30 open:shadow-md"
+        >
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-sm font-semibold text-[var(--color-text)] transition-colors hover:text-[var(--color-primary)] [&::-webkit-details-marker]:hidden">
+            <span class="pr-4">{item.question}</span>
+            <svg
+              class="h-5 w-5 shrink-0 text-[var(--color-text-light)] transition-transform duration-300 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="border-t border-[var(--color-border)] px-6 py-5">
+            <div class="prose prose-sm max-w-none text-[var(--color-text-light)]">
+              {item.answer}
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

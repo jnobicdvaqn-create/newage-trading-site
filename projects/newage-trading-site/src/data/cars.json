@@ -1,0 +1,1078 @@
+[
+  {
+    "id": "byd-han",
+    "brand": "BYD",
+    "model": "Han",
+    "type": "Sedan",
+    "category": "EV",
+    "price": 32999,
+    "priceRange": "$32,999 – $38,999",
+    "range": "521 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 517 hp",
+    "highlights": [
+      "Blade Battery",
+      "0–100 km/h in 3.9s",
+      "L2 ADAS",
+      "12.8\" Rotating Screen"
+    ],
+    "description": "The BYD Han is a flagship electric sedan featuring revolutionary Blade Battery technology. With a sleek aerodynamic design and luxurious interior, it competes directly with Tesla Model S at a significantly lower price point.",
+    "useCases": [
+      "Executive transport",
+      "Ride-hailing premium fleet",
+      "Personal luxury EV"
+    ],
+    "image": "/images/cars/byd-han.jpg",
+    "nameZh": "比亚迪 汉",
+    "nameRu": "BYD Han",
+    "descriptionZh": "比亚迪汉是旗舰电动轿车，搭载革命性刀片电池。流线型空气动力学设计搭配豪华内饰，性能对标特斯拉 Model S，价格显著更低。",
+    "descriptionRu": "BYD Han — флагманский электрический седан с революционной аккумуляторной технологией Blade Battery. Аэродинамический дизайн и роскошный интерьер.",
+    "typeZh": "轿车",
+    "typeRu": "Седан",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "刀片电池",
+      "0-100km/h 3.9秒",
+      "L2级智能驾驶",
+      "12.8寸旋转屏"
+    ],
+    "useCasesZh": [
+      "商务用车",
+      "高端网约车",
+      "个人豪华电动车"
+    ],
+    "highlightsRu": [
+      "Аккумулятор Blade",
+      "0-100 км/ч за 3.9с",
+      "L2 ADAS",
+      "12.8-дюймовый поворотный экран"
+    ],
+    "useCasesRu": [
+      "Бизнес-поездки",
+      "Премиум такси",
+      "Личный роскошный EV"
+    ],
+    "name": "BYD Han",
+    "engineZh": "纯电动 — 517 马力",
+    "engineRu": "Электро — 517 л.с.",
+    "rangeZh": "521 公里 (NEDC)",
+    "rangeRu": "521 км (NEDC)"
+  },
+  {
+    "id": "byd-atto3",
+    "brand": "BYD",
+    "model": "Atto 3",
+    "type": "SUV",
+    "category": "EV",
+    "price": 26999,
+    "priceRange": "$26,999 – $31,999",
+    "range": "420 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 201 hp",
+    "highlights": [
+      "Blade Battery",
+      "V2L Technology",
+      "Panoramic Sunroof",
+      "5-Star ANCAP"
+    ],
+    "description": "The BYD Atto 3 is a compact electric SUV that has taken global markets by storm. Sporty design, advanced safety features, and competitive pricing make it one of the best value EVs for export.",
+    "useCases": [
+      "Family SUV",
+      "Urban commuting",
+      "Fleet operations"
+    ],
+    "image": "/images/cars/byd-atto3.jpg",
+    "nameZh": "比亚迪 元 PLUS",
+    "nameRu": "BYD Atto 3",
+    "descriptionZh": "比亚迪元 PLUS 是全球热销的紧凑电动 SUV。运动设计、先进安全功能和高性价比，是出口最有价值的电动车之一。",
+    "descriptionRu": "BYD Atto 3 — компактный электрический внедорожник, популярный на мировых рынках.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "刀片电池",
+      "V2L外放电技术",
+      "全景天窗",
+      "ANCAP五星安全"
+    ],
+    "useCasesZh": [
+      "家庭SUV",
+      "城市通勤",
+      "车队运营"
+    ],
+    "highlightsRu": [
+      "Аккумулятор Blade",
+      "Технология V2L",
+      "Панорамная крыша",
+      "5 звёзд ANCAP"
+    ],
+    "useCasesRu": [
+      "Семейный внедорожник",
+      "Городская езда",
+      "Автопарк"
+    ],
+    "name": "BYD Atto 3",
+    "engineZh": "纯电动 — 201 马力",
+    "engineRu": "Электро — 201 л.с.",
+    "rangeZh": "420 公里 (NEDC)",
+    "rangeRu": "420 км (NEDC)"
+  },
+  {
+    "id": "byd-seal",
+    "brand": "BYD",
+    "model": "Seal",
+    "type": "Sedan",
+    "category": "EV",
+    "price": 35999,
+    "priceRange": "$35,999 – $42,999",
+    "range": "570 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 523 hp",
+    "highlights": [
+      "CTB Technology",
+      "0–100 km/h in 3.8s",
+      "iTAC System",
+      "Heat Pump"
+    ],
+    "description": "The BYD Seal is a high-performance electric sedan designed to rival the Tesla Model 3. Features Cell-to-Body technology for improved rigidity and a stunning low-slung silhouette.",
+    "useCases": [
+      "Performance EV",
+      "Long-distance travel",
+      "Executive sedan"
+    ],
+    "image": "/images/cars/byd-seal.jpg",
+    "nameZh": "比亚迪 海豹",
+    "nameRu": "BYD Seal",
+    "descriptionZh": "比亚迪海豹是高性能电动轿车，采用 CTB 电池车身一体化技术，加速迅猛，操控精准，是特斯拉 Model 3 的有力竞争者。",
+    "descriptionRu": "BYD Seal — высокопроизводительный электромобиль с технологией CTB (Cell-to-Body). Отличное ускорение и управляемость.",
+    "typeZh": "轿车",
+    "typeRu": "Седан",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "CTB电池车身一体化",
+      "0-100km/h 3.8秒",
+      "iTAC智能扭矩控制",
+      "热泵空调"
+    ],
+    "useCasesZh": [
+      "性能电动车",
+      "长途旅行",
+      "商务轿车"
+    ],
+    "highlightsRu": [
+      "Технология CTB",
+      "0-100 км/ч за 3.8с",
+      "Система iTAC",
+      "Тепловой насос"
+    ],
+    "useCasesRu": [
+      "Производительный EV",
+      "Дальние поездки",
+      "Бизнес-седан"
+    ],
+    "name": "BYD Seal",
+    "engineZh": "纯电动 — 523 马力",
+    "engineRu": "Электро — 523 л.с.",
+    "rangeZh": "570 公里 (NEDC)",
+    "rangeRu": "570 км (NEDC)"
+  },
+  {
+    "id": "byd-song-plus",
+    "brand": "BYD",
+    "model": "Song Plus",
+    "type": "SUV",
+    "category": "EV",
+    "price": 23999,
+    "priceRange": "$23,999 – $28,999",
+    "range": "505 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 181 hp",
+    "highlights": [
+      "Blade Battery",
+      "Dragon Face Design",
+      "DiLink 4.0",
+      "Wireless Charging"
+    ],
+    "description": "The BYD Song Plus is a mid-size electric SUV balancing affordability with premium features. One of BYD's best-selling models globally.",
+    "useCases": [
+      "Family transport",
+      "Fleet operations",
+      "Ride-hailing"
+    ],
+    "image": "/images/cars/byd-song-plus.jpg",
+    "nameZh": "比亚迪 宋 PLUS",
+    "nameRu": "BYD Song PLUS",
+    "descriptionZh": "比亚迪宋 PLUS 是插电混动 SUV，兼顾电动驾驶和长途旅行无焦虑。宽敞空间、丰富配置，家庭用户首选。",
+    "descriptionRu": "BYD Song PLUS — подключаемый гибридный внедорожник, сочетающий электрическое вождение с длительным пробегом.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "刀片电池",
+      "龙颜设计",
+      "DiLink 4.0智能系统",
+      "无线充电"
+    ],
+    "useCasesZh": [
+      "家庭出行",
+      "车队运营",
+      "网约车"
+    ],
+    "highlightsRu": [
+      "Аккумулятор Blade",
+      "Дизайн Dragon Face",
+      "DiLink 4.0",
+      "Беспроводная зарядка"
+    ],
+    "useCasesRu": [
+      "Семейные поездки",
+      "Автопарк",
+      "Такси"
+    ],
+    "name": "BYD Song Plus",
+    "engineZh": "纯电动 — 181 马力",
+    "engineRu": "Электро — 181 л.с.",
+    "rangeZh": "505 公里 (NEDC)",
+    "rangeRu": "505 км (NEDC)"
+  },
+  {
+    "id": "byd-dolphin",
+    "brand": "BYD",
+    "model": "Dolphin",
+    "type": "Hatchback",
+    "category": "EV",
+    "price": 18999,
+    "priceRange": "$18,999 – $22,999",
+    "range": "405 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 94 hp",
+    "highlights": [
+      "Blade Battery",
+      "e-Platform 3.0",
+      "Ocean Design",
+      "Lowest TCO"
+    ],
+    "description": "The BYD Dolphin is an affordable compact EV hatchback perfect for urban mobility. Surprising interior space and modern technology in a small footprint.",
+    "useCases": [
+      "Urban commuting",
+      "First EV",
+      "Delivery fleets"
+    ],
+    "image": "/images/cars/byd-dolphin.jpg",
+    "nameZh": "比亚迪 海豚",
+    "nameRu": "BYD Dolphin",
+    "descriptionZh": "比亚迪海豚是紧凑型电动掀背车，城市通勤的理想选择。e 平台 3.0 提供高效动力，小巧车身大空间。",
+    "descriptionRu": "BYD Dolphin — компактный электрический хэтчбек, идеальный выбор для городской езды.",
+    "typeZh": "掀背车",
+    "typeRu": "Хэтчбек",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "刀片电池",
+      "e平台3.0",
+      "海洋美学设计",
+      "超低用车成本"
+    ],
+    "useCasesZh": [
+      "城市通勤",
+      "首台电动车",
+      "配送车队"
+    ],
+    "highlightsRu": [
+      "Аккумулятор Blade",
+      "Платформа e-Platform 3.0",
+      "Дизайн Ocean",
+      "Низкая стоимость владения"
+    ],
+    "useCasesRu": [
+      "Городская езда",
+      "Первый EV",
+      "Курьерский автопарк"
+    ],
+    "name": "BYD Dolphin",
+    "engineZh": "纯电动 — 94 马力",
+    "engineRu": "Электро — 94 л.с.",
+    "rangeZh": "405 公里 (NEDC)",
+    "rangeRu": "405 км (NEDC)"
+  },
+  {
+    "id": "byd-qin-plus",
+    "brand": "BYD",
+    "model": "Qin Plus",
+    "type": "Sedan",
+    "category": "PHEV",
+    "price": 16999,
+    "priceRange": "$16,999 – $20,999",
+    "range": "55 km EV / 1200 km combined",
+    "seats": 5,
+    "engine": "Electric + 1.5L DM-i — 177 hp",
+    "highlights": [
+      "DM-i Hybrid",
+      "Best-seller in China",
+      "1200km Range",
+      "Digital Cluster"
+    ],
+    "description": "The BYD Qin Plus DM-i is one of the most affordable plug-in hybrids worldwide. With 1200 km combined range, it's the ultimate cost-effective solution.",
+    "useCases": [
+      "Budget-friendly PHEV",
+      "High-mileage driver",
+      "Fleet operations"
+    ],
+    "image": "/images/cars/byd-qin-plus.jpg",
+    "nameZh": "比亚迪 秦 PLUS",
+    "nameRu": "BYD Qin PLUS",
+    "descriptionZh": "比亚迪秦 PLUS 是经济实惠的插电混动轿车，百公里油耗低至 3.8 升，是出租车和网约车的热门选择。",
+    "descriptionRu": "BYD Qin PLUS — экономичный подключаемый гибридный седан, расход топлива всего 3.8 л/100 км.",
+    "typeZh": "轿车",
+    "typeRu": "Седан",
+    "categoryZh": "插电混动",
+    "categoryRu": "Гибрид",
+    "highlightsZh": [
+      "DM-i超级混动",
+      "中国销量冠军",
+      "综合续航1200km",
+      "全液晶仪表盘"
+    ],
+    "useCasesZh": [
+      "经济型混动",
+      "高频驾驶",
+      "车队运营"
+    ],
+    "highlightsRu": [
+      "Гибрид DM-i",
+      "Бестселлер в Китае",
+      "Запас хода 1200 км",
+      "Цифровая приборная панель"
+    ],
+    "useCasesRu": [
+      "Бюджетный гибрид",
+      "Для дальних поездок",
+      "Автопарк"
+    ],
+    "name": "BYD Qin Plus",
+    "engineZh": "纯电动 — 177 马力",
+    "engineRu": "Электро — 177 л.с.",
+    "rangeZh": "55 公里纯电 / 1200 公里综合",
+    "rangeRu": "55 км электр. / 1200 км комбинир."
+  },
+  {
+    "id": "geely-monjaro",
+    "brand": "Geely",
+    "model": "Monjaro",
+    "type": "SUV",
+    "category": "ICE",
+    "price": 27999,
+    "priceRange": "$27,999 – $33,999",
+    "engine": "2.0T — 235 hp",
+    "seats": 5,
+    "highlights": [
+      "Luxury Interior",
+      "Panoramic Roof",
+      "Bose Sound System",
+      "Level 2 ADAS"
+    ],
+    "description": "The Geely Monjaro is a premium mid-size SUV showcasing Geely's design prowess. A top choice for buyers wanting luxury without the premium brand price tag.",
+    "useCases": [
+      "Family SUV",
+      "Executive transport",
+      "Long-distance touring"
+    ],
+    "image": "/images/cars/geely-monjaro.jpg",
+    "nameZh": "吉利 星越L",
+    "nameRu": "Geely Monjaro",
+    "descriptionZh": "吉利星越 L 是中型 SUV，搭载沃尔沃 Drive-E 发动机，豪华内饰和先进驾驶辅助，国际品质。",
+    "descriptionRu": "Geely Monjaro — внедорожник среднего класса с двигателем Volvo Drive-E, премиальное качество.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "燃油",
+    "categoryRu": "Бензин",
+    "highlightsZh": [
+      "沃尔沃Drive-E发动机",
+      "豪华内饰",
+      "Bose音响系统",
+      "L2级驾驶辅助"
+    ],
+    "useCasesZh": [
+      "家庭SUV",
+      "商务出行",
+      "长途自驾"
+    ],
+    "highlightsRu": [
+      "Двигатель Volvo Drive-E",
+      "Роскошный интерьер",
+      "Аудиосистема Bose",
+      "L2 ADAS"
+    ],
+    "useCasesRu": [
+      "Семейный внедорожник",
+      "Бизнес-поездки",
+      "Дальние путешествия"
+    ],
+    "name": "Geely Monjaro",
+    "engineZh": "2.0T 汽油 — 235 马力",
+    "engineRu": "2.0T Бензин — 235 л.с.",
+    "rangeZh": "不适用（燃油车）",
+    "rangeRu": "Н/Д (ДВС)"
+  },
+  {
+    "id": "geely-starray",
+    "brand": "Geely",
+    "model": "Starray",
+    "type": "SUV",
+    "category": "ICE",
+    "price": 23999,
+    "priceRange": "$23,999 – $28,999",
+    "engine": "2.0T — 215 hp",
+    "seats": 7,
+    "highlights": [
+      "7-Seater",
+      "Large Trunk",
+      "540° Transparent Chassis",
+      "Dual Screens"
+    ],
+    "description": "The Geely Starray is a spacious 7-seater SUV designed for large families and commercial passenger transport.",
+    "useCases": [
+      "Large family",
+      "Shuttle service",
+      "Outdoor adventures"
+    ],
+    "image": "/images/cars/geely-starray.jpg",
+    "nameZh": "吉利 博越L",
+    "nameRu": "Geely Starray",
+    "descriptionZh": "吉利博越 L 是时尚跨界 SUV，智能座舱、全景天窗、丰富科技配置，适合追求性价比的家庭。",
+    "descriptionRu": "Geely Starray — стильный кроссовер с интеллектуальным салоном и панорамной крышей.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "燃油",
+    "categoryRu": "Бензин",
+    "highlightsZh": [
+      "7座大空间",
+      "超大后备箱",
+      "540度透明底盘",
+      "双联大屏"
+    ],
+    "useCasesZh": [
+      "大家庭出行",
+      "接驳服务",
+      "户外探险"
+    ],
+    "highlightsRu": [
+      "7-местный",
+      "Большой багажник",
+      "540° прозрачное шасси",
+      "Двойной экран"
+    ],
+    "useCasesRu": [
+      "Большая семья",
+      "Шаттл-сервис",
+      "Отдых на природе"
+    ],
+    "name": "Geely Starray",
+    "engineZh": "2.0T 汽油 — 215 马力",
+    "engineRu": "2.0T Бензин — 215 л.с.",
+    "rangeZh": "不适用（燃油车）",
+    "rangeRu": "Н/Д (ДВС)"
+  },
+  {
+    "id": "changan-deepal-s7",
+    "brand": "Changan",
+    "model": "Deepal S7",
+    "type": "SUV",
+    "category": "EV",
+    "price": 25999,
+    "priceRange": "$25,999 – $31,999",
+    "range": "520 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 255 hp",
+    "highlights": [
+      "EPA Platform",
+      "Futuristic Design",
+      "AR-HUD",
+      "Zero-gravity Seats"
+    ],
+    "description": "The Changan Deepal S7 is a futuristic electric SUV with coupe-like silhouette and zero-gravity seats for a premium experience.",
+    "useCases": [
+      "Tech-savvy buyers",
+      "Executive transport",
+      "Long-range EV"
+    ],
+    "image": "/images/cars/changan-deepal-s7.jpg",
+    "nameZh": "长安 深蓝 S7",
+    "nameRu": "Changan Deepal S7",
+    "descriptionZh": "长安深蓝 S7 是长安新能源旗舰 SUV，增程/纯电双版本，智能驾驶辅助，科技感十足。",
+    "descriptionRu": "Changan Deepal S7 — флагманский внедорожник нового энергетического подразделения Changan.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "EPA纯电平台",
+      "未来感设计",
+      "AR-HUD抬头显示",
+      "零重力座椅"
+    ],
+    "useCasesZh": [
+      "科技发烧友",
+      "商务出行",
+      "长续航电动车"
+    ],
+    "highlightsRu": [
+      "Платформа EPA",
+      "Футуристический дизайн",
+      "AR-HUD",
+      "Невесомые сиденья"
+    ],
+    "useCasesRu": [
+      "Технологичные покупатели",
+      "Бизнес-поездки",
+      "Дальний EV"
+    ],
+    "name": "Changan Deepal S7",
+    "engineZh": "纯电动 — 255 马力",
+    "engineRu": "Электро — 255 л.с.",
+    "rangeZh": "520 公里 (NEDC)",
+    "rangeRu": "520 км (NEDC)"
+  },
+  {
+    "id": "mg4-ev",
+    "brand": "MG",
+    "model": "MG4 EV",
+    "type": "Hatchback",
+    "category": "EV",
+    "price": 24999,
+    "priceRange": "$24,999 – $29,999",
+    "range": "450 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 201 hp",
+    "highlights": [
+      "RWD",
+      "5-Star Euro NCAP",
+      "XDS Cornering Control",
+      "V2L"
+    ],
+    "description": "The MG4 EV is a rear-wheel-drive electric hatchback with engaging dynamics and 5-star Euro NCAP safety rating.",
+    "useCases": [
+      "Enthusiast driving",
+      "Family hatchback",
+      "European export"
+    ],
+    "image": "/images/cars/mg4-ev.jpg",
+    "nameZh": "名爵 MG4",
+    "nameRu": "MG4 EV",
+    "descriptionZh": "名爵 MG4 是欧洲热销的紧凑电动掀背车，后驱操控乐趣、500km 续航、高性价比，出口主力车型。",
+    "descriptionRu": "MG4 EV — популярный в Европе электрический хэтчбек с задним приводом.",
+    "typeZh": "掀背车",
+    "typeRu": "Хэтчбек",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "后驱操控",
+      "Euro NCAP五星安全",
+      "XDS弯道辅助",
+      "V2L外放电"
+    ],
+    "useCasesZh": [
+      "驾驶爱好者",
+      "家庭掀背车",
+      "欧洲市场出口"
+    ],
+    "highlightsRu": [
+      "Задний привод",
+      "5 звёзд Euro NCAP",
+      "XDS Cornering Control",
+      "V2L"
+    ],
+    "useCasesRu": [
+      "Любители вождения",
+      "Семейный хэтчбек",
+      "Европейский экспорт"
+    ],
+    "name": "MG MG4 EV",
+    "engineZh": "纯电动 — 201 马力",
+    "engineRu": "Электро — 201 л.с.",
+    "rangeZh": "450 公里 (NEDC)",
+    "rangeRu": "450 км (NEDC)"
+  },
+  {
+    "id": "mg5-ev",
+    "brand": "MG",
+    "model": "MG5 EV",
+    "type": "Wagon",
+    "category": "EV",
+    "price": 26999,
+    "priceRange": "$26,999 – $31,999",
+    "range": "400 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 154 hp",
+    "highlights": [
+      "Large Cargo Space",
+      "Wagon Body Style",
+      "Fast Charging"
+    ],
+    "description": "One of the few electric station wagons on the market, offering exceptional cargo space and practicality.",
+    "useCases": [
+      "Family wagon",
+      "Cargo transport",
+      "Business fleet"
+    ],
+    "image": "/images/cars/mg5-ev.jpg",
+    "nameZh": "名爵 MG5",
+    "nameRu": "MG5 EV",
+    "descriptionZh": "名爵 MG5 是电动紧凑型轿车，流畅造型、宽敞空间、经济实惠，适合家庭日常使用。",
+    "descriptionRu": "MG5 EV — электрический седан с элегантным дизайном и вместительным салоном.",
+    "typeZh": "Wagon",
+    "typeRu": "Wagon",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "超大装载空间",
+      "旅行车造型",
+      "快速充电"
+    ],
+    "useCasesZh": [
+      "家庭旅行车",
+      "载货运输",
+      "商务车队"
+    ],
+    "highlightsRu": [
+      "Большой объём багажника",
+      "Куниверсал",
+      "Быстрая зарядка"
+    ],
+    "useCasesRu": [
+      "Семейный универсал",
+      "Перевозка грузов",
+      "Бизнес-автопарк"
+    ],
+    "name": "MG MG5 EV",
+    "engineZh": "纯电动 — 154 马力",
+    "engineRu": "Электро — 154 л.с.",
+    "rangeZh": "400 公里 (NEDC)",
+    "rangeRu": "400 км (NEDC)"
+  },
+  {
+    "id": "nio-et5",
+    "brand": "NIO",
+    "model": "ET5",
+    "type": "Sedan",
+    "category": "EV",
+    "price": 45999,
+    "priceRange": "$45,999 – $52,999",
+    "range": "550 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 483 hp",
+    "highlights": [
+      "Battery Swap",
+      "NOMI Assistant",
+      "Premium Interior",
+      "AR Glasses Compatible"
+    ],
+    "description": "The NIO ET5 is a premium electric sedan with innovative battery swap technology eliminating range anxiety.",
+    "useCases": [
+      "Premium executive",
+      "Tech enthusiast",
+      "Long-distance travel"
+    ],
+    "image": "/images/cars/nio-et5.jpg",
+    "nameZh": "蔚来 ET5",
+    "nameRu": "NIO ET5",
+    "descriptionZh": "蔚来 ET5 是高端电动轿跑，换电技术、NOMI 智能助手、双电机四驱，对标宝马 3 系。",
+    "descriptionRu": "NIO ET5 — премиальный электрический купе с технологией замены батарей.",
+    "typeZh": "轿车",
+    "typeRu": "Седан",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "换电技术",
+      "NOMI人工智能助手",
+      "豪华内饰",
+      "AR眼镜兼容"
+    ],
+    "useCasesZh": [
+      "高端商务",
+      "科技爱好者",
+      "长途出行"
+    ],
+    "highlightsRu": [
+      "Замена батареи",
+      "Ассистент NOMI",
+      "Премиальный интерьер",
+      "Совместимость с AR-очками"
+    ],
+    "useCasesRu": [
+      "Премиум бизнес",
+      "Технологичные энтузиасты",
+      "Дальние поездки"
+    ],
+    "name": "NIO ET5",
+    "engineZh": "纯电动 — 483 马力",
+    "engineRu": "Электро — 483 л.с.",
+    "rangeZh": "550 公里 (NEDC)",
+    "rangeRu": "550 км (NEDC)"
+  },
+  {
+    "id": "xpeng-p7",
+    "brand": "XPeng",
+    "model": "P7",
+    "type": "Sedan",
+    "category": "EV",
+    "price": 39999,
+    "priceRange": "$39,999 – $46,999",
+    "range": "562 km (NEDC)",
+    "seats": 5,
+    "engine": "Electric — 429 hp",
+    "highlights": [
+      "XPILOT 3.0",
+      "NGP Navigation",
+      "Sports Chassis",
+      "Xmart OS"
+    ],
+    "description": "The XPeng P7 features XPILOT 3.0 advanced driving assistance and a coupe-like design with impressive range.",
+    "useCases": [
+      "Tech-forward buyers",
+      "Premium EV",
+      "Autonomous driving enthusiast"
+    ],
+    "image": "/images/cars/xpeng-p7.jpg",
+    "nameZh": "小鹏 P7",
+    "nameRu": "XPeng P7",
+    "descriptionZh": "小鹏 P7 是智能电动轿跑，XNGP 智能辅助驾驶、800V 快充、丹拿音响，科技爱好者的首选。",
+    "descriptionRu": "XPeng P7 — интеллектуальный электрический купе с системой XNGP.",
+    "typeZh": "轿车",
+    "typeRu": "Седан",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "XPILOT 3.0智驾",
+      "NGP自动导航",
+      "运动底盘",
+      "Xmart OS智能系统"
+    ],
+    "useCasesZh": [
+      "科技先锋用户",
+      "高端电动车",
+      "自动驾驶爱好者"
+    ],
+    "highlightsRu": [
+      "XPILOT 3.0",
+      "NGP навигация",
+      "Спортивная подвеска",
+      "Xmart OS"
+    ],
+    "useCasesRu": [
+      "Продвинутые покупатели",
+      "Премиум EV",
+      "Любители автономного вождения"
+    ],
+    "name": "XPeng P7",
+    "engineZh": "纯电动 — 429 马力",
+    "engineRu": "Электро — 429 л.с.",
+    "rangeZh": "562 公里 (NEDC)",
+    "rangeRu": "562 км (NEDC)"
+  },
+  {
+    "id": "li-auto-l9",
+    "brand": "Li Auto",
+    "model": "L9",
+    "type": "SUV",
+    "category": "EREV",
+    "price": 49999,
+    "priceRange": "$49,999 – $55,999",
+    "range": "215 km EV / 1200 km combined",
+    "seats": 6,
+    "engine": "Electric + 1.5T Range Extender — 449 hp",
+    "highlights": [
+      "EREV",
+      "6-Seat Layout",
+      "Rear Fridge",
+      "3 Screens",
+      "Air Suspension"
+    ],
+    "description": "The Li Auto L9 flagship family SUV with six seats, built-in refrigerator, and three 15.7-inch screens. The ultimate family vehicle.",
+    "useCases": [
+      "Large family",
+      "Premium shuttle",
+      "Cross-country touring"
+    ],
+    "image": "/images/cars/li-auto-l9.jpg",
+    "nameZh": "理想 L9",
+    "nameRu": "Li Auto L9",
+    "descriptionZh": "理想 L9 是全尺寸增程 SUV，六座豪华空间、冰箱彩电大沙发、城市 NOA，是中国高端新能源代表。",
+    "descriptionRu": "Li Auto L9 — полноразмерный гибридный внедорожник, шесть роскошных сидений.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "EREV",
+    "categoryRu": "EREV",
+    "highlightsZh": [
+      "增程式动力",
+      "6座布局",
+      "车载冰箱",
+      "三联大屏",
+      "空气悬架"
+    ],
+    "useCasesZh": [
+      "大家庭",
+      "高端接驳",
+      "长途自驾旅行"
+    ],
+    "highlightsRu": [
+      "EREV",
+      "6 мест",
+      "Бортовой холодильник",
+      "3 экрана",
+      "Пневмоподвеска"
+    ],
+    "useCasesRu": [
+      "Большая семья",
+      "Премиум шаттл",
+      "Межгородские поездки"
+    ],
+    "name": "Li Auto L9",
+    "engineZh": "纯电动 — 449 马力",
+    "engineRu": "Электро — 449 л.с.",
+    "rangeZh": "215 公里纯电 / 1200 公里综合",
+    "rangeRu": "215 км электр. / 1200 км комбинир."
+  },
+  {
+    "id": "greatwall-p300",
+    "brand": "Great Wall (POER)",
+    "model": "P300",
+    "type": "Pickup",
+    "category": "ICE",
+    "price": 22999,
+    "priceRange": "$22,999 – $28,999",
+    "engine": "2.0T Diesel — 161 hp",
+    "seats": 5,
+    "highlights": [
+      "1-Ton Payload",
+      "Diff Lock",
+      "All-Terrain Tires",
+      "Towing Package"
+    ],
+    "description": "The Great Wall POER P300 is a rugged pickup built for work and adventure with 1-ton payload and off-road capabilities.",
+    "useCases": [
+      "Construction work",
+      "Off-road adventures",
+      "Agricultural use"
+    ],
+    "image": "/images/cars/greatwall-p300.jpg",
+    "nameZh": "长城 坦克 300",
+    "nameRu": "GWM Tank 300",
+    "descriptionZh": "长城坦克 300 是硬派越野 SUV，非承载式车身、三把差速锁、2.0T+8AT，越野爱好者的梦想。",
+    "descriptionRu": "GWM Tank 300 — рамный внедорожник с тремя блокировками дифференциала.",
+    "typeZh": "Pickup",
+    "typeRu": "Pickup",
+    "categoryZh": "燃油",
+    "categoryRu": "Бензин",
+    "highlightsZh": [
+      "1吨载重能力",
+      "差速锁",
+      "全地形轮胎",
+      "拖车套件"
+    ],
+    "useCasesZh": [
+      "工程用车",
+      "越野探险",
+      "农业用途"
+    ],
+    "highlightsRu": [
+      "Грузоподъёмность 1 тонна",
+      "Блокировка дифференциала",
+      "Внедорожные шины",
+      "Пакет для буксировки"
+    ],
+    "useCasesRu": [
+      "Строительные работы",
+      "Внедорожные приключения",
+      "Сельское хозяйство"
+    ],
+    "name": "Great Wall (POER) P300",
+    "engineZh": "2.0T 柴油 — 161 马力",
+    "engineRu": "2.0T Дизель — 161 л.с.",
+    "rangeZh": "不适用（燃油车）",
+    "rangeRu": "Н/Д (ДВС)"
+  },
+  {
+    "id": "chery-omoda-5",
+    "brand": "Chery",
+    "model": "Omoda 5",
+    "type": "SUV",
+    "category": "ICE",
+    "price": 19999,
+    "priceRange": "$19,999 – $24,999",
+    "engine": "1.6T GDI — 194 hp",
+    "seats": 5,
+    "highlights": [
+      "1.6T GDI Engine",
+      "Lion 5.0 AI Cockpit",
+      "540° Chassis",
+      "Sporty Design"
+    ],
+    "description": "The Chery Omoda 5 is a sporty compact SUV with a tech-forward cockpit and energetic performance.",
+    "useCases": [
+      "Young professionals",
+      "Urban SUV",
+      "Personal use"
+    ],
+    "image": "/images/cars/chery-omoda-5.jpg",
+    "nameZh": "Chery Omoda 5",
+    "nameRu": "Chery Omoda 5",
+    "descriptionZh": "奇瑞欧萌达5是一款运动型紧凑型SUV，具有前瞻性的科技设计，专为全球买家打造。其大胆的跨界造型、智能互联功能和全面的安全系统，是寻求高性价比都市SUV的消费者的理想选择。",
+    "descriptionRu": "Chery Omoda 5 — спорный компактный кроссовер с передовыми технологиями для мировых покупателей. Смелый дизайн, интеллектуальные функции безопасности делают его идеальным выбором для городских жителей.",
+    "typeZh": "SUV",
+    "typeRu": "Кроссовер",
+    "categoryZh": "燃油",
+    "categoryRu": "Бензин",
+    "highlightsZh": [
+      "1.6T GDI发动机",
+      "Lion 5.0 AI座舱",
+      "540度透明底盘",
+      "运动外观设计"
+    ],
+    "useCasesZh": [
+      "年轻白领",
+      "城市SUV",
+      "个人代步"
+    ],
+    "highlightsRu": [
+      "Двигатель 1.6T GDI",
+      "AI-кабина Lion 5.0",
+      "540° прозрачное шасси",
+      "Спортивный дизайн"
+    ],
+    "useCasesRu": [
+      "Молодые профессионалы",
+      "Городской внедорожник",
+      "Личное использование"
+    ],
+    "name": "Chery Omoda 5",
+    "engineZh": "1.6T 汽油 — 194 马力",
+    "engineRu": "1.6T Бензин — 194 л.с.",
+    "rangeZh": "不适用（燃油车）",
+    "rangeRu": "Н/Д (ДВС)"
+  },
+  {
+    "id": "greatwall-ora-funkycat",
+    "brand": "Great Wall (ORA)",
+    "model": "Funky Cat",
+    "type": "Hatchback",
+    "category": "EV",
+    "price": 20999,
+    "priceRange": "$20,999 – $24,999",
+    "range": "400 km (NEDC)",
+    "seats": 4,
+    "engine": "Electric — 143 hp",
+    "highlights": [
+      "Retro Design",
+      "V2L",
+      "L2 ADAS",
+      "iPhone-style HMI"
+    ],
+    "description": "The ORA Funky Cat combines retro charm with modern EV technology. Its unique vintage-inspired design makes it stand out.",
+    "useCases": [
+      "City driving",
+      "Style-conscious buyers",
+      "Second car"
+    ],
+    "image": "/images/cars/greatwall-ora-funkycat.jpg",
+    "nameZh": "Great Wall (ORA) Funky Cat",
+    "nameRu": "Great Wall (ORA) Funky Cat",
+    "descriptionZh": "欧拉好猫融合了复古魅力与现代电动技术。其标志性的圆润造型、宽敞的内饰和先进的ADAS功能，使其在都市电动车市场脱颖而出，尤其受年轻消费者青睐。",
+    "descriptionRu": "ORA Funky Cat сочетает ретро-стиль с современными электротехнологиями. Характерный округлый дизайн, просторный салон и передовые системы помощи водителю делают его standout на рынке городских электромобилей.",
+    "typeZh": "掀背车",
+    "typeRu": "Хэтчбек",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "复古造型设计",
+      "V2L外放电",
+      "L2级智能驾驶",
+      "iPhone风格交互界面"
+    ],
+    "useCasesZh": [
+      "城市驾驶",
+      "时尚用户",
+      "家庭第二辆车"
+    ],
+    "highlightsRu": [
+      "Ретро-дизайн",
+      "Технология V2L",
+      "L2 ADAS",
+      "Интерфейс в стиле iPhone"
+    ],
+    "useCasesRu": [
+      "Городская езда",
+      "Для стильных покупателей",
+      "Второй автомобиль"
+    ],
+    "name": "Great Wall (ORA) Funky Cat",
+    "engineZh": "纯电动 — 143 马力",
+    "engineRu": "Электро — 143 л.с.",
+    "rangeZh": "400 公里 (NEDC)",
+    "rangeRu": "400 км (NEDC)"
+  },
+  {
+    "id": "byd-seagull",
+    "brand": "BYD",
+    "model": "Seagull",
+    "type": "Hatchback",
+    "category": "EV",
+    "price": 9999,
+    "priceRange": "$9,999 – $12,999",
+    "range": "305 km (NEDC)",
+    "seats": 4,
+    "engine": "Electric — 74 hp",
+    "highlights": [
+      "Blade Battery",
+      "Lowest Price EV",
+      "8-in-1 Powertrain",
+      "Smart Screen"
+    ],
+    "description": "The BYD Seagull is the world's most affordable EV with Blade Battery safety. Perfect for urban mobility in emerging markets.",
+    "useCases": [
+      "Urban commuting",
+      "Entry-level EV",
+      "Car-sharing fleets"
+    ],
+    "image": "/images/cars/byd-seagull.jpg",
+    "nameZh": "BYD Seagull",
+    "nameRu": "BYD Seagull",
+    "descriptionZh": "比亚迪海鸥是全球最实惠的电动车之一，搭载刀片电池技术，提供令人印象深刻的续航和安全性。其紧凑的尺寸、宽敞的内部空间和实惠的价格，使其成为都市通勤的理想入门级电动车。",
+    "descriptionRu": "BYD Seagull — один из самых доступных электромобилей в мире с технологией Blade Battery. Компактные размеры, просторный салон и доступная цена делают его идеальным электромобилем для городских поездок.",
+    "typeZh": "掀背车",
+    "typeRu": "Хэтчбек",
+    "categoryZh": "纯电动",
+    "categoryRu": "Электромобиль",
+    "highlightsZh": [
+      "刀片电池",
+      "最便宜EV",
+      "8合1电驱系统",
+      "智能中控屏"
+    ],
+    "useCasesZh": [
+      "城市通勤",
+      "入门级电动车",
+      "共享车队"
+    ],
+    "highlightsRu": [
+      "Аккумулятор Blade",
+      "Самый доступный EV",
+      "Электромотор 8-в-1",
+      "Умный экран"
+    ],
+    "useCasesRu": [
+      "Городская езда",
+      "Начальный EV",
+      "Каршеринг"
+    ],
+    "name": "BYD Seagull",
+    "engineZh": "纯电动 — 74 马力",
+    "engineRu": "Электро — 74 л.с.",
+    "rangeZh": "305 公里 (NEDC)",
+    "rangeRu": "305 км (NEDC)"
+  }
+]

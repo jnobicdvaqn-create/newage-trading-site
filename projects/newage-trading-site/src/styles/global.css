@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a1628;
+  --color-primary-light: #1a365d;
+  --color-primary-dark: #060e1c;
+  --color-accent: #c9a84c;
+  --color-accent-light: #e2c767;
+  --color-accent-dark: #a8882e;
+  --color-surface: #f8fafc;
+  --color-surface-dark: #e2e8f0;
+  --color-muted: #64748b;
+  --color-border: #e5e7eb;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-primary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-primary-dark font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-primary-dark transition-colors duration-200;
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-primary;
+  }
+  .section-subtitle {
+    @apply text-lg text-muted max-w-2xl mx-auto;
+  }
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+}

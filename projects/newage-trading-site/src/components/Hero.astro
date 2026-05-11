@@ -1,0 +1,141 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  lang?: "en" | "ru" | "zh";
+  size?: "full" | "compact";
+}
+
+const {
+  title,
+  subtitle,
+  ctaText,
+  ctaLink = "#",
+  size = "full",
+} = Astro.props;
+
+const heightClass = size === "compact" ? "min-h-[40vh]" : "min-h-[85vh]";
+---
+
+<section class={`relative flex items-center overflow-hidden ${heightClass}`}>
+  <!-- ===== 背景层 ===== -->
+  <div class="absolute inset-0 bg-[#0a1628]" />
+
+  <!-- 动态渐变光晕 -->
+  <div class="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-br from-[#1e3a5f]/40 via-[#2563eb]/20 to-transparent rounded-full blur-3xl animate-pulse" style="animation-duration: 8s;" />
+  <div class="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-gradient-to-tr from-[#c4a35a]/15 via-[#1e3a5f]/20 to-transparent rounded-full blur-3xl animate-pulse" style="animation-duration: 12s; animation-delay: 2s;" />
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[400px] bg-gradient-to-r from-[#2563eb]/10 via-[#1e3a5f]/5 to-[#c4a35a]/10 rounded-full blur-2xl" />
+
+  <!-- 网格纹理 -->
+  <div class="absolute inset-0 opacity-[0.03]"
+    style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"
+  />
+
+  <!-- 装饰线条 -->
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c4a35a]/30 to-transparent" />
+  <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#1e3a5f]/30 to-transparent" />
+
+  <!-- 浮动装饰元素 -->
+  <div class="absolute top-20 right-16 w-3 h-3 bg-[#c4a35a] rounded-full opacity-40 animate-bounce" style="animation-duration: 3s;" />
+  <div class="absolute top-40 right-40 w-2 h-2 bg-[#2563eb] rounded-full opacity-30 animate-bounce" style="animation-duration: 4s; animation-delay: 1s;" />
+  <div class="absolute bottom-32 left-20 w-4 h-4 border border-[#c4a35a]/20 rotate-45 animate-spin" style="animation-duration: 20s;" />
+  <div class="absolute top-1/3 left-10 w-2 h-2 bg-white/20 rounded-full animate-ping" style="animation-duration: 3s;" />
+
+  <!-- ===== 内容层 ===== -->
+  <div class="relative z-10 mx-auto max-w-7xl px-6 py-24 w-full">
+    <div class="max-w-4xl">
+      <!-- 顶部标签 -->
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+        <span class="text-sm text-gray-300">
+          {Astro.props.lang === 'zh' ? '中国制造业直供全球' :
+           Astro.props.lang === 'ru' ? 'Прямые поставки из Китая' :
+           'Direct from Chinese Manufacturers'}
+        </span>
+      </div>
+
+      <!-- 金色竖线 + 主标题 -->
+      <div class="flex items-start gap-6 mb-6">
+        <div class="flex-shrink-0 w-1 h-20 bg-gradient-to-b from-[#c4a35a] to-[#c4a35a]/20 rounded-full" />
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+            {title ? (
+              title.split(' | ').map((part, i) => (
+                <>
+                  {i > 0 && <br />}
+                  <span class={i === 0 ? '' : 'text-[#c4a35a]'}>{part}</span>
+                </>
+              ))
+            ) : (
+              <>
+                Premium Products<br />
+                <span class="text-[#c4a35a]">Direct from China</span>
+              </>
+            )}
+          </h1>
+        </div>
+      </div>
+
+      <!-- 副标题 -->
+      {subtitle && (
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed ml-7">
+          {subtitle}
+        </p>
+      )}
+
+      <!-- CTA 按钮 -->
+      {ctaText && (
+        <div class="flex flex-wrap gap-4 ml-7 mb-12">
+          <a
+            href={ctaLink}
+            class="group inline-flex items-center gap-3 bg-gradient-to-r from-[#c4a35a] to-[#d4b36a] text-[#0a1628] font-bold px-8 py-4 rounded-xl text-base transition-all hover:shadow-lg hover:shadow-[#c4a35a]/30 hover:-translate-y-0.5"
+          >
+            {ctaText}
+            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href={`/${Astro.props.lang || "en"}/contact/`}
+            class="inline-flex items-center gap-3 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl text-base transition-all hover:border-[#c4a35a]/50 hover:bg-white/5 hover:-translate-y-0.5"
+          >
+            <svg class="h-5 w-5 text-[#2563eb]" fill="currentColor" viewBox="0 0 24 24"><path d="M.707 8.495c.047.468.374.876.82.965l19.865 3.973c.813.163 1.513-.544 1.215-1.314l-7.47-19.17a1.154 1.154 0 00-2.157 0L5.51 21.144c-.298.77.386 1.487 1.2 1.324l5.617-1.124-3.27-2.78L.707 8.495z"/></svg>
+            {Astro.props.lang === "ru" ? "Написать в Telegram" : Astro.props.lang === "zh" ? "Telegram 联系" : "Message on Telegram"}
+          </a>
+        </div>
+      )}
+
+      <!-- 业务线标签 -->
+      <div class="flex flex-wrap gap-3 ml-7">
+        <a href={`/${Astro.props.lang || "en"}/cars/`} class="inline-flex items-center gap-2 bg-white/5 border border-white/10 hover:border-[#c4a35a]/40 rounded-lg px-4 py-2 text-sm text-gray-300 hover:text-white transition-all hover:-translate-y-0.5">
+          <span class="text-lg">🚗</span>
+          <span>{Astro.props.lang === 'zh' ? '汽车出口' : Astro.props.lang === 'ru' ? 'Автоэкспорт' : 'Car Export'}</span>
+          <span class="text-[#c4a35a] text-xs">→</span>
+        </a>
+        <a href={`/${Astro.props.lang || "en"}/lingerie/`} class="inline-flex items-center gap-2 bg-white/5 border border-white/10 hover:border-[#c4a35a]/40 rounded-lg px-4 py-2 text-sm text-gray-300 hover:text-white transition-all hover:-translate-y-0.5">
+          <span class="text-lg">👗</span>
+          <span>{Astro.props.lang === 'zh' ? '内衣OEM' : Astro.props.lang === 'ru' ? 'OEM белья' : 'Lingerie OEM'}</span>
+          <span class="text-[#c4a35a] text-xs">→</span>
+        </a>
+        <a href={`/${Astro.props.lang || "en"}/security/`} class="inline-flex items-center gap-2 bg-white/5 border border-white/10 hover:border-[#c4a35a]/40 rounded-lg px-4 py-2 text-sm text-gray-300 hover:text-white transition-all hover:-translate-y-0.5">
+          <span class="text-lg">🔒</span>
+          <span>{Astro.props.lang === 'zh' ? '安防设备' : Astro.props.lang === 'ru' ? 'Охранное оборуд.' : 'Security Equip.'}</span>
+          <span class="text-[#c4a35a] text-xs">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 底部渐变 ===== -->
+  <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0f1a2e] to-transparent" />
+
+  <!-- 底部滚动提示 -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce" style="animation-duration: 2s;">
+    <span class="text-xs text-gray-500">{Astro.props.lang === 'zh' ? '向下滚动' : Astro.props.lang === 'ru' ? 'Прокрутите вниз' : 'Scroll'}</span>
+    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>

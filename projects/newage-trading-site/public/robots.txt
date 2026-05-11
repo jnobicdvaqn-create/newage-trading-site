@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://newage-trading.com/sitemap-index.xml
+
+# Block admin and internal paths
+Disallow: /wp-admin/
+Disallow: /api/

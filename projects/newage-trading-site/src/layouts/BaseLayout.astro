@@ -1,0 +1,112 @@
+---
+import '@styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import type { Locale } from '../i18n/types';
+import { t, alternates } from '../i18n/index';
+
+export interface Props {
+  title: string;
+  description: string;
+  lang: Locale;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  schema?: object;
+  breadcrumbs?: Array<{ name: string; path: string }>;
+  noCTA?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang,
+  canonical,
+  image,
+  type = 'website',
+  schema,
+  breadcrumbs,
+  noCTA,
+} = Astro.props;
+const siteUrl = 'https://newage-trading.com';
+const currentPath = Astro.url.pathname;
+// Fix trailing slash / double slash
+const cleanPath = currentPath.replace(/\/$/, '').replace(/\/\//g, '/');
+const fullUrl = canonical || `${siteUrl}${cleanPath}`;
+const ogImage = image || `${siteUrl}/images/og-default.jpg`;
+const altLinks = alternates(
+  lang,
+  currentPath === `/${lang}/` ? '/' : currentPath.replace(`/${lang}`, '')
+);
+
+const langOg: Record<string, string> = {
+  en: 'en_US',
+  ru: 'ru_RU',
+  zh: 'zh_CN',
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | NewAge Trading</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={fullUrl} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={`${title} | NewAge Trading`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={fullUrl} />
+  <meta property="og:type" content={type} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content={langOg[lang] || 'en_US'} />
+  <meta property="og:site_name" content="NewAge Trading" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | NewAge Trading`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- hreflang -->
+  {altLinks.map(alt => (
+    <link rel="alternate" hreflang={alt.lang} href={`${siteUrl}${alt.href}`} />
+  ))}
+  <link rel="alternate" hreflang="x-default" href={`${siteUrl}/${altLinks[0]?.href || ''}`} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org BreadcrumbList -->
+  {breadcrumbs && breadcrumbs.length > 0 && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((crumb, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": crumb.name,
+        "item": `${siteUrl}${crumb.path}`
+      }))
+    })} />
+  )}
+
+  <!-- Custom Schema -->
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", ...schema })} />
+  )}
+</head>
+<body class="bg-white text-primary antialiased">
+  <Header lang={lang} currentPath={currentPath} />
+  <main>
+    <slot />
+  </main>
+  {!noCTA && <CTA lang={lang} />}
+  <Footer lang={lang} />
+</body>
+</html>

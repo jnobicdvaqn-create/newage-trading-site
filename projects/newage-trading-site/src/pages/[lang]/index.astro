@@ -1,0 +1,134 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ServiceCard from '@components/ServiceCard.astro';
+import TrustBadges from '@components/TrustBadges.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const trustItems = [
+  { title: t('home.trustQuality', lang), description: t('home.trustQualityDesc', lang), icon: 'quality' as const },
+  { title: t('home.trustLogistics', lang), description: t('home.trustLogisticsDesc', lang), icon: 'logistics' as const },
+  { title: t('home.trustSupport', lang), description: t('home.trustSupportDesc', lang), icon: 'support' as const },
+  { title: t('home.trustQuality', lang), description: 'ISO 9001, CE, FCC certified partners', icon: 'certified' as const },
+];
+
+const services = [
+  {
+    icon: 'car' as const,
+    title: t('home.carsTitle', lang),
+    description: t('home.carsDesc', lang),
+    href: `/${lang}/cars/`,
+  },
+  {
+    icon: 'used-car' as const,
+    title: t('home.usedCarsTitle', lang),
+    description: t('home.usedCarsDesc', lang),
+    href: `/${lang}/used-cars/`,
+  },
+  {
+    icon: 'lingerie' as const,
+    title: t('home.lingerieTitle', lang),
+    description: t('home.lingerieDesc', lang),
+    href: `/${lang}/lingerie/`,
+  },
+  {
+    icon: 'security' as const,
+    title: t('home.securityTitle', lang),
+    description: t('home.securityDesc', lang),
+    href: `/${lang}/security/`,
+  },
+];
+---
+
+<BaseLayout
+  title={t('site.title', lang)}
+  description={t('site.description', lang)}
+  lang={lang}
+  schema={{
+    "@type": "Organization",
+    "name": "NewAge Trading",
+    "url": "https://newage-trading.com",
+    "logo": "https://newage-trading.com/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+86-170-7278-3745",
+      "contactType": "sales",
+      "availableLanguage": ["English", "Russian", "Chinese"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beijing",
+      "addressCountry": "China"
+    }
+  }}
+>
+  <!-- Hero -->
+  <Hero
+    title={t('home.heroTitle', lang)}
+    subtitle={t('home.heroSubtitle', lang)}
+    ctaText={t('home.heroCTA', lang)}
+    ctaLink={`/${lang}/contact/`}
+    lang={lang}
+  />
+
+  <!-- Services Section -->
+  <section class="container-section">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">{t('home.servicesTitle', lang)}</h2>
+      <p class="section-subtitle">{t('home.servicesSubtitle', lang)}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map(service => (
+        <ServiceCard
+          icon={service.icon}
+          title={service.title}
+          description={service.description}
+          href={service.href}
+          ctaText={t('common.learnMore', lang)}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">500+</div>
+          <div class="text-gray-400 text-sm">{t('about.clients', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">30+</div>
+          <div class="text-gray-400 text-sm">{t('about.countries', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">8+</div>
+          <div class="text-gray-400 text-sm">{t('about.years', lang)}</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-accent mb-2">50K+</div>
+          <div class="text-gray-400 text-sm">{t('about.products', lang)}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <TrustBadges
+    title={t('home.trustTitle', lang)}
+    subtitle={t('home.trustDesc', lang)}
+    items={trustItems}
+  />
+</BaseLayout>

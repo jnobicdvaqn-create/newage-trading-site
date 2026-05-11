@@ -1,0 +1,248 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTASection from '@components/CTASection.astro';
+import type { Locale } from '@i18n/types';
+import products from '@data/security-products.json';
+import { tData, tArr, label } from '@lib/i18n-data';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  return langs.flatMap(lang =>
+    products.map(product => ({
+      params: { lang, id: product.id },
+      props: { product, lang },
+    }))
+  );
+}
+
+const { product, lang } = Astro.props as { product: typeof products[0]; lang: Locale };
+const related = products.filter(p => p.brand === product.brand && p.id !== product.id).slice(0, 4);
+
+const productName = tData(product, 'name', lang);
+const productFeatures = tArr(product, 'features', lang);
+
+const scenarios = lang === 'zh' ? [
+  { icon: '🏠', name: '住宅', desc: '家庭安防和财产监控' },
+  { icon: '🏢', name: '商业', desc: '办公楼和零售店' },
+  { icon: '🏫', name: '教育', desc: '学校、大学、园区' },
+  { icon: '🏭', name: '工业', desc: '工厂、仓库、物流中心' },
+] : lang === 'ru' ? [
+  { icon: '🏠', name: 'Жилые', desc: 'Домашняя безопасность' },
+  { icon: '🏢', name: 'Коммерческие', desc: 'Офисы и магазины' },
+  { icon: '🏫', name: 'Образование', desc: 'Школы и университеты' },
+  { icon: '🏭', name: 'Промышленные', desc: 'Заводы и склады' },
+] : [
+  { icon: '🏠', name: 'Residential', desc: 'Home security and property monitoring' },
+  { icon: '🏢', name: 'Commercial', desc: 'Office buildings and retail stores' },
+  { icon: '🏫', name: 'Education', desc: 'Schools, universities, campuses' },
+  { icon: '🏭', name: 'Industrial', desc: 'Factories, warehouses, logistics centers' },
+];
+
+const faqItems = lang === 'zh' ? [
+  { question: `${product.brand} ${product.model} 的出口价格是多少？`, answer: `${product.brand} ${product.model} 的 FOB 工厂价格约为 $${product.priceUsd}。CIF 报价包含运费和保险费。批量订单（10 台以上）有折扣。请联系我们获取详细报价。` },
+  { question: `${product.brand} ${product.model} 有 CE/FCC 认证吗？`, answer: `是的，我们出口的所有产品都具有完整的国际认证，包括 CE（欧洲）、FCC（美国）和 RoHS 合规。每批货物均附带官方认证文件。可按需申请额外认证（GOST、UL）。` },
+  { question: `${product.brand} 安防设备的最低起订量是多少？`, answer: `${product.brand} 安防设备的最低起订量为每款 10 台。但同一品牌不同型号可混合达到 MOQ。首次购买者可以 1-3 台样品价格购买。` },
+  { question: `出口 ${product.brand} 设备的保修如何处理？`, answer: `所有 ${product.brand} 产品享有厂家标准保修（通常 2-3 年）。我们提供 RMA 支持，可安排您所在地区的授权经销商进行保修服务。` },
+  { question: `能提供完整的安防系统方案吗？`, answer: `当然可以。我们提供一站式安防解决方案，包括摄像头、NVR、门禁和报警系统。我们的工程师可以根据您的现场需求设计定制系统。每个项目订单均提供系统图、布线图和安装指南。` },
+] : lang === 'ru' ? [
+  { question: `Какова экспортная цена ${product.brand} ${product.model}?`, answer: `Цена FOB ${product.brand} ${product.model} — примерно $${product.priceUsd}. Цена CIF включает фрахт и страховку. Скидки при заказе от 10 штук.` },
+  { question: `Есть ли у ${product.brand} ${product.model} сертификация CE/FCC?`, answer: `Да, все наши продукты имеют международные сертификаты CE, FCC и RoHS. Документы прилагаются к каждой поставке.` },
+  { question: `Каков MOQ для оборудования ${product.brand}?`, answer: `MOQ для ${product.brand} — 10 штук на модель. Можно комбинировать разные модели одного бренда. Образцы 1-3 штуки доступны по более высокой цене.` },
+  { question: `Как работает гарантия на ${product.brand}?`, answer: `Все продукты ${product.brand} имеют гарантию 2-3 года. Мы поддерживаем RMA и можем организовать сервис через авторизованных дистрибьюторов.` },
+  { question: `Можете ли предоставить полное решение системы безопасности?`, answer: `Да, мы предлагаем комплексные решения: камеры, NVR, контроль доступа и сигнализация. Инженеры разработают индивидуальную систему по вашим требованиям.` },
+] : [
+  { question: `What is the export price of ${product.brand} ${product.model}?`, answer: `The FOB price of ${product.brand} ${product.model} is approximately $${product.priceUsd}. CIF pricing includes freight and insurance. Volume discounts for 10+ units.` },
+  { question: `Does ${product.brand} ${product.model} have CE/FCC certification?`, answer: `Yes, all products come with CE, FCC, and RoHS compliance. Certification documents included with every shipment. Additional certifications available upon request.` },
+  { question: `What is the MOQ for ${product.brand} security equipment?`, answer: `MOQ is 10 units per model. You can mix different models from the same brand. Sample orders of 1–3 units available at slightly higher pricing.` },
+  { question: `How is warranty handled for exported ${product.brand} equipment?`, answer: `All ${product.brand} products come with 2–3 year manufacturer warranty. We provide RMA support and can arrange service through authorized distributors in your region.` },
+  { question: `Can you provide a complete security system solution?`, answer: `Yes. We offer turnkey solutions combining cameras, NVRs, access control, and alarms. Our engineers design custom systems with diagrams, cable plans, and installation guides.` },
+];
+
+const specLabels = lang === 'zh' ? { brand: '品牌', model: '型号', spec: '规格', price: 'FOB 价格', certs: '认证', warranty: '保修', moq: '起订量' }
+  : lang === 'ru' ? { brand: 'Бренд', model: 'Модель', spec: 'Характеристики', price: 'Цена FOB', certs: 'Сертификаты', warranty: 'Гарантия', moq: 'MOQ' }
+  : { brand: 'Brand', model: 'Model', spec: 'Specifications', price: 'FOB Price', certs: 'Certifications', warranty: 'Warranty', moq: 'MOQ' };
+
+const pageTitle = lang === 'zh'
+  ? `${productName} — 出口价格与规格 | NewAge Trading`
+  : lang === 'ru'
+  ? `${productName} — Экспортная цена и характеристики | NewAge Trading`
+  : `${productName} — Export Price & Specs | NewAge Trading`;
+
+const pageDesc = lang === 'zh'
+  ? `购买 ${productName} 中国出口。FOB 价格 $${product.priceUsd}。${product.spec}。CE/FCC 认证。批量订单。`
+  : lang === 'ru'
+  ? `Купить ${productName} из Китая. Цена FOB $${product.priceUsd}. ${product.spec}. Сертификация CE/FCC.`
+  : `Buy ${productName} from China. FOB price $${product.priceUsd}. ${product.spec}. CE/FCC certified.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDesc}
+  lang={lang}
+  schema={{
+    "@type": "Product",
+    "name": productName,
+    "brand": { "@type": "Brand", "name": product.brand },
+    "description": product.spec,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": product.priceUsd,
+      "availability": "https://schema.org/InStock"
+    }
+  }}
+>
+  <Breadcrumb crumbs={[
+    { name: label('home', lang), path: `/${lang}/` },
+    { name: label('security', lang), path: `/${lang}/security/` },
+    { name: productName, path: `/${lang}/security/product/${product.id}/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0f2440] to-[#1e3a5f] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-[#c4a35a] text-[#1e3a5f] px-3 py-1 rounded-full text-sm font-bold mb-4">{product.brand}</span>
+          <h1 class="text-3xl md:text-4xl font-bold mb-2">{productName}</h1>
+          <p class="text-lg text-gray-400 mb-4">{lang === 'zh' ? '型号' : lang === 'ru' ? 'Модель' : 'Model'}: {product.model}</p>
+          <p class="text-gray-300 mb-6">{product.spec}</p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-gray-400">{specLabels.price}</div>
+              <div class="text-2xl font-bold text-[#c4a35a]">${product.priceUsd}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-gray-400">{specLabels.moq}</div>
+              <div class="text-lg font-semibold">10 {lang === 'zh' ? '台' : lang === 'ru' ? 'шт.' : 'Units'}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-5 py-3">
+              <div class="text-sm text-gray-400">{label('leadTime', lang)}</div>
+              <div class="text-lg font-semibold">7–15 {lang === 'zh' ? '天' : lang === 'ru' ? 'дней' : 'Days'}</div>
+            </div>
+          </div>
+          <a href={`/${lang}/contact/`} class="inline-block bg-[#c4a35a] hover:bg-[#d4b36a] text-[#1e3a5f] font-bold px-8 py-3 rounded-lg transition-colors">{label('requestBulk', lang)}</a>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <div class="text-center">
+            <span class="text-8xl block mb-4">📷</span>
+            <p class="text-gray-400 text-sm">{product.brand} {product.model}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '核心功能' : lang === 'ru' ? 'Основные функции' : 'Key Features'}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {productFeatures.map(feature => (
+          <div class="bg-gray-50 rounded-xl p-5 flex items-start gap-3">
+            <span class="text-[#c4a35a] text-xl mt-0.5">✓</span>
+            <span class="text-gray-700 font-medium">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('specs', lang)}</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <table class="w-full">
+          <tbody>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50 w-1/3">{specLabels.brand}</td><td class="px-6 py-4 font-semibold">{product.brand}</td></tr>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.model}</td><td class="px-6 py-4 font-semibold">{product.model}</td></tr>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.spec}</td><td class="px-6 py-4 font-semibold">{product.spec}</td></tr>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.price}</td><td class="px-6 py-4 font-semibold text-[#c4a35a]">${product.priceUsd}</td></tr>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.certs}</td><td class="px-6 py-4 font-semibold">CE, FCC, RoHS</td></tr>
+            <tr class="border-b"><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.warranty}</td><td class="px-6 py-4 font-semibold">2–3 {lang === 'zh' ? '年' : lang === 'ru' ? 'лет' : 'Years'}</td></tr>
+            <tr><td class="px-6 py-4 text-gray-600 bg-gray-50">{specLabels.moq}</td><td class="px-6 py-4 font-semibold">10 {lang === 'zh' ? '台' : lang === 'ru' ? 'шт.' : 'Units'}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Scenarios -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('scenarios', lang)}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {scenarios.map(s => (
+          <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            <span class="text-4xl block mb-3">{s.icon}</span>
+            <h3 class="font-bold text-[#1e3a5f] mb-2">{s.name}</h3>
+            <p class="text-sm text-gray-600">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-16 bg-[#1e3a5f] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-8">{label('internationalCerts', lang)}</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="bg-white/10 rounded-xl px-8 py-6"><div class="text-3xl mb-2">🇪🇺</div><div class="font-bold">CE</div><div class="text-sm text-gray-400">{lang === 'zh' ? '欧洲' : lang === 'ru' ? 'Европа' : 'European'}</div></div>
+        <div class="bg-white/10 rounded-xl px-8 py-6"><div class="text-3xl mb-2">🇺🇸</div><div class="font-bold">FCC</div><div class="text-sm text-gray-400">{lang === 'zh' ? '美国' : lang === 'ru' ? 'США' : 'United States'}</div></div>
+        <div class="bg-white/10 rounded-xl px-8 py-6"><div class="text-3xl mb-2">♻️</div><div class="font-bold">RoHS</div><div class="text-sm text-gray-400">{lang === 'zh' ? '环保' : lang === 'ru' ? 'Экология' : 'Environmental'}</div></div>
+        <div class="bg-white/10 rounded-xl px-8 py-6"><div class="text-3xl mb-2">🇷🇺</div><div class="font-bold">GOST</div><div class="text-sm text-gray-400">{lang === 'zh' ? '俄罗斯/CIS' : lang === 'ru' ? 'Россия/СНГ' : 'Russia/CIS'}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  {related.length > 0 && (
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{label('moreFrom', lang)} {product.brand}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {related.map(p => (
+            <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6 group">
+              <span class="text-3xl block mb-3">📷</span>
+              <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm">{tData(p, 'name', lang)}</h3>
+              <p class="text-xs text-gray-500 mt-1">{p.model}</p>
+              <p class="text-[#c4a35a] font-bold mt-2">${p.priceUsd}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('faq', lang)}</h2>
+      <div class="space-y-4">
+        {faqItems.map(item => (
+          <details class="bg-gray-50 rounded-xl overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:bg-gray-100 transition-colors flex justify-between items-center">
+              {item.question}
+              <span class="text-[#c4a35a] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

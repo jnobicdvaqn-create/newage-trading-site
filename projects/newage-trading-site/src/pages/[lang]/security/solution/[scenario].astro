@@ -1,0 +1,205 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTASection from '@components/CTASection.astro';
+import type { Locale } from '@i18n/types';
+import products from '@data/security-products.json';
+import scenarios from '@data/security-scenarios.json';
+import { tData, tArr, label } from '@lib/i18n-data';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  return langs.flatMap(lang =>
+    scenarios.map(s => ({
+      params: { lang, scenario: s.id },
+      props: { scenario: s, lang },
+    }))
+  );
+}
+
+const { scenario, lang } = Astro.props as { scenario: typeof scenarios[0]; lang: Locale };
+
+const scName = tData(scenario, 'name', lang);
+const scDesc = tData(scenario, 'desc', lang);
+const scCameraCount = tData(scenario, 'cameraCount', lang);
+const scStorage = tData(scenario, 'storage', lang);
+const scCost = tData(scenario, 'cost', lang);
+const scChallenges = tArr(scenario, 'challenges', lang);
+const scTips = tArr(scenario, 'tips', lang);
+
+const recommendedProducts = scenario.recommended
+  .map(id => products.find(p => p.id === id))
+  .filter(Boolean) as typeof products;
+
+const faqItems = lang === 'zh' ? [
+  { question: `${scName} 系统需要多少钱？`, answer: `完整的 ${scName} 系统从 NewAge Trading 采购价格为 ${scCost}（FOB 中国）。包含 ${scCameraCount}、${scStorage} 及所有必要配件。联系我们获取详细 CIF 报价。` },
+  { question: `${scName} 需要多少个摄像头？`, answer: `典型的 ${scName} 场景，我们推荐 ${scCameraCount}。具体数量取决于您的设施规模、布局和覆盖需求。我们的工程师可以为您定制方案。` },
+  { question: '你们提供安装支持吗？', answer: '我们提供完整的安装文档，包括摄像头位置指南、布线图和 NVR 配置说明。远程技术支持可通过 WhatsApp 和 Telegram 获得。' },
+  { question: '可以远程监控系统吗？', answer: '是的，所有系统都支持手机 APP 远程监控（海康威视使用 Hik-Connect，大华使用 gDMSS）。您可以随时随地查看实时画面、回放录像和接收移动告警。' },
+] : lang === 'ru' ? [
+  { question: `Сколько стоит система безопасности ${scName}?`, answer: `Полная система ${scName} от NewAge Trading стоит ${scCost} (FOB Китай). Включает ${scCameraCount}, ${scStorage} и все необходимые аксессуары. Свяжитесь с нами для детального CIF предложения.` },
+  { question: `Сколько камер нужно для ${scName}?`, answer: `Для типичного сценария ${scName} мы рекомендуем ${scCameraCount}. Точное количество зависит от размера, планировки и требований покрытия. Наши инженеры разработают индивидуальный план.` },
+  { question: 'Вы предоставляете поддержку установки?', answer: 'Мы предоставляем полную документацию по установке: руководства по размещению камер, схемы кабельных подключений и инструкции по настройке NVR. Удалённая поддержка доступна через WhatsApp и Telegram.' },
+  { question: 'Можно ли удалённо мониторить систему?', answer: 'Да, все системы поддерживают удалённый мониторинг через мобильные приложения (Hik-Connect для Hikvision, gDMSS для Dahua). Вы можете просматривать живое видео, воспроизводить записи и получать оповещения из любой точки мира.' },
+] : [
+  { question: `How much does a ${scName} system cost?`, answer: `A complete ${scName} system from NewAge Trading costs ${scCost} (FOB China). This includes ${scCameraCount}, ${scStorage}, and all necessary accessories. Contact us for a detailed CIF quote.` },
+  { question: `How many cameras do I need for ${scName}?`, answer: `For a typical ${scName} setup, we recommend ${scCameraCount}. The exact number depends on your facility size, layout, and coverage requirements. Our engineers can design a custom plan.` },
+  { question: 'Do you provide installation support?', answer: 'We provide comprehensive installation documentation including camera placement guides, cable diagrams, and NVR configuration instructions. Remote technical support is available via WhatsApp and Telegram.' },
+  { question: 'Can I monitor my system remotely?', answer: 'Yes, all our systems support remote monitoring via smartphone apps (Hik-Connect for Hikvision, gDMSS for Dahua). You can view live feeds, playback recordings, and receive motion alerts from anywhere.' },
+];
+
+const otherSolutions = scenarios.filter(s => s.id !== scenario.id).slice(0, 4);
+
+const titlePrefix = lang === 'zh' ? `${scName} 系统` : lang === 'ru' ? `Система ${scName}` : `${scName} System`;
+const descText = lang === 'zh'
+  ? `${scName}：${scCameraCount}，NVR，门禁控制。${scCost} FOB。海康威视 & 大华产品。`
+  : lang === 'ru'
+  ? `${scName}: ${scCameraCount}, NVR, контроль доступа. ${scCost} FOB. Hikvision и Dahua.`
+  : `${scName}: ${scCameraCount}, NVR, access control. ${scCost} FOB. Hikvision & Dahua products.`;
+---
+
+<BaseLayout
+  title={`${titlePrefix} — Complete CCTV Solution from China | NewAge Trading`}
+  description={descText}
+  lang={lang}
+>
+  <Breadcrumb crumbs={[
+    { name: label('home', lang), path: `/${lang}/` },
+    { name: label('security', lang), path: `/${lang}/security/` },
+    { name: scName, path: `/${lang}/security/solution/${scenario.id}/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0f2440] to-[#1e3a5f] text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-6xl block mb-4">{scenario.icon}</span>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">{scName}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">{scDesc}</p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="bg-white/10 rounded-lg px-6 py-4">
+          <div class="text-sm text-gray-400">{lang === 'zh' ? '摄像头' : lang === 'ru' ? 'Камеры' : 'Cameras'}</div>
+          <div class="text-xl font-bold text-[#c4a35a]">{scCameraCount}</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-6 py-4">
+          <div class="text-sm text-gray-400">{lang === 'zh' ? '存储' : lang === 'ru' ? 'Хранилище' : 'Storage'}</div>
+          <div class="text-lg font-bold">{scStorage}</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-6 py-4">
+          <div class="text-sm text-gray-400">{lang === 'zh' ? '预算' : lang === 'ru' ? 'Бюджет' : 'Budget'}</div>
+          <div class="text-xl font-bold text-[#c4a35a]">{scCost}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '安防挑战' : lang === 'ru' ? 'Задачи безопасности' : 'Security Challenges We Solve'}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {scChallenges.map(c => (
+          <div class="bg-red-50 rounded-xl p-5 flex items-center gap-3">
+            <span class="text-red-500 text-xl">⚠️</span>
+            <span class="font-medium text-gray-700">{c}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '推荐设备' : lang === 'ru' ? 'Рекомендуемое оборудование' : 'Recommended Equipment'}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {recommendedProducts.map(p => (
+          <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6 group">
+            <span class="text-3xl block mb-3">📷</span>
+            <div class="text-xs text-[#c4a35a] font-bold mb-1">{p.brand}</div>
+            <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm mb-2">{tData(p, 'name', lang)}</h3>
+            <p class="text-xs text-gray-500 mb-2">{p.spec}</p>
+            <p class="text-lg font-bold text-[#c4a35a]">${p.priceUsd}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Tips -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '安装最佳实践' : lang === 'ru' ? 'Лучшие практики установки' : 'Installation Best Practices'}</h2>
+      <div class="space-y-4">
+        {scTips.map((tip, i) => (
+          <div class="flex gap-4 items-start bg-blue-50 rounded-xl p-5">
+            <span class="flex-shrink-0 w-8 h-8 bg-[#1e3a5f] text-white rounded-full flex items-center justify-center font-bold text-sm">{i + 1}</span>
+            <p class="text-gray-700">{tip}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- System Overview -->
+  <section class="py-16 bg-[#1e3a5f] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-8 text-center">{lang === 'zh' ? '系统规格' : lang === 'ru' ? 'Характеристики системы' : 'System Specifications'}</h2>
+      <div class="bg-white/10 rounded-xl overflow-hidden">
+        <table class="w-full">
+          <tbody>
+            <tr class="border-b border-white/10"><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '摄像头数量' : lang === 'ru' ? 'Количество камер' : 'Camera Count'}</td><td class="px-6 py-4 font-semibold text-right">{scCameraCount}</td></tr>
+            <tr class="border-b border-white/10"><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '录像存储' : lang === 'ru' ? 'Запись и хранение' : 'Recording'}</td><td class="px-6 py-4 font-semibold text-right">{scStorage}</td></tr>
+            <tr class="border-b border-white/10"><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '预算范围' : lang === 'ru' ? 'Бюджет' : 'Budget Range'}</td><td class="px-6 py-4 font-semibold text-right text-[#c4a35a]">{scCost}</td></tr>
+            <tr class="border-b border-white/10"><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '品牌' : lang === 'ru' ? 'Бренды' : 'Brands'}</td><td class="px-6 py-4 font-semibold text-right">Hikvision, Dahua, ZKTeco</td></tr>
+            <tr class="border-b border-white/10"><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '认证' : lang === 'ru' ? 'Сертификация' : 'Certifications'}</td><td class="px-6 py-4 font-semibold text-right">CE, FCC, RoHS</td></tr>
+            <tr><td class="px-6 py-4 text-gray-400">{lang === 'zh' ? '远程访问' : lang === 'ru' ? 'Удалённый доступ' : 'Remote Access'}</td><td class="px-6 py-4 font-semibold text-right">Hik-Connect / gDMSS</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{label('faq', lang)}</h2>
+      <div class="space-y-4">
+        {faqItems.map(item => (
+          <details class="bg-gray-50 rounded-xl overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:bg-gray-100 transition-colors flex justify-between items-center">
+              {item.question}
+              <span class="text-[#c4a35a] group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+        }))
+      })} is:raw />
+    </div>
+  </section>
+
+  <!-- Other Solutions -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{lang === 'zh' ? '其他安防方案' : lang === 'ru' ? 'Другие решения' : 'Other Security Solutions'}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {otherSolutions.map(s => (
+          <a href={`/${lang}/security/solution/${s.id}/`} class="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow text-center group">
+            <span class="text-3xl block mb-2">{s.icon}</span>
+            <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm">{tData(s, 'name', lang)}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

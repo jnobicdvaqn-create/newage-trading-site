@@ -1,0 +1,125 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import security from '@data/security.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const categories = ['IP Camera', 'Recorder', 'Access Control', 'Alarm'];
+const categoryLabels: Record<string, string> = {
+  'IP Camera': 'Cameras',
+  'Recorder': 'Recorders & NVRs',
+  'Access Control': 'Access Control Systems',
+  'Alarm': 'Alarm Systems',
+};
+---
+
+<BaseLayout
+  title={t('security.title', lang)}
+  description={t('security.subtitle', lang)}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.security', lang), path: `/${lang}/security/` },
+  ]}
+  schema={{
+    "@type": "CollectionPage",
+    "name": "Security Equipment Wholesale - NewAge Trading",
+    "description": t('security.subtitle', lang)
+  }}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.security', lang), path: `/${lang}/security/` },
+  ]} />
+
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('security.title', lang)}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('security.subtitle', lang)}</p>
+    </div>
+  </section>
+
+  <!-- Product Catalog by Category -->
+  <section class="container-section">
+    {categories.map(cat => {
+      const items = security.filter(p => p.category === cat);
+      if (items.length === 0) return null;
+      return (
+        <div class="mb-16 last:mb-0">
+          <h2 class="text-2xl font-bold mb-2">{categoryLabels[cat] || cat}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {items.map(product => (
+              <a
+                href={`/${lang}/security/comparison/${product.id}/`}
+                class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-5 hover:border-accent/30"
+              >
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <span class="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded">{product.brand}</span>
+                    <span class="text-xs text-muted ml-2">{product.type}</span>
+                  </div>
+                  <span class="text-sm font-bold text-primary">{product.price}</span>
+                </div>
+                <h3 class="font-semibold mb-2">{product.model}</h3>
+                <p class="text-xs text-muted mb-1">{product.resolution}</p>
+                {product.features && (
+                  <div class="flex flex-wrap gap-1 mt-2">
+                    {product.features.slice(0, 3).map(f => (
+                      <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{f}</span>
+                    ))}
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">{t('security.solutionTitle', lang)}</h2>
+      <p class="text-muted max-w-2xl mx-auto mb-8">
+        Tailored security solutions for different environments.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href={`/${lang}/security/solution/school/`} class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+          <h3 class="text-lg font-semibold mb-2">🏫 Schools</h3>
+          <p class="text-sm text-muted">Comprehensive campus security with access control and CCTV</p>
+        </a>
+        <a href={`/${lang}/security/solution/warehouse/`} class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+          <h3 class="text-lg font-semibold mb-2">🏭 Warehouses</h3>
+          <p class="text-sm text-muted">Large-area surveillance with PTZ and perimeter detection</p>
+        </a>
+        <a href={`/${lang}/security/solution/office/`} class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+          <h3 class="text-lg font-semibold mb-2">🏢 Offices</h3>
+          <p class="text-sm text-muted">Access control, time attendance, and indoor CCTV</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="container-section">
+    <h2 class="text-3xl font-bold text-center mb-4">{t('security.certTitle', lang)}</h2>
+    <p class="text-muted text-center max-w-2xl mx-auto mb-8">
+      All our security equipment meets international quality and safety standards.
+    </p>
+    <div class="flex flex-wrap justify-center gap-6">
+      {['CE', 'FCC', 'UL', 'RoHS', 'IK10', 'IP67', 'IP66'].join(', ')}
+    </div>
+  </section>
+</BaseLayout>

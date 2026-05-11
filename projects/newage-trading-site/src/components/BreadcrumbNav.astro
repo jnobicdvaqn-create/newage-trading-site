@@ -1,0 +1,63 @@
+---
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface Props {
+  items: BreadcrumbItem[];
+  lang?: "en" | "ru" | "zh";
+}
+
+const { items, lang = "en" } = Astro.props;
+---
+
+<!-- Schema.org BreadcrumbList JSON-LD -->
+<script define:vars={{ items }} type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    ...(item.href ? { item: new URL(item.href, "https://newage-trading.com").href } : {}),
+  })),
+})}>
+</script>
+
+<nav aria-label="Breadcrumb" class="bg-white border-b border-[var(--color-border)]">
+  <div class="mx-auto max-w-7xl px-6 py-3">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm">
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        return (
+          <li class="flex items-center gap-1.5">
+            {index > 0 && (
+              <svg class="h-3.5 w-3.5 text-[var(--color-text-light)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+            {isLast || !item.href ? (
+              <span
+                class={isLast
+                  ? "font-medium text-[var(--color-text)]"
+                  : "text-[var(--color-text-light)]"
+                }
+                aria-current={isLast ? "page" : undefined}
+              >
+                {item.label}
+              </span>
+            ) : (
+              <a
+                href={item.href}
+                class="text-[var(--color-text-light)] transition-colors hover:text-[var(--color-primary)]"
+              >
+                {item.label}
+              </a>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</nav>
