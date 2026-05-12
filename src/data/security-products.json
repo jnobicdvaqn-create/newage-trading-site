@@ -23,7 +23,8 @@
     ],
     "priceUsd": 68,
     "nameEn": "4MP Indoor/Outdoor Dual-Light Network Camera",
-    "nameZh": "4MP室内外双光网络摄像机"
+    "nameZh": "4MP室内外双光网络摄像机",
+    "category": "IP Camera"
   },
   {
     "id": "ip-camera-8mp",
@@ -49,7 +50,8 @@
     ],
     "priceUsd": 115,
     "nameEn": "8MP Ultra HD Panoramic Network Camera",
-    "nameZh": "8MP超高清全景摄像机"
+    "nameZh": "8MP超高清全景摄像机",
+    "category": "IP Camera"
   },
   {
     "id": "bullet-camera",
@@ -75,7 +77,8 @@
     ],
     "priceUsd": 89,
     "nameEn": "5MP IR Bullet Network Camera",
-    "nameZh": "5MP红外网络枪机"
+    "nameZh": "5MP红外网络枪机",
+    "category": "IP Camera"
   },
   {
     "id": "ptz-camera",
@@ -101,7 +104,8 @@
     ],
     "priceUsd": 420,
     "nameEn": "4K Smart PTZ Dome Camera",
-    "nameZh": "4K智能PTZ球机"
+    "nameZh": "4K智能PTZ球机",
+    "category": "IP Camera"
   },
   {
     "id": "fisheye-camera",
@@ -127,7 +131,8 @@
     ],
     "priceUsd": 260,
     "nameEn": "12MP 360° Fisheye Camera",
-    "nameZh": "12MP全景鱼眼摄像机"
+    "nameZh": "12MP全景鱼眼摄像机",
+    "category": "IP Camera"
   },
   {
     "id": "nvr-16ch",
@@ -153,7 +158,8 @@
     ],
     "priceUsd": 380,
     "nameEn": "16-Channel NVR Network Video Recorder",
-    "nameZh": "16路NVR网络录像机"
+    "nameZh": "16路NVR网络录像机",
+    "category": "Recorder"
   },
   {
     "id": "nvr-32ch",
@@ -179,7 +185,8 @@
     ],
     "priceUsd": 540,
     "nameEn": "32-Channel AI NVR Recorder",
-    "nameZh": "32路AI-NVR录像机"
+    "nameZh": "32路AI-NVR录像机",
+    "category": "Recorder"
   },
   {
     "id": "access-control",
@@ -205,7 +212,8 @@
     ],
     "priceUsd": 215,
     "nameEn": "Face Recognition Access Control Terminal",
-    "nameZh": "人脸识别门禁一体机"
+    "nameZh": "人脸识别门禁一体机",
+    "category": "Access Control"
   },
   {
     "id": "turnstile",
@@ -231,7 +239,8 @@
     ],
     "priceUsd": 680,
     "nameEn": "Swing Barrier Turnstile (Smart Gate)",
-    "nameZh": "摆闸 (智能通道闸)"
+    "nameZh": "摆闸 (智能通道闸)",
+    "category": "Access Control"
   },
   {
     "id": "vibration-sensor",
@@ -257,7 +266,8 @@
     ],
     "priceUsd": 1200,
     "nameEn": "Fiber Optic Vibration Detection Sensor",
-    "nameZh": "光纤振动安防探测器"
+    "nameZh": "光纤振动安防探测器",
+    "category": "Alarm"
   },
   {
     "id": "alarm-panel",
@@ -283,7 +293,8 @@
     ],
     "priceUsd": 195,
     "nameEn": "Wireless Alarm Control Panel",
-    "nameZh": "无线报警控制主机"
+    "nameZh": "无线报警控制主机",
+    "category": "Alarm"
   },
   {
     "id": "body-camera",
@@ -309,6 +320,7 @@
     ],
     "priceUsd": 310,
     "nameEn": "Body-Worn Camera (Law Enforcement)",
-    "nameZh": "执法记录仪"
+    "nameZh": "执法记录仪",
+    "category": "IP Camera"
   }
 ]

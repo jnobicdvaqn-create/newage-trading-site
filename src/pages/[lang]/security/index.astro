@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
-import security from '@data/security.json';
+import products from '@data/security-products.json';
 
 export function getStaticPaths() {
   return [
@@ -53,7 +53,7 @@ const categoryLabels: Record<string, string> = {
   <!-- Product Catalog by Category -->
   <section class="container-section">
     {categories.map(cat => {
-      const items = security.filter(p => p.category === cat);
+      const items = products.filter(p => p.category === cat);
       if (items.length === 0) return null;
       return (
         <div class="mb-16 last:mb-0">
@@ -67,12 +67,12 @@ const categoryLabels: Record<string, string> = {
                 <div class="flex items-start justify-between mb-3">
                   <div>
                     <span class="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded">{product.brand}</span>
-                    <span class="text-xs text-muted ml-2">{product.type}</span>
+                    <span class="text-xs text-muted ml-2">{product.name}</span>
                   </div>
-                  <span class="text-sm font-bold text-primary">{product.price}</span>
+                  <span class="text-sm font-bold text-primary">{`$${product.priceUsd}`}</span>
                 </div>
                 <h3 class="font-semibold mb-2">{product.model}</h3>
-                <p class="text-xs text-muted mb-1">{product.resolution}</p>
+                <p class="text-xs text-muted mb-1">{product.spec}</p>
                 {product.features && (
                   <div class="flex flex-wrap gap-1 mt-2">
                     {product.features.slice(0, 3).map(f => (
