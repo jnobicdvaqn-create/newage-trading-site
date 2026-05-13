@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
-import products from '@data/security-products.json';
+import security from '@data/security.json';
 
 export function getStaticPaths() {
   return [
@@ -53,7 +53,7 @@ const categoryLabels: Record<string, string> = {
   <!-- Product Catalog by Category -->
   <section class="container-section">
     {categories.map(cat => {
-      const items = products.filter(p => p.category === cat);
+      const items = security.filter(p => p.category === cat);
       if (items.length === 0) return null;
       return (
         <div class="mb-16 last:mb-0">
@@ -62,24 +62,29 @@ const categoryLabels: Record<string, string> = {
             {items.map(product => (
               <a
                 href={`/${lang}/security/product/${product.id}/`}
-                class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-5 hover:border-accent/30"
+                class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden hover:border-accent/30"
               >
-                <div class="flex items-start justify-between mb-3">
-                  <div>
-                    <span class="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded">{product.brand}</span>
-                    <span class="text-xs text-muted ml-2">{product.name}</span>
-                  </div>
-                  <span class="text-sm font-bold text-primary">{`$${product.priceUsd}`}</span>
+                <div class="h-40 bg-gray-50 flex items-center justify-center p-4">
+                  <img src={product.image || '/images/security/hikvision-colorvu.jpg'} alt={product.model} class="max-h-full max-w-full object-contain" loading="lazy" />
                 </div>
-                <h3 class="font-semibold mb-2">{product.model}</h3>
-                <p class="text-xs text-muted mb-1">{product.spec}</p>
-                {product.features && (
-                  <div class="flex flex-wrap gap-1 mt-2">
-                    {product.features.slice(0, 3).map(f => (
-                      <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{f}</span>
-                    ))}
+                <div class="p-5">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <span class="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded">{product.brand}</span>
+                      <span class="text-xs text-muted ml-2">{product.type}</span>
+                    </div>
+                    <span class="text-sm font-bold text-primary">{product.price}</span>
                   </div>
-                )}
+                  <h3 class="font-semibold mb-2">{product.model}</h3>
+                  <p class="text-xs text-muted mb-1">{product.resolution}</p>
+                  {product.features && (
+                    <div class="flex flex-wrap gap-1 mt-2">
+                      {product.features.slice(0, 3).map(f => (
+                        <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{f}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </a>
             ))}
           </div>

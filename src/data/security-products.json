@@ -24,7 +24,7 @@
     "priceUsd": 68,
     "nameEn": "4MP Indoor/Outdoor Dual-Light Network Camera",
     "nameZh": "4MP室内外双光网络摄像机",
-    "category": "IP Camera"
+    "image": "/images/security/hikvision-colorvu.jpg"
   },
   {
     "id": "ip-camera-8mp",
@@ -51,7 +51,7 @@
     "priceUsd": 115,
     "nameEn": "8MP Ultra HD Panoramic Network Camera",
     "nameZh": "8MP超高清全景摄像机",
-    "category": "IP Camera"
+    "image": "/images/security/hikvision-darkfighter.jpg"
   },
   {
     "id": "bullet-camera",
@@ -78,7 +78,7 @@
     "priceUsd": 89,
     "nameEn": "5MP IR Bullet Network Camera",
     "nameZh": "5MP红外网络枪机",
-    "category": "IP Camera"
+    "image": "/images/security/dahua-wizsense.jpg"
   },
   {
     "id": "ptz-camera",
@@ -105,7 +105,7 @@
     "priceUsd": 420,
     "nameEn": "4K Smart PTZ Dome Camera",
     "nameZh": "4K智能PTZ球机",
-    "category": "IP Camera"
+    "image": "/images/security/dahua-ptz.jpg"
   },
   {
     "id": "fisheye-camera",
@@ -132,7 +132,7 @@
     "priceUsd": 260,
     "nameEn": "12MP 360° Fisheye Camera",
     "nameZh": "12MP全景鱼眼摄像机",
-    "category": "IP Camera"
+    "image": "/images/security/hikvision-dome.jpg"
   },
   {
     "id": "nvr-16ch",
@@ -159,7 +159,7 @@
     "priceUsd": 380,
     "nameEn": "16-Channel NVR Network Video Recorder",
     "nameZh": "16路NVR网络录像机",
-    "category": "Recorder"
+    "image": "/images/security/hikvision-nvr.jpg"
   },
   {
     "id": "nvr-32ch",
@@ -186,7 +186,7 @@
     "priceUsd": 540,
     "nameEn": "32-Channel AI NVR Recorder",
     "nameZh": "32路AI-NVR录像机",
-    "category": "Recorder"
+    "image": "/images/security/dahua-nvr.jpg"
   },
   {
     "id": "access-control",
@@ -213,7 +213,7 @@
     "priceUsd": 215,
     "nameEn": "Face Recognition Access Control Terminal",
     "nameZh": "人脸识别门禁一体机",
-    "category": "Access Control"
+    "image": "/images/security/access-control.jpg"
   },
   {
     "id": "turnstile",
@@ -240,7 +240,7 @@
     "priceUsd": 680,
     "nameEn": "Swing Barrier Turnstile (Smart Gate)",
     "nameZh": "摆闸 (智能通道闸)",
-    "category": "Access Control"
+    "image": "/images/security/access-control.jpg"
   },
   {
     "id": "vibration-sensor",
@@ -267,7 +267,7 @@
     "priceUsd": 1200,
     "nameEn": "Fiber Optic Vibration Detection Sensor",
     "nameZh": "光纤振动安防探测器",
-    "category": "Alarm"
+    "image": "/images/security/alarm-system.jpg"
   },
   {
     "id": "alarm-panel",
@@ -294,7 +294,7 @@
     "priceUsd": 195,
     "nameEn": "Wireless Alarm Control Panel",
     "nameZh": "无线报警控制主机",
-    "category": "Alarm"
+    "image": "/images/security/alarm-system.jpg"
   },
   {
     "id": "body-camera",
@@ -321,6 +321,480 @@
     "priceUsd": 310,
     "nameEn": "Body-Worn Camera (Law Enforcement)",
     "nameZh": "执法记录仪",
-    "category": "IP Camera"
+    "image": "/images/security/hikvision-colorvu.jpg"
+  },
+  {
+    "id": "hikvision-colorvu-8mp",
+    "brand": "Hikvision",
+    "name": "DS-2CD2T87G2-LSU",
+    "nameEn": "Hikvision ColorVu bullet camera delivers full-color 24/7 surveillance with excep",
+    "nameZh": "DS-2CD2T87G2-LSU",
+    "nameRu": "DS-2CD2T87G2-LSU",
+    "model": "DS-2CD2T87G2-LSU",
+    "spec": "8MP (4K), Bullet Camera",
+    "features": [
+      "ColorVu technology",
+      "AcuSense AI",
+      "120dB WDR"
+    ],
+    "featuresZh": [
+      "ColorVu technology",
+      "AcuSense AI",
+      "120dB WDR"
+    ],
+    "featuresRu": [
+      "ColorVu technology",
+      "AcuSense AI",
+      "120dB WDR"
+    ],
+    "priceUsd": 189,
+    "image": "/images/security/hikvision-colorvu.jpg",
+    "description": "Hikvision ColorVu bullet camera delivers full-color 24/7 surveillance with exceptional detail at 8MP resolution. Built-in AcuSense AI reduces false alerts by distinguishing humans and vehicles.",
+    "useCases": [
+      "Perimeter monitoring",
+      "Parking lots",
+      "Warehouse exterior",
+      "Retail storefronts"
+    ]
+  },
+  {
+    "id": "hikvision-darkfighter",
+    "brand": "Hikvision",
+    "name": "DS-2CD2086G2-IU",
+    "nameEn": "Hikvision DarkFighter bullet camera excels in ultra-low-light environments, prod",
+    "nameZh": "DS-2CD2086G2-IU",
+    "nameRu": "DS-2CD2086G2-IU",
+    "model": "DS-2CD2086G2-IU",
+    "spec": "8MP (4K), Bullet Camera",
+    "features": [
+      "DarkFighter technology",
+      "AcuSense",
+      "30m IR"
+    ],
+    "featuresZh": [
+      "DarkFighter technology",
+      "AcuSense",
+      "30m IR"
+    ],
+    "featuresRu": [
+      "DarkFighter technology",
+      "AcuSense",
+      "30m IR"
+    ],
+    "priceUsd": 159,
+    "image": "/images/security/hikvision-darkfighter.jpg",
+    "description": "Hikvision DarkFighter bullet camera excels in ultra-low-light environments, producing usable color images even at near-zero lux levels.",
+    "useCases": [
+      "Low-light areas",
+      "Night surveillance",
+      "Industrial sites",
+      "Street monitoring"
+    ]
+  },
+  {
+    "id": "hikvision-dome-5mp",
+    "brand": "Hikvision",
+    "name": "DS-2CD2347G2-LU",
+    "nameEn": "Hikvision dome camera with ColorVu and AcuSense for indoor/outdoor applications.",
+    "nameZh": "DS-2CD2347G2-LU",
+    "nameRu": "DS-2CD2347G2-LU",
+    "model": "DS-2CD2347G2-LU",
+    "spec": "5MP, Dome Camera",
+    "features": [
+      "AcuSense",
+      "ColorVu",
+      "20m IR"
+    ],
+    "featuresZh": [
+      "AcuSense",
+      "ColorVu",
+      "20m IR"
+    ],
+    "featuresRu": [
+      "AcuSense",
+      "ColorVu",
+      "20m IR"
+    ],
+    "priceUsd": 139,
+    "image": "/images/security/hikvision-dome.jpg",
+    "description": "Hikvision dome camera with ColorVu and AcuSense for indoor/outdoor applications. Vandal-resistant design makes it suitable for high-risk areas.",
+    "useCases": [
+      "Office interiors",
+      "Retail stores",
+      "School hallways",
+      "Hotel lobbies"
+    ]
+  },
+  {
+    "id": "hikvision-ptz-12x",
+    "brand": "Hikvision",
+    "name": "DS-2DE4A425IW-DE",
+    "nameEn": "Hikvision PTZ camera with 12x optical zoom and auto-tracking for comprehensive l",
+    "nameZh": "DS-2DE4A425IW-DE",
+    "nameRu": "DS-2DE4A425IW-DE",
+    "model": "DS-2DE4A425IW-DE",
+    "spec": "4MP, PTZ Camera",
+    "features": [
+      "12x optical zoom",
+      "360° endless rotation",
+      "AcuSense"
+    ],
+    "featuresZh": [
+      "12x optical zoom",
+      "360° endless rotation",
+      "AcuSense"
+    ],
+    "featuresRu": [
+      "12x optical zoom",
+      "360° endless rotation",
+      "AcuSense"
+    ],
+    "priceUsd": 599,
+    "image": "/images/security/hikvision-ptz.jpg",
+    "description": "Hikvision PTZ camera with 12x optical zoom and auto-tracking for comprehensive large-area surveillance. Covers wide areas with minimal blind spots.",
+    "useCases": [
+      "Large warehouses",
+      "Construction sites",
+      "Campus monitoring",
+      "Perimeter security"
+    ]
+  },
+  {
+    "id": "hikvision-nvr-16ch",
+    "brand": "Hikvision",
+    "name": "DS-7616NI-I2/16P",
+    "nameEn": "Hikvision 16-channel PoE NVR with H.265 Pro+ compression saves up to 80% storage",
+    "nameZh": "DS-7616NI-I2/16P",
+    "nameRu": "DS-7616NI-I2/16P",
+    "model": "DS-7616NI-I2/16P",
+    "spec": "Up to 12MP per channel, NVR",
+    "features": [
+      "16-channel PoE",
+      "H.265 Pro+",
+      "eSATA expansion"
+    ],
+    "featuresZh": [
+      "16-channel PoE",
+      "H.265 Pro+",
+      "eSATA expansion"
+    ],
+    "featuresRu": [
+      "16-channel PoE",
+      "H.265 Pro+",
+      "eSATA expansion"
+    ],
+    "priceUsd": 499,
+    "image": "/images/security/hikvision-nvr.jpg",
+    "description": "Hikvision 16-channel PoE NVR with H.265 Pro+ compression saves up to 80% storage. Supports ANPR and people counting analytics.",
+    "useCases": [
+      "Multi-camera deployment",
+      "Enterprise security",
+      "Large facility monitoring"
+    ]
+  },
+  {
+    "id": "dahua-wizsense-8mp",
+    "brand": "Dahua",
+    "name": "IPC-HFW5849H1-ASE-LED",
+    "nameEn": "Dahua WizSense 8MP bullet camera with AI-powered human/vehicle detection and Sta",
+    "nameZh": "IPC-HFW5849H1-ASE-LED",
+    "nameRu": "IPC-HFW5849H1-ASE-LED",
+    "model": "IPC-HFW5849H1-ASE-LED",
+    "spec": "8MP (4K), Bullet Camera",
+    "features": [
+      "WizSense AI",
+      "Starlight Technology",
+      "Smart IR 50m"
+    ],
+    "featuresZh": [
+      "WizSense AI",
+      "Starlight Technology",
+      "Smart IR 50m"
+    ],
+    "featuresRu": [
+      "WizSense AI",
+      "Starlight Technology",
+      "Smart IR 50m"
+    ],
+    "priceUsd": 169,
+    "image": "/images/security/dahua-wizsense.jpg",
+    "description": "Dahua WizSense 8MP bullet camera with AI-powered human/vehicle detection and Starlight technology for superior low-light performance.",
+    "useCases": [
+      "Commercial security",
+      "Building perimeter",
+      "Industrial facilities",
+      "Smart city"
+    ]
+  },
+  {
+    "id": "dahua-wizsense-dome",
+    "brand": "Dahua",
+    "name": "IPC-HDW5849H1-ASE-LED",
+    "nameEn": "Dahua WizSense dome camera with 8MP resolution and vandal-resistant housing. Ide",
+    "nameZh": "IPC-HDW5849H1-ASE-LED",
+    "nameRu": "IPC-HDW5849H1-ASE-LED",
+    "model": "IPC-HDW5849H1-ASE-LED",
+    "spec": "8MP (4K), Dome Camera",
+    "features": [
+      "WizSense AI",
+      "Starlight",
+      "20m IR"
+    ],
+    "featuresZh": [
+      "WizSense AI",
+      "Starlight",
+      "20m IR"
+    ],
+    "featuresRu": [
+      "WizSense AI",
+      "Starlight",
+      "20m IR"
+    ],
+    "priceUsd": 159,
+    "image": "/images/security/dahua-dome.jpg",
+    "description": "Dahua WizSense dome camera with 8MP resolution and vandal-resistant housing. Ideal for indoor surveillance requiring discreet yet powerful monitoring.",
+    "useCases": [
+      "Retail stores",
+      "Office buildings",
+      "Banks",
+      "Hospitals"
+    ]
+  },
+  {
+    "id": "dahua-ptz-25x",
+    "brand": "Dahua",
+    "name": "SD49225XA-HNR",
+    "nameEn": "Dahua PTZ with 25x optical zoom for long-range surveillance. Advanced IVS analyt",
+    "nameZh": "SD49225XA-HNR",
+    "nameRu": "SD49225XA-HNR",
+    "model": "SD49225XA-HNR",
+    "spec": "2MP (Full HD), PTZ Camera",
+    "features": [
+      "25x optical zoom",
+      "Auto-tracking",
+      "Starlight"
+    ],
+    "featuresZh": [
+      "25x optical zoom",
+      "Auto-tracking",
+      "Starlight"
+    ],
+    "featuresRu": [
+      "25x optical zoom",
+      "Auto-tracking",
+      "Starlight"
+    ],
+    "priceUsd": 449,
+    "image": "/images/security/dahua-ptz.jpg",
+    "description": "Dahua PTZ with 25x optical zoom for long-range surveillance. Advanced IVS analytics reduce false alarms in complex outdoor environments.",
+    "useCases": [
+      "Large perimeters",
+      "Highway monitoring",
+      "Ports and harbors",
+      "Border security"
+    ]
+  },
+  {
+    "id": "dahua-xvr-8ch",
+    "brand": "Dahua",
+    "name": "DHI-XVR5116HS-I3",
+    "nameEn": "Dahua 16-channel hybrid XVR supports multiple analog and IP camera formats. Buil",
+    "nameZh": "DHI-XVR5116HS-I3",
+    "nameRu": "DHI-XVR5116HS-I3",
+    "model": "DHI-XVR5116HS-I3",
+    "spec": "Up to 8MP per channel, XVR",
+    "features": [
+      "16-channel Hybrid",
+      "AI encoding",
+      "HDCVI/AHD/TVI/CVBS/IP"
+    ],
+    "featuresZh": [
+      "16-channel Hybrid",
+      "AI encoding",
+      "HDCVI/AHD/TVI/CVBS/IP"
+    ],
+    "featuresRu": [
+      "16-channel Hybrid",
+      "AI encoding",
+      "HDCVI/AHD/TVI/CVBS/IP"
+    ],
+    "priceUsd": 349,
+    "image": "/images/security/dahua-xvr.jpg",
+    "description": "Dahua 16-channel hybrid XVR supports multiple analog and IP camera formats. Built-in AI analytics enable intelligent search and alert generation.",
+    "useCases": [
+      "System upgrade from analog",
+      "Hybrid deployments",
+      "Cost-effective solutions"
+    ]
+  },
+  {
+    "id": "dahua-nvr-32ch",
+    "brand": "Dahua",
+    "name": "DHI-NVR5832-X",
+    "nameEn": "Dahua 32-channel NVR with 4 HDD bays for large-scale deployments. Supports face ",
+    "nameZh": "DHI-NVR5832-X",
+    "nameRu": "DHI-NVR5832-X",
+    "model": "DHI-NVR5832-X",
+    "spec": "Up to 12MP, NVR",
+    "features": [
+      "32-channel",
+      "4 HDD bays",
+      "RAID 0/1/5/10"
+    ],
+    "featuresZh": [
+      "32-channel",
+      "4 HDD bays",
+      "RAID 0/1/5/10"
+    ],
+    "featuresRu": [
+      "32-channel",
+      "4 HDD bays",
+      "RAID 0/1/5/10"
+    ],
+    "priceUsd": 699,
+    "image": "/images/security/dahua-nvr.jpg",
+    "description": "Dahua 32-channel NVR with 4 HDD bays for large-scale deployments. Supports face detection and heat mapping analytics.",
+    "useCases": [
+      "Large enterprise",
+      "Smart city",
+      "Multi-site monitoring",
+      "Government facilities"
+    ]
+  },
+  {
+    "id": "uniview-8mp",
+    "brand": "Uniview",
+    "name": "IPC-B2241-V",
+    "nameEn": "Uniview bullet camera with AI ISP for clear imaging in challenging lighting cond",
+    "nameZh": "IPC-B2241-V",
+    "nameRu": "IPC-B2241-V",
+    "model": "IPC-B2241-V",
+    "spec": "8MP (4K), Bullet Camera",
+    "features": [
+      "AI ISP",
+      "Smart IR 40m",
+      "True WDR 120dB"
+    ],
+    "featuresZh": [
+      "AI ISP",
+      "Smart IR 40m",
+      "True WDR 120dB"
+    ],
+    "featuresRu": [
+      "AI ISP",
+      "Smart IR 40m",
+      "True WDR 120dB"
+    ],
+    "priceUsd": 149,
+    "image": "/images/security/uniview-bullet.jpg",
+    "description": "Uniview bullet camera with AI ISP for clear imaging in challenging lighting conditions. Cost-effective 4K solution with enterprise-grade features.",
+    "useCases": [
+      "Small business",
+      "Residential",
+      "Warehouse",
+      "Retail"
+    ]
+  },
+  {
+    "id": "tiandy-8mp",
+    "brand": "Tiandy",
+    "name": "TC-C52SN",
+    "nameEn": "Tiandy 8MP AI bullet camera with SSA (Scene Self-Adaption) technology for optima",
+    "nameZh": "TC-C52SN",
+    "nameRu": "TC-C52SN",
+    "model": "TC-C52SN",
+    "spec": "8MP (4K), Bullet Camera",
+    "features": [
+      "AI SSA",
+      "Smart IR 40m",
+      "120dB WDR"
+    ],
+    "featuresZh": [
+      "AI SSA",
+      "Smart IR 40m",
+      "120dB WDR"
+    ],
+    "featuresRu": [
+      "AI SSA",
+      "Smart IR 40m",
+      "120dB WDR"
+    ],
+    "priceUsd": 129,
+    "image": "/images/security/tiandy-bullet.jpg",
+    "description": "Tiandy 8MP AI bullet camera with SSA (Scene Self-Adaption) technology for optimal image quality in varying conditions. Best value in its class.",
+    "useCases": [
+      "Budget-conscious projects",
+      "Small retail",
+      "Storage facilities",
+      "Parking areas"
+    ]
+  },
+  {
+    "id": "access-control-basic",
+    "brand": "Hikvision",
+    "name": "DS-K1T607MFW",
+    "nameEn": "Hikvision face recognition terminal with multiple authentication modes. 2MP wide",
+    "nameZh": "DS-K1T607MFW",
+    "nameRu": "DS-K1T607MFW",
+    "model": "DS-K1T607MFW",
+    "spec": "2MP camera, Access Control",
+    "features": [
+      "Face recognition",
+      "Fingerprint",
+      "Card reader"
+    ],
+    "featuresZh": [
+      "Face recognition",
+      "Fingerprint",
+      "Card reader"
+    ],
+    "featuresRu": [
+      "Face recognition",
+      "Fingerprint",
+      "Card reader"
+    ],
+    "priceUsd": 349,
+    "image": "/images/security/access-control.jpg",
+    "description": "Hikvision face recognition terminal with multiple authentication modes. 2MP wide-angle camera captures faces even at tall person heights.",
+    "useCases": [
+      "Office entry",
+      "Factory gates",
+      "Staff attendance",
+      "VIP areas"
+    ]
+  },
+  {
+    "id": "hikvision-alarm-system",
+    "brand": "Hikvision",
+    "name": "DS-PWA32-L",
+    "nameEn": "Hikvision wireless alarm system with 32 zones for comprehensive intrusion detect",
+    "nameZh": "DS-PWA32-L",
+    "nameRu": "DS-PWA32-L",
+    "model": "DS-PWA32-L",
+    "spec": "N/A, Alarm System",
+    "features": [
+      "32 wireless zones",
+      "App control",
+      "GSM/4G backup"
+    ],
+    "featuresZh": [
+      "32 wireless zones",
+      "App control",
+      "GSM/4G backup"
+    ],
+    "featuresRu": [
+      "32 wireless zones",
+      "App control",
+      "GSM/4G backup"
+    ],
+    "priceUsd": 249,
+    "image": "/images/security/alarm-system.jpg",
+    "description": "Hikvision wireless alarm system with 32 zones for comprehensive intrusion detection. Mobile app allows remote arming/disarming and real-time alerts.",
+    "useCases": [
+      "Home security",
+      "Small office",
+      "Retail shops",
+      "Warehouse perimeter"
+    ]
   }
 ]
