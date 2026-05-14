@@ -230,7 +230,7 @@ const paymentMethods = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-4">{t('usedCars.ctaTitle', lang)}</h2>
       <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{t('usedCars.ctaText', lang)}</p>
-      <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '立即联系' : lang === 'ru' ? 'Связаться' : 'Contact Us'}</a>
+      <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '立即联系' : lang === 'ru' ? 'Связаться' : t('contact.title', lang)}</a>
     </div>
   </section>
 </BaseLayout>

@@ -352,8 +352,8 @@
       "privacy": "Политика конфиденциальности",
       "terms": "Условия использования",
       "sitemap": "Карта сайта",
-      "newsletter": "Подпишитесь на новости",
-      "newsletterPlaceholder": "Ваш email",
+      "newsletter": "Подпишитесь на нашу рассылку",
+      "newsletterPlaceholder": "Введите ваш email",
       "newsletterCTA": "Подписаться"
     },
     "cars": {
@@ -381,8 +381,8 @@
         "ICE": "ICE"
       },
       "faq1": "Законно ли импортировать китайские автомобили в Грузию?",
-      "faq2": "Предлагает ли BYD международную гарантию?",
-      "faq3": "Сколько времени занимает доставка из Китая в Грузию?",
+      "faq2": "Предоставляет ли BYD международную гарантию?",
+      "faq3": "Сколько времени занимает доставка автомобилей из Китая в Грузию?",
       "countryGeorgia": "Грузия",
       "countryRussia": "Россия",
       "countryUAE": "ОАЭ",
@@ -533,7 +533,17 @@
       "usedCars.riskText": "Аккредитив, расчёты в USD, сеть местных партнёров.",
       "usedCars.ctaTitle": "Готовы выйти в Африку?",
       "usedCars.ctaText": "Свяжитесь для бесплатного анализа рынка."
-    }
+    },
+    "subscribe_newsletter": "Подпишитесь на нашу рассылку",
+    "newsletter_description": "Введите ваш email, чтобы получать последние обновления и специальные предложения",
+    "subscribe_btn": "Подписаться",
+    "have_questions": "Есть вопросы?",
+    "contact_description": "Свяжитесь с нашей командой для получения профессиональной консультации по экспорту автомобилей, OEM-производству нижнего белья и оборудованию безопасности.",
+    "send_us_message": "Отправьте нам сообщение",
+    "your_name": "Ваше имя",
+    "your_email": "Ваш email",
+    "your_message": "Ваше сообщение",
+    "send_message_btn": "Отправить сообщение"
   },
   "zh": {
     "site": {
@@ -616,11 +626,11 @@
       "responseTime": "典型响应时间：< 2小时"
     },
     "footer": {
-      "rights": "© 2026 NewAge Trading。保留所有权利。",
+      "rights": "© 2026 NewAge Trading. 版权所有。",
       "privacy": "隐私政策",
       "terms": "服务条款",
       "sitemap": "网站地图",
-      "newsletter": "订阅我们的通讯",
+      "newsletter": "订阅我们的新闻通讯",
       "newsletterPlaceholder": "输入您的邮箱",
       "newsletterCTA": "订阅"
     },
@@ -648,9 +658,9 @@
         "EREV": "增程",
         "ICE": "燃油"
       },
-      "faq1": "进口中国汽车到格鲁吉亚合法吗？",
-      "faq2": "比亚迪提供国际保修吗？",
-      "faq3": "从中国发货到格鲁吉亚需要多久？",
+      "faq1": "从中国进口汽车到格鲁吉亚是否合法？",
+      "faq2": "BYD 是否提供国际保修服务？",
+      "faq3": "从中国运输汽车到格鲁吉亚需要多长时间？",
       "countryGeorgia": "格鲁吉亚",
       "countryRussia": "俄罗斯",
       "countryUAE": "阿联酋",
@@ -801,6 +811,16 @@
       "usedCars.riskText": "信用证付款、美元结算、本地合作伙伴网络，保障每笔交易安全。",
       "usedCars.ctaTitle": "准备进军非洲？",
       "usedCars.ctaText": "联系我们，获取免费市场分析和首批报价。"
-    }
+    },
+    "subscribe_newsletter": "订阅我们的新闻通讯",
+    "newsletter_description": "输入您的邮箱以获取最新更新和优惠信息",
+    "subscribe_btn": "订阅",
+    "have_questions": "有任何问题？",
+    "contact_description": "联系我们的专业团队，获取汽车出口、内衣OEM和安防设备方面的专业建议。",
+    "send_us_message": "给我们留言",
+    "your_name": "您的姓名",
+    "your_email": "您的邮箱",
+    "your_message": "您的留言",
+    "send_message_btn": "发送消息"
   }
 }

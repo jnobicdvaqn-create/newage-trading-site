@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import faqs from '../../../../data/cars-faq.json';
+
+// Get all possible paths
+export function getStaticPaths() {
+  const langs = ['en', 'zh', 'ru'];
+  return Object.entries(faqs).flatMap(([key, faq]) =>
+    langs.map((lang) => ({
+      params: { lang, slug: faq.slug },
+      props: { faqKey: key, faq },
+    }))
+  );
+}
+
+const { lang, slug } = Astro.params;
+const faqKey = Astro.props.faqKey;
+const faq = Astro.props.faq;
+if (!faq) return Astro.redirect(`/${lang}/cars/`);
+
+// Translation helper
+function t(key: string, lang: string): string {
+  const translations: Record<string, Record<string, string>> = {
+    'cars.faqBack': {
+      en: '← Back to Cars',
+      zh: '← 返回汽车页面',
+      ru: '← Назад к автомобилям',
+    },
+    'cars.faqCategory': {
+      en: 'FAQ',
+      zh: '常见问题',
+      ru: 'Часто задаваемые вопросы',
+    },
+    'cars.faqRelatedTitle': {
+      en: 'Related Questions',
+      zh: '相关问题',
+      ru: 'Связанные вопросы',
+    },
+    'cars.faqContact': {
+      en: 'Still have questions? Contact us on WhatsApp!',
+      zh: '还有问题？通过WhatsApp联系我们！',
+      ru: 'Остались вопросы? Свяжитесь с нами в WhatsApp!',
+    },
+    'cars.faqContactCTA': {
+      en: 'Contact Us',
+      zh: '联系我们',
+      ru: 'Связаться с нами',
+    },
+  };
+  return translations[key]?.[lang] || translations[key]?.en || key;
+}
+
+// Get related FAQs (other than current)
+const relatedFaqs = Object.entries(faqs)
+  .filter(([key, f]) => f.slug !== slug)
+  .slice(0, 2)
+  .map(([key, f]) => f);
+
+// Title for SEO
+const titles = {
+  en: faq.en.split('.')[0] + '...',
+  zh: faq.zh.split('。')[0] + '...',
+  ru: faq.ru.split('.')[0] + '...',
+};
+const pageTitle = titles[lang as keyof typeof titles] || titles.en;
+---
+
+<BaseLayout lang={lang} title={pageTitle}>
+  <section class="container py-16">
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto mb-8 text-sm text-text-secondary">
+      <a href={`/${lang}/cars/`} class="hover:text-accent transition-colors">
+        {t('cars.faqBack', lang)}
+      </a>
+      <span class="mx-2">/</span>
+      <span>{t('cars.faqCategory', lang)}</span>
+    </nav>
+
+    <!-- FAQ Content -->
+    <article class="max-w-4xl mx-auto bg-surface rounded-2xl p-8 shadow-lg">
+      <span class="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-4">
+        {t('cars.faqCategory', lang)}
+      </span>
+
+      <h1 class="text-3xl font-bold mb-6">
+        {lang === 'zh' ? faq.zh.split('。')[0] + '。' : lang === 'ru' ? faq.ru.split('.')[0] + '.' : faq.en.split('.')[0] + '.'}
+      </h1>
+
+      <div class="prose prose-lg max-w-none text-text-primary leading-relaxed">
+        {lang === 'zh' ? (
+          faq.zh.split('。').filter(Boolean).map((sentence) => (
+            <p class="mb-4">{sentence}。</p>
+          ))
+        ) : lang === 'ru' ? (
+          faq.ru.split('. ').filter(Boolean).map((sentence) => (
+            <p class="mb-4">{sentence}.</p>
+          ))
+        ) : (
+          faq.en.split('. ').filter(Boolean).map((sentence) => (
+            <p class="mb-4">{sentence}.</p>
+          ))
+        )}
+      </div>
+    </article>
+
+    <!-- Related FAQs -->
+    {relatedFaqs.length > 0 && (
+      <div class="max-w-4xl mx-auto mt-12">
+        <h2 class="text-2xl font-bold mb-6">{t('cars.faqRelatedTitle', lang)}</h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          {relatedFaqs.map((related) => (
+            <a
+              href={`/${lang}/cars/faq/${related.slug}/`}
+              class="block p-6 bg-surface rounded-xl hover:shadow-lg transition-shadow border border-border"
+            >
+              <p class="font-medium text-text-primary">
+                {lang === 'zh' ? related.zh.split('。')[0] + '。' : lang === 'ru' ? related.ru.split('.')[0] + '.' : related.en.split('.')[0] + '.'}
+              </p>
+              <p class="text-sm text-text-secondary mt-2 line-clamp-2">
+                {lang === 'zh' ? related.zh.substring(0, 100) + '...' : lang === 'ru' ? related.ru.substring(0, 100) + '...' : related.en.substring(0, 100) + '...'}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto mt-12 bg-primary rounded-2xl p-8 text-center">
+      <p class="text-xl text-white mb-4">{t('cars.faqContact', lang)}</p>
+      <a
+        href="https://wa.me/PHONENUMBER"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block px-6 py-3 bg-accent text-primary font-semibold rounded-xl hover:bg-accent-dark transition-colors"
+      >
+        {t('cars.faqContactCTA', lang)}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

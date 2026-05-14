@@ -1,0 +1,175 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return [
+    ...['en', 'zh', 'ru'].flatMap(lang => ['guangzhou', 'shenzhen', 'shanghai', 'hangzhou'].map(city => ({ params: { lang, city } }))),
+  ];
+}
+
+const { lang, city } = Astro.params;
+
+// City data
+const cityData: Record<string, Record<string, { name: string; description: string }>> = {
+  guangzhou: {
+    en: {
+      name: 'Guangzhou',
+      description: 'Guangzhou is one of China\'s largest garment manufacturing hubs, with a history spanning decades. The city is home to thousands of lingerie and underwear manufacturers, ranging from small workshops to large-scale factories. Key advantages include proximity to fabric suppliers in the Pearl River Delta, well-developed logistics networks, and access to international trade fairs like the Canton Fair. Guangzhou manufacturers specialize in seamless underwear, sports bras, and mid-to-high-end lingerie products. Many factories offer OEM/ODM services with MOQ starting from 300-500 pieces per style. The city\'s Baiyun International Airport and Nansha Port provide convenient shipping routes to Georgia and Central Asia.',
+    },
+    zh: {
+      name: '广州',
+      description: '广州是中国最大的服装制造基地之一，拥有数十年的产业历史。这里有成千上万家内衣和内衣制造商，从小型作坊到大型工厂一应俱全。主要优势包括靠近珠江三角洲的面料供应商、发达的物流网络以及广交会等国际贸易展会的便利条件。广州制造商擅长无缝内衣、运动文胸和中高端内衣产品。许多工厂提供OEM/ODM服务，起订量为每款300-500件。广州白云国际机场和南沙港提供了通往格鲁吉亚和中亚的便利运输路线。',
+    },
+    ru: {
+      name: 'Гуанчжоу',
+      description: 'Гуанчжоу — один из крупнейших центров производства одежды в Китае с многолетней историей. Здесь расположены тысячи производителей нижнего белья — от небольших мастерских до крупных фабрик. Основные преимущества: близость к поставщикам тканей в дельте Жемчужной реки, развитая логистическая сеть и доступ к международным выставкам, таким как Кантонская ярмарка. Производители Гуанчжоу специализируются на бесшовном белье, спортивных бюстгальтерах и продукции среднего и высокого ценового сегмента. Многие фабрики предлагают услуги OEM/ODM с минимальным заказом от 300-500 единиц на стиль. Международный аэропорт Байюнь и порт Наньша обеспечивают удобные маршруты доставки в Грузию и Центральную Азию.',
+    },
+  },
+  shenzhen: {
+    en: {
+      name: 'Shenzhen',
+      description: 'Shenzhen is a technology-driven manufacturing center known for innovation and efficiency. While primarily known for electronics, the city has a growing lingerie manufacturing sector that leverages advanced production technologies. Shenzhen manufacturers excel in smart textiles, moisture-wicking fabrics, and performance-oriented underwear. The city benefits from a young, skilled workforce and proximity to Hong Kong for international trade. Many Shenzhen factories have invested in automated cutting and sewing equipment, reducing production time and improving consistency. MOQ typically ranges from 200-500 pieces. Shenzhen\'s Yantian Port is one of the busiest container ports in the world, offering competitive shipping rates to international destinations.',
+    },
+    zh: {
+      name: '深圳',
+      description: '深圳是以创新和效率著称的科技驱动型制造中心。虽然主要以电子产品闻名，但该市正在发展利用先进生产技术的内衣制造业。深圳制造商擅长智能纺织品、吸湿排汗面料和高性能内衣。该市受益于年轻熟练的劳动力队伍和靠近香港的国际贸易便利。许多深圳工厂投资了自动裁剪和缝纫设备，缩短了生产时间并提高了质量一致性。起订量通常为200-500件。深圳盐田港是世界上最繁忙的集装箱港口之一，提供具有竞争力的国际运费。',
+    },
+    ru: {
+      name: 'Шэньчжэнь',
+      description: 'Шэньчжэнь — технологически развитый производственный центр, известный инновациями и эффективностью. Хотя город в первую очередь известен электроникой, здесь растёт сектор производства нижнего белья, использующий передовые производственные технологии. Производители Шэньчжэня преуспевают в создании умных тканей, материалов с влагоотведением и функционального белья. Город привлекает молодым квалифицированным персоналом и близостью к Гонконгу для международной торговли. Многие фабрики Шэньчжэня инвестировали в автоматизированное оборудование для раскроя и пошива, сокращая время производства и улучшая стабильность качества. Минимальный заказ обычно составляет 200-500 единиц. Контейнерный порт Яньтянь в Шэньчжэне является одним из самых загруженных в мире и предлагает конкурентоспособные тарифы на международные перевозки.',
+    },
+  },
+  shanghai: {
+    en: {
+      name: 'Shanghai',
+      description: 'Shanghai is China\'s premier fashion and trade center, home to high-end lingerie brands and premium manufacturers. The city\'s manufacturers focus on luxury lingerie, designer collections, and fashion-forward products. Shanghai benefits from a mature supply chain, international design talent, and easy access to global shipping through the world\'s largest container port. Manufacturers here typically cater to established brands and offer comprehensive OEM/ODM services including design consultation, fabric sourcing, and quality control. MOQ tends to be higher, ranging from 500-1000 pieces, reflecting the premium nature of production. The city\'s textile markets and fashion weeks provide excellent sourcing opportunities for buyers.',
+    },
+    zh: {
+      name: '上海',
+      description: '上海是中国首屈一指的时尚和贸易中心，拥有高端内衣品牌和优质制造商。该市的制造商专注于豪华内衣、设计师系列和时尚前沿产品。上海受益于成熟的供应链、国际化的设计人才以及通过全球最大集装箱港口进入全球航运的便利。这里的制造商通常服务于成熟品牌，提供全面的OEM/ODM服务，包括设计咨询、面料采购和质量控制。起订量通常较高，在500-1000件之间，反映了生产的高端定位。该市的纺织品市场和时装周为买家提供了极佳的采购机会。',
+    },
+    ru: {
+      name: 'Шанхай',
+      description: 'Шанхай — ведущий центр моды и торговли в Китае, где расположены производители нижнего белья премиум-класса и高端品牌. Производители города специализируются на роскошном белье, дизайнерских коллекциях и модной продукции. Шанхай обладает развитой цепочкой поставок, международным дизайнерским талантом и удобным доступом к мировым морским перевозкам через крупнейший в мире контейнерный порт. Производители здесь обычно обслуживают устоявшиеся бренды и предлагают комплексные услуги OEM/ODM, включая консультации по дизайну, подбор тканей и контроль качества. Минимальный заказ, как правило, выше — от 500 до 1000 единиц, что отражает премиальный характер производства. Текстильные рынки и недели моды города предоставляют отличные возможности для закупок.',
+    },
+  },
+  hangzhou: {
+    en: {
+      name: 'Hangzhou',
+      description: 'Hangzhou is an emerging lingerie manufacturing center known for its silk production and e-commerce integration. The city is home to major Chinese underwear brands and manufacturers specializing in silk lingerie, lace products, and comfortable everyday wear. Hangzhou\'s proximity to the Yiwu commodity market provides excellent sourcing opportunities for accessories and packaging materials. Many manufacturers have embraced e-commerce and offer direct-to-consumer models alongside traditional B2B services. The city\'s Alibaba headquarters influence has led to innovation in digital manufacturing and supply chain management. MOQ ranges from 300-800 pieces. Hangzhou\'s textile industry has centuries of history in silk production, providing unique advantages for silk-based lingerie products.',
+    },
+    zh: {
+      name: '杭州',
+      description: '杭州是一个新兴的内衣制造中心，以丝绸生产和电商整合著称。该市是主要中国内衣品牌的所在地，制造商专注于真丝内衣、蕾丝产品和舒适日常穿着。杭州靠近义乌小商品市场，为配饰和包装材料的采购提供了极好的机会。许多制造商已经拥抱电子商务，在传统B2B服务之外提供直接面向消费者的模式。该市阿里巴巴总部的影响促进了数字制造和供应链管理的创新。起订量在300-800件之间。杭州纺织业在丝绸生产方面有着数百年的历史，为丝绸内衣产品提供了独特的优势。',
+    },
+    ru: {
+      name: 'Ханчжоу',
+      description: 'Ханчжоу — развивающийся центр производства нижнего белья, известный производством шёлка и интеграцией электронной коммерции. Здесь расположены крупные китайские бренды нижнего белья и производители, специализирующиеся на шёлковом белье, кружевной продукции и комфортной повседневной одежде. Близость Ханчжоу к товарному рынку Иу предоставляет отличные возможности для закупок аксессуаров и упаковочных материалов. Многие производители освоили электронную коммерцию и предлагают модели прямой продажи потребителям наряду с традиционным B2B-обслуживанием. Влияние штаб-квартиры Alibaba в городе привело к инновациям в цифровом производстве и управлении цепочками поставок. Минимальный заказ составляет от 300 до 800 единиц. Текстильная промышленность Ханчжоу имеет многовековую историю производства шёлка, что даёт уникальные преимущества для шёлковых изделий.',
+    },
+  },
+};
+
+const data = cityData[city]?.[lang as keyof typeof cityData['guangzhou']] || cityData[city]?.en;
+if (!data) return Astro.redirect(`/${lang}/lingerie/`);
+
+// Related cities
+const relatedCities = ['guangzhou', 'shenzhen', 'shanghai', 'hangzhou'].filter((c) => c !== city).slice(0, 2);
+
+// Title
+const title = `${data.name} — Lingerie OEM Manufacturing | NewAge Trading`;
+---
+
+<BaseLayout lang={lang} title={title}>
+  <section class="container py-16">
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto mb-8 text-sm text-text-secondary">
+      <a href={`/${lang}/lingerie/`} class="hover:text-accent transition-colors">
+        {lang === 'zh' ? '← 返回内衣' : lang === 'ru' ? '← Назад к белью' : '← Back to Lingerie'}
+      </a>
+      <span class="mx-2">/</span>
+      <span>{data.name}</span>
+    </nav>
+
+    <!-- City Content -->
+    <article class="max-w-4xl mx-auto bg-surface rounded-2xl p-8 shadow-lg">
+      <span class="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-4">
+        {lang === 'zh' ? 'OEM 制造基地' : lang === 'ru' ? 'OEM Производство' : 'OEM Manufacturing Hub'}
+      </span>
+
+      <h1 class="text-3xl font-bold mb-6">
+        {data.name}
+        <span class="text-text-secondary text-xl block mt-1">
+          {lang === 'zh' ? '内衣 OEM 制造' : lang === 'ru' ? 'OEM производство белья' : 'Lingerie OEM Manufacturing'}
+        </span>
+      </h1>
+
+      <div class="prose prose-lg max-w-none text-text-primary leading-relaxed">
+        {data.description.split('. ').filter(Boolean).map((sentence) => (
+          <p class="mb-4">{sentence}.</p>
+        ))}
+      </div>
+
+      <!-- Key Stats -->
+      <div class="grid grid-cols-3 gap-4 mt-8 p-4 bg-primary/5 rounded-xl">
+        <div class="text-center">
+          <p class="text-2xl font-bold text-accent">300-1000</p>
+          <p class="text-sm text-text-secondary">
+            {lang === 'zh' ? '起订量' : lang === 'ru' ? 'Мин. заказ' : 'MOQ'}
+          </p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-accent">
+            {lang === 'zh' ? '15-25天' : lang === 'ru' ? '15-25 дней' : '15-25 days'}
+          </p>
+          <p class="text-sm text-text-secondary">
+            {lang === 'zh' ? '生产周期' : lang === 'ru' ? 'Срок' : 'Lead Time'}
+          </p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-accent">OEM/ODM</p>
+          <p class="text-sm text-text-secondary">
+            {lang === 'zh' ? '服务类型' : lang === 'ru' ? 'Тип услуги' : 'Service'}
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Cities -->
+    <div class="max-w-4xl mx-auto mt-12">
+      <h2 class="text-2xl font-bold mb-6">
+        {lang === 'zh' ? '其他制造基地' : lang === 'ru' ? 'Другие базы' : 'Other Manufacturing Hubs'}
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        {relatedCities.map((relatedCity) => {
+          const relatedData = cityData[relatedCity]?.[lang as keyof typeof cityData['guangzhou']] || cityData[relatedCity]?.en;
+          return (
+            <a
+              href={`/${lang}/lingerie/manufacturer/${relatedCity}/`}
+              class="block p-6 bg-surface rounded-xl hover:shadow-lg transition-shadow border border-border"
+            >
+              <p class="font-bold text-lg text-accent">{relatedData.name}</p>
+              <p class="text-sm text-text-secondary mt-1 line-clamp-2">
+                {relatedData.description.substring(0, 100)}...
+              </p>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto mt-12 bg-primary rounded-2xl p-8 text-center">
+      <p class="text-xl text-white mb-4">
+        {lang === 'zh' ? '想了解{data.name}工厂报价？联系我们！' : lang === 'ru' ? 'Хотите узнать цену фабрики в {data.name}? Свяжитесь с нами!' : `Want a quote from ${data.name} factories? Contact us!`}
+      </p>
+      <a
+        href="https://wa.me/PHONENUMBER"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block px-6 py-3 bg-accent text-primary font-semibold rounded-xl hover:bg-accent-dark transition-colors"
+      >
+        {lang === 'zh' ? 'WhatsApp 联系' : lang === 'ru' ? 'Написать в WhatsApp' : 'Contact via WhatsApp'}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

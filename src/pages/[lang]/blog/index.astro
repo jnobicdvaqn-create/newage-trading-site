@@ -132,7 +132,7 @@ const categoryLabels: Record<string, Record<Locale, string>> = {
         {lang === 'zh' ? '联系我们的专业团队，获取个性化采购方案和市场分析。' : lang === 'ru' ? 'Свяжитесь с нашей командой экспертов для персонального плана закупок и анализа рынка.' : 'Contact our expert team for personalized sourcing strategies and market analysis.'}
       </p>
       <a href={`/${lang}/contact/`} class="btn-primary">
-        {lang === 'zh' ? '联系我们' : lang === 'ru' ? 'Связаться' : 'Contact Us'}
+        {lang === 'zh' ? '联系我们' : lang === 'ru' ? 'Связаться' : t('contact.title', lang)}
       </a>
     </div>
   </section>
