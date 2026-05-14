@@ -19,7 +19,7 @@ const product = props.product as Record<string, unknown> | undefined;
 const title = props.title || (product?.name as string) || '';
 const description = props.description || (product?.description as string) || '';
 const rawImage = props.image || (product?.image as string) || '';
-const image = rawImage ? `${rawImage}?v=20260514` : '';
+const image = rawImage ? `${rawImage}?v=20260514c` : '';
 const price = props.price || (product?.price as string) || '';
 const link = props.href || props.link || '#';
 
