@@ -12,7 +12,13 @@
     "excerpt": "Everything you need to know about importing electric vehicles from China — from choosing the right models to navigating customs procedures in your target market.",
     "excerptZh": "从中国进口电动汽车所需了解的一切 — 从选择合适的车型到目标市场的海关程序。",
     "excerptRu": "Все, что вам нужно знать об импорте электромобилей из Китая.",
-    "tags": ["EV", "Export Guide", "China", "BYD", "Customs"],
+    "tags": [
+      "EV",
+      "Export Guide",
+      "China",
+      "BYD",
+      "Customs"
+    ],
     "content": {
       "en": [
         {
@@ -39,14 +45,56 @@
         },
         {
           "type": "table",
-          "headers": ["Model", "Type", "Range (km)", "FOB Price (USD)", "Best Markets"],
+          "headers": [
+            "Model",
+            "Type",
+            "Range (km)",
+            "FOB Price (USD)",
+            "Best Markets"
+          ],
           "rows": [
-            ["BYD Han", "Sedan EV", "605", "32,999", "Georgia, UAE, Russia"],
-            ["BYD Atto 3", "SUV EV", "480", "26,999", "Georgia, Kazakhstan, Brazil"],
-            ["BYD Seal", "Sedan EV", "700", "35,999", "UAE, Russia, Armenia"],
-            ["BYD Song Plus", "SUV EV", "520", "23,999", "Georgia, Kazakhstan, Mexico"],
-            ["BYD Dolphin", "Hatchback EV", "420", "18,999", "Georgia, UAE, Thailand"],
-            ["Geely Monjaro", "SUV ICE", "N/A", "28,999", "Russia, Kazakhstan, Georgia"]
+            [
+              "BYD Han",
+              "Sedan EV",
+              "605",
+              "32,999",
+              "Georgia, UAE, Russia"
+            ],
+            [
+              "BYD Atto 3",
+              "SUV EV",
+              "480",
+              "26,999",
+              "Georgia, Kazakhstan, Brazil"
+            ],
+            [
+              "BYD Seal",
+              "Sedan EV",
+              "700",
+              "35,999",
+              "UAE, Russia, Armenia"
+            ],
+            [
+              "BYD Song Plus",
+              "SUV EV",
+              "520",
+              "23,999",
+              "Georgia, Kazakhstan, Mexico"
+            ],
+            [
+              "BYD Dolphin",
+              "Hatchback EV",
+              "420",
+              "18,999",
+              "Georgia, UAE, Thailand"
+            ],
+            [
+              "Geely Monjaro",
+              "SUV ICE",
+              "N/A",
+              "28,999",
+              "Russia, Kazakhstan, Georgia"
+            ]
           ]
         },
         {
@@ -150,13 +198,49 @@
         },
         {
           "type": "table",
-          "headers": ["车型", "类型", "续航(km)", "FOB价格(USD)", "最佳市场"],
+          "headers": [
+            "车型",
+            "类型",
+            "续航(km)",
+            "FOB价格(USD)",
+            "最佳市场"
+          ],
           "rows": [
-            ["比亚迪汉", "轿车EV", "605", "32,999", "格鲁吉亚、阿联酋、俄罗斯"],
-            ["比亚迪元PLUS", "SUV EV", "480", "26,999", "格鲁吉亚、哈萨克斯坦、巴西"],
-            ["比亚迪海豹", "轿车EV", "700", "35,999", "阿联酋、俄罗斯、亚美尼亚"],
-            ["比亚迪宋PLUS", "SUV EV", "520", "23,999", "格鲁吉亚、哈萨克斯坦、墨西哥"],
-            ["比亚迪海豚", "两厢EV", "420", "18,999", "格鲁吉亚、阿联酋、泰国"]
+            [
+              "比亚迪汉",
+              "轿车EV",
+              "605",
+              "32,999",
+              "格鲁吉亚、阿联酋、俄罗斯"
+            ],
+            [
+              "比亚迪元PLUS",
+              "SUV EV",
+              "480",
+              "26,999",
+              "格鲁吉亚、哈萨克斯坦、巴西"
+            ],
+            [
+              "比亚迪海豹",
+              "轿车EV",
+              "700",
+              "35,999",
+              "阿联酋、俄罗斯、亚美尼亚"
+            ],
+            [
+              "比亚迪宋PLUS",
+              "SUV EV",
+              "520",
+              "23,999",
+              "格鲁吉亚、哈萨克斯坦、墨西哥"
+            ],
+            [
+              "比亚迪海豚",
+              "两厢EV",
+              "420",
+              "18,999",
+              "格鲁吉亚、阿联酋、泰国"
+            ]
           ]
         },
         {
@@ -194,13 +278,49 @@
         },
         {
           "type": "table",
-          "headers": ["Модель", "Тип", "Запас хода (км)", "Цена FOB (USD)", "Лучшие рынки"],
+          "headers": [
+            "Модель",
+            "Тип",
+            "Запас хода (км)",
+            "Цена FOB (USD)",
+            "Лучшие рынки"
+          ],
           "rows": [
-            ["BYD Han", "Седан EV", "605", "32,999", "Грузия, ОАЭ, Россия"],
-            ["BYD Atto 3", "SUV EV", "480", "26,999", "Грузия, Казахстан, Бразилия"],
-            ["BYD Seal", "Седан EV", "700", "35,999", "ОАЭ, Россия, Армения"],
-            ["BYD Song Plus", "SUV EV", "520", "23,999", "Грузия, Казахстан, Мексика"],
-            ["BYD Dolphin", "Хэтчбек EV", "420", "18,999", "Грузия, ОАЭ, Таиланд"]
+            [
+              "BYD Han",
+              "Седан EV",
+              "605",
+              "32,999",
+              "Грузия, ОАЭ, Россия"
+            ],
+            [
+              "BYD Atto 3",
+              "SUV EV",
+              "480",
+              "26,999",
+              "Грузия, Казахстан, Бразилия"
+            ],
+            [
+              "BYD Seal",
+              "Седан EV",
+              "700",
+              "35,999",
+              "ОАЭ, Россия, Армения"
+            ],
+            [
+              "BYD Song Plus",
+              "SUV EV",
+              "520",
+              "23,999",
+              "Грузия, Казахстан, Мексика"
+            ],
+            [
+              "BYD Dolphin",
+              "Хэтчбек EV",
+              "420",
+              "18,999",
+              "Грузия, ОАЭ, Таиланд"
+            ]
           ]
         }
       ]
@@ -219,7 +339,13 @@
     "excerpt": "A practical guide to finding reliable OEM manufacturers in China's lingerie industry — from Shantou and Zhongshan clusters to quality control and MOQ negotiation.",
     "excerptZh": "在中国内衣行业寻找可靠OEM制造商的实用指南 — 从汕头和中山产业集群到质量控制和MOQ谈判。",
     "excerptRu": "Практическое руководство по поиску надежных OEM-производителей в Китае.",
-    "tags": ["OEM", "Lingerie", "Manufacturing", "MOQ", "Quality Control"],
+    "tags": [
+      "OEM",
+      "Lingerie",
+      "Manufacturing",
+      "MOQ",
+      "Quality Control"
+    ],
     "content": {
       "en": [
         {
@@ -251,12 +377,37 @@
         },
         {
           "type": "table",
-          "headers": ["Order Type", "Typical MOQ", "Unit Price Range", "Lead Time"],
+          "headers": [
+            "Order Type",
+            "Typical MOQ",
+            "Unit Price Range",
+            "Lead Time"
+          ],
           "rows": [
-            ["Existing Style (No Customization)", "200-500 pcs/style", "$2-8/pc", "15-20 days"],
-            ["Custom Design (Your Pattern)", "500-1,000 pcs/style", "$3-12/pc", "25-35 days"],
-            ["Full OEM (Your Brand + Design)", "1,000-3,000 pcs/style", "$4-15/pc", "30-45 days"],
-            ["Premium/Lace Collection", "300-800 pcs/style", "$8-25/pc", "35-50 days"]
+            [
+              "Existing Style (No Customization)",
+              "200-500 pcs/style",
+              "$2-8/pc",
+              "15-20 days"
+            ],
+            [
+              "Custom Design (Your Pattern)",
+              "500-1,000 pcs/style",
+              "$3-12/pc",
+              "25-35 days"
+            ],
+            [
+              "Full OEM (Your Brand + Design)",
+              "1,000-3,000 pcs/style",
+              "$4-15/pc",
+              "30-45 days"
+            ],
+            [
+              "Premium/Lace Collection",
+              "300-800 pcs/style",
+              "$8-25/pc",
+              "35-50 days"
+            ]
           ]
         },
         {
@@ -348,7 +499,14 @@
     "excerpt": "Comprehensive guide to importing security equipment from Chinese manufacturers — Hikvision, Dahua, and tactical gear suppliers. CE/FCC certification, UNGM bidding, and compliance.",
     "excerptZh": "从中国制造商进口安防设备的综合指南 — 海康威视、大华和战术装备供应商。CE/FCC认证、UNGM投标和合规。",
     "excerptRu": "Полное руководство по импорту оборудования безопасности от китайских производителей.",
-    "tags": ["Security", "CCTV", "Hikvision", "Dahua", "CE Certification", "UNGM"],
+    "tags": [
+      "Security",
+      "CCTV",
+      "Hikvision",
+      "Dahua",
+      "CE Certification",
+      "UNGM"
+    ],
     "content": {
       "en": [
         {
@@ -382,13 +540,43 @@
         },
         {
           "type": "table",
-          "headers": ["Certification", "Applicable Markets", "Required For", "Processing Time"],
+          "headers": [
+            "Certification",
+            "Applicable Markets",
+            "Required For",
+            "Processing Time"
+          ],
           "rows": [
-            ["CE", "European Union", "All electronic equipment", "4-8 weeks"],
-            ["FCC", "United States", "Radio frequency devices", "3-6 weeks"],
-            ["GOST-R", "Russia/CIS", "Security equipment", "4-6 weeks"],
-            ["ISO 9001", "Global (quality)", "Factory qualification", "8-12 weeks"],
-            ["UNGM Registration", "UN procurement", "Bidding on UN contracts", "4-8 weeks"]
+            [
+              "CE",
+              "European Union",
+              "All electronic equipment",
+              "4-8 weeks"
+            ],
+            [
+              "FCC",
+              "United States",
+              "Radio frequency devices",
+              "3-6 weeks"
+            ],
+            [
+              "GOST-R",
+              "Russia/CIS",
+              "Security equipment",
+              "4-6 weeks"
+            ],
+            [
+              "ISO 9001",
+              "Global (quality)",
+              "Factory qualification",
+              "8-12 weeks"
+            ],
+            [
+              "UNGM Registration",
+              "UN procurement",
+              "Bidding on UN contracts",
+              "4-8 weeks"
+            ]
           ]
         },
         {
@@ -461,7 +649,13 @@
     "excerpt": "The China-Georgia Free Trade Agreement makes importing from China more attractive than ever. Explore tariff advantages, popular product categories, and how to get started.",
     "excerptZh": "中格自由贸易协定使从中国进口比以往任何时候都更具吸引力。探索关税优势、热门产品类别以及如何开始。",
     "excerptRu": "Соглашение о свободной торговле между Китаем и Грузией делает импорт из Китая более привлекательным.",
-    "tags": ["Georgia", "China FTA", "Trade", "Import", "Tbilisi"],
+    "tags": [
+      "Georgia",
+      "China FTA",
+      "Trade",
+      "Import",
+      "Tbilisi"
+    ],
     "content": {
       "en": [
         {
@@ -545,7 +739,12 @@
     "excerpt": "Don't get scammed. Learn how to verify Chinese manufacturers, check business licenses, request factory audits, and protect yourself with secure payment methods.",
     "excerptZh": "避免被骗。学习如何验证中国制造商、检查营业执照、要求工厂审核，并通过安全的付款方式保护自己。",
     "excerptRu": "Не попадайтесь на мошенничество. Узнайте, как проверить китайских производителей.",
-    "tags": ["Due Diligence", "Supplier Verification", "Business License", "Trade Assurance"],
+    "tags": [
+      "Due Diligence",
+      "Supplier Verification",
+      "Business License",
+      "Trade Assurance"
+    ],
     "content": {
       "en": [
         {
@@ -627,7 +826,13 @@
     "excerpt": "Compare shipping methods, costs, transit times, and customs procedures for getting goods from Chinese factories to Georgian warehouses.",
     "excerptZh": "比较运输方式、成本、运输时间和海关程序，了解如何将货物从中国工厂运到格鲁吉亚仓库。",
     "excerptRu": "Сравните способы доставки, расходы и транзитное время для получения товаров из Китая в Грузию.",
-    "tags": ["Logistics", "Shipping", "Georgia", "Sea Freight", "Rail Freight"],
+    "tags": [
+      "Logistics",
+      "Shipping",
+      "Georgia",
+      "Sea Freight",
+      "Rail Freight"
+    ],
     "content": {
       "en": [
         {
@@ -654,12 +859,37 @@
         },
         {
           "type": "table",
-          "headers": ["Method", "Cost per CBM", "Transit Time", "Best For"],
+          "headers": [
+            "Method",
+            "Cost per CBM",
+            "Transit Time",
+            "Best For"
+          ],
           "rows": [
-            ["Sea Freight (LCL)", "$60-120/CBM", "30-45 days", "Bulk cargo, non-urgent"],
-            ["Sea Freight (FCL 20')", "$1,800-3,000", "30-45 days", "Full container loads"],
-            ["Rail Freight", "$150-250/CBM", "18-25 days", "Central Asian corridor"],
-            ["Air Freight", "$4-8/kg", "5-10 days", "High-value, urgent"]
+            [
+              "Sea Freight (LCL)",
+              "$60-120/CBM",
+              "30-45 days",
+              "Bulk cargo, non-urgent"
+            ],
+            [
+              "Sea Freight (FCL 20')",
+              "$1,800-3,000",
+              "30-45 days",
+              "Full container loads"
+            ],
+            [
+              "Rail Freight",
+              "$150-250/CBM",
+              "18-25 days",
+              "Central Asian corridor"
+            ],
+            [
+              "Air Freight",
+              "$4-8/kg",
+              "5-10 days",
+              "High-value, urgent"
+            ]
           ]
         },
         {
@@ -692,6 +922,1282 @@
         {
           "type": "paragraph",
           "text": "Морской транспорт через порт Поти: 30-45 дней. Ж/д через Средний коридор: 18-25 дней. Воздушный транспорт: 5-10 дней."
+        }
+      ]
+    }
+  },
+  {
+    "id": "byd-vs-tesla-cost-comparison-georgia",
+    "date": "2026-05-14",
+    "author": "NewAge Trading",
+    "category": "cars",
+    "coverImage": "/images/blog/byd-vs-tesla.jpg",
+    "readTime": "6 min",
+    "title": "BYD vs Tesla for Georgian Buyers: 2026 Cost Comparison & Best Choice",
+    "titleZh": "BYD与特斯拉对比：格鲁吉亚买家2026成本分析与最佳选择",
+    "titleRu": "BYD или Tesla для покупателей в Грузии: сравнение затрат 2026",
+    "excerpt": "A detailed cost comparison between BYD and Tesla for buyers in Georgia, including purchase price, shipping, import duties, and total cost of ownership.",
+    "excerptZh": "BYD与特斯拉在格鲁吉亚的详细成本对比，包括购车价、运费、关税和总拥有成本。",
+    "excerptRu": "Детальное сравнение затрат между BYD и Tesla для покупателей в Грузии.",
+    "tags": [
+      "BYD",
+      "Tesla",
+      "Cost Comparison",
+      "Georgia",
+      "EV"
+    ],
+    "content": {
+      "en": [
+        {
+          "type": "heading",
+          "text": "Introduction: The EV Revolution in Georgia",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia's EV market is experiencing rapid growth in 2026. With 0% import duty on electric vehicles under the Free Trade Agreement with China, Georgian buyers have more choices than ever. The two dominant brands attracting attention are BYD (Build Your Dreams) and Tesla. But which offers the better value for your money?"
+        },
+        {
+          "type": "paragraph",
+          "text": "In this article, we compare purchase costs, shipping, import duties, and total ownership costs between BYD and Tesla models popular in the Georgian market."
+        },
+        {
+          "type": "heading",
+          "text": "Model-by-Model Price Comparison",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Model",
+            "China FOB Price",
+            "Shipping to Georgia",
+            "Import Duty",
+            "Estimated Georgian Price"
+          ],
+          "rows": [
+            [
+              "BYD Atto 3 (Yuan Plus)",
+              "$28,000",
+              "$2,500–3,500",
+              "0%",
+              "$32,000–34,000"
+            ],
+            [
+              "BYD Seal",
+              "$32,000",
+              "$2,500–3,500",
+              "0%",
+              "$36,000–38,000"
+            ],
+            [
+              "BYD Han EV",
+              "$38,000",
+              "$2,500–3,500",
+              "0%",
+              "$42,000–44,000"
+            ],
+            [
+              "Tesla Model 3 (China)",
+              "$35,000",
+              "$3,000–4,000",
+              "0%",
+              "$40,000–42,000"
+            ],
+            [
+              "Tesla Model Y (China)",
+              "$40,000",
+              "$3,000–4,500",
+              "0%",
+              "$45,000–47,000"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All prices are estimates for Q2 2026. Actual costs may vary based on exchange rates, shipping method, and dealer markup."
+        },
+        {
+          "type": "heading",
+          "text": "Why BYD Offers Better Value for Georgian Buyers",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lower base price: BYD models typically cost 15–25% less than comparable Tesla models",
+            "Blade Battery technology: LFP chemistry is safer and has longer cycle life than Tesla's NMC cells",
+            "No import duty: Both brands benefit from 0% duty under China-Georgia FTA, but BYD's lower base price means more savings",
+            "Growing service network: More BYD authorized service centers are opening across Georgia",
+            "Better parts availability: BYD's supply chain in China ensures faster parts delivery"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "When Tesla Makes Sense",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Tesla still leads in certain areas that may justify the premium for some buyers:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Supercharger network: Tesla's proprietary charging infrastructure (where available)",
+            "Autopilot features: More mature autonomous driving capabilities",
+            "Brand recognition: Higher resale value due to global brand prestige",
+            "Software ecosystem: Over-the-air updates and integration with Tesla app"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Total Cost of Ownership (5-Year Comparison)",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cost Item",
+            "BYD Atto 3",
+            "Tesla Model 3"
+          ],
+          "rows": [
+            [
+              "Purchase Price",
+              "$32,000",
+              "$40,000"
+            ],
+            [
+              "Insurance (5 years)",
+              "$4,000",
+              "$5,000"
+            ],
+            [
+              "Maintenance (5 years)",
+              "$1,500",
+              "$2,000"
+            ],
+            [
+              "Electricity (100,000 km)",
+              "$6,000",
+              "$5,500"
+            ],
+            [
+              "Total 5-Year Cost",
+              "$43,500",
+              "$52,500"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Can Help",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We specialize in sourcing BYD vehicles directly from authorized Chinese dealers at the best available prices. Our services include: vehicle selection, quality inspection, customs documentation, and door-to-door shipping to Georgia. Contact us for a personalized quote."
+        }
+      ],
+      "zh": [
+        {
+          "type": "heading",
+          "text": "引言：格鲁吉亚的电动汽车革命",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "2026年，格鲁吉亚的电动汽车市场正在快速增长。根据中格自由贸易协定，电动汽车享受0%进口关税，格鲁吉亚买家拥有前所未有的选择。BYD（比亚迪）和特斯拉是最受关注的两大品牌。但哪个更划算呢？"
+        },
+        {
+          "type": "paragraph",
+          "text": "本文从购车价、运费、关税和总拥有成本四个方面对比BYD与特斯拉在格鲁吉亚市场的热门车型。"
+        },
+        {
+          "type": "heading",
+          "text": "车型价格对比",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "车型",
+            "中国FOB价",
+            "格鲁吉亚运费",
+            "进口关税",
+            "预估格鲁吉亚售价"
+          ],
+          "rows": [
+            [
+              "BYD 元Plus（Atto 3）",
+              "$28,000",
+              "$2,500–3,500",
+              "0%",
+              "$32,000–34,000"
+            ],
+            [
+              "BYD 海豹（Seal）",
+              "$32,000",
+              "$2,500–3,500",
+              "0%",
+              "$36,000–38,000"
+            ],
+            [
+              "BYD 汉EV",
+              "$38,000",
+              "$2,500–3,500",
+              "0%",
+              "$42,000–44,000"
+            ],
+            [
+              "特斯拉Model 3（中国）",
+              "$35,000",
+              "$3,000–4,000",
+              "0%",
+              "$40,000–42,000"
+            ],
+            [
+              "特斯拉Model Y（中国）",
+              "$40,000",
+              "$3,000–4,500",
+              "0%",
+              "$45,000–47,000"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "BYD对格鲁吉亚买家的性价比优势",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "更低的基础价格：BYD车型通常比特斯拉便宜15-25%",
+            "刀片电池技术：LFP化学更安全，循环寿命更长",
+            "零进口关税：中格FTA下两个品牌都受益，但BYD更低的基础价格意味着更多节省",
+            "服务网络增长：更多BYD授权服务中心在格鲁吉亚开设",
+            "配件供应更好：BYD在中国的供应链确保更快交付配件"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "何时选择特斯拉",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "超级充电网络：特斯拉专有充电基础设施",
+            "自动驾驶：更成熟的自动驾驶功能",
+            "品牌认可度：因全球品牌声望而保值率更高",
+            "软件生态：OTA更新和特斯拉应用集成"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5年总拥有成本对比",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "成本项",
+            "BYD 元Plus",
+            "特斯拉Model 3"
+          ],
+          "rows": [
+            [
+              "购车价",
+              "$32,000",
+              "$40,000"
+            ],
+            [
+              "保险（5年）",
+              "$4,000",
+              "$5,000"
+            ],
+            [
+              "维护（5年）",
+              "$1,500",
+              "$2,000"
+            ],
+            [
+              "电费（10万公里）",
+              "$6,000",
+              "$5,500"
+            ],
+            [
+              "5年总成本",
+              "$43,500",
+              "$52,500"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading能为您做什么",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们专注于直接从中国授权经销商采购BYD车辆，提供最优价格。服务包括：车辆选择、质量检测、海关文件和门到门运输至格鲁吉亚。联系我们获取个性化报价。"
+        }
+      ],
+      "ru": [
+        {
+          "type": "heading",
+          "text": "Введение: Электромобильная революция в Грузии",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Рынок электромобилей в Грузии быстро растёт в 2026 году. Благодаря нулевой пошлине на электромобили в рамках Соглашения о свободной торговле с Китаем, у грузинских покупателей больше выбора, чем когда-либо. Два ведущих бренда — BYD и Tesla. Но какой из них предлагает лучшую стоимость?"
+        },
+        {
+          "type": "heading",
+          "text": "Сравнение цен по моделям",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Модель",
+            "Цена FOB Китай",
+            "Доставка в Грузию",
+            "Импортная пошлина",
+            "Цена в Грузии"
+          ],
+          "rows": [
+            [
+              "BYD Atto 3 (Yuan Plus)",
+              "$28,000",
+              "$2,500–3,500",
+              "0%",
+              "$32,000–34,000"
+            ],
+            [
+              "BYD Seal",
+              "$32,000",
+              "$2,500–3,500",
+              "0%",
+              "$36,000–38,000"
+            ],
+            [
+              "BYD Han EV",
+              "$38,000",
+              "$2,500–3,500",
+              "0%",
+              "$42,000–44,000"
+            ],
+            [
+              "Tesla Model 3 (Китай)",
+              "$35,000",
+              "$3,000–4,000",
+              "0%",
+              "$40,000–42,000"
+            ],
+            [
+              "Tesla Model Y (Китай)",
+              "$40,000",
+              "$3,000–4,500",
+              "0%",
+              "$45,000–47,000"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Почему BYD выгоднее для покупателей в Грузии",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Более низкая базовая цена: модели BYD обычно на 15–25% дешевле аналогичных Tesla",
+            "Технология Blade Battery: химия LFP безопаснее и имеет больший срок службы",
+            "Нулевая импортная пошлина: оба бренда выигрывают от 0% пошлины, но более низкая цена BYD означает большую экономию",
+            "Растущая сеть обслуживания: всё больше авторизованных сервисных центров BYD открывается в Грузии"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Когда Tesla имеет смысл",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Сеть Supercharger: собственная зарядная инфраструктура Tesla",
+            "Автопилот: более зрелые возможности автономного вождения",
+            "Узнаваемость бренда: более высокая остаточная стоимость",
+            "Программная экосистема: обновления OTA и интеграция с приложением Tesla"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Совокупная стоимость владения (5 лет)",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Статья расходов",
+            "BYD Atto 3",
+            "Tesla Model 3"
+          ],
+          "rows": [
+            [
+              "Стоимость покупки",
+              "$32,000",
+              "$40,000"
+            ],
+            [
+              "Страховка (5 лет)",
+              "$4,000",
+              "$5,000"
+            ],
+            [
+              "Обслуживание (5 лет)",
+              "$1,500",
+              "$2,000"
+            ],
+            [
+              "Электричество (100,000 км)",
+              "$6,000",
+              "$5,500"
+            ],
+            [
+              "Итого за 5 лет",
+              "$43,500",
+              "$52,500"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Как NewAge Trading может помочь",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы специализируемся на поставках автомобилей BYD напрямую от авторизованных китайских дилеров по лучшим ценам. Наши услуги: подбор автомобилей, инспекция качества, таможенное оформление и доставка до двери в Грузии."
+        }
+      ]
+    }
+  },
+  {
+    "id": "import-cars-to-georgia-2026",
+    "date": "2026-05-14",
+    "author": "NewAge Trading",
+    "category": "cars",
+    "coverImage": "/images/blog/import-cars-georgia.jpg",
+    "readTime": "7 min",
+    "title": "How to Import Cars to Georgia in 2026: Step-by-Step Guide for Buyers",
+    "titleZh": "2026年如何将汽车进口到格鲁吉亚：买家分步指南",
+    "titleRu": "Как импортировать автомобили в Грузию в 2026 году: пошаговое руководство",
+    "excerpt": "A complete step-by-step guide for importing vehicles to Georgia in 2026, covering customs procedures, required documents, taxes, and registration.",
+    "excerptZh": "2026年进口车辆到格鲁吉亚的完整分步指南，涵盖海关程序、所需文件、税费和注册。",
+    "excerptRu": "Полное пошаговое руководство по импорту автомобилей в Грузию в 2026 году.",
+    "tags": [
+      "Georgia",
+      "Import",
+      "Customs",
+      "Car Import",
+      "Registration"
+    ],
+    "content": {
+      "en": [
+        {
+          "type": "heading",
+          "text": "Why Georgia is an Ideal Car Import Destination",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia has become one of the most attractive countries for importing vehicles, especially from China. The Free Trade Agreement with China (since 2018), 0% import duty on EVs, and a streamlined customs process make it a top choice for buyers across the Caucasus and Eastern Europe."
+        },
+        {
+          "type": "heading",
+          "text": "Step 1: Choose Your Vehicle",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Decide whether you need a new or used vehicle. Chinese manufacturers offer a wide range of options:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "New EVs: BYD Atto 3, BYD Seal, Geely Geometry, Great Wall Ora — from $25,000 FOB",
+            "New ICE: Chery Tiggo, Haval Jolion, Geely Coolray — from $12,000 FOB",
+            "Used from Korea: Hyundai, Kia, Genesis — from $8,000 FOB"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensure the vehicle meets Georgian technical standards (emissions, safety features) and has a valid Certificate of Conformity."
+        },
+        {
+          "type": "heading",
+          "text": "Step 2: Calculate Total Costs",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cost Component",
+            "EV (0% Duty)",
+            "ICE Vehicle"
+          ],
+          "rows": [
+            [
+              "Vehicle Price (FOB China)",
+              "$28,000",
+              "$15,000"
+            ],
+            [
+              "Shipping (RoRo/Container)",
+              "$2,500–3,500",
+              "$2,000–3,000"
+            ],
+            [
+              "Import Duty",
+              "0%",
+              "0–5% (FTA)"
+            ],
+            [
+              "VAT (18%)",
+              "$5,490",
+              "$3,060"
+            ],
+            [
+              "Customs Clearance Fee",
+              "$200–500",
+              "$200–500"
+            ],
+            [
+              "Registration & Plates",
+              "$100–200",
+              "$100–200"
+            ],
+            [
+              "Total Estimated",
+              "$36,290–37,690",
+              "$20,360–21,760"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Step 3: Arrange Shipping",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Three shipping options are available:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "RoRo (Roll-on/Roll-off): Most economical, 25–35 days from Chinese ports to Poti/Batumi",
+            "Container Shipping: More protection, suitable for high-value vehicles, 30–40 days",
+            "Rail (China-Europe): Growing option for landlocked regions, 18–25 days"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Step 4: Customs Clearance in Georgia",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Submit customs declaration at Poti or Batumi port",
+            "Provide: Commercial Invoice, Bill of Lading, Certificate of Origin, Insurance",
+            "Pay VAT (18% of CIF value + duty)",
+            "Vehicle inspection by Georgian customs",
+            "Receive customs clearance certificate"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Step 5: Registration",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Visit the Service Agency (საჯარო რეესტრი) in Tbilisi or regional offices with your customs clearance certificate, passport, and vehicle documents. You will receive Georgian license plates within 1–3 business days."
+        },
+        {
+          "type": "heading",
+          "text": "Important Notes",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "EVs enjoy 0% import duty through 2027 under Georgia's green energy policy",
+            "Vehicles older than 10 years may face additional restrictions",
+            "Right-hand drive vehicles are NOT permitted for registration in Georgia",
+            "Hybrid vehicles are classified as ICE (not eligible for 0% duty)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Simplifies This Process",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We handle everything: vehicle sourcing in China, shipping arrangement, customs documentation, and coordination with Georgian customs brokers. One contact, end-to-end service. Contact us today for a free consultation."
+        }
+      ],
+      "zh": [
+        {
+          "type": "heading",
+          "text": "为什么格鲁吉亚是理想的汽车进口目的地",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "格鲁吉亚已成为最具吸引力的汽车进口国之一，尤其是从中国进口。自2018年以来的中格自由贸易协定、电动汽车0%进口关税，以及精简的海关流程，使其成为高加索和东欧买家的首选。"
+        },
+        {
+          "type": "heading",
+          "text": "第一步：选择车辆",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "新电动车：BYD 元Plus、海豹、几何、欧拉——FOB价从$25,000起",
+            "新燃油车：奇瑞瑞虎、哈弗初恋、吉利缤越——FOB价从$12,000起",
+            "韩国二手车：现代、起亚、捷尼赛思——FOB价从$8,000起"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "第二步：计算总成本",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "成本项目",
+            "电动车（0%关税）",
+            "燃油车"
+          ],
+          "rows": [
+            [
+              "车辆价格（FOB中国）",
+              "$28,000",
+              "$15,000"
+            ],
+            [
+              "运费（滚装/集装箱）",
+              "$2,500–3,500",
+              "$2,000–3,000"
+            ],
+            [
+              "进口关税",
+              "0%",
+              "0–5%（FTA）"
+            ],
+            [
+              "增值税（18%）",
+              "$5,490",
+              "$3,060"
+            ],
+            [
+              "海关清关费",
+              "$200–500",
+              "$200–500"
+            ],
+            [
+              "注册及车牌",
+              "$100–200",
+              "$100–200"
+            ],
+            [
+              "预估总计",
+              "$36,290–37,690",
+              "$20,360–21,760"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "第三步：安排运输",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "滚装船（RoRo）：最经济，中国港口到波季/巴统25-35天",
+            "集装箱运输：更多保护，适合高价值车辆，30-40天",
+            "铁路运输（中欧班列）：内陆地区新兴选择，18-25天"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "第四步：格鲁吉亚海关清关",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "在波季或巴统港口提交海关申报",
+            "提供：商业发票、提单、原产地证、保险单",
+            "缴纳增值税（CIF价+关税的18%）",
+            "格鲁吉亚海关车辆检验",
+            "领取海关清关证书"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "第五步：注册上牌",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "携带海关清关证书、护照和车辆文件前往第比利斯或地区服务局（საჯარო რეესტრი），1-3个工作日内即可领取格鲁吉亚车牌。"
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading如何简化流程",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们处理一切：中国境内车辆采购、运输安排、海关文件和与格鲁吉亚海关代理协调。一站式全程服务。立即联系我们获取免费咨询。"
+        }
+      ],
+      "ru": [
+        {
+          "type": "heading",
+          "text": "Почему Грузия — идеальное направление для импорта авто",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Грузия стала одной из самых привлекательных стран для импорта автомобилей, особенно из Китая. Соглашение о свободной торговле с Китаем, 0% пошлины на электромобили и упрощённый таможенный процесс делают её выбором номер один для покупателей Кавказа и Восточной Европы."
+        },
+        {
+          "type": "heading",
+          "text": "Шаг 1: Выбор автомобиля",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Новые электромобили: BYD Atto 3, BYD Seal, Geely Geometry — от $25,000 FOB",
+            "Новые ДВС: Chery Tiggo, Haval Jolion, Geely Coolray — от $12,000 FOB",
+            "Б/у из Кореи: Hyundai, Kia, Genesis — от $8,000 FOB"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Шаг 2: Расчёт полной стоимости",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Компонент",
+            "Электромобиль (0%)",
+            "ДВС"
+          ],
+          "rows": [
+            [
+              "Цена авто (FOB Китай)",
+              "$28,000",
+              "$15,000"
+            ],
+            [
+              "Доставка",
+              "$2,500–3,500",
+              "$2,000–3,000"
+            ],
+            [
+              "Импортная пошлина",
+              "0%",
+              "0–5%"
+            ],
+            [
+              "НДС (18%)",
+              "$5,490",
+              "$3,060"
+            ],
+            [
+              "Таможенное оформление",
+              "$200–500",
+              "$200–500"
+            ],
+            [
+              "Регистрация",
+              "$100–200",
+              "$100–200"
+            ],
+            [
+              "Итого",
+              "$36,290–37,690",
+              "$20,360–21,760"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Шаг 3: Организация доставки",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "RoRo: самый экономичный, 25–35 дней из китайских портов в Поти/Батуми",
+            "Контейнер: больше защиты, 30–40 дней",
+            "Ж/д (Китай-Европа): растущий вариант, 18–25 дней"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Шаг 4: Таможенное оформление в Грузии",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Подать таможенную декларацию в порту Поти или Батуми",
+            "Предоставить: коммерческий счёт-фактуру, коносамент, сертификат происхождения",
+            "Уплатить НДС (18% от стоимости CIF + пошлина)",
+            "Получить сертификат таможенного оформления"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Шаг 5: Регистрация",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Обратитесь в Агентство обслуживания (საჯარო რეესტრი) в Тбилиси с таможенным сертификатом, паспортом и документами на автомобиль. Грузинские номера будут готовы через 1–3 рабочих дня."
+        },
+        {
+          "type": "heading",
+          "text": "Как NewAge Trading упрощает этот процесс",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы берём на себя всё: закупку автомобилей в Китае, организацию доставки, таможенные документы и координацию с грузинскими таможенными брокерами. Один контакт — полное обслуживание."
+        }
+      ]
+    }
+  },
+  {
+    "id": "top-5-chinese-security-cameras-2026",
+    "date": "2026-05-14",
+    "author": "NewAge Trading",
+    "category": "security",
+    "coverImage": "/images/blog/top-security-cameras.jpg",
+    "readTime": "6 min",
+    "title": "Top 5 Chinese Security Camera Brands in 2026: Comparison & Buying Guide",
+    "titleZh": "2026年中国安防摄像头五大品牌对比与采购指南",
+    "titleRu": "Топ-5 китайских брендов камер видеонаблюдения 2026: сравнение и руководство",
+    "excerpt": "A comprehensive comparison of the top 5 Chinese security camera brands for 2026, including Hikvision, Dahua, Uniview, Tiandy, and TP-Link Tapo.",
+    "excerptZh": "2026年中国五大安防摄像头品牌全面对比，包括海康威视、大华、宇视、天地伟业和TP-Link。",
+    "excerptRu": "Сравнение 5 ведущих китайских брендов камер видеонаблюдения 2026 года.",
+    "tags": [
+      "Hikvision",
+      "Dahua",
+      "Security Cameras",
+      "CCTV",
+      "Buying Guide"
+    ],
+    "content": {
+      "en": [
+        {
+          "type": "heading",
+          "text": "Why Chinese Security Cameras Lead the Global Market",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Chinese manufacturers dominate the global surveillance camera market, accounting for over 60% of worldwide production. Advanced AI features, competitive pricing, and continuous innovation have made Chinese brands the go-to choice for businesses and homeowners worldwide."
+        },
+        {
+          "type": "heading",
+          "text": "#1 Hikvision — Industry Leader",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Hikvision is the world's largest video surveillance manufacturer with over $12 billion in annual revenue. Their 2026 lineup features:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ColorVu technology: Full-color night vision with F1.0 super aperture",
+            "Deep learning AcuSense: 99% human/vehicle detection accuracy",
+            "8MP (4K) resolution across all price tiers",
+            "Price range: $45 (basic bullet) to $800 (professional PTZ)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Best for: Large-scale commercial installations, government projects, premium home security."
+        },
+        {
+          "type": "heading",
+          "text": "#2 Dahua Technology — Value Champion",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Dahua is the second-largest manufacturer, known for excellent price-to-performance ratio:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "WizSense AI: Built-in AI at budget-friendly prices",
+            "Full-color night vision up to 30 meters",
+            "TiOC (Three-in-One Camera): Active deterrence with light & siren",
+            "Price range: $35 (entry dome) to $600 (pro PTZ)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Best for: SMBs, residential complexes, budget-conscious buyers who still want AI features."
+        },
+        {
+          "type": "heading",
+          "text": "#3 Uniview (UNV) — Enterprise Grade",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Industry-leading IP67 weatherproofing",
+            "Stellar light technology: Ultra-low illumination performance",
+            "Strong NVR ecosystem with 64+ channel options",
+            "Price range: $50 to $700"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#4 Tiandy — Rising Star",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Super Starlight: Excellent low-light performance",
+            "AI-powered analytics at competitive prices",
+            "Growing international presence",
+            "Price range: $30 to $500 (best value for money)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#5 TP-Link Tapo — Smart Home Entry",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Plug-and-play setup, no NVR required",
+            "Cloud storage options with free tier",
+            "Mobile app with live view and two-way audio",
+            "Price range: $20 to $80 per camera"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Best for: Home users, small shops, DIY security systems."
+        },
+        {
+          "type": "heading",
+          "text": "Quick Comparison Table",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Brand",
+            "Best For",
+            "Starting Price",
+            "AI Features",
+            "Warranty"
+          ],
+          "rows": [
+            [
+              "Hikvision",
+              "Enterprise",
+              "$45",
+              "✅ Advanced",
+              "2 years"
+            ],
+            [
+              "Dahua",
+              "SMB/Budget",
+              "$35",
+              "✅ WizSense",
+              "2 years"
+            ],
+            [
+              "Uniview",
+              "Enterprise",
+              "$50",
+              "✅ Stellar",
+              "3 years"
+            ],
+            [
+              "Tiandy",
+              "Value",
+              "$30",
+              "✅ Basic AI",
+              "2 years"
+            ],
+            [
+              "TP-Link Tapo",
+              "Home/SOHO",
+              "$20",
+              "⚠️ Limited",
+              "1 year"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How to Choose the Right Brand",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "For large warehouses/industrial sites → Hikvision or Uniview",
+            "For retail stores/offices → Dahua WizSense series",
+            "For residential buildings → Tiandy (best value)",
+            "For home/small shop → TP-Link Tapo (easiest setup)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading Security Solutions",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We supply all major Chinese security brands at competitive wholesale prices. Whether you need 4 cameras for a shop or 200+ for a warehouse, we provide customized solutions with full warranty and technical support. Contact us for a free quote."
+        }
+      ],
+      "zh": [
+        {
+          "type": "heading",
+          "text": "为什么中国安防摄像头领先全球市场",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "中国制造商主导全球监控摄像头市场，占全球产量的60%以上。先进的AI功能、有竞争力的价格和持续创新，使中国品牌成为全球企业和家庭的首选。"
+        },
+        {
+          "type": "heading",
+          "text": "第一名：海康威视 — 行业领导者",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "全彩技术（ColorVu）：F1.0超大光圈全彩夜视",
+            "深度学习智能侦测：人/车检测准确率99%",
+            "全系列8MP（4K）分辨率",
+            "价格范围：$45（基础枪机）到$800（专业球机）"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "最适合：大型商业安装、政府项目、高端家庭安防。"
+        },
+        {
+          "type": "heading",
+          "text": "第二名：大华科技 — 性价比之王",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "WizSense AI：预算友好型内置AI",
+            "全彩夜视最远30米",
+            "TiOC三合一相机：灯光+警笛主动威慑",
+            "价格范围：$35到$600"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "最适合：中小企业、住宅小区、追求AI功能但预算有限的买家。"
+        },
+        {
+          "type": "heading",
+          "text": "第三至五名快速对比",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "品牌",
+            "适用场景",
+            "起步价",
+            "AI功能",
+            "保修"
+          ],
+          "rows": [
+            [
+              "宇视（Uniview）",
+              "企业级",
+              "$50",
+              "✅ 智能",
+              "3年"
+            ],
+            [
+              "天地伟业（Tiandy）",
+              "高性价比",
+              "$30",
+              "✅ 基础AI",
+              "2年"
+            ],
+            [
+              "TP-Link Tapo",
+              "家庭/小店",
+              "$20",
+              "⚠️ 有限",
+              "1年"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "如何选择合适品牌",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "大型仓库/工业场地 → 海康威视或宇视",
+            "零售店/办公室 → 大华WizSense系列",
+            "住宅小区 → 天地伟业（最佳性价比）",
+            "家庭/小商店 → TP-Link Tapo（最易安装）"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading安防解决方案",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们以有竞争力的批发价格供应所有主要中国安防品牌。无论您需要4个摄像头用于商店还是200+用于仓库，我们都提供带完整保修和技术支持的定制方案。联系我们获取免费报价。"
+        }
+      ],
+      "ru": [
+        {
+          "type": "heading",
+          "text": "Почему китайские камеры видеонаблюдения лидируют на мировом рынке",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Китайские производители доминируют на мировом рынке камер наблюдения, занимая более 60% мирового производства. Передовые функции ИИ, конкурентоспособные цены и непрерывные инновации сделали китайские бренды выбором номер один."
+        },
+        {
+          "type": "heading",
+          "text": "№1 Hikvision — Лидер отрасли",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Технология ColorVu: полноцветное ночное видение с диафрагмой F1.0",
+            "Глубокое обучение AcuSense: 99% точность обнаружения людей/транспортных средств",
+            "Разрешение 8MP (4K) во всех ценовых категориях",
+            "Диапазон цен: $45–$800"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "№2 Dahua Technology — Чемпион стоимости",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "WizSense AI: встроенный ИИ по доступным ценам",
+            "Полноцветное ночное видение до 30 метров",
+            "TiOC: активное предупреждение со светом и сиреной",
+            "Диапазон цен: $35–$600"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Быстрое сравнение",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Бренд",
+            "Для чего",
+            "От",
+            "ИИ функции",
+            "Гарантия"
+          ],
+          "rows": [
+            [
+              "Hikvision",
+              "Предприятие",
+              "$45",
+              "✅ Продвинутый",
+              "2 года"
+            ],
+            [
+              "Dahua",
+              "МБ/Бюджет",
+              "$35",
+              "✅ WizSense",
+              "2 года"
+            ],
+            [
+              "Uniview",
+              "Предприятие",
+              "$50",
+              "✅ Stellar",
+              "3 года"
+            ],
+            [
+              "Tiandy",
+              "Ценность",
+              "$30",
+              "✅ Базовый ИИ",
+              "2 года"
+            ],
+            [
+              "TP-Link Tapo",
+              "Дом/Офис",
+              "$20",
+              "⚠️ Ограничен",
+              "1 год"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Решения NewAge Trading",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы поставляем все основные китайские бренды безопасности по конкурентоспособным оптовым ценам. Мы предлагаем индивидуальные решения с полной гарантией и технической поддержкой. Свяжитесь с нами для бесплатной консультации."
         }
       ]
     }
