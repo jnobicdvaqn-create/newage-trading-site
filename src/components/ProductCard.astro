@@ -18,9 +18,11 @@ const props = Astro.props;
 const product = props.product as Record<string, unknown> | undefined;
 const title = props.title || (product?.name as string) || '';
 const description = props.description || (product?.description as string) || '';
-const image = props.image || (product?.image as string) || '';
+const rawImage = props.image || (product?.image as string) || '';
+const image = rawImage ? `${rawImage}?v=20260514` : '';
 const price = props.price || (product?.price as string) || '';
 const link = props.href || props.link || '#';
+
 const badge = props.badge || (product?.category as string) || '';
 const features = props.features || (product?.highlights as string[]) || undefined;
 ---
