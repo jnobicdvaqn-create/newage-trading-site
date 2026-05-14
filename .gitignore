@@ -1,0 +1,8 @@
+memory/
+contact-form/
+.astro/
+tools/site-deploy/
+PROJECT_BRIEF.md
+backups/
+node_modules/
+dist/
