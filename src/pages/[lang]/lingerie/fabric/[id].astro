@@ -112,11 +112,13 @@ const oemSteps = lang === 'zh' ? [
           </div>
           <a href={`/${lang}/contact/`} class="inline-block bg-[#1e3a5f] hover:bg-[#0f2440] text-white font-bold px-8 py-3 rounded-lg transition-colors">{label('requestOEM', lang)}</a>
         </div>
-        <div class="bg-white/10 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
-          <div class="text-center">
-            <span class="text-8xl block mb-4">👗</span>
-            <p class="text-white/60 text-sm">{fabricName} — {fabricCat}</p>
-          </div>
+        <div class="bg-white/10 rounded-2xl overflow-hidden flex items-center justify-center min-h-[300px]">
+          <img
+            src={`${fabric.image}?v=20260514`}
+            alt={fabricName}
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
         </div>
       </div>
     </div>
@@ -193,14 +195,24 @@ const oemSteps = lang === 'zh' ? [
           const fCat = tData(f, 'category', lang);
           const fProps = tArr(f, 'properties', lang);
           return (
-            <a href={`/${lang}/lingerie/fabric/${f.id}/`} class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow group">
-              <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors">{fName}</h3>
-              <p class="text-sm text-gray-500 mt-1">{fCat}</p>
-              <p class="text-[#c4a35a] font-semibold mt-2 text-sm">{f.priceRange}/pc</p>
-              <div class="flex flex-wrap gap-1 mt-3">
-                {fProps.slice(0, 3).map(p => (
-                  <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">{p}</span>
-                ))}
+            <a href={`/${lang}/lingerie/fabric/${f.id}/`} class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group">
+              <div class="aspect-video w-full overflow-hidden bg-white">
+                <img
+                  src={`${f.image}?v=20260514`}
+                  alt={fName}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors">{fName}</h3>
+                <p class="text-sm text-gray-500 mt-1">{fCat}</p>
+                <p class="text-[#c4a35a] font-semibold mt-2 text-sm">{f.priceRange}/pc</p>
+                <div class="flex flex-wrap gap-1 mt-3">
+                  {fProps.slice(0, 3).map(p => (
+                    <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">{p}</span>
+                  ))}
+                </div>
               </div>
             </a>
           );

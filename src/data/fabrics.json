@@ -2,6 +2,7 @@
   {
     "id": "cotton",
     "name": "Cotton",
+    "image": "/images/lingerie/cotton.jpg",
     "category": "Natural Fiber",
     "properties": ["Breathable", "Hypoallergenic", "Soft feel", "Moisture absorbent", "Easy to dye"],
     "moq": "300 pcs per design",
@@ -24,6 +25,7 @@
   {
     "id": "modal",
     "name": "Modal",
+    "image": "/images/lingerie/modal.jpg",
     "category": "Semi-Synthetic",
     "properties": ["Silky smooth", "High absorbency", "Drapes well", "Breathable", "Resists shrinkage"],
     "moq": "500 pcs per design",
@@ -46,6 +48,7 @@
   {
     "id": "bamboo",
     "name": "Bamboo",
+    "image": "/images/lingerie/bamboo.jpg",
     "category": "Natural Fiber",
     "properties": ["Ultra-soft", "Antibacterial", "Temperature regulating", "Eco-friendly", "UV protective"],
     "moq": "500 pcs per design",
@@ -68,6 +71,7 @@
   {
     "id": "spandex-elastane",
     "name": "Spandex / Elastane",
+    "image": "/images/lingerie/spandex.jpg",
     "category": "Synthetic",
     "properties": ["4-way stretch", "Shape retention", "Lightweight", "Quick-dry", "Slimming effect"],
     "moq": "800 pcs per design",
@@ -90,6 +94,7 @@
   {
     "id": "nylon-polyamide",
     "name": "Nylon / Polyamide",
+    "image": "/images/lingerie/nylon.jpg",
     "category": "Synthetic",
     "properties": ["Exceptionally soft", "Stretchy", "Quick-drying", "Lightweight", "Colorfast"],
     "moq": "500 pcs per design",
@@ -112,6 +117,7 @@
   {
     "id": "polyester",
     "name": "Polyester",
+    "image": "/images/lingerie/satin.jpg",
     "category": "Synthetic",
     "properties": ["Durable", "Wrinkle resistant", "Moisture wicking", "Colorfast", "Affordable"],
     "moq": "1000 pcs per design",
@@ -134,6 +140,7 @@
   {
     "id": "silk",
     "name": "Silk",
+    "image": "/images/lingerie/silk.jpg",
     "category": "Natural Fiber",
     "properties": ["Luxurious feel", "Natural sheen", "Thermoregulating", "Hypoallergenic", "Moisture wicking"],
     "moq": "200 pcs per design",
@@ -156,6 +163,7 @@
   {
     "id": "lace",
     "name": "Lace",
+    "image": "/images/lingerie/lace.jpg",
     "category": "Specialty",
     "properties": ["Intricate patterns", "Sheer elegance", "Stretchable", "Romantic aesthetic", "Layered options"],
     "moq": "500 pcs per design",
@@ -178,6 +186,7 @@
   {
     "id": "tencel-lyocell",
     "name": "Tencel / Lyocell",
+    "image": "/images/lingerie/mesh.jpg",
     "category": "Semi-Synthetic",
     "properties": ["Eco-friendly", "Smooth texture", "Breathable", "Biodegradable", "Anti-bacterial"],
     "moq": "500 pcs per design",
@@ -200,6 +209,7 @@
   {
     "id": "microfiber",
     "name": "Microfiber",
+    "image": "/images/lingerie/microfiber.jpg",
     "category": "Synthetic",
     "properties": ["Ultra-fine fibers", "Seamless finish", "Smooth under clothes", "Quick-dry", "Lightweight"],
     "moq": "800 pcs per design",

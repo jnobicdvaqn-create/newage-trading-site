@@ -76,21 +76,31 @@ const oemSteps = [
         {fabrics.map(fabric => (
           <a
             href={`/${lang}/lingerie/fabric/${fabric.id}/`}
-            class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-accent/30"
+            class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-accent/30 overflow-hidden group"
           >
-            <div class="flex items-center justify-between mb-3">
-              <h3 class="text-lg font-semibold">{lang === 'zh' ? fabric.nameZh : lang === 'ru' ? fabric.nameRu : fabric.name}</h3>
-              <span class="text-xs bg-accent/10 text-accent px-2 py-1 rounded">{lang === 'zh' ? fabric.categoryZh : lang === 'ru' ? fabric.categoryRu : fabric.category}</span>
+            <div class="aspect-video w-full overflow-hidden bg-gray-50">
+              <img
+                src={`${fabric.image}?v=20260514`}
+                alt={lang === 'zh' ? fabric.nameZh : lang === 'ru' ? fabric.nameRu : fabric.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             </div>
-            <p class="text-sm text-muted line-clamp-2 mb-3">{lang === 'zh' ? fabric.descriptionZh : lang === 'ru' ? fabric.descriptionRu : fabric.description}</p>
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              {(lang === 'zh' ? fabric.propertiesZh : lang === 'ru' ? fabric.propertiesRu : fabric.properties).slice(0, 3).map(p => (
-                <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{p}</span>
-              ))}
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-semibold">{lang === 'zh' ? fabric.nameZh : lang === 'ru' ? fabric.nameRu : fabric.name}</h3>
+                <span class="text-xs bg-accent/10 text-accent px-2 py-1 rounded">{lang === 'zh' ? fabric.categoryZh : lang === 'ru' ? fabric.categoryRu : fabric.category}</span>
+              </div>
+              <p class="text-sm text-muted line-clamp-2 mb-3">{lang === 'zh' ? fabric.descriptionZh : lang === 'ru' ? fabric.descriptionRu : fabric.description}</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                {(lang === 'zh' ? fabric.propertiesZh : lang === 'ru' ? fabric.propertiesRu : fabric.properties).slice(0, 3).map(p => (
+                  <span class="text-xs bg-gray-100 text-muted px-2 py-0.5 rounded">{p}</span>
+                ))}
+              </div>
+              <p class="text-sm font-medium text-primary">
+                <span class="text-muted font-normal">MOQ:</span> {fabric.moq}
+              </p>
             </div>
-            <p class="text-sm font-medium text-primary">
-              <span class="text-muted font-normal">MOQ:</span> {fabric.moq}
-            </p>
           </a>
         ))}
       </div>
