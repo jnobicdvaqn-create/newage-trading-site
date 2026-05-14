@@ -24,3 +24,11 @@ export function alternates(locale: Locale, path: string = ''): Array<{ lang: Loc
   const locales: Locale[] = ['en', 'ru', 'zh'];
   return locales.map(l => ({ lang: l, href: `/${l}${path}` }));
 }
+
+// Export raw translations for complex data access (objects, nested maps)
+export function getTranslations(locale: Locale) {
+  return translations[locale];
+}
+export function getRawTranslations() {
+  return translations;
+}

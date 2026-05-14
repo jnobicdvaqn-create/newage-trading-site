@@ -128,7 +128,35 @@
       "productTitle": "Product Catalog",
       "solutionTitle": "Security Solutions by Scenario",
       "certTitle": "Certifications & Compliance",
-      "ctaTitle": "Request Wholesale Pricing"
+      "ctaTitle": "Request Wholesale Pricing",
+      "schoolTitle": "Schools",
+      "schoolDesc": "Comprehensive campus security with access control and CCTV",
+      "warehouseTitle": "Warehouses",
+      "warehouseDesc": "Large-area surveillance with PTZ and perimeter detection",
+      "officeTitle": "Offices",
+      "officeDesc": "Access control, time attendance, and indoor CCTV",
+      "certDesc": "All our security equipment meets international quality and safety standards.",
+      "solutionDesc": "Tailored security solutions for different environments.",
+      "catCamera": "Cameras",
+      "catRecorder": "Recorders & NVRs",
+      "catAccessControl": "Access Control Systems",
+      "catAlarm": "Alarm Systems",
+      "typeBullet": "Bullet Camera",
+      "typeDome": "Dome Camera",
+      "typePTZ": "PTZ Camera",
+      "typeNVR": "NVR",
+      "typeXVR": "XVR",
+      "typeAccessControl": "Access Control",
+      "typeAlarmSystem": "Alarm System",
+      "type": {
+        "Bullet Camera": "Bullet Camera",
+        "Dome Camera": "Dome Camera",
+        "PTZ Camera": "PTZ Camera",
+        "NVR": "NVR",
+        "XVR": "XVR",
+        "Access Control": "Access Control",
+        "Alarm System": "Alarm System"
+      }
     },
     "blog": {
       "title": "Blog",
@@ -290,7 +318,7 @@
       "infoTitle": "Контактная информация",
       "whatsapp": "WhatsApp",
       "telegram": "Telegram",
-      "email": "Email",
+      "email": "Электронная почта",
       "address": "Офис",
       "addressLine": "Гуанчжоу, Китай",
       "responseTime": "Среднее время ответа: < 2 часов"
@@ -310,7 +338,9 @@
       "ctaTitle": "Получить CIF цену",
       "calculatorTitle": "Калькулятор CIF",
       "guideTitle": "Гайд по экспорту",
-      "faqTitle": "Часто задаваемые вопросы"
+      "faqTitle": "Часто задаваемые вопросы",
+      "comparisonTitle": "Сравнение моделей",
+      "priceTitle": "Цена в {country}"
     },
     "lingerie": {
       "title": "OEM/ODM производство нижнего белья",
@@ -339,7 +369,38 @@
     "security": {
       "title": "Оптовая продажа оборудования безопасности",
       "subtitle": "CCTV, контроль доступа и сигнализации от ведущих производителей Китая",
-      "ctaTitle": "Запросить оптовые цены"
+      "ctaTitle": "Запросить оптовые цены",
+      "certTitle": "Сертификация и соответствие",
+      "productTitle": "Каталог продуктов",
+      "solutionTitle": "Решения безопасности по сценариям",
+      "schoolTitle": "Школы",
+      "schoolDesc": "Комплексная защита кампуса с контролем доступа и видеонаблюдением",
+      "warehouseTitle": "Склады",
+      "warehouseDesc": "Масштабное видеонаблюдение с PTZ-камерами и защитой периметра",
+      "officeTitle": "Офисы",
+      "officeDesc": "Контроль доступа, учёт рабочего времени и внутреннее видеонаблюдение",
+      "certDesc": "Всё наше оборудование соответствует международным стандартам качества и безопасности.",
+      "solutionDesc": "Индивидуальные решения безопасности для различных объектов.",
+      "catCamera": "Камеры",
+      "catRecorder": "Регистраторы и видеорегистраторы",
+      "catAccessControl": "Системы контроля доступа",
+      "catAlarm": "Сигнализации",
+      "typeBullet": "Пулевая камера",
+      "typeDome": "Купольная камера",
+      "typePTZ": "PTZ-камера",
+      "typeNVR": "NVR",
+      "typeXVR": "XVR",
+      "typeAccessControl": "Контроль доступа",
+      "typeAlarmSystem": "Сигнализация",
+      "type": {
+        "Bullet Camera": "Пулевая камера",
+        "Dome Camera": "Купольная камера",
+        "PTZ Camera": "PTZ-камера",
+        "NVR": "Видеорегистратор NVR",
+        "XVR": "Видеорегистратор XVR",
+        "Access Control": "Контроль доступа",
+        "Alarm System": "Система сигнализации"
+      }
     },
     "blog": {
       "title": "Блог",
@@ -356,7 +417,8 @@
       "quickLinks": "Быстрые ссылки",
       "contactInfo": "Контактная информация",
       "ctaTitle": "Есть вопросы?",
-      "ctaDesc": "Мы готовы помочь. Свяжитесь с нами в любое время."
+      "ctaDesc": "Мы готовы помочь. Свяжитесь с нами в любое время.",
+      "allRightsReserved": "Все права защищены."
     },
     "privacy": {
       "description": "Политика конфиденциальности NewAge Trading — как мы собираем, используем и защищаем вашу личную информацию.",
@@ -520,7 +582,9 @@
       "ctaTitle": "获取任何车型的CIF价格",
       "calculatorTitle": "CIF价格计算器",
       "guideTitle": "各国出口指南",
-      "faqTitle": "常见问题"
+      "faqTitle": "常见问题",
+      "comparisonTitle": "车型对比",
+      "priceTitle": "{country}价格"
     },
     "lingerie": {
       "title": "内衣OEM/ODM制造",
@@ -549,7 +613,38 @@
     "security": {
       "title": "安防设备批发",
       "subtitle": "来自中国顶级安防制造商的CCTV、门禁和报警系统工厂直销",
-      "ctaTitle": "申请批发报价"
+      "ctaTitle": "申请批发报价",
+      "certTitle": "认证与合规",
+      "productTitle": "产品目录",
+      "solutionTitle": "按场景分类的安防解决方案",
+      "schoolTitle": "学校",
+      "schoolDesc": "门禁和监控于一体的校园综合安防方案",
+      "warehouseTitle": "仓库",
+      "warehouseDesc": "PTZ球机和周界检测的大面积监控方案",
+      "officeTitle": "办公室",
+      "officeDesc": "门禁、考勤和室内监控方案",
+      "certDesc": "我们的安防设备均符合国际质量和安全标准。",
+      "solutionDesc": "针对不同场景的定制化安防解决方案。",
+      "catCamera": "摄像机",
+      "catRecorder": "录像机/NVR",
+      "catAccessControl": "门禁系统",
+      "catAlarm": "报警系统",
+      "typeBullet": "枪式摄像机",
+      "typeDome": "半球摄像机",
+      "typePTZ": "球型摄像机",
+      "typeNVR": "网络录像机",
+      "typeXVR": "混合录像机",
+      "typeAccessControl": "门禁",
+      "typeAlarmSystem": "报警系统",
+      "type": {
+        "Bullet Camera": "枪机",
+        "Dome Camera": "半球摄像机",
+        "PTZ Camera": "云台摄像机",
+        "NVR": "网络录像机",
+        "XVR": "混合录像机",
+        "Access Control": "门禁系统",
+        "Alarm System": "报警系统"
+      }
     },
     "blog": {
       "title": "博客",
@@ -566,7 +661,8 @@
       "quickLinks": "快速链接",
       "contactInfo": "联系信息",
       "ctaTitle": "有问题？",
-      "ctaDesc": "我们随时准备帮助您解决采购需求。随时联系我们。"
+      "ctaDesc": "我们随时准备帮助您解决采购需求。随时联系我们。",
+      "allRightsReserved": "版权所有。"
     },
     "privacy": {
       "description": "NewAge Trading 隐私政策 — 我们如何收集、使用和保护您的个人信息。",
