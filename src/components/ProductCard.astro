@@ -1,4 +1,7 @@
 ---
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -10,21 +13,37 @@ export interface Props {
   // Support passing a product object directly
   product?: Record<string, unknown>;
   href?: string;
+  lang?: Locale;
 }
 
 const props = Astro.props;
+const lang = props.lang as Locale | undefined;
 
 // Extract from product object if provided, otherwise use direct props
 const product = props.product as Record<string, unknown> | undefined;
-const title = props.title || (product?.name as string) || '';
-const description = props.description || (product?.description as string) || '';
+
+// Language-aware field extraction
+const title = props.title || 
+  (lang && product?.[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}` as string] as string) || 
+  (product?.name as string) || '';
+
+const description = props.description || 
+  (lang && product?.[`description${lang.charAt(0).toUpperCase() + lang.slice(1)}` as string] as string) || 
+  (product?.description as string) || '';
+
 const rawImage = props.image || (product?.image as string) || '';
 const image = rawImage ? `${rawImage}?v=20260514c` : '';
 const price = props.price || (product?.price as string) || '';
 const link = props.href || props.link || '#';
 
 const badge = props.badge || (product?.category as string) || '';
-const features = props.features || (product?.highlights as string[]) || undefined;
+const features = props.features || 
+  (lang && product?.[`highlights${lang.charAt(0).toUpperCase() + lang.slice(1)}` as string] as string[]) || 
+  (product?.highlights as string[]) || undefined;
+
+// Localized "View Details" label
+const viewDetails = lang ? t('common.viewDetails', lang) : 'View Details';
+const moreLabel = lang ? t('common.more', lang) : 'more';
 ---
 
 <a
@@ -88,7 +107,7 @@ const features = props.features || (product?.highlights as string[]) || undefine
         ))}
         {features.length > 3 && (
           <li class="text-xs font-medium text-[var(--color-primary)]">
-            +{features.length - 3} more
+            +{features.length - 3} {moreLabel}
           </li>
         )}
       </ul>
@@ -97,7 +116,7 @@ const features = props.features || (product?.highlights as string[]) || undefine
     <!-- View Details link -->
     <div class="mt-auto pt-4">
       <span class="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]">
-        View Details
+        {viewDetails}
         <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>

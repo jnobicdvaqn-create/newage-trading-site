@@ -34,7 +34,7 @@ const categories = ['EV', 'PHEV', 'EREV', 'ICE'] as const;
   ]}
   schema={{
     "@type": "CollectionPage",
-    "name": "Chinese Automobile Export - NewAge Trading",
+    "name": t('cars.title', lang),
     "description": t('cars.subtitle', lang)
   }}
 >
@@ -56,21 +56,21 @@ const categories = ['EV', 'PHEV', 'EREV', 'ICE'] as const;
       if (items.length === 0) return null;
       return (
         <div class="mb-16 last:mb-0">
-          <h2 class="text-2xl font-bold mb-2">{cat}</h2>
-          <p class="text-muted mb-6">
-            {cat === 'EV' ? 'Electric Vehicles — zero emissions, high performance' :
-             cat === 'PHEV' ? 'Plug-in Hybrid Electric Vehicles — best of both worlds' :
-             cat === 'EREV' ? 'Extended Range Electric Vehicles — no range anxiety' :
-             'Internal Combustion Engine — proven reliability'}
-          </p>
+          <h2 class="text-2xl font-bold mb-2">{t(`cars.cat${cat}`, lang)}</h2>
+          <p class="text-muted mb-6">{t(`cars.cat${cat}Desc`, lang)}</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {items.map(car => (
-              <ProductCard
-                product={car as any}
-                href={`/${lang}/cars/price/${car.id}/`}
-                badge={car.category}
-              />
-            ))}
+            {items.map(car => {
+              const badgeKey = car.category;
+              const badgeLabel = t(`cars.badges.${badgeKey}`, lang) || badgeKey;
+              return (
+                <ProductCard
+                  product={car as any}
+                  href={`/${lang}/cars/price/${car.id}/`}
+                  badge={badgeLabel}
+                  lang={lang}
+                />
+              );
+            })}
           </div>
         </div>
       );
@@ -82,13 +82,13 @@ const categories = ['EV', 'PHEV', 'EREV', 'ICE'] as const;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold mb-4">{t('cars.guideTitle', lang)}</h2>
       <p class="text-muted max-w-2xl mx-auto mb-8">
-        Learn about import regulations, taxes, and procedures for each target market.
+        {t('cars.guideDesc', lang)}
       </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href={`/${lang}/cars/guide/georgia/`} class="btn-outline">Georgia</a>
-        <a href={`/${lang}/cars/guide/russia/`} class="btn-outline">Russia</a>
-        <a href={`/${lang}/cars/guide/uae/`} class="btn-outline">UAE</a>
-        <a href={`/${lang}/cars/guide/kazakhstan/`} class="btn-outline">Kazakhstan</a>
+        <a href={`/${lang}/cars/guide/georgia/`} class="btn-outline">{t('cars.countryGeorgia', lang)}</a>
+        <a href={`/${lang}/cars/guide/russia/`} class="btn-outline">{t('cars.countryRussia', lang)}</a>
+        <a href={`/${lang}/cars/guide/uae/`} class="btn-outline">{t('cars.countryUAE', lang)}</a>
+        <a href={`/${lang}/cars/guide/kazakhstan/`} class="btn-outline">{t('cars.countryKazakhstan', lang)}</a>
       </div>
     </div>
   </section>
@@ -98,13 +98,13 @@ const categories = ['EV', 'PHEV', 'EREV', 'ICE'] as const;
     <h2 class="text-3xl font-bold text-center mb-8">{t('cars.faqTitle', lang)}</h2>
     <div class="max-w-3xl mx-auto space-y-4">
       <a href={`/${lang}/cars/faq/is-it-legal-to-import-chinese-cars/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
-        <span class="font-medium">Is it legal to import Chinese cars to Georgia?</span>
+        <span class="font-medium">{t('cars.faq1', lang)}</span>
       </a>
       <a href={`/${lang}/cars/faq/byd-warranty-international/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
-        <span class="font-medium">Does BYD offer international warranty coverage?</span>
+        <span class="font-medium">{t('cars.faq2', lang)}</span>
       </a>
       <a href={`/${lang}/cars/faq/shipping-time-china-to-georgia/`} class="block p-4 rounded-xl bg-surface hover:bg-surface-dark transition-colors">
-        <span class="font-medium">How long does shipping from China to Georgia take?</span>
+        <span class="font-medium">{t('cars.faq3', lang)}</span>
       </a>
     </div>
   </section>

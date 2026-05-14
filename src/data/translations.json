@@ -96,7 +96,29 @@
       "guideTitle": "Export Guide by Country",
       "faqTitle": "Frequently Asked Questions",
       "priceTitle": "Price in {country}",
-      "comparisonTitle": "Compare Models"
+      "comparisonTitle": "Compare Models",
+      "catEV": "Electric Vehicles (EV)",
+      "catEVDesc": "Zero emissions, high performance — the future of driving",
+      "catPHEV": "Plug-in Hybrids (PHEV)",
+      "catPHEVDesc": "Best of both worlds — electric range with gas backup",
+      "catEREV": "Extended Range (EREV)",
+      "catEREVDesc": "No range anxiety — electric drive with generator",
+      "catICE": "Gasoline Vehicles",
+      "catICEDesc": "Proven reliability and performance",
+      "guideDesc": "Learn about import regulations, taxes, and procedures for each target market.",
+      "badges": {
+        "EV": "EV",
+        "PHEV": "PHEV",
+        "EREV": "EREV",
+        "ICE": "ICE"
+      },
+      "faq1": "Is it legal to import Chinese cars to Georgia?",
+      "faq2": "Does BYD offer international warranty coverage?",
+      "faq3": "How long does shipping from China to Georgia take?",
+      "countryGeorgia": "Georgia",
+      "countryRussia": "Russia",
+      "countryUAE": "UAE",
+      "countryKazakhstan": "Kazakhstan"
     },
     "lingerie": {
       "title": "Lingerie OEM / ODM Manufacturing",
@@ -174,7 +196,9 @@
       "quickLinks": "Quick Links",
       "contactInfo": "Contact Information",
       "ctaTitle": "Have Questions?",
-      "ctaDesc": "We're ready to help with your sourcing needs. Reach out anytime."
+      "ctaDesc": "We're ready to help with your sourcing needs. Reach out anytime.",
+      "viewDetails": "View Details",
+      "more": "more"
     },
     "privacy": {
       "description": "Privacy Policy of NewAge Trading — how we collect, use, and protect your personal information.",
@@ -340,7 +364,29 @@
       "guideTitle": "Гайд по экспорту",
       "faqTitle": "Часто задаваемые вопросы",
       "comparisonTitle": "Сравнение моделей",
-      "priceTitle": "Цена в {country}"
+      "priceTitle": "Цена в {country}",
+      "catEV": "Электромобили (EV)",
+      "catEVDesc": "Нулевые выбросы, высокая производительность",
+      "catPHEV": "Подключаемые гибриды (PHEV)",
+      "catPHEVDesc": "Лучшее из двух миров — электричество + бензин",
+      "catEREV": "Последовательные гибриды (EREV)",
+      "catEREVDesc": "Без страха перед расстоянием — электро с генератором",
+      "catICE": "Бензиновые автомобили",
+      "catICEDesc": "Проверенная надёжность и производительность",
+      "guideDesc": "Узнайте об импортных правилах, налогах и процедурах для каждой страны.",
+      "badges": {
+        "EV": "EV",
+        "PHEV": "PHEV",
+        "EREV": "EREV",
+        "ICE": "ICE"
+      },
+      "faq1": "Законно ли импортировать китайские автомобили в Грузию?",
+      "faq2": "Предлагает ли BYD международную гарантию?",
+      "faq3": "Сколько времени занимает доставка из Китая в Грузию?",
+      "countryGeorgia": "Грузия",
+      "countryRussia": "Россия",
+      "countryUAE": "ОАЭ",
+      "countryKazakhstan": "Казахстан"
     },
     "lingerie": {
       "title": "OEM/ODM производство нижнего белья",
@@ -418,7 +464,9 @@
       "contactInfo": "Контактная информация",
       "ctaTitle": "Есть вопросы?",
       "ctaDesc": "Мы готовы помочь. Свяжитесь с нами в любое время.",
-      "allRightsReserved": "Все права защищены."
+      "allRightsReserved": "Все права защищены.",
+      "viewDetails": "Подробнее",
+      "more": "ещё"
     },
     "privacy": {
       "description": "Политика конфиденциальности NewAge Trading — как мы собираем, используем и защищаем вашу личную информацию.",
@@ -584,7 +632,29 @@
       "guideTitle": "各国出口指南",
       "faqTitle": "常见问题",
       "comparisonTitle": "车型对比",
-      "priceTitle": "{country}价格"
+      "priceTitle": "{country}价格",
+      "catEV": "纯电动车 (EV)",
+      "catEVDesc": "零排放、高性能——驾驶的未来",
+      "catPHEV": "插电混动 (PHEV)",
+      "catPHEVDesc": "两全其美——电动续航+燃油备用",
+      "catEREV": "增程式 (EREV)",
+      "catEREVDesc": "无续航焦虑——电驱动配发电机",
+      "catICE": "燃油车",
+      "catICEDesc": "久经考验的可靠性和性能",
+      "guideDesc": "了解各目标市场的进口法规、税费和流程。",
+      "badges": {
+        "EV": "电动",
+        "PHEV": "混动",
+        "EREV": "增程",
+        "ICE": "燃油"
+      },
+      "faq1": "进口中国汽车到格鲁吉亚合法吗？",
+      "faq2": "比亚迪提供国际保修吗？",
+      "faq3": "从中国发货到格鲁吉亚需要多久？",
+      "countryGeorgia": "格鲁吉亚",
+      "countryRussia": "俄罗斯",
+      "countryUAE": "阿联酋",
+      "countryKazakhstan": "哈萨克斯坦"
     },
     "lingerie": {
       "title": "内衣OEM/ODM制造",
@@ -662,7 +732,9 @@
       "contactInfo": "联系信息",
       "ctaTitle": "有问题？",
       "ctaDesc": "我们随时准备帮助您解决采购需求。随时联系我们。",
-      "allRightsReserved": "版权所有。"
+      "allRightsReserved": "版权所有。",
+      "viewDetails": "查看详情",
+      "more": "更多"
     },
     "privacy": {
       "description": "NewAge Trading 隐私政策 — 我们如何收集、使用和保护您的个人信息。",
