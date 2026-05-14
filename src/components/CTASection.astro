@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '@i18n/types';
 import { t } from '@i18n/index';
+import { contact } from '@config/contact';
 
 export interface Props {
   lang?: Locale;
@@ -28,7 +29,7 @@ const {
     <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
       <!-- WhatsApp -->
       <a
-        href="https://wa.me/8617072783745"
+        href={`https://wa.me/${contact.whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
         class="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-green-500 px-8 py-4 text-white transition-all hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/30 sm:w-auto"
@@ -38,7 +39,7 @@ const {
         </svg>
         <span class="text-left">
           <span class="block text-xs opacity-80">{t('contact.whatsapp', lang)}</span>
-          <span class="block text-sm font-semibold">+86-170-7278-3745</span>
+          <span class="block text-sm font-semibold">{contact.whatsappDisplay}</span>
         </span>
       </a>
 

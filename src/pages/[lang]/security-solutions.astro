@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PriceBadge from '@components/PriceBadge.astro';
+import QuoteCTA from '@components/QuoteCTA.astro';
+import QuoteForm from '@components/QuoteForm.astro';
+import PricingDisclaimer from '@components/PricingDisclaimer.astro';
+import { tp, alternates, type Locale } from '@i18n/index';
+import { FORM_MODE, securityProducts } from '@config/pricing';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const heroTitle = tp('securityHeroTitle', lang);
+const heroSubtitle = tp('securityHeroSubtitle', lang);
+const refTableTitle = tp('securityRefTableTitle', lang);
+const refDisclaimer = tp('securityRefDisclaimer', lang);
+// Product cards
+const catCamera = tp('securityCatCamera', lang);
+const catCameraPrice = tp('securityCatCameraPrice', lang);
+const catCameraDesc = tp('securityCatCameraDesc', lang);
+const catNvr = tp('securityCatNvr', lang);
+const catNvrPrice = tp('securityCatNvrPrice', lang);
+const catNvrDesc = tp('securityCatNvrDesc', lang);
+const catAccess = tp('securityCatAccess', lang);
+const catAccessPrice = tp('securityCatAccessPrice', lang);
+const catAccessDesc = tp('securityCatAccessDesc', lang);
+const catInstall = tp('securityCatInstall', lang);
+const catInstallPrice = tp('securityCatInstallPrice', lang);
+const catInstallDesc = tp('securityCatInstallDesc', lang);
+// Table
+const tableProduct = tp('securityTableProduct', lang);
+const tablePrice = tp('securityTablePrice', lang);
+const rowCam2mp = tp('securityRowCam2mp', lang);
+const rowCam4mp = tp('securityRowCam4mp', lang);
+const rowNvr8ch = tp('securityRowNvr8ch', lang);
+const rowNvr16ch = tp('securityRowNvr16ch', lang);
+const rowAccess = tp('securityRowAccess', lang);
+---
+
+<BaseLayout
+  title={`${heroTitle} | NewAge Trading`}
+  description={heroSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/security-solutions')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16 md:py-24">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 text-[#c9a84c]">{heroTitle}</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">{heroSubtitle}</p>
+      <div class="mt-6 flex justify-center gap-3">
+        <PriceBadge priceType="reference_range" locale={lang} />
+        <PriceBadge priceType="solution_quote" locale={lang} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Product categories -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
+          <span class="text-4xl mb-3 block">📷</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{catCamera}</h3>
+          <p class="text-xs text-gray-500 mb-3">{catCameraPrice}</p>
+          <p class="text-sm text-gray-600">{catCameraDesc}</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
+          <span class="text-4xl mb-3 block">🖥️</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{catNvr}</h3>
+          <p class="text-xs text-gray-500 mb-3">{catNvrPrice}</p>
+          <p class="text-sm text-gray-600">{catNvrDesc}</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
+          <span class="text-4xl mb-3 block">🚪</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{catAccess}</h3>
+          <p class="text-xs text-gray-500 mb-3">{catAccessPrice}</p>
+          <p class="text-sm text-gray-600">{catAccessDesc}</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
+          <span class="text-4xl mb-3 block">🔧</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{catInstall}</h3>
+          <p class="text-xs text-gray-500 mb-3">{catInstallPrice}</p>
+          <p class="text-sm text-gray-600">{catInstallDesc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference pricing table -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-2xl font-bold text-[#0a1628] mb-6 text-center">{refTableTitle}</h2>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <table class="w-full text-sm">
+          <thead class="bg-[#0a1628] text-white">
+            <tr>
+              <th class="text-left p-4">{tableProduct}</th>
+              <th class="text-right p-4">{tablePrice}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {securityProducts.map((p) => (
+              <tr class="border-b border-gray-100"><td class="p-4">{tp(p.key, lang)}</td><td class="text-right p-4">{p.price}</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="p-4 text-xs text-gray-500 bg-gray-50">{refDisclaimer}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimers -->
+  <section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl space-y-4">
+      <PricingDisclaimer locale={lang} variant="universal" />
+      <PricingDisclaimer locale={lang} variant="security" />
+      <PricingDisclaimer locale={lang} variant="compliance" />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <QuoteCTA locale={lang} pageSlug="security" />
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <QuoteForm locale={lang} formMode={FORM_MODE} pageSlug="security" />
+    </div>
+  </section>
+</BaseLayout>

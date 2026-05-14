@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '@i18n/types';
 import { t } from '@i18n/index';
+import { waLink } from '@config/contact';
 
 export interface Props {
   lang: Locale;
@@ -19,7 +20,7 @@ const ctaDesc = description || t('common.ctaDesc', lang);
     <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">{ctaDesc}</p>
     <div class="flex flex-wrap items-center justify-center gap-4">
       <a
-        href="https://wa.me/8617072783745"
+        href={waLink('default')}
         target="_blank"
         rel="noopener noreferrer"
         class="btn-primary text-base"

@@ -1,0 +1,246 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import QuoteForm from '@components/QuoteForm.astro';
+import PricingDisclaimer from '@components/PricingDisclaimer.astro';
+import { tp, localePath, alternates, type Locale } from '@i18n/index';
+import { FORM_MODE } from '@config/pricing';
+import { waLink } from '@config/contact';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const heroTitle = tp('calcHeroTitle', lang);
+const heroSubtitle = tp('calcHeroSubtitle', lang);
+const tabVehicle = tp('tabVehicle', lang);
+const tabSecurity = tp('tabSecurity', lang);
+const tabOem = tp('tabOem', lang);
+
+const v = {
+  type: tp('vehicleType', lang),
+  condition: tp('vehicleCondition', lang),
+  budget: tp('vehicleBudget', lang),
+  dest: tp('vehicleDest', lang),
+  customs: tp('vehicleCustoms', lang),
+  reg: tp('vehicleReg', lang),
+};
+const s = {
+  site: tp('securitySite', lang),
+  cameras: tp('securityCameras', lang),
+  storage: tp('securityStorage', lang),
+  access: tp('securityAccess', lang),
+  dest: tp('securityDest', lang),
+};
+const o = {
+  type: tp('oemType', lang),
+  qty: tp('oemQty', lang),
+  fabric: tp('oemFabric', lang),
+  logo: tp('oemLogo', lang),
+  dest: tp('oemDest', lang),
+};
+const resultTitle = tp('resultTitle', lang);
+const resultText = tp('resultText', lang);
+const resultWhatsApp = tp('resultWhatsApp', lang);
+const estimateBtn = tp('estimateBtn', lang);
+const waHref = waLink('calculator');
+---
+
+<BaseLayout
+  title={heroTitle}
+  description={heroSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/calculator')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3 text-[#c9a84c]">{heroTitle}</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto">{heroSubtitle}</p>
+    </div>
+  </section>
+
+  <!-- Tabbed calculator -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <!-- Tabs -->
+      <div class="flex gap-2 mb-8 bg-white rounded-xl p-1 shadow-sm">
+        <button class="calc-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors" data-tab="vehicle">{tabVehicle}</button>
+        <button class="calc-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors" data-tab="security">{tabSecurity}</button>
+        <button class="calc-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors" data-tab="oem">{tabOem}</button>
+      </div>
+
+      <!-- Vehicle form -->
+      <div id="calc-vehicle" class="calc-panel bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <form class="space-y-5" onsubmit="return false;">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{v.type}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>SUV</option><option>Sedan</option><option>EV</option><option>Truck</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{v.condition}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>New</option><option>Used</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{v.budget}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Under $15,000</option><option>$15,000–$30,000</option><option>$30,000–$50,000</option><option>$50,000+</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{v.dest}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Georgia</option><option>Russia</option><option>Kazakhstan</option><option>Uzbekistan</option><option>Azerbaijan</option>
+            </select>
+          </div>
+          <div class="flex gap-6">
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" class="rounded border-gray-300 text-[#c9a84c] focus:ring-[#c9a84c]" /> {v.customs}
+            </label>
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" class="rounded border-gray-300 text-[#c9a84c] focus:ring-[#c9a84c]" /> {v.reg}
+            </label>
+          </div>
+          <button type="submit" class="calc-submit w-full px-6 py-3 bg-[#c9a84c] text-[#0a1628] font-semibold rounded-xl hover:bg-[#e2c767] transition-colors">{estimateBtn}</button>
+        </form>
+      </div>
+
+      <!-- Security form -->
+      <div id="calc-security" class="calc-panel hidden bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <form class="space-y-5" onsubmit="return false;">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{s.site}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Home</option><option>Office</option><option>Warehouse</option><option>Retail</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{s.cameras}</label>
+            <input type="number" min="1" max="64" value="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none" />
+          </div>
+          <div class="flex gap-6">
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" class="rounded border-gray-300 text-[#c9a84c] focus:ring-[#c9a84c]" /> {s.storage}
+            </label>
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" class="rounded border-gray-300 text-[#c9a84c] focus:ring-[#c9a84c]" /> {s.access}
+            </label>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{s.dest}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Georgia</option><option>Russia</option><option>Kazakhstan</option><option>Uzbekistan</option>
+            </select>
+          </div>
+          <button type="submit" class="calc-submit w-full px-6 py-3 bg-[#c9a84c] text-[#0a1628] font-semibold rounded-xl hover:bg-[#e2c767] transition-colors">{estimateBtn}</button>
+        </form>
+      </div>
+
+      <!-- OEM form -->
+      <div id="calc-oem" class="calc-panel hidden bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <form class="space-y-5" onsubmit="return false;">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{o.type}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Underwear set</option><option>Bra</option><option>Panties</option><option>Shapewear</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{o.qty}</label>
+            <input type="number" min="50" value="300" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{o.fabric}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Economy</option><option>Standard</option><option>Premium</option>
+            </select>
+          </div>
+          <div class="flex gap-6">
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" class="rounded border-gray-300 text-[#c9a84c] focus:ring-[#c9a84c]" /> {o.logo}
+            </label>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">{o.dest}</label>
+            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c9a84c] outline-none">
+              <option>Georgia</option><option>Russia</option><option>Kazakhstan</option><option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="calc-submit w-full px-6 py-3 bg-[#c9a84c] text-[#0a1628] font-semibold rounded-xl hover:bg-[#e2c767] transition-colors">{estimateBtn}</button>
+        </form>
+      </div>
+
+      <!-- Result (hidden by default) -->
+      <div id="calc-result" class="hidden bg-white rounded-2xl shadow-lg p-6 md:p-8 text-center">
+        <span class="text-4xl mb-4 block">📊</span>
+        <h3 class="text-xl font-bold text-[#0a1628] mb-2">{resultTitle}</h3>
+        <p class="text-gray-600 mb-6">{resultText}</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href={waHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-semibold rounded-xl hover:bg-[#20bd5a] transition-colors">
+            {resultWhatsApp}
+          </a>
+          <a href="#quote-form" class="inline-flex items-center px-6 py-3 bg-[#c9a84c] text-[#0a1628] font-semibold rounded-xl hover:bg-[#e2c767] transition-colors">
+            {tp('formTitle', lang)}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <PricingDisclaimer locale={lang} variant="universal" />
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="quote-form" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <QuoteForm locale={lang} formMode={FORM_MODE} pageSlug="calculator" />
+    </div>
+  </section>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.calc-tab');
+    const panels = document.querySelectorAll('.calc-panel');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = (tab as HTMLElement).dataset.tab;
+        tabs.forEach((t) => t.classList.remove('bg-[#c9a84c]', 'text-[#0a1628]'));
+        (tab as HTMLElement).classList.add('bg-[#c9a84c]', 'text-[#0a1628]');
+        panels.forEach((p) => {
+          (p as HTMLElement).classList.toggle('hidden', p.id !== `calc-${target}`);
+        });
+      });
+    });
+
+    // Select first tab by default
+    if (tabs.length > 0) {
+      (tabs[0] as HTMLElement).click();
+    }
+
+    // Submit handlers (prototype mode)
+    document.querySelectorAll('.calc-submit').forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const result = document.getElementById('calc-result');
+        if (result) {
+          document.querySelectorAll('.calc-panel').forEach((p) => (p as HTMLElement).classList.add('hidden'));
+          result.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
+</BaseLayout>

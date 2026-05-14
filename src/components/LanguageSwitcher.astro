@@ -1,0 +1,51 @@
+---
+/**
+ * LanguageSwitcher.astro — Compact language toggle bar.
+ * Preserves current path, only swaps the /en|ru|zh/ prefix.
+ *
+ * Props:
+ *   lang: current Locale ('en' | 'ru' | 'zh')
+ *   className?: optional outer class
+ */
+import type { Locale } from '@i18n/types';
+import { LOCALES } from '@i18n/locales';
+
+interface Props {
+  lang: Locale;
+  className?: string;
+}
+
+const { lang, className = '' } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+const localeNames: Record<Locale, string> = {
+  en: 'EN',
+  ru: 'RU',
+  zh: '中文',
+};
+
+const switchTo = (target: Locale): string => {
+  // If path starts with /en/, /ru/, /zh/, replace prefix
+  if (/^\/[a-z]{2}(\/|$)/.test(currentPath)) {
+    return currentPath.replace(/^\/[a-z]{2}/, `/${target}`);
+  }
+  // Bare path (e.g. /pricing) → prefix with target
+  return `/${target}${currentPath}`;
+};
+---
+
+<div class={`flex overflow-hidden rounded-lg border border-gray-200 text-xs font-medium ${className}`}>
+  {LOCALES.map((l) => (
+    l === lang ? (
+      <span class="bg-[var(--color-primary)] px-2.5 py-1.5 text-white">{localeNames[l]}</span>
+    ) : (
+      <a
+        href={switchTo(l)}
+        class="px-2.5 py-1.5 text-gray-500 transition-colors hover:bg-gray-100"
+      >
+        {localeNames[l]}
+      </a>
+    )
+  ))}
+</div>
