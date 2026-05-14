@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const messages = {
+  en: {
+    title: 'Message Sent!',
+    subtitle: 'Thank you for contacting us. We will get back to you within 24 hours.',
+    backHome: 'Back to Home',
+    backContact: 'Contact Us Again',
+    tip: '💡 While waiting, feel free to browse our product catalog or check our export guides.',
+  },
+  ru: {
+    title: 'Сообщение отправлено!',
+    subtitle: 'Спасибо за обращение. Мы ответим вам в течение 24 часов.',
+    backHome: 'На главную',
+    backContact: 'Написать снова',
+    tip: '💡 Пока ждёте, просмотрите наш каталог или руководства по экспорту.',
+  },
+  zh: {
+    title: '消息已发送！',
+    subtitle: '感谢您的留言，我们将在24小时内回复您。',
+    backHome: '返回首页',
+    backContact: '再次联系我们',
+    tip: '💡 等待期间，您可以浏览我们的产品目录或查看出口指南。',
+  },
+};
+
+const msg = messages[lang];
+---
+
+<BaseLayout
+  title={msg.title}
+  description={msg.subtitle}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.contact', lang), path: `/${lang}/contact/` },
+    { name: msg.title },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.contact', lang), path: `/${lang}/contact/` },
+    { name: msg.title },
+  ]} />
+
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{msg.title}</h1>
+    </div>
+  </section>
+
+  <section class="container-section">
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Success Icon -->
+      <div class="w-20 h-20 mx-auto mb-8 bg-green-100 rounded-full flex items-center justify-center">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-4">{msg.title}</h2>
+      <p class="text-lg text-muted mb-8">{msg.subtitle}</p>
+
+      <div class="p-6 rounded-xl bg-surface mb-8">
+        <p class="text-muted">{msg.tip}</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`/${lang}/`} class="btn-primary">{msg.backHome}</a>
+        <a href={`/${lang}/contact/`} class="btn-outline">{msg.backContact}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

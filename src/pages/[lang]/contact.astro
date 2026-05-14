@@ -73,8 +73,13 @@ const contactMethods = [
       <!-- Contact Form -->
       <div>
         <h2 class="text-2xl font-bold mb-6">{t('contact.formTitle', lang)}</h2>
-        <form id="contactForm" class="space-y-4">
-          <!-- Honeypot field -->
+        <form id="contactForm" class="space-y-4" action="https://formsubmit.co/felipeche01manager@YUNBSAOtrade.onmicrosoft.com" method="POST">
+          <!-- FormSubmit.co config fields -->
+          <input type="hidden" name="_subject" value="New Contact Form Submission — NewAge Trading" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={Astro.url.origin + '/' + lang + '/contact/thanks/'} />
+          <!-- Honeypot field (anti-spam) -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div>
             <label class="block text-sm font-medium text-primary mb-1">{t('contact.formName', lang)}</label>
@@ -97,6 +102,7 @@ const contactMethods = [
         </form>
 
         <script>
+          // FormSubmit.co AJAX submission
           document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = e.target;
@@ -104,35 +110,31 @@ const contactMethods = [
             const status = document.getElementById('formStatus');
             const originalText = btn.textContent;
 
-            // Disable button
             btn.disabled = true;
             btn.textContent = '...';
             status.classList.add('hidden');
 
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
 
             try {
-              const res = await fetch('/api/contact', {
+              const res = await fetch(form.action, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(formData.entries())),
               });
-              const result = await res.json();
 
-              status.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'bg-green-50', 'text-green-700');
-              if (res.ok && result.success) {
+              if (res.ok) {
+                status.classList.remove('hidden');
                 status.classList.add('bg-green-50', 'text-green-700');
-                status.textContent = result.message || 'Thank you!';
+                status.textContent = '✅ Message sent successfully! We will get back to you soon.';
                 form.reset();
               } else {
-                status.classList.add('bg-red-50', 'text-red-700');
-                status.textContent = result.message || 'Something went wrong. Please try again.';
+                // Fallback: use native form submission (page redirect to FormSubmit thanks page)
+                form.submit();
               }
             } catch (err) {
-              status.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'bg-green-50', 'text-green-700');
-              status.classList.add('bg-red-50', 'text-red-700');
-              status.textContent = 'Network error. Please check your connection and try again.';
+              // Fallback: use native form submission
+              form.submit();
             } finally {
               btn.disabled = false;
               btn.textContent = originalText;
