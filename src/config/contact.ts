@@ -2,13 +2,22 @@
  * Contact configuration — single source of truth.
  * All WhatsApp buttons and contact elements read from here.
  * Do NOT hardcode WhatsApp numbers or email in pages/components.
+ *
+ * ⚠️ BEFORE LAUNCH: Replace placeholders with real business numbers.
+ * Use .env.local for local testing:
+ *   PUBLIC_WHATSAPP_NUMBER=<real_number>
+ *   PUBLIC_WHATSAPP_DISPLAY=+<real_number>
  */
+
+const envNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
+const envDisplay = import.meta.env.PUBLIC_WHATSAPP_DISPLAY;
+
 export const contact = {
   /** Display number for UI (with + and spaces) */
-  whatsappDisplay: '+86 170 7278 3745',
+  whatsappDisplay: envDisplay ?? '+XX XXXXX XXXXX',
 
   /** Number for wa.me deep links (no + or spaces) */
-  whatsappNumber: '8617072783745',
+  whatsappNumber: envNumber ?? 'WHATSAPP_NUMBER',
 
   /** Email for receiving inquiries */
   email: 'CONTACT_EMAIL',
@@ -23,6 +32,11 @@ export const contact = {
   telegram: '@richzhu001',
   telegramUrl: 'https://t.me/richzhu001',
 } as const;
+
+/** Check if WhatsApp is properly configured (not placeholder) */
+export function isWhatsAppConfigured(): boolean {
+  return contact.whatsappNumber !== 'WHATSAPP_NUMBER';
+}
 
 /**
  * Page-aware WhatsApp messages — auto-selects context-appropriate text.

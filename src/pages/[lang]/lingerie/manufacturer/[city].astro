@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { contact, waLink } from '@config/contact';
 
 export function getStaticPaths() {
   return [
@@ -163,7 +164,7 @@ const title = `${data.name} — Lingerie OEM Manufacturing | NewAge Trading`;
         {lang === 'zh' ? '想了解{data.name}工厂报价？联系我们！' : lang === 'ru' ? 'Хотите узнать цену фабрики в {data.name}? Свяжитесь с нами!' : `Want a quote from ${data.name} factories? Contact us!`}
       </p>
       <a
-        href="https://wa.me/PHONENUMBER"
+        href={waLink('oem')}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-block px-6 py-3 bg-accent text-primary font-semibold rounded-xl hover:bg-accent-dark transition-colors"

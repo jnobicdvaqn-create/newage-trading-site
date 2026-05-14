@@ -4,6 +4,9 @@
  *
  * ⚠️ RULE: When real supplier prices are confirmed, ONLY edit this file.
  * Do NOT hardcode prices in page HTML or Astro components.
+ *
+ * ⚠️ CURRENT STATUS: All prices are PLACEHOLDER references only.
+ * Real numbers must be confirmed with suppliers before launch.
  */
 
 export type PriceType =
@@ -102,12 +105,14 @@ export const disclaimers = {
 export const FORM_MODE: 'prototype' | 'email' | 'feishu' | 'email_feishu' =
   'prototype';
 
+import { contact } from './contact';
+
 /**
  * Form endpoints (used when FORM_MODE !== 'prototype')
  */
 export const FORM_ENDPOINTS = {
   email:
-    'https://formsubmit.co/felipeche01manager@YUNBSAOtrade.onmicrosoft.com',
+    `https://formsubmit.co/${contact.email}`,
   feishu: '', // TODO: add Feishu webhook URL when ready
 } as const;
 
@@ -121,11 +126,11 @@ export interface SecurityProduct {
 }
 
 export const securityProducts: SecurityProduct[] = [
-  { key: 'rowCam2mp', price: 'USD 50–120/unit' },
-  { key: 'rowCam4mp', price: 'USD 80–200/unit' },
-  { key: 'rowNvr8ch', price: 'USD 100–300/set' },
-  { key: 'rowNvr16ch', price: 'USD 200–500/set' },
-  { key: 'rowAccess', price: 'USD 80–500/set' },
+  { key: 'rowCam2mp', price: 'USD XX–XX/unit' },
+  { key: 'rowCam4mp', price: 'USD XX–XX/unit' },
+  { key: 'rowNvr8ch', price: 'USD XX–XX/set' },
+  { key: 'rowNvr16ch', price: 'USD XX–XX/set' },
+  { key: 'rowAccess', price: 'USD XX–XX/set' },
 ];
 
 // ─────────────────────────────────────────────
@@ -139,9 +144,9 @@ export interface OemProduct {
 }
 
 export const underwearOemProducts: OemProduct[] = [
-  { key: 'rowBraBasic', price: 'USD 2–5/pc', moq: '300 pcs' },
-  { key: 'rowBraMid', price: 'USD 5–10/pc', moq: '300 pcs' },
-  { key: 'rowBraPremium', price: 'USD 10–15/pc', moq: '200 pcs' },
-  { key: 'rowPanty', price: 'USD 1–3/set', moq: '500 sets' },
-  { key: 'rowShapewear', price: 'USD 5–12/pc', moq: '300 pcs' },
+  { key: 'rowBraBasic', price: 'USD XX–XX/pc', moq: 'N pcs' },
+  { key: 'rowBraMid', price: 'USD XX–XX/pc', moq: 'N pcs' },
+  { key: 'rowBraPremium', price: 'USD XX–XX/pc', moq: 'N pcs' },
+  { key: 'rowPanty', price: 'USD XX–XX/set', moq: 'N sets' },
+  { key: 'rowShapewear', price: 'USD XX–XX/pc', moq: 'N pcs' },
 ];
