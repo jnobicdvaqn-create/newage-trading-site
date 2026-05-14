@@ -56,6 +56,10 @@ const langOg: Record<string, string> = {
   <meta name="description" content={description} />
   <link rel="canonical" href={fullUrl} />
 
+  <!-- Content Security Policy (CSP) via meta tag -->
+  <!-- 防护恶意脚本注入：只允许指定来源的资源 -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;" />
+
   <!-- Open Graph -->
   <meta property="og:title" content={`${title} | NewAge Trading`} />
   <meta property="og:description" content={description} />
