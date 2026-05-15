@@ -1,0 +1,61 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { tp, localePath, alternates, type Locale } from '@i18n/index';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const heroTitle = tp('faqHeroTitle', lang);
+const heroSubtitle = tp('faqHeroSubtitle', lang);
+
+const qa = [
+  { q: tp('q1', lang), a: tp('a1', lang) },
+  { q: tp('q2', lang), a: tp('a2', lang) },
+  { q: tp('q3', lang), a: tp('a3', lang) },
+  { q: tp('q4', lang), a: tp('a4', lang) },
+  { q: tp('q5', lang), a: tp('a5', lang) },
+  { q: tp('q6', lang), a: tp('a6', lang) },
+  { q: tp('q7', lang), a: tp('a7', lang) },
+];
+---
+
+<BaseLayout
+  title={heroTitle}
+  description={heroSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/faq/pricing')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3 text-[#c9a84c]">{heroTitle}</h1>
+      <p class="text-gray-300 max-w-xl mx-auto">{heroSubtitle}</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="space-y-6">
+        {qa.map((item) => (
+          <details class="group border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-5 bg-gray-50 hover:bg-gray-100 transition-colors">
+              <h3 class="font-semibold text-[#0a1628] pr-4">{item.q}</h3>
+              <span class="text-[#c9a84c] text-xl flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="p-5 text-gray-700 leading-relaxed border-t border-gray-100">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

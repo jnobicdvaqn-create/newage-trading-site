@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import faqs from '../../../../data/cars-faq.json';
+import { contact, waLink } from '@config/contact';
 
 // Get all possible paths
 export function getStaticPaths() {
@@ -129,7 +130,7 @@ const pageTitle = titles[lang as keyof typeof titles] || titles.en;
     <div class="max-w-4xl mx-auto mt-12 bg-primary rounded-2xl p-8 text-center">
       <p class="text-xl text-white mb-4">{t('cars.faqContact', lang)}</p>
       <a
-        href="https://wa.me/PHONENUMBER"
+        href={waLink('vehicles')}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-block px-6 py-3 bg-accent text-primary font-semibold rounded-xl hover:bg-accent-dark transition-colors"

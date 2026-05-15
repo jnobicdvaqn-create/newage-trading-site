@@ -1,0 +1,40 @@
+---
+/**
+ * PriceBadge.astro — Displays pricing type badge on product/quote pages.
+ *
+ * Props:
+ *   priceType: 'quote_only' | 'reference_range' | 'solution_quote' | 'range_moq'
+ *   locale: 'en' | 'ru' | 'zh'
+ *
+ * Reads labels from src/i18n/pricing/*.ts — never hardcoded.
+ */
+import { tp, type Locale } from '@i18n/index';
+
+interface Props {
+  priceType: 'quote_only' | 'reference_range' | 'solution_quote' | 'range_moq';
+  locale?: Locale;
+  className?: string;
+}
+
+const { priceType, locale = 'en', className = '' } = Astro.props;
+
+const badgeKeyMap: Record<Props['priceType'], string> = {
+  quote_only: 'badgeQuoteOnly',
+  reference_range: 'badgeReference',
+  solution_quote: 'badgeSolutionQuote',
+  range_moq: 'badgeRangeMq',
+};
+
+const label = tp(badgeKeyMap[priceType], locale);
+
+const styleMap: Record<Props['priceType'], string> = {
+  quote_only: 'bg-amber-100 text-amber-800',
+  reference_range: 'bg-blue-100 text-blue-800',
+  solution_quote: 'bg-purple-100 text-purple-800',
+  range_moq: 'bg-emerald-100 text-emerald-800',
+};
+
+const badgeClass = `${styleMap[priceType]} inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${className}`;
+---
+
+<span class={badgeClass}>{label}</span>

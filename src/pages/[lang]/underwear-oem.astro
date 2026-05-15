@@ -1,0 +1,130 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PriceBadge from '@components/PriceBadge.astro';
+import QuoteCTA from '@components/QuoteCTA.astro';
+import QuoteForm from '@components/QuoteForm.astro';
+import PricingDisclaimer from '@components/PricingDisclaimer.astro';
+import { tp, alternates, type Locale } from '@i18n/index';
+import { FORM_MODE, underwearOemProducts } from '@config/pricing';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const heroTitle = tp('oemHeroTitle', lang);
+const heroSubtitle = tp('oemHeroSubtitle', lang);
+const refTableTitle = tp('oemRefTableTitle', lang);
+const refDisclaimer = tp('oemRefDisclaimer', lang);
+// Features
+const featOemTitle = tp('oemFeatOemTitle', lang);
+const featOemDesc = tp('oemFeatOemDesc', lang);
+const featMoqTitle = tp('oemFeatMoqTitle', lang);
+const featMoqDesc = tp('oemFeatMoqDesc', lang);
+const featExportTitle = tp('oemFeatExportTitle', lang);
+const featExportDesc = tp('oemFeatExportDesc', lang);
+// Table
+const tableProduct = tp('oemTableProduct', lang);
+const tablePrice = tp('oemTablePrice', lang);
+const tableMoq = tp('oemTableMoq', lang);
+const rowBraBasic = tp('oemRowBraBasic', lang);
+const rowBraMid = tp('oemRowBraMid', lang);
+const rowBraPremium = tp('oemRowBraPremium', lang);
+const rowPanty = tp('oemRowPanty', lang);
+const rowShapewear = tp('oemRowShapewear', lang);
+---
+
+<BaseLayout
+  title={`${heroTitle} | NewAge Trading`}
+  description={heroSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/underwear-oem')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16 md:py-24">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 text-[#c9a84c]">{heroTitle}</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">{heroSubtitle}</p>
+      <div class="mt-6 flex justify-center">
+        <PriceBadge priceType="range_moq" locale={lang} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Service features -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">🏭</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{featOemTitle}</h3>
+          <p class="text-sm text-gray-600">{featOemDesc}</p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">📦</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{featMoqTitle}</h3>
+          <p class="text-sm text-gray-600">{featMoqDesc}</p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">🚢</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{featExportTitle}</h3>
+          <p class="text-sm text-gray-600">{featExportDesc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference pricing -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-2xl font-bold text-[#0a1628] mb-6 text-center">{refTableTitle}</h2>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <table class="w-full text-sm">
+          <thead class="bg-[#0a1628] text-white">
+            <tr>
+              <th class="text-left p-4">{tableProduct}</th>
+              <th class="text-right p-4">{tablePrice}</th>
+              <th class="text-right p-4">{tableMoq}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {underwearOemProducts.map((p) => (
+              <tr class="border-b border-gray-100">
+                <td class="p-4">{tp(p.key, lang)}</td>
+                <td class="text-right p-4">{p.price}</td>
+                <td class="text-right p-4">{p.moq}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="p-4 text-xs text-gray-500 bg-gray-50">{refDisclaimer}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimers -->
+  <section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl space-y-4">
+      <PricingDisclaimer locale={lang} variant="universal" />
+      <PricingDisclaimer locale={lang} variant="oem" />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <QuoteCTA locale={lang} pageSlug="oem" />
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <QuoteForm locale={lang} formMode={FORM_MODE} pageSlug="oem" />
+    </div>
+  </section>
+</BaseLayout>

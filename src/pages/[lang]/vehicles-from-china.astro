@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PriceBadge from '@components/PriceBadge.astro';
+import QuoteCTA from '@components/QuoteCTA.astro';
+import QuoteForm from '@components/QuoteForm.astro';
+import CostBreakdown from '@components/CostBreakdown.astro';
+import PricingDisclaimer from '@components/PricingDisclaimer.astro';
+import { tp, alternates, type Locale } from '@i18n/index';
+import { FORM_MODE } from '@config/pricing';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const pageTitle = tp('vehiclesHeroTitle', lang);
+const pageSubtitle = tp('vehiclesHeroSubtitle', lang);
+const serviceNewTitle = tp('vehiclesServiceNew', lang);
+const serviceNewDesc = tp('vehiclesServiceNewDesc', lang);
+const serviceUsedTitle = tp('vehiclesServiceUsed', lang);
+const serviceUsedDesc = tp('vehiclesServiceUsedDesc', lang);
+const serviceFullTitle = tp('vehiclesServiceFull', lang);
+const serviceFullDesc = tp('vehiclesServiceFullDesc', lang);
+---
+
+<BaseLayout
+  title={`${pageTitle} | NewAge Trading`}
+  description={pageSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/vehicles-from-china')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16 md:py-24">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 text-[#c9a84c]">{pageTitle}</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">{pageSubtitle}</p>
+      <div class="mt-6 flex justify-center">
+        <PriceBadge priceType="quote_only" locale={lang} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">🚗</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{serviceNewTitle}</h3>
+          <p class="text-sm text-gray-600">{serviceNewDesc}</p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">🚘</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{serviceUsedTitle}</h3>
+          <p class="text-sm text-gray-600">{serviceUsedDesc}</p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-2xl">
+          <span class="text-4xl mb-3 block">🚢</span>
+          <h3 class="font-bold text-[#0a1628] mb-2">{serviceFullTitle}</h3>
+          <p class="text-sm text-gray-600">{serviceFullDesc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost breakdown -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <CostBreakdown locale={lang} />
+    </div>
+  </section>
+
+  <!-- Disclaimers -->
+  <section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl space-y-4">
+      <PricingDisclaimer locale={lang} variant="universal" />
+      <PricingDisclaimer locale={lang} variant="vehicle" />
+      <PricingDisclaimer locale={lang} variant="compliance" />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <QuoteCTA locale={lang} pageSlug="vehicles" />
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <QuoteForm locale={lang} formMode={FORM_MODE} pageSlug="vehicles" />
+    </div>
+  </section>
+</BaseLayout>

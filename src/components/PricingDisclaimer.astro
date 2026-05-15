@@ -1,0 +1,51 @@
+---
+/**
+ * PricingDisclaimer.astro — Universal disclaimer block.
+ * Required on ALL pages that display any pricing information.
+ *
+ * Props:
+ *   locale: 'en' | 'ru' | 'zh'
+ *   variant: 'universal' | 'vehicle' | 'security' | 'oem' | 'compliance'
+ *   className: optional extra classes
+ */
+import { tp, type Locale } from '@i18n/index';
+
+interface Props {
+  locale?: Locale;
+  variant?: 'universal' | 'vehicle' | 'security' | 'oem' | 'compliance';
+  className?: string;
+}
+
+const { locale = 'en', variant = 'universal', className = '' } = Astro.props;
+
+const keyMap: Record<Exclude<Props['variant'], 'universal'>, string> = {
+  vehicle: 'disclaimerVehicle',
+  security: 'disclaimerSecurity',
+  oem: 'disclaimerOem',
+  compliance: 'complianceNotice',
+};
+
+const text = variant === 'universal'
+  ? tp('disclaimerUniversal', locale)
+  : tp(keyMap[variant], locale);
+
+const title = tp('disclaimerTitle', locale);
+
+const iconMap: Record<NonNullable<Props['variant']>, string> = {
+  universal: 'ℹ️',
+  vehicle: '🚗',
+  security: '🔒',
+  oem: '👗',
+  compliance: '⚖️',
+};
+
+const icon = iconMap[variant];
+---
+
+<div class={`flex gap-3 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-gray-700 ${className}`}>
+  <span class="text-xl flex-shrink-0" aria-hidden="true">{icon}</span>
+  <div>
+    <p class="font-semibold text-amber-900 mb-1">{title}</p>
+    <p>{text}</p>
+  </div>
+</div>

@@ -32,3 +32,26 @@ export function getTranslations(locale: Locale) {
 export function getRawTranslations() {
   return translations;
 }
+
+// ── Pricing module i18n (new structure) ──
+import * as pricingEn from './pricing/en';
+import * as pricingRu from './pricing/ru';
+import * as pricingZh from './pricing/zh';
+
+const pricingModules: Record<Locale, Record<string, unknown>> = {
+  en: pricingEn as Record<string, unknown>,
+  ru: pricingRu as Record<string, unknown>,
+  zh: pricingZh as Record<string, unknown>,
+};
+
+/** Get pricing module translations for a locale */
+export function getPricingTranslations(locale: Locale) {
+  return pricingModules[locale] ?? pricingModules.en;
+}
+
+/** Pricing-specific t() helper — falls back to English if key missing */
+export function tp(key: string, locale: Locale): string {
+  const fallback = pricingModules.en as Record<string, string>;
+  const module = (pricingModules[locale] ?? fallback) as Record<string, string>;
+  return module[key] ?? fallback[key] ?? key;
+}

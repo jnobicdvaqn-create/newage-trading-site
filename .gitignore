@@ -6,3 +6,5 @@ PROJECT_BRIEF.md
 backups/
 node_modules/
 dist/
+.env.local
+.env.*.local

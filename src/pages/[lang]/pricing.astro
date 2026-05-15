@@ -1,0 +1,168 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import QuoteCTA from '@components/QuoteCTA.astro';
+import QuoteForm from '@components/QuoteForm.astro';
+import PricingDisclaimer from '@components/PricingDisclaimer.astro';
+import { tp, localePath, alternates, type Locale } from '@i18n/index';
+import { pricingLines, FORM_MODE } from '@config/pricing';
+import { contact, waLink } from '@config/contact';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const pageTitle = tp('heroTitle', lang);
+const pageSubtitle = tp('heroSubtitle', lang);
+const whyTitle = tp('sectionWhyTitle', lang);
+const whyText = tp('sectionWhyText', lang);
+const howTitle = tp('sectionHowTitle', lang);
+const howText = tp('sectionHowText', lang);
+
+const steps = [
+  { title: tp('step1Title', lang), desc: tp('step1Desc', lang), icon: '📝' },
+  { title: tp('step2Title', lang), desc: tp('step2Desc', lang), icon: '📋' },
+  { title: tp('step3Title', lang), desc: tp('step3Desc', lang), icon: '🤝' },
+  { title: tp('step4Title', lang), desc: tp('step4Desc', lang), icon: '🚀' },
+];
+
+const priceTypeLabelMap: Record<string, string> = {
+  quote_only: 'badgeQuoteOnly',
+  reference_range: 'badgeReference',
+  solution_quote: 'badgeSolutionQuote',
+  range_moq: 'badgeRangeMq',
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageSubtitle}
+  lang={lang}
+  alternates={alternates(lang, '/pricing')}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#0a1628] to-[#1a2a44] py-16 md:py-24">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#c9a84c]">{pageTitle}</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">{pageSubtitle}</p>
+    </div>
+  </section>
+
+  <!-- Why we don't show exact prices -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-2xl font-bold text-[#0a1628] mb-4">{whyTitle}</h2>
+      <p class="text-gray-700 leading-relaxed">{whyText}</p>
+    </div>
+  </section>
+
+  <!-- Pricing by business line -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0a1628] mb-8 text-center">{howTitle}</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {pricingLines.map((line) => {
+          const badgeLabel = tp(priceTypeLabelMap[line.priceType], lang);
+          const badgeClass = {
+            quote_only: 'bg-amber-100 text-amber-800',
+            reference_range: 'bg-blue-100 text-blue-800',
+            solution_quote: 'bg-purple-100 text-purple-800',
+            range_moq: 'bg-emerald-100 text-emerald-800',
+          }[line.priceType];
+
+          return (
+            <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow">
+              <span class={`inline-block px-3 py-1 rounded-full text-sm font-semibold mb-3 ${badgeClass}`}>
+                {badgeLabel}
+              </span>
+
+              {line.priceType === 'quote_only' && (
+                <div class="text-gray-400 text-sm mt-2">Contact us for personalised CIF quotation</div>
+              )}
+
+              {line.priceType === 'reference_range' && line.priceMin != null && line.priceMax != null && (
+                <div class="mt-3 space-y-2">
+                  <p class="text-2xl font-bold text-[#0a1628]">
+                    USD {line.priceMin}–{line.priceMax} / {line.unit}
+                  </p>
+                  <p class="text-xs text-gray-500">Reference only — final quote after specification review</p>
+                </div>
+              )}
+
+              {line.priceType === 'solution_quote' && (
+                <div class="text-gray-400 text-sm mt-2">Custom project — share your site requirements</div>
+              )}
+
+              {line.priceType === 'range_moq' && line.priceMin != null && line.priceMax != null && (
+                <div class="mt-3 space-y-2">
+                  <p class="text-2xl font-bold text-[#0a1628]">
+                    USD {line.priceMin}–{line.priceMax} / {line.unit}
+                  </p>
+                  <p class="text-sm text-gray-600">MOQ: {line.moq} {line.unit}s</p>
+                  <p class="text-xs text-gray-500">Depends on material, quantity, packaging</p>
+                </div>
+              )}
+
+              <div class="mt-4">
+                <a
+                  href={waLink(line.whatsappSlug)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm text-[#25D366] hover:underline font-medium"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  {tp('ctaWhatsApp', lang)}
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-step process -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0a1628] mb-8 text-center">{howTitle}</h2>
+      <p class="text-gray-700 text-center max-w-2xl mx-auto mb-10">{howText}</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {steps.map((step, i) => (
+          <div class="text-center">
+            <span class="text-4xl mb-3 block">{step.icon}</span>
+            <h3 class="font-semibold text-[#0a1628] mb-1">{step.title}</h3>
+            <p class="text-sm text-gray-600">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal disclaimer -->
+  <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <PricingDisclaimer locale={lang} variant="universal" />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <QuoteCTA locale={lang} pageSlug="pricing" />
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <QuoteForm locale={lang} formMode={FORM_MODE} pageSlug="pricing" />
+    </div>
+  </section>
+</BaseLayout>

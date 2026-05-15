@@ -3,6 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
+import { contact } from '@config/contact';
 
 export function getStaticPaths() {
   return [
@@ -61,8 +62,8 @@ const sections = [
       <h3 class="text-lg font-semibold mb-3">{t('terms.contactTitle', lang)}</h3>
       <p class="text-muted">{t('terms.contactContent', lang)}</p>
       <p class="mt-2">
-        <a href="mailto:felipeche01manager@YUNBSAOtrade.onmicrosoft.com" class="text-accent hover:underline">
-          felipeche01manager@YUNBSAOtrade.onmicrosoft.com
+        <a href={`mailto:${contact.email}`} class="text-accent hover:underline">
+          {contact.email}
         </a>
       </p>
     </div>

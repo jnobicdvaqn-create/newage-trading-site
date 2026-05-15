@@ -5,6 +5,7 @@ import ServiceCard from '@components/ServiceCard.astro';
 import TrustBadges from '@components/TrustBadges.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
+import { contact } from '@config/contact';
 
 export function getStaticPaths() {
   return [
@@ -22,6 +23,26 @@ const trustItems = [
   { title: t('home.trustSupport', lang), description: t('home.trustSupportDesc', lang), icon: 'support' as const },
   { title: t('home.trustQuality', lang), description: 'ISO 9001, CE, FCC certified partners', icon: 'certified' as const },
 ];
+
+const indexSchema: Record<string, unknown> = {
+  "@type": "Organization",
+  "name": "NewAge Trading",
+  "url": "https://newage-trading.com",
+  "logo": "https://newage-trading.com/images/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Beijing",
+    "addressCountry": "China"
+  },
+};
+if (contact.whatsappNumber !== 'WHATSAPP_NUMBER') {
+  indexSchema.contactPoint = {
+    "@type": "ContactPoint",
+    "telephone": `+${contact.whatsappNumber}`,
+    "contactType": "sales",
+    "availableLanguage": ["English", "Russian", "Chinese"]
+  };
+}
 
 const services = [
   {
@@ -55,23 +76,7 @@ const services = [
   title={t('site.title', lang)}
   description={t('site.description', lang)}
   lang={lang}
-  schema={{
-    "@type": "Organization",
-    "name": "NewAge Trading",
-    "url": "https://newage-trading.com",
-    "logo": "https://newage-trading.com/images/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+86-170-7278-3745",
-      "contactType": "sales",
-      "availableLanguage": ["English", "Russian", "Chinese"]
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Beijing",
-      "addressCountry": "China"
-    }
-  }}
+  schema={indexSchema}
 >
   <!-- Hero -->
   <Hero

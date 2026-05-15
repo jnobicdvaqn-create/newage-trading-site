@@ -1,0 +1,50 @@
+---
+/**
+ * CostBreakdown.astro — Vehicle cost breakdown table (CIF components).
+ * Used on vehicle quote pages and calculator results.
+ *
+ * Props:
+ *   locale: 'en' | 'ru' | 'zh'
+ *   className: optional
+ */
+import { tp, type Locale } from '@i18n/index';
+
+interface Props {
+  locale?: Locale;
+  className?: string;
+}
+
+const { locale = 'en', className = '' } = Astro.props;
+
+const title = tp('costBreakdownTitle', locale);
+const subtitle = tp('costBreakdownSubtitle', locale);
+const disclaimer = tp('costBreakdownDisclaimer', locale);
+
+const rows = [
+  { label: tp('rowFob', locale), desc: tp('rowFobDesc', locale), icon: '🏭' },
+  { label: tp('rowFreight', locale), desc: tp('rowFreightDesc', locale), icon: '🚢' },
+  { label: tp('rowInsurance', locale), desc: tp('rowInsuranceDesc', locale), icon: '🛡️' },
+  { label: tp('rowDuty', locale), desc: tp('rowDutyDesc', locale), icon: '📋' },
+  { label: tp('rowCustoms', locale), desc: tp('rowCustomsDesc', locale), icon: '📄' },
+  { label: tp('rowRegistration', locale), desc: tp('rowRegistrationDesc', locale), icon: '🔑' },
+];
+---
+
+<section class={`bg-white rounded-2xl shadow-lg p-6 md:p-8 ${className}`}>
+  <h2 class="text-xl md:text-2xl font-bold text-[#0a1628] mb-2">{title}</h2>
+  <p class="text-gray-600 mb-6">{subtitle}</p>
+
+  <div class="space-y-4">
+    {rows.map((row) => (
+      <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+        <span class="text-2xl flex-shrink-0" aria-hidden="true">{row.icon}</span>
+        <div>
+          <p class="font-semibold text-[#0a1628]">{row.label}</p>
+          <p class="text-sm text-gray-600">{row.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <p class="mt-6 text-xs text-gray-500 italic">{disclaimer}</p>
+</section>
