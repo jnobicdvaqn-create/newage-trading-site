@@ -48,7 +48,7 @@ const contactSchema = {
   },
 };
 
-const formActionUrl = `https://formsubmit.co/${contact.email}`;
+const formActionUrl = '/api/contact';
 ---
 
 <BaseLayout
@@ -79,11 +79,9 @@ const formActionUrl = `https://formsubmit.co/${contact.email}`;
       <div>
         <h2 class="text-2xl font-bold mb-6">{t('contact.formTitle', lang)}</h2>
         <form id="contactForm" class="space-y-4" action={formActionUrl} method="POST">
-          <!-- FormSubmit.co config fields -->
+          <!-- Self-hosted API fields -->
           <input type="hidden" name="_subject" value="New Contact Form Submission — NewAge Trading" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value={Astro.url.origin + '/' + lang + '/contact/thanks/'} />
+          <input type="hidden" name="_lang" value={lang} />
           <!-- Honeypot field (anti-spam) -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div>
@@ -107,25 +105,27 @@ const formActionUrl = `https://formsubmit.co/${contact.email}`;
         </form>
 
         <script>
-          // FormSubmit.co AJAX submission
+          // Self-hosted AJAX submission
           document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = e.target;
             const btn = document.getElementById('submitBtn');
             const status = document.getElementById('formStatus');
             const originalText = btn.textContent;
+            const lang = document.documentElement.lang || 'en';
 
             btn.disabled = true;
             btn.textContent = '...';
             status.classList.add('hidden');
 
             const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
 
             try {
-              const res = await fetch(form.action, {
+              const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(Object.fromEntries(formData.entries())),
+                body: JSON.stringify(data),
               });
 
               if (res.ok) {
@@ -134,12 +134,15 @@ const formActionUrl = `https://formsubmit.co/${contact.email}`;
                 status.textContent = lang === 'zh' ? '✅ 消息已发送！我们将在24小时内回复您。' : lang === 'ru' ? '✅ Сообщение отправлено! Мы ответим вам в течение 24 часов.' : '✅ Message sent successfully! We will get back to you within 24 hours.';
                 form.reset();
               } else {
-                // Fallback: use native form submission (page redirect to FormSubmit thanks page)
-                form.submit();
+                const errData = await res.json().catch(() => ({}));
+                status.classList.remove('hidden');
+                status.classList.add('bg-red-50', 'text-red-700');
+                status.textContent = errData.error || (lang === 'zh' ? '发送失败，请稍后重试' : lang === 'ru' ? 'Ошибка отправки' : 'Failed to send. Please try again later.');
               }
             } catch (err) {
-              // Fallback: use native form submission
-              form.submit();
+              status.classList.remove('hidden');
+              status.classList.add('bg-red-50', 'text-red-700');
+              status.textContent = lang === 'zh' ? '网络错误，请稍后重试' : lang === 'ru' ? 'Ошибка сети' : 'Network error. Please try again later.';
             } finally {
               btn.disabled = false;
               btn.textContent = originalText;

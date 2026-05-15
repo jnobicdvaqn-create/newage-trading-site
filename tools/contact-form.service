@@ -1,0 +1,16 @@
+[Unit]
+Description=NewAge Trading Contact Form API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/contact-form
+ExecStart=/usr/bin/node /opt/contact-form/server.js
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
