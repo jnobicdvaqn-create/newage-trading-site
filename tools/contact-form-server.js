@@ -5,7 +5,7 @@ const https = require('https');
 
 const PORT = 3889;
 const DIR = '/var/www/newage-trading.com/submissions';
-const TO_EMAIL = 'felipeche01manager@YUNBSAOtrade.onmicrosoft.com';
+const TO_EMAIL = 'felipeche01manager@126.com';
 const RESEND_API_KEY = 're_7czRFpaD_Mw6jjWjHQ11t5dUsWWXUxCyp';
 
 if (!fs.existsSync(DIR)) fs.mkdirSync(DIR, { recursive: true });
@@ -33,7 +33,7 @@ function sendEmailNotification(data) {
       const subject = data._subject || 'New Contact Form — NewAge Trading';
 
       const emailData = JSON.stringify({
-        from: 'NewAge Trading <onboarding@resend.dev>',
+        from: 'onboarding@resend.dev',
         to: [TO_EMAIL],
         subject: subject,
         html: `<h2>New Contact Form Submission</h2>
