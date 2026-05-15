@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@i18n/types';
 import { t } from '@i18n/index';
-import { waLink } from '@config/contact';
+import { waLink, contact } from '@config/contact';
 
 export interface Props {
   lang: Locale;
@@ -29,7 +29,7 @@ const ctaDesc = description || t('common.ctaDesc', lang);
         WhatsApp
       </a>
       <a
-        href="https://t.me/richzhu001"
+        href={contact.telegramUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="btn-outline text-base"

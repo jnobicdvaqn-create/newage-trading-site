@@ -29,8 +29,8 @@ export const contact = {
   workingHours: '9:00–18:00 (Beijing Time, UTC+8)',
 
   /** Telegram */
-  telegram: '@richzhu001',
-  telegramUrl: 'https://t.me/richzhu001',
+  telegram: '@placeholder_telegram',
+  telegramUrl: 'https://t.me/placeholder_telegram',
 } as const;
 
 /** Check if WhatsApp is properly configured (not placeholder) */
