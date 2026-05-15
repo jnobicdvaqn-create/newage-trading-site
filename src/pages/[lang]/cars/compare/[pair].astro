@@ -84,7 +84,7 @@ const priceVerdict = lang === 'zh'
 const faqItems = lang === 'zh'
   ? [
     { question: `${nameA} 和 ${nameB} 哪个更好？`, answer: `两款都是优秀的出口车型。${nameA}（${engA}）在 ${hlA[0]} 方面表现出色，而 ${nameB}（${engB}）则以 ${hlB[0]} 脱颖而出。最佳选择取决于您的预算、续航需求和目标市场偏好。请联系我们获取详细对比报告。` },
-    { question: '哪款进口成本更低？', answer: `${cheaperName} 的 FOB 价格更低（${cheaperCar.priceRange}），相比 ${costlierName}（${costlierCar.priceRange}）。但总进口成本还取决于运输方式、目的港和当地关税。我们可提供两款车的完整 CIF 报价。` },
+    { question: '哪款进口成本更低？', answer: `${cheaperName} 的起始价格更低。但总进口成本还取决于运输方式、目的港和当地关税。我们可为两款车提供个性化报价。` },
     { question: `能同时进口 ${carA.brand} 和 ${carB.brand} 的车吗？`, answer: `当然可以。我们从中国所有主要制造商采购，包括 ${carA.brand} 和 ${carB.brand}。混合品牌订单完全没问题。` },
     { question: '哪个中国品牌在格鲁吉亚更受欢迎？', answer: `${carA.brand} 和 ${carB.brand} 在格鲁吉亚的市场份额都在增长。BYD 目前在电动车领域领先。请联系我们获取最新销售数据和建议。` },
   ]
@@ -97,7 +97,7 @@ const faqItems = lang === 'zh'
   ]
   : [
     { question: `Which is better: ${nameA} or ${nameB}?`, answer: `Both are excellent vehicles for export. The ${nameA} (${engA}) excels with ${hlA[0]}, while the ${nameB} (${engB}) stands out with ${hlB[0]}. Your best choice depends on budget, range requirements, and target market preferences. Contact us for a detailed comparison.` },
-    { question: 'Which is cheaper to import?', answer: `The ${cheaperName} has a lower FOB price at ${cheaperCar.priceRange}, compared to the ${costlierName} at ${costlierCar.priceRange}. However, total import cost also depends on shipping method, destination port, and local import duties.` },
+    { question: 'Which is cheaper to import?', answer: `The ${cheaperName} has a lower starting price. However, total import cost also depends on shipping method, destination port, and local import duties. Contact us for a personalized quote.` },
     { question: `Can I import both ${carA.brand} and ${carB.brand} cars from China?`, answer: `Absolutely. We source from all major Chinese manufacturers including ${carA.brand} and ${carB.brand}. Mixed-brand orders are welcome.` },
     { question: 'Which Chinese car brand is more popular in Georgia?', answer: `Both ${carA.brand} and ${carB.brand} are gaining popularity in Georgia. BYD currently leads in the EV segment. Contact us for the latest sales data.` },
   ];

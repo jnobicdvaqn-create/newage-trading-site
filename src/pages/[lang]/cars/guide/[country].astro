@@ -28,7 +28,7 @@ const capitalName = tData(country, 'capital', lang);
 const shippingTimeLabel = lang === 'zh' ? '运输时间' : lang === 'ru' ? 'Срок доставки' : 'Shipping Time';
 
 const importStepsZh = [
-  { step: 1, title: '选择车辆', desc: `浏览我们的目录，从 18+ 款可出口到${countryName}的中国车型中选择。我们将在 24 小时内提供详细的 CIF 报价。` },
+  { step: 1, title: '选择车辆', desc: `浏览我们的目录，从 18+ 款可出口到${countryName}的中国车型中选择。我们将在 24 小时内提供详细报价。` },
   { step: 2, title: '确认订单与付款', desc: `签署形式发票并通过 T/T 银行电汇支付 30% 定金。我们将从授权经销商开始采购车辆。` },
   { step: 3, title: '质量检验', desc: `我们的团队进行全面的装船前检验，包括外观、内饰、机械系统和文件。提供照片和视频。` },
   { step: 4, title: '运输与文件', desc: `车辆从宁波/上海港口通过滚装船或集装箱运输。我们准备所有出口文件：提单、原产地证、商业发票、装箱单。` },
@@ -37,7 +37,7 @@ const importStepsZh = [
 ];
 
 const importStepsRu = [
-  { step: 1, title: 'Выберите автомобиль', desc: `Просмотрите наш каталог и выберите из более чем 18 моделей китайских автомобилей, доступных для экспорта в ${countryName}. Мы предоставим подробный CIF расчёт в течение 24 часов.` },
+  { step: 1, title: 'Выберите автомобиль', desc: `Просмотрите наш каталог и выберите из более чем 18 моделей китайских автомобилей, доступных для экспорта в ${countryName}. Мы предоставим подробный расчёт в течение 24 часов.` },
   { step: 2, title: 'Подтверждение заказа и оплата', desc: `Подпишите счёт-проформу и внесите 30% предоплаты через банковский перевод T/T. Мы начнём закупку автомобиля у авторизованных дилеров.` },
   { step: 3, title: 'Контроль качества', desc: `Наша команда проводит всестороннюю инспекцию перед отгрузкой, включая внешний вид, интерьер, механические системы и документацию. Фото и видео предоставляются.` },
   { step: 4, title: 'Доставка и документация', desc: `Автомобиль отправляется из портов Нинбо/Шанхай через RORO или контейнер. Мы готовим все экспортные документы: коносамент, сертификат происхождения, коммерческий счёт-фактура, упаковочный лист.` },
@@ -46,7 +46,7 @@ const importStepsRu = [
 ];
 
 const importStepsEn = [
-  { step: 1, title: 'Select Your Vehicle', desc: `Browse our catalog and choose from 18+ Chinese car models available for export to ${countryName}. We'll provide a detailed CIF quote within 24 hours.` },
+  { step: 1, title: 'Select Your Vehicle', desc: `Browse our catalog and choose from 18+ Chinese car models available for export to ${countryName}. We'll provide a detailed quote within 24 hours.` },
   { step: 2, title: 'Confirm Order & Payment', desc: `Sign the proforma invoice and make a 30% deposit via T/T bank transfer. We'll begin vehicle procurement from authorized dealers.` },
   { step: 3, title: 'Quality Inspection', desc: `Our team conducts a comprehensive pre-shipment inspection covering exterior, interior, mechanical systems, and documentation. Photos and video provided.` },
   { step: 4, title: 'Shipping & Documentation', desc: `Vehicle shipped via RORO or container from Ningbo/Shanghai port. We prepare all export documents: Bill of Lading, Certificate of Origin, Commercial Invoice, Packing List.` },
@@ -104,10 +104,10 @@ const pageTitle = lang === 'zh'
   : `How to Import Cars from China to ${countryName} — Complete Guide 2026 | NewAge Trading`;
 
 const pageDesc = lang === 'zh'
-  ? `从中国进口汽车到${countryName}的完整指南。进口关税：${country.importTax}。运输 25-40 天。BYD、吉利、长城可供应。免费 CIF 报价。`
+  ? `从中国进口汽车到${countryName}的完整指南。进口关税：${country.importTax}。运输 25-40 天。BYD、吉利、长城可供应。`
   : lang === 'ru'
-  ? `Полное руководство по импорту китайских авто в ${countryName}. Импортная пошлина: ${country.importTax}. Доставка 25-40 дней. BYD, Geely, Great Wall. Бесплатный CIF расчёт.`
-  : `Complete guide to importing Chinese cars to ${countryName}. Import duty: ${country.importTax}. Shipping 25-40 days. BYD, Geely, Great Wall available. Free CIF quote.`;
+  ? `Полное руководство по импорту китайских авто в ${countryName}. Импортная пошлина: ${country.importTax}. Доставка 25-40 дней. BYD, Geely, Great Wall.`
+  : `Complete guide to importing Chinese cars to ${countryName}. Import duty: ${country.importTax}. Shipping 25-40 days. BYD, Geely, Great Wall available.`;
 
 const heroH1 = lang === 'zh'
   ? `从中国进口汽车到${countryName}`
@@ -124,7 +124,7 @@ const regulationsLabel = lang === 'zh' ? '法规要求' : lang === 'ru' ? 'Но�
 const docsNote = lang === 'zh' ? '* 我们处理所有文件准备工作。您只需提供当地进口许可证和买方身份证明。' : lang === 'ru' ? '* Мы занимаемся подготовкой всей документации. Вам нужно предоставить только местную импортную лицензию и удостоверение покупателя.' : '* We handle all documentation preparation. You only need to provide your local import license and buyer identification.';
 
 const faqItemsZh = [
-  { question: `从中国进口汽车到${countryName}需要多少费用？`, answer: `总费用包括 FOB 价格（车辆成本）、海运费（$900–$2,400，视路线而定）、海运保险费（约车辆价值的 0.3%）和当地进口关税（${country.importTax}）。例如，比亚迪汉（FOB $32,999）的 CIF ${capitalName} 价格约为 $35,000–$37,000。请联系我们获取精确报价。` },
+  { question: `从中国进口汽车到${countryName}需要多少费用？`, answer: `总费用包括车辆成本、海运费、海运保险费和当地进口关税。具体费用因车型和目的地而异。请联系我们获取精确报价。` },
   { question: `从中国运输到${countryName}需要多长时间？`, answer: `从中国港口（宁波/上海）到${capitalName}的运输时间约为 25-40 天，视运输方式而定。滚装船通常需要 25-35 天，集装箱运输需要 30-40 天。我们提供全程实时跟踪。` },
   { question: `${countryName}的汽车进口规定是什么？`, answer: `${tData(country, 'regulations', lang)} 进口关税为 ${country.importTax}。${country.taxNotes} 所有车辆到达后必须通过技术检验。我们处理所有合规要求和文件。` },
   { question: `能向中国${countryName}进口电动车吗？`, answer: `可以，电动车在${countryName}越来越受欢迎。${country.taxNotes} ${countryName}的热门电动车型包括比亚迪汉、比亚迪海豹和比亚迪元 PLUS。电动车通常享受减免或零进口关税，性价比更高。` },
@@ -132,7 +132,7 @@ const faqItemsZh = [
 ];
 
 const faqItemsRu = [
-  { question: `Сколько стоит импорт авто из Китая в ${countryName}?`, answer: `Общая стоимость включает цену FOB (стоимость автомобиля), морской фрахт ($900–$2,400 в зависимости от маршрута), морскую страховку (~0,3% от стоимости авто) и местные импортные пошлины (${country.importTax}). Например, BYD Han (FOB $32,999) будет стоить примерно $35,000–$37,000 CIF ${capitalName}. Свяжитесь с нами для точного расчёта.` },
+  { question: `Сколько стоит импорт авто из Китая в ${countryName}?`, answer: `Общая стоимость включает стоимость автомобиля, морской фрахт, морскую страховку и местные импортные пошлины. Конкретные расходы зависят от модели и пункта назначения. Свяжитесь с нами для точного расчёта.` },
   { question: `Сколько времени занимает доставка из Китая в ${countryName}?`, answer: `Доставка из китайских портов (Нинбо/Шанхай) в ${capitalName} занимает примерно 25–40 дней в зависимости от способа доставки. RORO обычно 25–35 дней, контейнерная доставка 30–40 дней. Мы предоставляем отслеживание в реальном времени.` },
   { question: `Каковы правила импорта автомобилей в ${countryName}?`, answer: `${tData(country, 'regulations', lang)} Импортная пошлина составляет ${country.importTax}. ${country.taxNotes} Все автомобили должны пройти техническую инспекцию по прибытии. Мы занимаемся всеми требованиями соответствия и документацией.` },
   { question: `Можно ли импортировать электромобиль в ${countryName}?`, answer: `Да, электромобили становятся всё более популярными в ${countryName}. ${country.taxNotes} Популярные модели EV для ${countryName} включают BYD Han, BYD Seal и BYD Atto 3. Электромобили часто пользуются сниженными или нулевыми импортными пошлинами.` },
@@ -140,7 +140,7 @@ const faqItemsRu = [
 ];
 
 const faqItemsEn = [
-  { question: `How much does it cost to import a car from China to ${countryName}?`, answer: `The total cost includes FOB price (vehicle cost), ocean freight ($900–$2,400 depending on route), marine insurance (~0.3% of vehicle value), and local import duties (${country.importTax}). For example, a BYD Han (FOB $32,999) would cost approximately $35,000–$37,000 CIF ${capitalName}. Contact us for an exact quote.` },
+  { question: `How much does it cost to import a car from China to ${countryName}?`, answer: `The total cost includes the vehicle price, ocean freight, marine insurance, and local import duties. Exact costs vary by model and destination. Contact us for an exact quote.` },
   { question: `How long does shipping from China to ${countryName} take?`, answer: `Shipping from Chinese ports (Ningbo/Shanghai) to ${capitalName} takes approximately 25–40 days depending on the shipping method. RORO (Roll-on/Roll-off) is typically 25–35 days, while container shipping takes 30–40 days. We provide real-time tracking throughout.` },
   { question: `What are the import regulations for cars in ${countryName}?`, answer: `${country.regulations} Import duty is ${country.importTax}. ${country.taxNotes} All vehicles must pass a technical inspection upon arrival. We handle all compliance requirements and documentation.` },
   { question: `Can I import an electric car to ${countryName}?`, answer: `Yes, electric vehicles (EVs) are increasingly popular in ${countryName}. ${country.taxNotes} Popular EV models for ${countryName} include BYD Han, BYD Seal, and BYD Atto 3. EVs often enjoy reduced or zero import duties, making them particularly cost-effective.` },
