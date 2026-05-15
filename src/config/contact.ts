@@ -29,7 +29,7 @@ export const contact = {
   whatsappNumber: envWaNumber ?? '8617072783745',
 
   /** Email for receiving inquiries */
-  email: envEmail ?? 'manager003@yunbsaotrade.onmicrosoft.com',
+  email: envEmail ?? 'felipeche01manager@YUNBSAOtrade.onmicrosoft.com',
 
   /** Company name */
   companyName: 'NewAge Trading',
