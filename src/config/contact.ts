@@ -1,26 +1,35 @@
 /**
  * Contact configuration — single source of truth.
- * All WhatsApp buttons and contact elements read from here.
- * Do NOT hardcode WhatsApp numbers or email in pages/components.
+ * All contact methods read from environment variables at build time.
+ * Do NOT hardcode real contact info in pages/components.
  *
- * ⚠️ BEFORE LAUNCH: Replace placeholders with real business numbers.
- * Use .env.local for local testing:
- *   PUBLIC_WHATSAPP_NUMBER=<real_number>
- *   PUBLIC_WHATSAPP_DISPLAY=+<real_number>
+ * Production env vars (set on VPS before `npm run build`):
+ *   PUBLIC_WHATSAPP_NUMBER=8617072783745
+ *   PUBLIC_WHATSAPP_DISPLAY=+86 170 7278 3745
+ *   PUBLIC_CONTACT_EMAIL=manager003@agentmail.to
+ *   PUBLIC_TELEGRAM=richzhu001
+ *   PUBLIC_TELEGRAM_URL=https://t.me/richzhu001
+ *
+ * Local testing (.env.local):
+ *   PUBLIC_WHATSAPP_NUMBER=<test_number>
+ *   PUBLIC_WHATSAPP_DISPLAY=+<test_number>
  */
 
-const envNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
-const envDisplay = import.meta.env.PUBLIC_WHATSAPP_DISPLAY;
+const envWaNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
+const envWaDisplay = import.meta.env.PUBLIC_WHATSAPP_DISPLAY;
+const envEmail = import.meta.env.PUBLIC_CONTACT_EMAIL;
+const envTg = import.meta.env.PUBLIC_TELEGRAM;
+const envTgUrl = import.meta.env.PUBLIC_TELEGRAM_URL;
 
 export const contact = {
   /** Display number for UI (with + and spaces) */
-  whatsappDisplay: envDisplay ?? '+XX XXXXX XXXXX',
+  whatsappDisplay: envWaDisplay ?? '+XX XXXXX XXXXX',
 
   /** Number for wa.me deep links (no + or spaces) */
-  whatsappNumber: envNumber ?? 'WHATSAPP_NUMBER',
+  whatsappNumber: envWaNumber ?? 'WHATSAPP_NUMBER',
 
   /** Email for receiving inquiries */
-  email: 'CONTACT_EMAIL',
+  email: envEmail ?? 'CONTACT_EMAIL',
 
   /** Company name */
   companyName: 'NewAge Trading',
@@ -28,9 +37,11 @@ export const contact = {
   /** Working hours */
   workingHours: '9:00–18:00 (Beijing Time, UTC+8)',
 
-  /** Telegram */
-  telegram: '@placeholder_telegram',
-  telegramUrl: 'https://t.me/placeholder_telegram',
+  /** Telegram handle (without @) */
+  telegram: envTg ?? 'placeholder_telegram',
+
+  /** Telegram deep link URL */
+  telegramUrl: envTgUrl ?? 'https://t.me/placeholder_telegram',
 } as const;
 
 /** Check if WhatsApp is properly configured (not placeholder) */
