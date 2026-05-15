@@ -80,7 +80,7 @@ const langOg: Record<string, string> = {
   {altLinks.map(alt => (
     <link rel="alternate" hreflang={alt.lang} href={`${siteUrl}${alt.href}`} />
   ))}
-  <link rel="alternate" hreflang="x-default" href={`${siteUrl}/${altLinks[0]?.href || ''}`} />
+  <link rel="alternate" hreflang="x-default" href={`${siteUrl}${altLinks[0]?.href || ''}`} />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
