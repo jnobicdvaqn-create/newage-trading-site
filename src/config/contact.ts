@@ -23,13 +23,13 @@ const envTgUrl = import.meta.env.PUBLIC_TELEGRAM_URL;
 
 export const contact = {
   /** Display number for UI (with + and spaces) */
-  whatsappDisplay: envWaDisplay ?? '+XX XXXXX XXXXX',
+  whatsappDisplay: envWaDisplay ?? '+86-170-7278-3745',
 
   /** Number for wa.me deep links (no + or spaces) */
-  whatsappNumber: envWaNumber ?? 'WHATSAPP_NUMBER',
+  whatsappNumber: envWaNumber ?? '8617072783745',
 
   /** Email for receiving inquiries */
-  email: envEmail ?? 'CONTACT_EMAIL',
+  email: envEmail ?? 'manager003@yunbsaotrade.onmicrosoft.com',
 
   /** Company name */
   companyName: 'NewAge Trading',
@@ -38,10 +38,10 @@ export const contact = {
   workingHours: '9:00–18:00 (Beijing Time, UTC+8)',
 
   /** Telegram handle (without @) */
-  telegram: envTg ?? 'placeholder_telegram',
+  telegram: envTg ?? 'richzhu001',
 
   /** Telegram deep link URL */
-  telegramUrl: envTgUrl ?? 'https://t.me/placeholder_telegram',
+  telegramUrl: envTgUrl ?? 'https://t.me/richzhu001',
 } as const;
 
 /** Check if WhatsApp is properly configured (not placeholder) */
