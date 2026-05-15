@@ -4,11 +4,11 @@
  * Do NOT hardcode real contact info in pages/components.
  *
  * Production env vars (set on VPS before `npm run build`):
- *   PUBLIC_WHATSAPP_NUMBER=8617072783745
- *   PUBLIC_WHATSAPP_DISPLAY=+86 170 7278 3745
- *   PUBLIC_CONTACT_EMAIL=manager003@agentmail.to
- *   PUBLIC_TELEGRAM=richzhu001
- *   PUBLIC_TELEGRAM_URL=https://t.me/richzhu001
+ *   PUBLIC_WHATSAPP_NUMBER=<real_number>
+ *   PUBLIC_WHATSAPP_DISPLAY=+<real_number>
+ *   PUBLIC_CONTACT_EMAIL=<real_email>
+ *   PUBLIC_TELEGRAM=<real_handle>
+ *   PUBLIC_TELEGRAM_URL=https://t.me/<real_handle>
  *
  * Local testing (.env.local):
  *   PUBLIC_WHATSAPP_NUMBER=<test_number>
