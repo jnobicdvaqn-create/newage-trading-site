@@ -72,46 +72,6 @@ const paymentMethods = [
     </div>
   </section>
 
-  <!-- Policy Advantage -->
-  <section class="container-section">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl font-bold text-[var(--color-text)] mb-4">{t('usedCars.policyTitle', lang)}</h2>
-          <p class="text-[var(--color-text-light)] text-lg leading-relaxed mb-6">{t('usedCars.policyText', lang)}</p>
-          <div class="space-y-4">
-            {[
-              { label: lang === 'zh' ? '关税税率' : lang === 'ru' ? 'Тариф' : 'Tariff Rate', before: '20%-70%', after: lang === 'zh' ? '0%（零关税）' : lang === 'ru' ? '0% (нулевой)' : '0% (Zero)' },
-              { label: lang === 'zh' ? '单车利润' : lang === 'ru' ? 'Прибыль' : 'Per-Car Profit', before: '¥3,000', after: '¥8,000+' },
-              { label: lang === 'zh' ? '覆盖国家' : lang === 'ru' ? 'Страны' : 'Countries', before: '—', after: '53' },
-            ].map((item) => (
-              <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
-                <span class="font-medium text-[var(--color-text)]">{item.label}</span>
-                <div class="flex items-center gap-4">
-                  <span class="text-red-500 line-through">{item.before}</span>
-                  <svg class="h-5 w-5 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-                  <span class="text-green-600 font-bold">{item.after}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-            <div class="text-center p-8">
-              <div class="text-6xl mb-4">🌍</div>
-              <div class="text-3xl font-bold text-[var(--color-primary)]">53</div>
-              <div class="text-lg text-[var(--color-text-light)] mt-2">{lang === 'zh' ? '非洲国家' : lang === 'ru' ? 'стран Африки' : 'African Countries'}</div>
-              <div class="mt-6 p-4 rounded-xl bg-white shadow-lg">
-                <div class="text-sm text-[var(--color-text-light)]">{lang === 'zh' ? '70-80% 交易量是二手车' : lang === 'ru' ? '70-80% сделок — подержанные' : '70-80% of transactions are used cars'}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Best-Selling Models -->
   <section class="bg-surface py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
