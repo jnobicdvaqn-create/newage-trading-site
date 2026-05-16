@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const PORT = 3889;
+const PORT = 3210;
 const DIR = '/var/www/newage-trading.com/submissions';
 const TO_EMAIL = 'felipeche01manager@126.com';
 const RESEND_API_KEY = 're_7czRFpaD_Mw6jjWjHQ11t5dUsWWXUxCyp';
