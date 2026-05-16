@@ -48,7 +48,6 @@ const contactSchema = {
   },
 };
 
-const formActionUrl = '/api/contact';
 ---
 
 <BaseLayout
@@ -78,9 +77,12 @@ const formActionUrl = '/api/contact';
       <!-- Contact Form -->
       <div>
         <h2 class="text-2xl font-bold mb-6">{t('contact.formTitle', lang)}</h2>
-        <form id="contactForm" class="space-y-4" action={formActionUrl} method="POST">
-          <!-- Self-hosted API fields -->
+        <form id="contactForm" class="space-y-4" action="https://formsubmit.co/felipeche01manager@YUNBSAOtrade.onmicrosoft.com" method="POST">
+          <!-- FormSubmit.co configuration -->
           <input type="hidden" name="_subject" value="New Contact Form Submission — NewAge Trading" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={`https://newagetrading.com/${lang}/contact/thanks/`} />
           <input type="hidden" name="_lang" value={lang} />
           <!-- Honeypot field (anti-spam) -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
@@ -105,7 +107,7 @@ const formActionUrl = '/api/contact';
         </form>
 
         <script>
-          // Self-hosted AJAX submission
+          // FormSubmit.co AJAX submission (no backend needed)
           document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = e.target;
@@ -119,13 +121,11 @@ const formActionUrl = '/api/contact';
             status.classList.add('hidden');
 
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
 
             try {
-              const res = await fetch('/api/contact', {
+              const res = await fetch('https://formsubmit.co/ajax/felipeche01manager@YUNBSAOtrade.onmicrosoft.com', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(data),
+                body: formData,
               });
 
               if (res.ok) {
@@ -134,10 +134,9 @@ const formActionUrl = '/api/contact';
                 status.textContent = lang === 'zh' ? '✅ 消息已发送！我们将在24小时内回复您。' : lang === 'ru' ? '✅ Сообщение отправлено! Мы ответим вам в течение 24 часов.' : '✅ Message sent successfully! We will get back to you within 24 hours.';
                 form.reset();
               } else {
-                const errData = await res.json().catch(() => ({}));
                 status.classList.remove('hidden');
                 status.classList.add('bg-red-50', 'text-red-700');
-                status.textContent = errData.error || (lang === 'zh' ? '发送失败，请稍后重试' : lang === 'ru' ? 'Ошибка отправки' : 'Failed to send. Please try again later.');
+                status.textContent = lang === 'zh' ? '发送失败，请稍后重试' : lang === 'ru' ? 'Ошибка отправки' : 'Failed to send. Please try again later.';
               }
             } catch (err) {
               status.classList.remove('hidden');
