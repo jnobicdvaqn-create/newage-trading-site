@@ -26,7 +26,9 @@ function checkRateLimit(ip) {
 
 function sendEmailNotification(data) {
   // Run in separate process - never affect client response
-  const TO_EMAIL = 'felipeche01manager@126.com';
+  // Send to both enterprise (primary) and 126 (backup)
+  const TO_EMAIL = process.env.NOTIFY_EMAIL || 'felipeche01manager@YUNBSAOtrade.onmicrosoft.com';
+  const CC_EMAIL = 'felipeche01manager@126.com';
   const RESEND_API_KEY = process.env.RESEND_API_KEY || 're_7czRFpaD_Mw6jjWjHQ11t5dUsWWXUxCyp';
 
   const name = data.name || 'N/A';
@@ -37,7 +39,7 @@ function sendEmailNotification(data) {
 
   const emailData = JSON.stringify({
     from: 'onboarding@resend.dev',
-    to: [TO_EMAIL],
+    to: [TO_EMAIL, CC_EMAIL],
     subject: subject,
     html: `<h2>New Contact Form Submission</h2>
            <p><strong>Name:</strong> ${name}</p>
