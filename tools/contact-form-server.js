@@ -1,11 +1,12 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const https = require('https');
 
-const PORT = 3889;
+const PORT = 3210;
 const DIR = '/var/www/newage-trading.com/submissions';
-const TO_EMAIL = 'felipeche01manager@YUNBSAOtrade.onmicrosoft.com';
+const TO_EMAIL = 'felipeche01manager@126.com';
+const RESEND_API_KEY = 're_7czRFpaD_Mw6jjWjHQ11t5dUsWWXUxCyp';
 
 if (!fs.existsSync(DIR)) fs.mkdirSync(DIR, { recursive: true });
 
@@ -23,31 +24,64 @@ function checkRateLimit(ip) {
 }
 
 function sendEmailNotification(data) {
-  try {
-    const name = (data.name || '').replace(/'/g, "\\'");
-    const email = (data.email || '').replace(/'/g, "\\'");
-    const phone = (data.phone || '').replace(/'/g, "\\'");
-    const message = (data.message || '').replace(/'/g, "\\'").replace(/\n/g, '\\n');
-    const subject = (data._subject || 'New Contact Form — NewAge Trading').replace(/'/g, "\\'");
+  return new Promise((resolve) => {
+    try {
+      const name = data.name || 'N/A';
+      const email = data.email || 'N/A';
+      const phone = data.phone || 'N/A';
+      const message = data.message || 'N/A';
+      const subject = data._subject || 'New Contact Form — NewAge Trading';
 
-    const phpCode = `<?php
-$to = '${TO_EMAIL}';
-$subject = '${subject}';
-$message = "Name: ${name}\\nEmail: ${email}\\nPhone: ${phone}\\n\\nMessage:\\n${message}";
-$headers = "From: noreply@newage-trading.com\\r\\n";
-$headers .= "Reply-To: ${email}\\r\\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\\r\\n";
-mail($to, $subject, $message, $headers);
-?>`;
-    const phpFile = '/tmp/contact_send_' + Date.now() + '.php';
-    fs.writeFileSync(phpFile, phpCode);
-    execSync('php ' + phpFile, { timeout: 10000 });
-    fs.unlinkSync(phpFile);
-    return true;
-  } catch (e) {
-    console.error('Email notification failed:', e.message);
-    return false;
-  }
+      const emailData = JSON.stringify({
+        from: 'onboarding@resend.dev',
+        to: [TO_EMAIL],
+        subject: subject,
+        html: `<h2>New Contact Form Submission</h2>
+               <p><strong>Name:</strong> ${name}</p>
+               <p><strong>Email:</strong> ${email}</p>
+               <p><strong>Phone:</strong> ${phone}</p>
+               <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
+               <hr/>
+               <p style="color:#888;">IP: ${data.ip || 'unknown'} | Time: ${data.timestamp || new Date().toISOString()}</p>`
+      });
+
+      const options = {
+        hostname: 'api.resend.com',
+        path: '/emails',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${RESEND_API_KEY}`
+        }
+      };
+
+      const req = https.request(options, (res) => {
+        let body = '';
+        res.on('data', chunk => body += chunk);
+        res.on('end', () => {
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            console.log('[Resend] Email sent successfully:', body);
+            resolve(true);
+          } else {
+            console.error('[Resend] Failed:', res.statusCode, body);
+            resolve(false);
+          }
+        });
+      });
+
+      req.on('error', (e) => {
+        console.error('[Resend] Request error:', e.message);
+        resolve(false);
+      });
+
+      req.setTimeout(10000, () => { req.destroy(); resolve(false); });
+      req.write(emailData);
+      req.end();
+    } catch (e) {
+      console.error('[Resend] Error:', e.message);
+      resolve(false);
+    }
+  });
 }
 
 const server = http.createServer((req, res) => {
@@ -74,8 +108,10 @@ const server = http.createServer((req, res) => {
     const record = {ip, timestamp: new Date().toISOString(), ...data};
     fs.writeFileSync(file, JSON.stringify(record, null, 2));
 
-    // Send email notification
-    sendEmailNotification(data);
+    // Send email notification (async, non-blocking)
+    sendEmailNotification({...data, ip, timestamp: record.timestamp})
+      .then(sent => console.log(`[${ts}] Email notification ${sent ? 'sent' : 'failed'}`))
+      .catch(e => console.error(`[${ts}] Email error:`, e.message));
 
     console.log(`[${ts}] New submission from ${ip} saved to ${file}`);
     res.writeHead(200);
