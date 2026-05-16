@@ -344,7 +344,7 @@
       "telegram": "Telegram",
       "email": "Электронная почта",
       "address": "Офис",
-      "addressLine": "Гуанчжоу, Китай",
+      "addressLine": "Пекин, Китай",
       "responseTime": "Среднее время ответа: < 2 часов"
     },
     "footer": {
@@ -622,7 +622,7 @@
       "telegram": "Telegram",
       "email": "邮箱",
       "address": "办公地址",
-      "addressLine": "中国广州",
+      "addressLine": "中国北京",
       "responseTime": "典型响应时间：< 2小时"
     },
     "footer": {
