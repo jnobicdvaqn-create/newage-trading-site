@@ -137,6 +137,14 @@ const relatedPosts = blogPosts
             </div>
           );
         }
+        if (block.type === 'image') {
+          return (
+            <figure class="my-8">
+              <img src={block.src} alt={block.alt || ''} class="w-full h-auto rounded-xl" />
+              {block.caption && <figcaption class="mt-2 text-sm text-muted text-center">{block.caption}</figcaption>}
+            </figure>
+          );
+        }
         return null;
       })}
     </div>
