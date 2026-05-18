@@ -30,7 +30,13 @@ function getExcerpt(post: any, l: Locale): string {
   return l === 'zh' ? post.excerptZh : l === 'ru' ? post.excerptRu : post.excerpt;
 }
 function getContentBlocks(post: any, l: Locale): any[] {
-  return post.content?.[l] || post.content?.['en'] || [];
+  const localized = post.content?.[l] || [];
+  const english = post.content?.['en'] || [];
+  // 如果本地化内容严重缺失（少于英文的70%），回退到英文原文
+  if (localized.length > 0 && localized.length >= english.length * 0.7) {
+    return localized;
+  }
+  return english;
 }
 
 // Category labels
