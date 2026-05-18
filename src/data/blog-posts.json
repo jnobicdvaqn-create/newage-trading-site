@@ -315,6 +315,80 @@
             "集装箱运输：车辆装入40英尺集装箱（通常每箱2-3辆车）。时间安排更灵活，成本略高：每辆车1,200-2,500美元。",
             "铁路货运（中欧班列）：在中亚和俄罗斯目的地越来越受欢迎。运输时间：15-20天，而海运需30-45天。"
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Each destination has unique requirements. Here's what you need to know:"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Georgia (FTA with China)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia offers a Free Trade Agreement with China, meaning 0% import duty on EVs from Chinese manufacturers. A 5% customs fee applies to ICE vehicles. Left-hand drive is mandatory, and vehicles must meet Euro 5 emissions standards. Right-hand drive vehicles older than 15 years are prohibited."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "UAE"
+        },
+        {
+          "type": "paragraph",
+          "text": "The UAE imposes a standard 5% import duty on all vehicles. EV imports are growing rapidly, with Dubai and Abu Dhabi investing heavily in charging infrastructure. GCC homologation (GSO standards) is required for all imports."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Russia"
+        },
+        {
+          "type": "paragraph",
+          "text": "Russia applies 15-25% import duties on vehicles, though Chinese brands benefit from favorable bilateral trade agreements. EAEU homologation (TR CU certification) is mandatory. Chinese EV sales in Russia grew 500%+ year-over-year in 2024."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Shipping Methods & Costs"
+        },
+        {
+          "type": "paragraph",
+          "text": "There are three main shipping options for Chinese vehicle exports:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Roll-on/Roll-off (RoRo): The most cost-effective method for bulk shipments. Vehicles are driven onto specialized carriers. Cost: $800-1,500 per vehicle to major ports.",
+            "Container Shipping: Vehicles are loaded into 40ft containers (typically 2-3 cars per container). More flexible scheduling, slightly higher cost: $1,200-2,500 per vehicle.",
+            "Rail Freight (China-Europe Railway): Growing in popularity for Central Asian and Russian destinations. Transit time: 15-20 days vs. 30-45 days by sea."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Required Documentation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Commercial Invoice (stamped by exporter)",
+            "Packing List with VIN numbers",
+            "Bill of Lading (original + 3 copies)",
+            "Certificate of Origin (from CCPIT)",
+            "Vehicle Registration Certificate (if used)",
+            "Quality Inspection Report",
+            "Insurance Certificate (CIF terms)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How NewAge Trading Can Help"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide end-to-end export services: vehicle sourcing from authorized Chinese dealers, quality inspection, export documentation, customs clearance, shipping arrangements (RoRo/container/rail), and insurance. Get a free CIF quote by contacting us via WhatsApp or email."
         }
       ],
       "ru": [
@@ -406,6 +480,145 @@
               "Грузия, ОАЭ, Таиланд"
             ]
           ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Model",
+            "Type",
+            "Range (km)",
+            "FOB Price (USD)",
+            "Best Markets"
+          ],
+          "rows": [
+            [
+              "BYD Han",
+              "Sedan EV",
+              "605",
+              "32,999",
+              "Georgia, UAE, Russia"
+            ],
+            [
+              "BYD Atto 3",
+              "SUV EV",
+              "480",
+              "26,999",
+              "Georgia, Kazakhstan, Brazil"
+            ],
+            [
+              "BYD Seal",
+              "Sedan EV",
+              "700",
+              "35,999",
+              "UAE, Russia, Armenia"
+            ],
+            [
+              "BYD Song Plus",
+              "SUV EV",
+              "520",
+              "23,999",
+              "Georgia, Kazakhstan, Mexico"
+            ],
+            [
+              "BYD Dolphin",
+              "Hatchback EV",
+              "420",
+              "18,999",
+              "Georgia, UAE, Thailand"
+            ],
+            [
+              "Geely Monjaro",
+              "SUV ICE",
+              "N/A",
+              "28,999",
+              "Russia, Kazakhstan, Georgia"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Import Regulations by Country"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/ev-export-guide.jpg",
+          "alt": "Chinese EV manufacturing",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Each destination has unique requirements. Here's what you need to know:"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Georgia (FTA with China)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia offers a Free Trade Agreement with China, meaning 0% import duty on EVs from Chinese manufacturers. A 5% customs fee applies to ICE vehicles. Left-hand drive is mandatory, and vehicles must meet Euro 5 emissions standards. Right-hand drive vehicles older than 15 years are prohibited."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "UAE"
+        },
+        {
+          "type": "paragraph",
+          "text": "The UAE imposes a standard 5% import duty on all vehicles. EV imports are growing rapidly, with Dubai and Abu Dhabi investing heavily in charging infrastructure. GCC homologation (GSO standards) is required for all imports."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Russia"
+        },
+        {
+          "type": "paragraph",
+          "text": "Russia applies 15-25% import duties on vehicles, though Chinese brands benefit from favorable bilateral trade agreements. EAEU homologation (TR CU certification) is mandatory. Chinese EV sales in Russia grew 500%+ year-over-year in 2024."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Shipping Methods & Costs"
+        },
+        {
+          "type": "paragraph",
+          "text": "There are three main shipping options for Chinese vehicle exports:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Roll-on/Roll-off (RoRo): The most cost-effective method for bulk shipments. Vehicles are driven onto specialized carriers. Cost: $800-1,500 per vehicle to major ports.",
+            "Container Shipping: Vehicles are loaded into 40ft containers (typically 2-3 cars per container). More flexible scheduling, slightly higher cost: $1,200-2,500 per vehicle.",
+            "Rail Freight (China-Europe Railway): Growing in popularity for Central Asian and Russian destinations. Transit time: 15-20 days vs. 30-45 days by sea."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Required Documentation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Commercial Invoice (stamped by exporter)",
+            "Packing List with VIN numbers",
+            "Bill of Lading (original + 3 copies)",
+            "Certificate of Origin (from CCPIT)",
+            "Vehicle Registration Certificate (if used)",
+            "Quality Inspection Report",
+            "Insurance Certificate (CIF terms)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How NewAge Trading Can Help"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide end-to-end export services: vehicle sourcing from authorized Chinese dealers, quality inspection, export documentation, customs clearance, shipping arrangements (RoRo/container/rail), and insurance. Get a free CIF quote by contacting us via WhatsApp or email."
         }
       ]
     }
@@ -609,6 +822,93 @@
         {
           "type": "paragraph",
           "text": "MOQ是新进口商面临的最大挑战之一。现有款式无需定制：200-500件/款，单价$2-8。定制设计：500-1,000件/款，单价$3-12。全OEM（品牌+设计）：1,000-3,000件/款，单价$4-15。"
+        },
+        {
+          "type": "paragraph",
+          "text": "MOQ is one of the biggest challenges for new importers. Here's what to expect:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Order Type",
+            "Typical MOQ",
+            "Unit Price Range",
+            "Lead Time"
+          ],
+          "rows": [
+            [
+              "Existing Style (No Customization)",
+              "200-500 pcs/style",
+              "$2-8/pc",
+              "15-20 days"
+            ],
+            [
+              "Custom Design (Your Pattern)",
+              "500-1,000 pcs/style",
+              "$3-12/pc",
+              "25-35 days"
+            ],
+            [
+              "Full OEM (Your Brand + Design)",
+              "1,000-3,000 pcs/style",
+              "$4-15/pc",
+              "30-45 days"
+            ],
+            [
+              "Premium/Lace Collection",
+              "300-800 pcs/style",
+              "$8-25/pc",
+              "35-50 days"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Quality Control Checklist"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/lingerie-oem.jpg",
+          "alt": "Lingerie OEM manufacturing",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fabric composition verification (cotton/polyamide/spandex ratios)",
+            "Color fastness testing (wash and rub tests)",
+            "Stitch quality inspection (stitches per inch, seam strength)",
+            "Size accuracy measurement (±1cm tolerance)",
+            "Elastic durability test (stretch recovery after 100 cycles)",
+            "Label and packaging compliance (care labels, barcodes)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Shipping & Logistics"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lingerie is lightweight and high-value, making air freight competitive for urgent orders. Sea freight is ideal for bulk shipments. Typical shipping costs from Guangdong to Tbilisi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Air Freight: $4-8/kg, 7-10 days transit",
+            "Sea Freight (LCL): $80-150/CBM, 25-35 days",
+            "Express (DHL/FedEx): $12-18/kg, 3-5 days for samples"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How NewAge Trading Adds Value"
+        },
+        {
+          "type": "paragraph",
+          "text": "We connect you with verified manufacturers in China's top lingerie clusters. Our services include factory audits, sample coordination, quality inspection, and door-to-door shipping. Contact us to start your OEM journey."
         }
       ],
       "ru": [
@@ -638,6 +938,110 @@
           "src": "/images/blog/georgia-china-trade.jpg",
           "alt": "China-Georgia trade routes",
           "caption": "Understanding trade routes helps optimize supply chain costs"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Understanding MOQ: Minimum Order Quantities"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/georgia-china-trade.jpg",
+          "alt": "China-Georgia trade routes",
+          "caption": "Understanding trade routes helps optimize supply chain costs"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/lingerie-oem.jpg",
+          "alt": "Lingerie OEM manufacturing",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "MOQ is one of the biggest challenges for new importers. Here's what to expect:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Order Type",
+            "Typical MOQ",
+            "Unit Price Range",
+            "Lead Time"
+          ],
+          "rows": [
+            [
+              "Existing Style (No Customization)",
+              "200-500 pcs/style",
+              "$2-8/pc",
+              "15-20 days"
+            ],
+            [
+              "Custom Design (Your Pattern)",
+              "500-1,000 pcs/style",
+              "$3-12/pc",
+              "25-35 days"
+            ],
+            [
+              "Full OEM (Your Brand + Design)",
+              "1,000-3,000 pcs/style",
+              "$4-15/pc",
+              "30-45 days"
+            ],
+            [
+              "Premium/Lace Collection",
+              "300-800 pcs/style",
+              "$8-25/pc",
+              "35-50 days"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Quality Control Checklist"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/lingerie-oem.jpg",
+          "alt": "Lingerie OEM manufacturing",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fabric composition verification (cotton/polyamide/spandex ratios)",
+            "Color fastness testing (wash and rub tests)",
+            "Stitch quality inspection (stitches per inch, seam strength)",
+            "Size accuracy measurement (±1cm tolerance)",
+            "Elastic durability test (stretch recovery after 100 cycles)",
+            "Label and packaging compliance (care labels, barcodes)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Shipping & Logistics"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lingerie is lightweight and high-value, making air freight competitive for urgent orders. Sea freight is ideal for bulk shipments. Typical shipping costs from Guangdong to Tbilisi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Air Freight: $4-8/kg, 7-10 days transit",
+            "Sea Freight (LCL): $80-150/CBM, 25-35 days",
+            "Express (DHL/FedEx): $12-18/kg, 3-5 days for samples"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How NewAge Trading Adds Value"
+        },
+        {
+          "type": "paragraph",
+          "text": "We connect you with verified manufacturers in China's top lingerie clusters. Our services include factory audits, sample coordination, quality inspection, and door-to-door shipping. Contact us to start your OEM journey."
         }
       ]
     }
@@ -831,6 +1235,81 @@
         {
           "type": "paragraph",
           "text": "CE认证适用于欧盟市场，FCC认证适用于美国市场，GOST-R适用于俄罗斯/独联体市场。中国制造商通常已获得CE和FCC认证，可直接向这些市场出口。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Certification Requirements"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/security-equipment.jpg",
+          "alt": "Security equipment export",
+          "caption": ""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Certification",
+            "Applicable Markets",
+            "Required For",
+            "Processing Time"
+          ],
+          "rows": [
+            [
+              "CE",
+              "European Union",
+              "All electronic equipment",
+              "4-8 weeks"
+            ],
+            [
+              "FCC",
+              "United States",
+              "Radio frequency devices",
+              "3-6 weeks"
+            ],
+            [
+              "GOST-R",
+              "Russia/CIS",
+              "Security equipment",
+              "4-6 weeks"
+            ],
+            [
+              "ISO 9001",
+              "Global (quality)",
+              "Factory qualification",
+              "8-12 weeks"
+            ],
+            [
+              "UNGM Registration",
+              "UN procurement",
+              "Bidding on UN contracts",
+              "4-8 weeks"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "UNGM Bidding Opportunities"
+        },
+        {
+          "type": "paragraph",
+          "text": "The United Nations Global Marketplace (UNGM) is an excellent channel for security equipment exporters. UN agencies regularly procure CCTV systems, access control, and surveillance equipment for peacekeeping missions, refugee camps, and field offices. Chinese manufacturers with CE certification are well-positioned to win these contracts."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Why Import from China"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Price advantage: Chinese security equipment costs 30-60% less than Western equivalents with comparable specifications.",
+            "Technology leadership: AI-powered analytics, facial recognition, and thermal imaging are standard features.",
+            "Scalability: From single-camera setups to city-wide surveillance systems, Chinese manufacturers offer complete solutions.",
+            "Fast delivery: Most products ship within 7-15 days of order confirmation."
+          ]
         }
       ],
       "ru": [
@@ -860,6 +1339,103 @@
           "src": "/images/blog/top-security-cameras.jpg",
           "alt": "Top Chinese security cameras and surveillance systems",
           "caption": "Chinese security cameras offer competitive features at lower prices"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/security-equipment.jpg",
+          "alt": "Security equipment export",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/top-security-cameras.jpg",
+          "alt": "Top Chinese security cameras and surveillance systems",
+          "caption": "Chinese security cameras offer competitive features at lower prices"
+        },
+        {
+          "type": "list",
+          "items": [
+            "CCTV/IP Cameras: Bullet, dome, PTZ, and thermal cameras ranging from $15-500/unit depending on resolution and features.",
+            "NVR/DVR Systems: Network video recorders with 4-64 channels. Support H.265 encoding, AI analytics, and cloud storage.",
+            "Access Control: RFID card readers, biometric scanners, door controllers, and turnstils for commercial and industrial use.",
+            "Alarm Systems: Intrusion detection, fire alarms, and emergency response systems for homes, offices, and warehouses.",
+            "Tactical Equipment: Body armor, tactical vests, flashlights, and communication gear for security personnel."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Certification Requirements"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/security-equipment.jpg",
+          "alt": "Security equipment export",
+          "caption": ""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Certification",
+            "Applicable Markets",
+            "Required For",
+            "Processing Time"
+          ],
+          "rows": [
+            [
+              "CE",
+              "European Union",
+              "All electronic equipment",
+              "4-8 weeks"
+            ],
+            [
+              "FCC",
+              "United States",
+              "Radio frequency devices",
+              "3-6 weeks"
+            ],
+            [
+              "GOST-R",
+              "Russia/CIS",
+              "Security equipment",
+              "4-6 weeks"
+            ],
+            [
+              "ISO 9001",
+              "Global (quality)",
+              "Factory qualification",
+              "8-12 weeks"
+            ],
+            [
+              "UNGM Registration",
+              "UN procurement",
+              "Bidding on UN contracts",
+              "4-8 weeks"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "UNGM Bidding Opportunities"
+        },
+        {
+          "type": "paragraph",
+          "text": "The United Nations Global Marketplace (UNGM) is an excellent channel for security equipment exporters. UN agencies regularly procure CCTV systems, access control, and surveillance equipment for peacekeeping missions, refugee camps, and field offices. Chinese manufacturers with CE certification are well-positioned to win these contracts."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Why Import from China"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Price advantage: Chinese security equipment costs 30-60% less than Western equivalents with comparable specifications.",
+            "Technology leadership: AI-powered analytics, facial recognition, and thermal imaging are standard features.",
+            "Scalability: From single-camera setups to city-wide surveillance systems, Chinese manufacturers offer complete solutions.",
+            "Fast delivery: Most products ship within 7-15 days of order confirmation."
+          ]
         }
       ]
     }
@@ -987,6 +1563,54 @@
           "src": "/images/blog/import-cars-georgia.jpg",
           "alt": "Import goods arriving at Georgia",
           "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Top Import Categories for Georgia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/import-cars-georgia.jpg",
+          "alt": "Import goods arriving at Georgia",
+          "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/georgia-china-trade.jpg",
+          "alt": "China-Georgia trade route",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Automobiles: Chinese EVs (BYD, Geely) are selling rapidly in Tbilisi. The FTA eliminates import duty on EVs from China.",
+            "Electronics & Appliances: Smartphones, home appliances, and IT equipment at 40-60% below European prices.",
+            "Textiles & Clothing: Lingerie, sportswear, and fashion accessories from Shantou and Guangzhou clusters.",
+            "Building Materials: LED lighting, PVC pipes, steel products, and ceramic tiles.",
+            "Security Equipment: CCTV systems, access control, and alarm equipment for Georgia's growing commercial sector."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Getting Started: Step-by-Step"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/georgia-china-trade.jpg",
+          "alt": "China-Georgia trade route",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Identify your product category and target price range",
+            "Contact a sourcing partner who understands both Chinese and Georgian markets",
+            "Request samples before committing to bulk orders",
+            "Arrange shipping via sea freight (Poti/Batumi ports) or overland through Central Asia",
+            "Handle customs clearance with your Georgian import license"
+          ]
         }
       ],
       "ru": [
@@ -1016,6 +1640,54 @@
           "src": "/images/blog/import-cars-georgia.jpg",
           "alt": "Import goods arriving at Georgia",
           "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Top Import Categories for Georgia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/import-cars-georgia.jpg",
+          "alt": "Import goods arriving at Georgia",
+          "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/georgia-china-trade.jpg",
+          "alt": "China-Georgia trade route",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Automobiles: Chinese EVs (BYD, Geely) are selling rapidly in Tbilisi. The FTA eliminates import duty on EVs from China.",
+            "Electronics & Appliances: Smartphones, home appliances, and IT equipment at 40-60% below European prices.",
+            "Textiles & Clothing: Lingerie, sportswear, and fashion accessories from Shantou and Guangzhou clusters.",
+            "Building Materials: LED lighting, PVC pipes, steel products, and ceramic tiles.",
+            "Security Equipment: CCTV systems, access control, and alarm equipment for Georgia's growing commercial sector."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Getting Started: Step-by-Step"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/georgia-china-trade.jpg",
+          "alt": "China-Georgia trade route",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Identify your product category and target price range",
+            "Contact a sourcing partner who understands both Chinese and Georgian markets",
+            "Request samples before committing to bulk orders",
+            "Arrange shipping via sea freight (Poti/Batumi ports) or overland through Central Asia",
+            "Handle customs clearance with your Georgian import license"
+          ]
         }
       ]
     }
@@ -1140,6 +1812,51 @@
           "src": "/images/blog/shipping-logistics.jpg",
           "alt": "Supply chain and logistics verification",
           "caption": "Complete supply chain verification prevents delivery delays"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/verify-suppliers.jpg",
+          "alt": "Supplier verification process",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Supply chain and logistics verification",
+          "caption": "Complete supply chain verification prevents delivery delays"
+        },
+        {
+          "type": "paragraph",
+          "text": "A genuine manufacturer will gladly share photos and live video of their factory floor, warehouse, and quality control area. Be wary of suppliers who only have office photos or refuse to show production facilities."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Step 3: Third-Party Inspection"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/verify-suppliers.jpg",
+          "alt": "Supplier verification process",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Services like SGS, Bureau Veritas, or local inspection companies can conduct factory audits on your behalf. Cost: $300-800 per audit. This is the most reliable way to verify production capacity and quality control systems."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Step 4: Secure Payment Methods"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alibaba Trade Assurance: Protects orders up to $100,000 with escrow payment.",
+            "Letter of Credit (L/C): Bank-guaranteed payment for orders over $10,000.",
+            "30% T/T + 70% against B/L copy: Standard practice for established relationships.",
+            "PayPal/Western Union: Only for samples, never for bulk orders."
+          ]
         }
       ],
       "ru": [
@@ -1169,6 +1886,51 @@
           "src": "/images/blog/shipping-logistics.jpg",
           "alt": "Supply chain and logistics verification",
           "caption": "Complete supply chain verification prevents delivery delays"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/verify-suppliers.jpg",
+          "alt": "Supplier verification process",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Supply chain and logistics verification",
+          "caption": "Complete supply chain verification prevents delivery delays"
+        },
+        {
+          "type": "paragraph",
+          "text": "A genuine manufacturer will gladly share photos and live video of their factory floor, warehouse, and quality control area. Be wary of suppliers who only have office photos or refuse to show production facilities."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Step 3: Third-Party Inspection"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/verify-suppliers.jpg",
+          "alt": "Supplier verification process",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Services like SGS, Bureau Veritas, or local inspection companies can conduct factory audits on your behalf. Cost: $300-800 per audit. This is the most reliable way to verify production capacity and quality control systems."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Step 4: Secure Payment Methods"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alibaba Trade Assurance: Protects orders up to $100,000 with escrow payment.",
+            "Letter of Credit (L/C): Bank-guaranteed payment for orders over $10,000.",
+            "30% T/T + 70% against B/L copy: Standard practice for established relationships.",
+            "PayPal/Western Union: Only for samples, never for bulk orders."
+          ]
         }
       ]
     }
@@ -1319,6 +2081,73 @@
           "src": "/images/blog/import-cars-georgia.jpg",
           "alt": "Goods arriving at Georgia port",
           "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Cost Comparison"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/import-cars-georgia.jpg",
+          "alt": "Goods arriving at Georgia port",
+          "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Cargo container logistics",
+          "caption": ""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Cost per CBM",
+            "Transit Time",
+            "Best For"
+          ],
+          "rows": [
+            [
+              "Sea Freight (LCL)",
+              "$60-120/CBM",
+              "30-45 days",
+              "Bulk cargo, non-urgent"
+            ],
+            [
+              "Sea Freight (FCL 20')",
+              "$1,800-3,000",
+              "30-45 days",
+              "Full container loads"
+            ],
+            [
+              "Rail Freight",
+              "$150-250/CBM",
+              "18-25 days",
+              "Central Asian corridor"
+            ],
+            [
+              "Air Freight",
+              "$4-8/kg",
+              "5-10 days",
+              "High-value, urgent"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Customs Clearance in Georgia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Cargo container logistics",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia has one of the most business-friendly customs regimes in the region. Required documents: commercial invoice, packing list, bill of lading, certificate of origin, and import declaration. Processing time: 1-3 business days for standard clearance."
         }
       ],
       "ru": [
@@ -1348,6 +2177,73 @@
           "src": "/images/blog/import-cars-georgia.jpg",
           "alt": "Goods arriving at Georgia port",
           "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Cost Comparison"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/import-cars-georgia.jpg",
+          "alt": "Goods arriving at Georgia port",
+          "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Cargo container logistics",
+          "caption": ""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Cost per CBM",
+            "Transit Time",
+            "Best For"
+          ],
+          "rows": [
+            [
+              "Sea Freight (LCL)",
+              "$60-120/CBM",
+              "30-45 days",
+              "Bulk cargo, non-urgent"
+            ],
+            [
+              "Sea Freight (FCL 20')",
+              "$1,800-3,000",
+              "30-45 days",
+              "Full container loads"
+            ],
+            [
+              "Rail Freight",
+              "$150-250/CBM",
+              "18-25 days",
+              "Central Asian corridor"
+            ],
+            [
+              "Air Freight",
+              "$4-8/kg",
+              "5-10 days",
+              "High-value, urgent"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Customs Clearance in Georgia"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Cargo container logistics",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Georgia has one of the most business-friendly customs regimes in the region. Required documents: commercial invoice, packing list, bill of lading, certificate of origin, and import declaration. Processing time: 1-3 business days for standard clearance."
         }
       ]
     }
@@ -1729,6 +2625,15 @@
         {
           "type": "paragraph",
           "text": "我们专注于直接从中国授权经销商采购BYD车辆，提供最优价格。服务包括：车辆选择、质量检测、海关文件和门到门运输至格鲁吉亚。联系我们获取个性化报价。"
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Can Help",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We specialize in sourcing BYD vehicles directly from authorized Chinese dealers at the best available prices. Our services include: vehicle selection, quality inspection, customs documentation, and door-to-door shipping to Georgia. Contact us for a personalized quote."
         }
       ],
       "ru": [
@@ -1899,6 +2804,50 @@
         {
           "type": "paragraph",
           "text": "Мы специализируемся на поставках автомобилей BYD напрямую от авторизованных китайских дилеров по лучшим ценам. Наши услуги: подбор автомобилей, инспекция качества, таможенное оформление и доставка до двери в Грузии."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cost Item",
+            "BYD Atto 3",
+            "Tesla Model 3"
+          ],
+          "rows": [
+            [
+              "Purchase Price",
+              "$32,000",
+              "$40,000"
+            ],
+            [
+              "Insurance (5 years)",
+              "$4,000",
+              "$5,000"
+            ],
+            [
+              "Maintenance (5 years)",
+              "$1,500",
+              "$2,000"
+            ],
+            [
+              "Electricity (100,000 km)",
+              "$6,000",
+              "$5,500"
+            ],
+            [
+              "Total 5-Year Cost",
+              "$43,500",
+              "$52,500"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Can Help",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We specialize in sourcing BYD vehicles directly from authorized Chinese dealers at the best available prices. Our services include: vehicle selection, quality inspection, customs documentation, and door-to-door shipping to Georgia. Contact us for a personalized quote."
         }
       ]
     }
@@ -2248,6 +3197,33 @@
         {
           "type": "paragraph",
           "text": "我们处理一切：中国境内车辆采购、运输安排、海关文件和与格鲁吉亚海关代理协调。一站式全程服务。立即联系我们获取免费咨询。"
+        },
+        {
+          "type": "paragraph",
+          "text": "Visit the Service Agency (საჯარო რეესტრი) in Tbilisi or regional offices with your customs clearance certificate, passport, and vehicle documents. You will receive Georgian license plates within 1–3 business days."
+        },
+        {
+          "type": "heading",
+          "text": "Important Notes",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "EVs enjoy 0% import duty through 2027 under Georgia's green energy policy",
+            "Vehicles older than 10 years may face additional restrictions",
+            "Right-hand drive vehicles are NOT permitted for registration in Georgia",
+            "Hybrid vehicles are classified as ICE (not eligible for 0% duty)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Simplifies This Process",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We handle everything: vehicle sourcing in China, shipping arrangement, customs documentation, and coordination with Georgian customs brokers. One contact, end-to-end service. Contact us today for a free consultation."
         }
       ],
       "ru": [
@@ -2397,6 +3373,33 @@
         {
           "type": "paragraph",
           "text": "Мы берём на себя всё: закупку автомобилей в Китае, организацию доставки, таможенные документы и координацию с грузинскими таможенными брокерами. Один контакт — полное обслуживание."
+        },
+        {
+          "type": "paragraph",
+          "text": "Visit the Service Agency (საჯარო რეესტრი) in Tbilisi or regional offices with your customs clearance certificate, passport, and vehicle documents. You will receive Georgian license plates within 1–3 business days."
+        },
+        {
+          "type": "heading",
+          "text": "Important Notes",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "EVs enjoy 0% import duty through 2027 under Georgia's green energy policy",
+            "Vehicles older than 10 years may face additional restrictions",
+            "Right-hand drive vehicles are NOT permitted for registration in Georgia",
+            "Hybrid vehicles are classified as ICE (not eligible for 0% duty)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How NewAge Trading Simplifies This Process",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We handle everything: vehicle sourcing in China, shipping arrangement, customs documentation, and coordination with Georgian customs brokers. One contact, end-to-end service. Contact us today for a free consultation."
         }
       ]
     }
@@ -2764,6 +3767,99 @@
         {
           "type": "paragraph",
           "text": "我们以有竞争力的批发价格供应所有主要中国安防品牌。无论您需要4个摄像头用于商店还是200+用于仓库，我们都提供带完整保修和技术支持的定制方案。联系我们获取免费报价。"
+        },
+        {
+          "type": "heading",
+          "text": "#5 TP-Link Tapo — Smart Home Entry",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Plug-and-play setup, no NVR required",
+            "Cloud storage options with free tier",
+            "Mobile app with live view and two-way audio",
+            "Price range: $20 to $80 per camera"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Best for: Home users, small shops, DIY security systems."
+        },
+        {
+          "type": "heading",
+          "text": "Quick Comparison Table",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Brand",
+            "Best For",
+            "Starting Price",
+            "AI Features",
+            "Warranty"
+          ],
+          "rows": [
+            [
+              "Hikvision",
+              "Enterprise",
+              "$45",
+              "✅ Advanced",
+              "2 years"
+            ],
+            [
+              "Dahua",
+              "SMB/Budget",
+              "$35",
+              "✅ WizSense",
+              "2 years"
+            ],
+            [
+              "Uniview",
+              "Enterprise",
+              "$50",
+              "✅ Stellar",
+              "3 years"
+            ],
+            [
+              "Tiandy",
+              "Value",
+              "$30",
+              "✅ Basic AI",
+              "2 years"
+            ],
+            [
+              "TP-Link Tapo",
+              "Home/SOHO",
+              "$20",
+              "⚠️ Limited",
+              "1 year"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How to Choose the Right Brand",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "For large warehouses/industrial sites → Hikvision or Uniview",
+            "For retail stores/offices → Dahua WizSense series",
+            "For residential buildings → Tiandy (best value)",
+            "For home/small shop → TP-Link Tapo (easiest setup)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading Security Solutions",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We supply all major Chinese security brands at competitive wholesale prices. Whether you need 4 cameras for a shop or 200+ for a warehouse, we provide customized solutions with full warranty and technical support. Contact us for a free quote."
         }
       ],
       "ru": [
@@ -2894,6 +3990,127 @@
         {
           "type": "paragraph",
           "text": "Мы поставляем все основные китайские бренды безопасности по конкурентоспособным оптовым ценам. Мы предлагаем индивидуальные решения с полной гарантией и технической поддержкой. Свяжитесь с нами для бесплатной консультации."
+        },
+        {
+          "type": "heading",
+          "text": "#3 Uniview (UNV) — Enterprise Grade",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Industry-leading IP67 weatherproofing",
+            "Stellar light technology: Ultra-low illumination performance",
+            "Strong NVR ecosystem with 64+ channel options",
+            "Price range: $50 to $700"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#4 Tiandy — Rising Star",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Super Starlight: Excellent low-light performance",
+            "AI-powered analytics at competitive prices",
+            "Growing international presence",
+            "Price range: $30 to $500 (best value for money)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#5 TP-Link Tapo — Smart Home Entry",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Plug-and-play setup, no NVR required",
+            "Cloud storage options with free tier",
+            "Mobile app with live view and two-way audio",
+            "Price range: $20 to $80 per camera"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Best for: Home users, small shops, DIY security systems."
+        },
+        {
+          "type": "heading",
+          "text": "Quick Comparison Table",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Brand",
+            "Best For",
+            "Starting Price",
+            "AI Features",
+            "Warranty"
+          ],
+          "rows": [
+            [
+              "Hikvision",
+              "Enterprise",
+              "$45",
+              "✅ Advanced",
+              "2 years"
+            ],
+            [
+              "Dahua",
+              "SMB/Budget",
+              "$35",
+              "✅ WizSense",
+              "2 years"
+            ],
+            [
+              "Uniview",
+              "Enterprise",
+              "$50",
+              "✅ Stellar",
+              "3 years"
+            ],
+            [
+              "Tiandy",
+              "Value",
+              "$30",
+              "✅ Basic AI",
+              "2 years"
+            ],
+            [
+              "TP-Link Tapo",
+              "Home/SOHO",
+              "$20",
+              "⚠️ Limited",
+              "1 year"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How to Choose the Right Brand",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "For large warehouses/industrial sites → Hikvision or Uniview",
+            "For retail stores/offices → Dahua WizSense series",
+            "For residential buildings → Tiandy (best value)",
+            "For home/small shop → TP-Link Tapo (easiest setup)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "NewAge Trading Security Solutions",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "We supply all major Chinese security brands at competitive wholesale prices. Whether you need 4 cameras for a shop or 200+ for a warehouse, we provide customized solutions with full warranty and technical support. Contact us for a free quote."
         }
       ]
     }
@@ -4298,6 +5515,186 @@
           "type": "heading",
           "level": 3,
           "text": "Бесплатная оценка"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Country",
+            "Import Duty",
+            "VAT/Sales Tax",
+            "Excise",
+            "Total Burden (typical car)"
+          ],
+          "rows": [
+            [
+              "🇬🇪 Georgia",
+              "0.5%",
+              "18%",
+              "Low",
+              "~20%"
+            ],
+            [
+              "🇷🇺 Russia",
+              "15-25%",
+              "20%",
+              "High",
+              "40-60%"
+            ],
+            [
+              "🇹🇷 Turkey",
+              "10-40%",
+              "20%",
+              "High",
+              "50-80%"
+            ],
+            [
+              "🇦🇲 Armenia",
+              "0%",
+              "20%",
+              "Medium",
+              "25-30%"
+            ],
+            [
+              "🇦🇿 Azerbaijan",
+              "15%",
+              "18%",
+              "Medium",
+              "35-45%"
+            ],
+            [
+              "🇺🇦 Ukraine",
+              "10%",
+              "20%",
+              "Medium",
+              "35-40%"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Strategic Insight: Georgia's tax regime makes it a re-export hub. Many importers bring cars to Georgia, then re-export to neighboring countries (though re-export regulations vary)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Common Mistakes & How to Avoid Them"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mistake",
+            "Consequence",
+            "Solution"
+          ],
+          "rows": [
+            [
+              "Under-declaring vehicle value",
+              "Penalties, delays, reassessment",
+              "Declare realistic market value"
+            ],
+            [
+              "Not budgeting for excise tax",
+              "Surprise costs at customs",
+              "Use the calculator above"
+            ],
+            [
+              "Skipping customs broker",
+              "2-3 weeks delay",
+              "Hire one ($200-$400)"
+            ],
+            [
+              "Wrong engine size declaration",
+              "Wrong excise rate, penalties",
+              "Verify engine cc from registration"
+            ],
+            [
+              "Missing documents",
+              "Weeks of delays",
+              "Prepare all 6 documents before arrival"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Is there an age limit for importing cars to Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No official age limit. However, vehicles over 10 years old face a 3× excise tax multiplier, making them significantly more expensive to import."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: Can I import a right-hand drive car?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, but left-hand drive is preferred and easier to register. Right-hand drive vehicles must pass standard technical inspection."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Do I pay taxes if importing for personal use?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, taxes apply regardless of personal or commercial use. No personal exemption exists for vehicle imports."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: What if customs disagrees with my declared value?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Georgian customs may reassess using their internal database. Always declare a realistic market value — under-declaring risks penalties."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Are hybrids taxed differently?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Hybrids receive a 50% reduction on excise tax. Import duty (0.5%) and VAT (18%) remain the same."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Can I get a tax refund if I re-export the vehicle?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: VAT may be refundable under certain re-export procedures. Consult a customs broker for specific cases."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Need Help Calculating Your Import Tax?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Free Tax Estimate"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Personalized tax calculation for any vehicle",
+            "Real-time CIF pricing",
+            "Customs broker recommendations in Poti/Batumi",
+            "Complete cost breakdown (FOB to registration)"
+          ]
         }
       ],
       "zh": [
@@ -4884,6 +6281,128 @@
           "type": "heading",
           "level": 3,
           "text": "免费估算"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Common Mistakes & How to Avoid Them"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mistake",
+            "Consequence",
+            "Solution"
+          ],
+          "rows": [
+            [
+              "Under-declaring vehicle value",
+              "Penalties, delays, reassessment",
+              "Declare realistic market value"
+            ],
+            [
+              "Not budgeting for excise tax",
+              "Surprise costs at customs",
+              "Use the calculator above"
+            ],
+            [
+              "Skipping customs broker",
+              "2-3 weeks delay",
+              "Hire one ($200-$400)"
+            ],
+            [
+              "Wrong engine size declaration",
+              "Wrong excise rate, penalties",
+              "Verify engine cc from registration"
+            ],
+            [
+              "Missing documents",
+              "Weeks of delays",
+              "Prepare all 6 documents before arrival"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Is there an age limit for importing cars to Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No official age limit. However, vehicles over 10 years old face a 3× excise tax multiplier, making them significantly more expensive to import."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: Can I import a right-hand drive car?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, but left-hand drive is preferred and easier to register. Right-hand drive vehicles must pass standard technical inspection."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Do I pay taxes if importing for personal use?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, taxes apply regardless of personal or commercial use. No personal exemption exists for vehicle imports."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: What if customs disagrees with my declared value?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Georgian customs may reassess using their internal database. Always declare a realistic market value — under-declaring risks penalties."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Are hybrids taxed differently?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Hybrids receive a 50% reduction on excise tax. Import duty (0.5%) and VAT (18%) remain the same."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Can I get a tax refund if I re-export the vehicle?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: VAT may be refundable under certain re-export procedures. Consult a customs broker for specific cases."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Need Help Calculating Your Import Tax?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Free Tax Estimate"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Personalized tax calculation for any vehicle",
+            "Real-time CIF pricing",
+            "Customs broker recommendations in Poti/Batumi",
+            "Complete cost breakdown (FOB to registration)"
+          ]
         }
       ]
     }
@@ -6111,6 +7630,189 @@
           "type": "heading",
           "level": 3,
           "text": "Расчёт для Ганы"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vehicle Registration in Ghana (DVLA)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Process"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Action",
+            "Cost"
+          ],
+          "rows": [
+            [
+              "1",
+              "Vehicle inspection at DVLA",
+              "$20-$30"
+            ],
+            [
+              "2",
+              "Submit customs release + documents",
+              "—"
+            ],
+            [
+              "3",
+              "Pay registration fee",
+              "$50-$100"
+            ],
+            [
+              "4",
+              "Receive license plates",
+              "$20-$30"
+            ],
+            [
+              "5",
+              "Get registration certificate",
+              "—"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Required for DVLA Registration"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Customs release document",
+            "Original purchase invoice",
+            "Insurance certificate (third-party minimum)",
+            "Valid driver's license or ID",
+            "TIN certificate"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Common Mistakes When Importing to Ghana"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mistake",
+            "Consequence",
+            "How to Avoid"
+          ],
+          "rows": [
+            [
+              "Importing cars older than 10 years",
+              "Rejected at customs",
+              "Verify manufacture year before buying"
+            ],
+            [
+              "Under-declaring value",
+              "Penalties + delays",
+              "Declare realistic market value"
+            ],
+            [
+              "No TIN",
+              "Cannot clear customs",
+              "Apply for TIN before shipping"
+            ],
+            [
+              "No pre-shipment inspection",
+              "Receive damaged car",
+              "Always inspect before payment"
+            ],
+            [
+              "Wrong port choice",
+              "Extra transport costs",
+              "Tema is the main auto import port"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Can I import a used car to Ghana?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, but it must be less than 10 years old from the year of manufacture. For 2026 imports, only 2016+ models are allowed."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: How much does it cost total?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Expect to pay approximately CIF + 40% for Ghana. A $7,800 CIF vehicle will cost approximately $10,800-$11,000 landed in Accra."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What is the ICUMS system?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: ICUMS (Integrated Customs Management System) is Ghana's online customs declaration platform. All import declarations must be submitted through ICUMS."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: Can I drive the car immediately after customs release?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No. You must complete DVLA registration (1-2 weeks) before legally driving on Ghanaian roads."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Are electric vehicles cheaper to import?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes! Ghana offers tax incentives for EVs — import duty can be as low as 0-5%, and environmental levies may be waived."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Where can I get spare parts for Chinese cars in Ghana?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Growing network in Accra (Kaneshie, Madina) and Kumasi. Geely and Chery have the best parts availability."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Import from China to Ghana?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Your Ghana-Specific Quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Real-time CIF Tema pricing for any Chinese vehicle",
+            "Ghana tax calculation (accurate, up-to-date)",
+            "ICUMS documentation support",
+            "Reliable shipping to Tema Port",
+            "Pre-shipment inspection coordination"
+          ]
         }
       ],
       "zh": [
@@ -6667,6 +8369,79 @@
           "type": "heading",
           "level": 3,
           "text": "获取加纳专属报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, but it must be less than 10 years old from the year of manufacture. For 2026 imports, only 2016+ models are allowed."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: How much does it cost total?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Expect to pay approximately CIF + 40% for Ghana. A $7,800 CIF vehicle will cost approximately $10,800-$11,000 landed in Accra."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What is the ICUMS system?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: ICUMS (Integrated Customs Management System) is Ghana's online customs declaration platform. All import declarations must be submitted through ICUMS."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: Can I drive the car immediately after customs release?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No. You must complete DVLA registration (1-2 weeks) before legally driving on Ghanaian roads."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Are electric vehicles cheaper to import?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes! Ghana offers tax incentives for EVs — import duty can be as low as 0-5%, and environmental levies may be waived."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Where can I get spare parts for Chinese cars in Ghana?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Growing network in Accra (Kaneshie, Madina) and Kumasi. Geely and Chery have the best parts availability."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Import from China to Ghana?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Your Ghana-Specific Quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Real-time CIF Tema pricing for any Chinese vehicle",
+            "Ghana tax calculation (accurate, up-to-date)",
+            "ICUMS documentation support",
+            "Reliable shipping to Tema Port",
+            "Pre-shipment inspection coordination"
+          ]
         }
       ]
     }
@@ -7548,6 +9323,115 @@
           "type": "heading",
           "level": 3,
           "text": "Получить цену"
+        },
+        {
+          "type": "paragraph",
+          "text": "Recommendation: For first-time importers to Ghana, CIF is safer and simpler."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How to Get the Best CIF Price for Tema"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5 Money-Saving Tips"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tip",
+            "Savings",
+            "How"
+          ],
+          "rows": [
+            [
+              "1. Compare 3+ suppliers",
+              "5-15%",
+              "Different suppliers have different shipping contracts"
+            ],
+            [
+              "2. Ship off-peak",
+              "10-20%",
+              "Avoid Dec-Jan (Chinese New Year) and Sep-Oct (peak)"
+            ],
+            [
+              "3. Group orders",
+              "20-40% per unit",
+              "Fill a 40ft container with 3-4 cars"
+            ],
+            [
+              "4. Choose nearest Chinese port",
+              "$100-$300",
+              "Supplier near Shanghai/Shenzhen"
+            ],
+            [
+              "5. Negotiate insurance",
+              "10-30%",
+              "Shop around for marine insurance rates"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Does CIF include Ghana customs duties?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No. CIF only covers shipping to Tema Port. You still need to pay Ghana import duties (approximately 35-45% of CIF value)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: How long does CIF shipping to Ghana take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 30-50 days depending on departure port and shipping method."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Can I track my shipment to Tema?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes. You'll receive the vessel name, voyage number, and container number for online tracking."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: What if the car is damaged before Tema arrival?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Marine insurance covers transit damage. File a claim within 7 days with photos and documentation."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Is CIF more expensive than arranging shipping myself?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Usually not. Suppliers get volume discounts from shipping lines. However, experienced importers may save 5-10% with their own shipping contacts."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready for Your CIF Tema Quote?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Real-Time Pricing"
         }
       ],
       "zh": [
@@ -7919,6 +9803,115 @@
           "type": "heading",
           "level": 3,
           "text": "获取实时价格"
+        },
+        {
+          "type": "paragraph",
+          "text": "Recommendation: For first-time importers to Ghana, CIF is safer and simpler."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How to Get the Best CIF Price for Tema"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5 Money-Saving Tips"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tip",
+            "Savings",
+            "How"
+          ],
+          "rows": [
+            [
+              "1. Compare 3+ suppliers",
+              "5-15%",
+              "Different suppliers have different shipping contracts"
+            ],
+            [
+              "2. Ship off-peak",
+              "10-20%",
+              "Avoid Dec-Jan (Chinese New Year) and Sep-Oct (peak)"
+            ],
+            [
+              "3. Group orders",
+              "20-40% per unit",
+              "Fill a 40ft container with 3-4 cars"
+            ],
+            [
+              "4. Choose nearest Chinese port",
+              "$100-$300",
+              "Supplier near Shanghai/Shenzhen"
+            ],
+            [
+              "5. Negotiate insurance",
+              "10-30%",
+              "Shop around for marine insurance rates"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Does CIF include Ghana customs duties?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: No. CIF only covers shipping to Tema Port. You still need to pay Ghana import duties (approximately 35-45% of CIF value)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: How long does CIF shipping to Ghana take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 30-50 days depending on departure port and shipping method."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Can I track my shipment to Tema?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes. You'll receive the vessel name, voyage number, and container number for online tracking."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: What if the car is damaged before Tema arrival?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Marine insurance covers transit damage. File a claim within 7 days with photos and documentation."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Is CIF more expensive than arranging shipping myself?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Usually not. Suppliers get volume discounts from shipping lines. However, experienced importers may save 5-10% with their own shipping contacts."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready for Your CIF Tema Quote?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Real-Time Pricing"
         }
       ]
     }
@@ -9530,6 +11523,189 @@
           "type": "heading",
           "level": 3,
           "text": "Бесплатная проверка"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Supplier Verification Scorecard"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Rate Your Potential Supplier (1-5 each)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criteria",
+            "Score",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "Business license verified (age, capital, scope)",
+              "/5",
+              "Check gsxt.gov.cn"
+            ],
+            [
+              "Export credentials confirmed (on official list)",
+              "/5",
+              "Ministry of Commerce"
+            ],
+            [
+              "Platform reputation (Alibaba ratings, reviews)",
+              "/5",
+              "≥3 years, ≥95% positive"
+            ],
+            [
+              "Third-party inspection passed",
+              "/5",
+              "SGS/BV/CCIC report"
+            ],
+            [
+              "Payment terms reasonable (not 100% upfront)",
+              "/5",
+              "30/70 split preferred"
+            ],
+            [
+              "Communication responsive and professional",
+              "/5",
+              "Quick, clear replies"
+            ],
+            [
+              "Contract comprehensive (all key clauses)",
+              "/5",
+              "Bilingual, complete"
+            ],
+            [
+              "References available (previous buyers)",
+              "/5",
+              "Can vouch for supplier"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Scoring Guide"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Total Score",
+            "Assessment",
+            "Action"
+          ],
+          "rows": [
+            [
+              "35-40",
+              "Excellent supplier",
+              "Proceed with confidence"
+            ],
+            [
+              "28-34",
+              "Good supplier",
+              "Minor concerns, proceed with caution"
+            ],
+            [
+              "20-27",
+              "Average supplier",
+              "Address concerns before proceeding"
+            ],
+            [
+              "Below 20",
+              "Poor supplier",
+              "🚫 WALK AWAY — find another"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Can I visit the supplier in person?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, and it's the BEST verification method. Check if their physical address matches the business license and if they have actual inventory."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: What if the supplier refuses third-party inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: This is a major red flag. A legitimate supplier has nothing to hide. Find another supplier immediately."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: How do I verify the bank account?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The bank account name MUST match the company name on the business license. Cross-reference both documents before paying."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: Are Alibaba Trade Assurance suppliers 100% safe?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Trade Assurance provides buyer protection up to the covered amount, but it doesn't guarantee quality. Still conduct due diligence and inspection."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: What if I discover fraud after payment?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Contact the platform (Alibaba) immediately to file a Trade Assurance claim",
+            "Report to Chinese police (经侦大队 — Economic Crime Investigation)",
+            "Contact your country's embassy in China",
+            "Consider legal action with a Chinese lawyer"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Should I use a sourcing agent?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: A reputable sourcing agent can help verify suppliers and coordinate inspections. They typically charge 3-5% of the order value. However, you still need to verify the agent's credentials."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Verify Your Supplier?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get a Free Supplier Verification Check"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Business license and export credential verification",
+            "Third-party inspection coordination (SGS/BV/CCIC)",
+            "Secure payment through Alibaba Trade Assurance",
+            "Bilingual contract drafting and review",
+            "Pre-shipment quality verification"
+          ]
         }
       ],
       "zh": [
@@ -10199,6 +12375,189 @@
           "type": "heading",
           "level": 3,
           "text": "免费供应商核实"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Supplier Verification Scorecard"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Rate Your Potential Supplier (1-5 each)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criteria",
+            "Score",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "Business license verified (age, capital, scope)",
+              "/5",
+              "Check gsxt.gov.cn"
+            ],
+            [
+              "Export credentials confirmed (on official list)",
+              "/5",
+              "Ministry of Commerce"
+            ],
+            [
+              "Platform reputation (Alibaba ratings, reviews)",
+              "/5",
+              "≥3 years, ≥95% positive"
+            ],
+            [
+              "Third-party inspection passed",
+              "/5",
+              "SGS/BV/CCIC report"
+            ],
+            [
+              "Payment terms reasonable (not 100% upfront)",
+              "/5",
+              "30/70 split preferred"
+            ],
+            [
+              "Communication responsive and professional",
+              "/5",
+              "Quick, clear replies"
+            ],
+            [
+              "Contract comprehensive (all key clauses)",
+              "/5",
+              "Bilingual, complete"
+            ],
+            [
+              "References available (previous buyers)",
+              "/5",
+              "Can vouch for supplier"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Scoring Guide"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Total Score",
+            "Assessment",
+            "Action"
+          ],
+          "rows": [
+            [
+              "35-40",
+              "Excellent supplier",
+              "Proceed with confidence"
+            ],
+            [
+              "28-34",
+              "Good supplier",
+              "Minor concerns, proceed with caution"
+            ],
+            [
+              "20-27",
+              "Average supplier",
+              "Address concerns before proceeding"
+            ],
+            [
+              "Below 20",
+              "Poor supplier",
+              "🚫 WALK AWAY — find another"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Can I visit the supplier in person?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, and it's the BEST verification method. Check if their physical address matches the business license and if they have actual inventory."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: What if the supplier refuses third-party inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: This is a major red flag. A legitimate supplier has nothing to hide. Find another supplier immediately."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: How do I verify the bank account?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The bank account name MUST match the company name on the business license. Cross-reference both documents before paying."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: Are Alibaba Trade Assurance suppliers 100% safe?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Trade Assurance provides buyer protection up to the covered amount, but it doesn't guarantee quality. Still conduct due diligence and inspection."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: What if I discover fraud after payment?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Contact the platform (Alibaba) immediately to file a Trade Assurance claim",
+            "Report to Chinese police (经侦大队 — Economic Crime Investigation)",
+            "Contact your country's embassy in China",
+            "Consider legal action with a Chinese lawyer"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Should I use a sourcing agent?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: A reputable sourcing agent can help verify suppliers and coordinate inspections. They typically charge 3-5% of the order value. However, you still need to verify the agent's credentials."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Verify Your Supplier?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get a Free Supplier Verification Check"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Business license and export credential verification",
+            "Third-party inspection coordination (SGS/BV/CCIC)",
+            "Secure payment through Alibaba Trade Assurance",
+            "Bilingual contract drafting and review",
+            "Pre-shipment quality verification"
+          ]
         }
       ]
     }
@@ -11578,6 +13937,121 @@
           "type": "heading",
           "level": 3,
           "text": "Организация профессионального осмотра"
+        },
+        {
+          "type": "list",
+          "items": [
+            "How many years of automotive inspection experience?",
+            "Do you provide written reports with photos?",
+            "Can you check for accident and flood damage?",
+            "Do you verify VIN and documentation?",
+            "Can you perform a test drive?",
+            "How quickly can you provide the report?",
+            "Do you offer video inspection (live stream)?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pro Tip: Request a video inspection via WeChat/WhatsApp. You can watch the inspector examine the car in real-time and ask questions."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Inspection Report Template"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use this template to document findings:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Can I do the inspection myself?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: If you're physically in China, yes. But a professional inspector has specialized tools (paint gauge, OBD scanner, lift for undercarriage) and expertise. For $150-$300, it's a wise investment."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: What if the inspection reveals problems?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: You have three options:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Negotiate a lower price — use repair cost estimates as leverage",
+            "Request repairs before shipping — supplier fixes issues at their cost",
+            "Walk away — if problems are major (frame damage, flood, engine issues)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Should I inspect before or after payment?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Ideally: pay a small deposit (10-30%) → inspect → pay balance. This gives you leverage to negotiate or walk away."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long does a thorough inspection take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 1.5-2 hours for a complete inspection including test drive and documentation review."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: What's the single most important part of the inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The undercarriage and VIN verification. Hidden frame damage and VIN fraud are the most costly and hardest-to-detect issues."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Can the supplier arrange the inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: They can coordinate it, but YOU should hire and pay the inspector directly. This ensures the inspector works for you, not the supplier."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Inspect Your Vehicle?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Arrange a Professional Pre-Shipment Inspection"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Third-party inspection coordination (SGS/BV/CCIC)",
+            "Bilingual inspection reports with photos",
+            "Live video inspection via WhatsApp/WeChat",
+            "Pre-payment inspection (pay deposit → inspect → pay balance)"
+          ]
         }
       ],
       "zh": [
@@ -12066,6 +14540,121 @@
           "type": "heading",
           "level": 3,
           "text": "专业装船前检验"
+        },
+        {
+          "type": "list",
+          "items": [
+            "How many years of automotive inspection experience?",
+            "Do you provide written reports with photos?",
+            "Can you check for accident and flood damage?",
+            "Do you verify VIN and documentation?",
+            "Can you perform a test drive?",
+            "How quickly can you provide the report?",
+            "Do you offer video inspection (live stream)?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pro Tip: Request a video inspection via WeChat/WhatsApp. You can watch the inspector examine the car in real-time and ask questions."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Inspection Report Template"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use this template to document findings:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Can I do the inspection myself?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: If you're physically in China, yes. But a professional inspector has specialized tools (paint gauge, OBD scanner, lift for undercarriage) and expertise. For $150-$300, it's a wise investment."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: What if the inspection reveals problems?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: You have three options:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Negotiate a lower price — use repair cost estimates as leverage",
+            "Request repairs before shipping — supplier fixes issues at their cost",
+            "Walk away — if problems are major (frame damage, flood, engine issues)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: Should I inspect before or after payment?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Ideally: pay a small deposit (10-30%) → inspect → pay balance. This gives you leverage to negotiate or walk away."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long does a thorough inspection take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 1.5-2 hours for a complete inspection including test drive and documentation review."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: What's the single most important part of the inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The undercarriage and VIN verification. Hidden frame damage and VIN fraud are the most costly and hardest-to-detect issues."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6: Can the supplier arrange the inspection?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: They can coordinate it, but YOU should hire and pay the inspector directly. This ensures the inspector works for you, not the supplier."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Inspect Your Vehicle?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Arrange a Professional Pre-Shipment Inspection"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Third-party inspection coordination (SGS/BV/CCIC)",
+            "Bilingual inspection reports with photos",
+            "Live video inspection via WhatsApp/WeChat",
+            "Pre-payment inspection (pay deposit → inspect → pay balance)"
+          ]
         }
       ]
     }
@@ -13207,6 +15796,200 @@
           "type": "heading",
           "level": 3,
           "text": "Цены и наличие"
+        },
+        {
+          "type": "paragraph",
+          "text": "Key Insight: BYD EVs offer 30-40% better value than European/American competitors in Georgia."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Where to Buy BYD in Georgia"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Buying Options"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Option",
+            "Pros",
+            "Cons"
+          ],
+          "rows": [
+            [
+              "Import used from China",
+              "Cheapest (30-40% savings), wide selection",
+              "6-10 weeks wait"
+            ],
+            [
+              "Local dealers (new)",
+              "Immediate delivery, local warranty",
+              "20-30% markup"
+            ],
+            [
+              "Import new from China",
+              "Better than local price, full warranty",
+              "Still requires shipping time"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Recommended Approach"
+        },
+        {
+          "type": "paragraph",
+          "text": "For the best value, import a 1-3 year old used BYD from China:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Already absorbed the steepest depreciation",
+            "Still has good battery health (80%+ capacity)",
+            "Significant cost savings vs. buying new locally"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "BYD Warranty & After-Sales in Georgia"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Component",
+            "Coverage"
+          ],
+          "rows": [
+            [
+              "Vehicle",
+              "3 years / 100,000 km"
+            ],
+            [
+              "Battery (EV)",
+              "8 years / 150,000 km"
+            ],
+            [
+              "Electric Motor",
+              "8 years / 150,000 km"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Service Considerations"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Factor",
+            "Status in Georgia"
+          ],
+          "rows": [
+            [
+              "Official BYD dealer",
+              "Growing presence in Tbilisi"
+            ],
+            [
+              "Parts availability",
+              "Improving"
+            ],
+            [
+              "Independent mechanics",
+              "Limited EV expertise"
+            ],
+            [
+              "Battery service",
+              "Must go to authorized center"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Are BYD EVs reliable?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes. BYD's Blade Battery technology passed the nail penetration test (a stringent safety test). Over 1 million BYD EVs sold globally with strong reliability record."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: Can I get BYD warranty if I import from China?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Usually, BYD's international warranty applies. Confirm with BYD Georgia before importing. Some warranties may be region-specific."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What's the cheapest BYD to import to Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The BYD F3 (gasoline) at $4,500-$6,500 used. For EVs, the BYD Dolphin at $12,000-$16,000 used."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long do BYD EV batteries last?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: BYD guarantees 8 years / 150,000 km. In practice, batteries retain 80%+ capacity after 10 years."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Is there charging infrastructure in Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, expanding rapidly:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tbilisi: 50+ public chargers",
+            "Batumi: 20+ public chargers",
+            "Highway corridors: Fast chargers every 100-150 km",
+            "Home charging: Standard 220V outlet works"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Order a BYD?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get BYD Pricing & Availability"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Real-time BYD pricing (FOB + CIF to Poti)",
+            "Vehicle inspection reports",
+            "Battery health verification (for EVs)",
+            "Complete import documentation"
+          ]
         }
       ],
       "zh": [
@@ -13628,6 +16411,200 @@
           "type": "heading",
           "level": 3,
           "text": "获取报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "Key Insight: BYD EVs offer 30-40% better value than European/American competitors in Georgia."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Where to Buy BYD in Georgia"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Buying Options"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Option",
+            "Pros",
+            "Cons"
+          ],
+          "rows": [
+            [
+              "Import used from China",
+              "Cheapest (30-40% savings), wide selection",
+              "6-10 weeks wait"
+            ],
+            [
+              "Local dealers (new)",
+              "Immediate delivery, local warranty",
+              "20-30% markup"
+            ],
+            [
+              "Import new from China",
+              "Better than local price, full warranty",
+              "Still requires shipping time"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Recommended Approach"
+        },
+        {
+          "type": "paragraph",
+          "text": "For the best value, import a 1-3 year old used BYD from China:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Already absorbed the steepest depreciation",
+            "Still has good battery health (80%+ capacity)",
+            "Significant cost savings vs. buying new locally"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "BYD Warranty & After-Sales in Georgia"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Component",
+            "Coverage"
+          ],
+          "rows": [
+            [
+              "Vehicle",
+              "3 years / 100,000 km"
+            ],
+            [
+              "Battery (EV)",
+              "8 years / 150,000 km"
+            ],
+            [
+              "Electric Motor",
+              "8 years / 150,000 km"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Service Considerations"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Factor",
+            "Status in Georgia"
+          ],
+          "rows": [
+            [
+              "Official BYD dealer",
+              "Growing presence in Tbilisi"
+            ],
+            [
+              "Parts availability",
+              "Improving"
+            ],
+            [
+              "Independent mechanics",
+              "Limited EV expertise"
+            ],
+            [
+              "Battery service",
+              "Must go to authorized center"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1: Are BYD EVs reliable?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes. BYD's Blade Battery technology passed the nail penetration test (a stringent safety test). Over 1 million BYD EVs sold globally with strong reliability record."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2: Can I get BYD warranty if I import from China?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Usually, BYD's international warranty applies. Confirm with BYD Georgia before importing. Some warranties may be region-specific."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What's the cheapest BYD to import to Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The BYD F3 (gasoline) at $4,500-$6,500 used. For EVs, the BYD Dolphin at $12,000-$16,000 used."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long do BYD EV batteries last?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: BYD guarantees 8 years / 150,000 km. In practice, batteries retain 80%+ capacity after 10 years."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Is there charging infrastructure in Georgia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: Yes, expanding rapidly:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tbilisi: 50+ public chargers",
+            "Batumi: 20+ public chargers",
+            "Highway corridors: Fast chargers every 100-150 km",
+            "Home charging: Standard 220V outlet works"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Order a BYD?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get BYD Pricing & Availability"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Real-time BYD pricing (FOB + CIF to Poti)",
+            "Vehicle inspection reports",
+            "Battery health verification (for EVs)",
+            "Complete import documentation"
+          ]
         }
       ]
     }
@@ -14734,6 +17711,56 @@
           "type": "heading",
           "level": 3,
           "text": "Получить расчёт"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What's the most popular Geely model in Africa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The Geely Emgrand (sedan) and Geely GX3 (compact SUV) are most popular due to affordability and practicality."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long does shipping to Africa take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 20-40 days depending on destination port and shipping method."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Should I buy new or used Geely for export to Africa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: For Africa, used Geelys (1-3 years old) offer the best value. They've absorbed initial depreciation but still have good condition."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Export Geely to Africa?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Your Geely Export Quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geely model recommendations for your market",
+            "Real-time FOB + CIF pricing",
+            "Vehicle inspection and verification",
+            "Shipping arrangement to African ports"
+          ]
         }
       ],
       "zh": [
@@ -15223,6 +18250,56 @@
           "type": "heading",
           "level": 3,
           "text": "获取报价"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3: What's the most popular Geely model in Africa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: The Geely Emgrand (sedan) and Geely GX3 (compact SUV) are most popular due to affordability and practicality."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4: How long does shipping to Africa take?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: 20-40 days depending on destination port and shipping method."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5: Should I buy new or used Geely for export to Africa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A: For Africa, used Geelys (1-3 years old) offer the best value. They've absorbed initial depreciation but still have good condition."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ready to Export Geely to Africa?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Get Your Geely Export Quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "We provide:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geely model recommendations for your market",
+            "Real-time FOB + CIF pricing",
+            "Vehicle inspection and verification",
+            "Shipping arrangement to African ports"
+          ]
         }
       ]
     }
