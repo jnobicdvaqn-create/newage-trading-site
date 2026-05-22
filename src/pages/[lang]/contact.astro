@@ -38,11 +38,11 @@ const contactMethods = [
 
 const contactSchema = {
   "@type": "ContactPage",
-  name: `Contact NewAge Trading`,
+  name: `Contact YunBao International Trading`,
   description: t('contact.subtitle', lang),
   mainEntity: {
     "@type": "Organization",
-    name: "NewAge Trading",
+    name: "YunBao International Trading",
     email: contact.email,
     ...(isWhatsAppConfigured() ? { telephone: `+${contact.whatsappNumber}` } : {}),
   },
@@ -80,7 +80,7 @@ const formActionUrl = '/api/contact';
         <h2 class="text-2xl font-bold mb-6">{t('contact.formTitle', lang)}</h2>
         <form id="contactForm" class="space-y-4" action={formActionUrl} method="POST">
           <!-- Self-hosted API fields -->
-          <input type="hidden" name="_subject" value="New Contact Form Submission — NewAge Trading" />
+          <input type="hidden" name="_subject" value="New Contact Form Submission — YunBao International Trading" />
           <input type="hidden" name="_lang" value={lang} />
           <!-- Honeypot field (anti-spam) -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />

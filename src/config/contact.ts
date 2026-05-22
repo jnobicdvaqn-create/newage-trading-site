@@ -32,7 +32,7 @@ export const contact = {
   email: envEmail ?? 'felipeche01manager@YUNBSAOtrade.onmicrosoft.com',
 
   /** Company name */
-  companyName: 'NewAge Trading',
+  companyName: 'YunBao International Trading',
 
   /** Working hours */
   workingHours: '9:00–18:00 (Beijing Time, UTC+8)',
