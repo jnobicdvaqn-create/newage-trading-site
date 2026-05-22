@@ -32,17 +32,17 @@ const recommendedProducts = scenario.recommended
   .filter(Boolean) as typeof products;
 
 const faqItems = lang === 'zh' ? [
-  { question: `${scName} 系统需要多少钱？`, answer: `完整的 ${scName} 系统从 NewAge Trading 采购价格为 ${scCost}（FOB 中国）。包含 ${scCameraCount}、${scStorage} 及所有必要配件。联系我们获取详细 CIF 报价。` },
+  { question: `${scName} 系统需要多少钱？`, answer: `完整的 ${scName} 系统从 YunBao International Trading 采购价格为 ${scCost}（FOB 中国）。包含 ${scCameraCount}、${scStorage} 及所有必要配件。联系我们获取详细 CIF 报价。` },
   { question: `${scName} 需要多少个摄像头？`, answer: `典型的 ${scName} 场景，我们推荐 ${scCameraCount}。具体数量取决于您的设施规模、布局和覆盖需求。我们的工程师可以为您定制方案。` },
   { question: '你们提供安装支持吗？', answer: '我们提供完整的安装文档，包括摄像头位置指南、布线图和 NVR 配置说明。远程技术支持可通过 WhatsApp 和 Telegram 获得。' },
   { question: '可以远程监控系统吗？', answer: '是的，所有系统都支持手机 APP 远程监控（海康威视使用 Hik-Connect，大华使用 gDMSS）。您可以随时随地查看实时画面、回放录像和接收移动告警。' },
 ] : lang === 'ru' ? [
-  { question: `Сколько стоит система безопасности ${scName}?`, answer: `Полная система ${scName} от NewAge Trading стоит ${scCost} (FOB Китай). Включает ${scCameraCount}, ${scStorage} и все необходимые аксессуары. Свяжитесь с нами для детального CIF предложения.` },
+  { question: `Сколько стоит система безопасности ${scName}?`, answer: `Полная система ${scName} от YunBao International Trading стоит ${scCost} (FOB Китай). Включает ${scCameraCount}, ${scStorage} и все необходимые аксессуары. Свяжитесь с нами для детального CIF предложения.` },
   { question: `Сколько камер нужно для ${scName}?`, answer: `Для типичного сценария ${scName} мы рекомендуем ${scCameraCount}. Точное количество зависит от размера, планировки и требований покрытия. Наши инженеры разработают индивидуальный план.` },
   { question: 'Вы предоставляете поддержку установки?', answer: 'Мы предоставляем полную документацию по установке: руководства по размещению камер, схемы кабельных подключений и инструкции по настройке NVR. Удалённая поддержка доступна через WhatsApp и Telegram.' },
   { question: 'Можно ли удалённо мониторить систему?', answer: 'Да, все системы поддерживают удалённый мониторинг через мобильные приложения (Hik-Connect для Hikvision, gDMSS для Dahua). Вы можете просматривать живое видео, воспроизводить записи и получать оповещения из любой точки мира.' },
 ] : [
-  { question: `How much does a ${scName} system cost?`, answer: `A complete ${scName} system from NewAge Trading costs ${scCost} (FOB China). This includes ${scCameraCount}, ${scStorage}, and all necessary accessories. Contact us for a detailed CIF quote.` },
+  { question: `How much does a ${scName} system cost?`, answer: `A complete ${scName} system from YunBao International Trading costs ${scCost} (FOB China). This includes ${scCameraCount}, ${scStorage}, and all necessary accessories. Contact us for a detailed CIF quote.` },
   { question: `How many cameras do I need for ${scName}?`, answer: `For a typical ${scName} setup, we recommend ${scCameraCount}. The exact number depends on your facility size, layout, and coverage requirements. Our engineers can design a custom plan.` },
   { question: 'Do you provide installation support?', answer: 'We provide comprehensive installation documentation including camera placement guides, cable diagrams, and NVR configuration instructions. Remote technical support is available via WhatsApp and Telegram.' },
   { question: 'Can I monitor my system remotely?', answer: 'Yes, all our systems support remote monitoring via smartphone apps (Hik-Connect for Hikvision, gDMSS for Dahua). You can view live feeds, playback recordings, and receive motion alerts from anywhere.' },
@@ -59,7 +59,7 @@ const descText = lang === 'zh'
 ---
 
 <BaseLayout
-  title={`${titlePrefix} — Complete CCTV Solution from China | NewAge Trading`}
+  title={`${titlePrefix} — Complete CCTV Solution from China | YunBao International Trading`}
   description={descText}
   lang={lang}
 >
