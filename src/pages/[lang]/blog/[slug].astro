@@ -30,7 +30,13 @@ function getExcerpt(post: any, l: Locale): string {
   return l === 'zh' ? post.excerptZh : l === 'ru' ? post.excerptRu : post.excerpt;
 }
 function getContentBlocks(post: any, l: Locale): any[] {
-  return post.content?.[l] || post.content?.['en'] || [];
+  const localized = post.content?.[l] || [];
+  const english = post.content?.['en'] || [];
+  // 如果本地化内容严重缺失（少于英文的70%），回退到英文原文
+  if (localized.length > 0 && localized.length >= english.length * 0.7) {
+    return localized;
+  }
+  return english;
 }
 
 // Category labels
@@ -49,7 +55,7 @@ const relatedPosts = blogPosts
 ---
 
 <BaseLayout
-  title={`${getTitle(post, lang)} | NewAge Trading`}
+  title={`${getTitle(post, lang)} | YunBao International Trading`}
   description={getExcerpt(post, lang)}
   lang={lang}
   breadcrumbs={[
@@ -135,6 +141,14 @@ const relatedPosts = blogPosts
                 </tbody>
               </table>
             </div>
+          );
+        }
+        if (block.type === 'image') {
+          return (
+            <figure class="my-8">
+              <img src={block.src} alt={block.alt || ''} class="w-full h-auto rounded-xl" />
+              {block.caption && <figcaption class="mt-2 text-sm text-muted text-center">{block.caption}</figcaption>}
+            </figure>
           );
         }
         return null;
