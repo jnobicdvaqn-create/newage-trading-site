@@ -27,18 +27,6 @@
           "text": "Why Chinese EVs Are Dominating Global Markets"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "China EV export process overview",
-          "caption": "The China EV export process involves multiple steps and documentation"
-        },
-        {
           "type": "paragraph",
           "text": "China has become the world's largest automobile exporter, surpassing Japan in 2023. The driving force? New Energy Vehicles (NEVs) — electric vehicles (EVs), plug-in hybrids (PHEVs), and extended-range EVs (EREVs) that combine cutting-edge technology with competitive pricing."
         },
@@ -56,12 +44,6 @@
           "src": "/images/blog/shipping-logistics.jpg",
           "alt": "Shipping logistics for vehicle export",
           "caption": "Shipping logistics determine delivery timelines and costs"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -125,12 +107,6 @@
           "type": "heading",
           "level": 2,
           "text": "Import Regulations by Country"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -214,18 +190,6 @@
           "text": "为什么中国电动汽车主导全球市场"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "China EV export process overview",
-          "caption": "The China EV export process involves multiple steps and documentation"
-        },
-        {
           "type": "paragraph",
           "text": "中国已成为全球最大的汽车出口国，2023年超过日本。推动力是什么？新能源汽车（NEV）— 电动汽车（EV）、插电式混合动力车（PHEV）和增程式电动车（EREV），它们将尖端技术与有竞争力的价格结合在一起。"
         },
@@ -237,18 +201,6 @@
           "type": "heading",
           "level": 2,
           "text": "热门出口车型"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping logistics for vehicle export",
-          "caption": "Shipping logistics determine delivery timelines and costs"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
         },
         {
           "type": "table",
@@ -303,10 +255,52 @@
           "text": "运输方式与成本"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
+          "type": "list",
+          "items": [
+            "滚装船（RoRo）：大批量运输最具成本效益的方式。车辆被开到专用运输船上。成本：到主要港口每辆车800-1,500美元。",
+            "集装箱运输：车辆装入40英尺集装箱（通常每箱2-3辆车）。时间安排更灵活，成本略高：每辆车1,200-2,500美元。",
+            "铁路货运（中欧班列）：在中亚和俄罗斯目的地越来越受欢迎。运输时间：15-20天，而海运需30-45天。"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "每个目的地都有独特的要求。以下是您需要了解的内容："
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "格鲁吉亚（与中国自贸协定）"
+        },
+        {
+          "type": "paragraph",
+          "text": "格鲁吉亚与中国签署了自由贸易协定，意味着从中国制造商进口的电动汽车关税为0%。内燃机车辆需缴纳5%的海关费用。车辆必须为左舵，并符合欧5排放标准。禁止进口车龄超过15年的右舵车辆。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "阿联酋"
+        },
+        {
+          "type": "paragraph",
+          "text": "阿联酋对所有车辆征收标准5%的进口关税。电动汽车进口增长迅速，迪拜和阿布扎比正在大量投资充电基础设施。所有进口车辆均需GCC认证（GSO标准）。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "俄罗斯"
+        },
+        {
+          "type": "paragraph",
+          "text": "俄罗斯对车辆征收15-25%的进口关税，但中国品牌受益于优惠的双边贸易协定。EAEU认证（TR CU认证）为强制性要求。2024年中国电动汽车在俄罗斯销量同比增长超过500%。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "运输方式与成本"
+        },
+        {
+          "type": "paragraph",
+          "text": "中国车辆出口有三种主要运输方式："
         },
         {
           "type": "list",
@@ -315,6 +309,32 @@
             "集装箱运输：车辆装入40英尺集装箱（通常每箱2-3辆车）。时间安排更灵活，成本略高：每辆车1,200-2,500美元。",
             "铁路货运（中欧班列）：在中亚和俄罗斯目的地越来越受欢迎。运输时间：15-20天，而海运需30-45天。"
           ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "所需文件"
+        },
+        {
+          "type": "list",
+          "items": [
+            "商业发票（出口商盖章）",
+            "含车架号的装箱单",
+            "提单（正本+3份副本）",
+            "原产地证明（由中国贸促会出具）",
+            "车辆登记证（如为二手车）",
+            "质量检验报告",
+            "保险证书（CIF条款）"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "云豹国际贸易如何帮助您"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供端到端的出口服务：从授权中国经销商采购车辆、质量检验、出口文件、清关、运输安排（滚装/集装箱/铁路）以及保险。通过WhatsApp或邮件联系我们获取免费CIF报价。"
         }
       ],
       "ru": [
@@ -322,18 +342,6 @@
           "type": "heading",
           "level": 2,
           "text": "Почему китайские электромобили доминируют на мировых рынках"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "China EV export process overview",
-          "caption": "The China EV export process involves multiple steps and documentation"
         },
         {
           "type": "paragraph",
@@ -347,18 +355,6 @@
           "type": "heading",
           "level": 2,
           "text": "Топ китайских электромобилей для экспорта"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping logistics for vehicle export",
-          "caption": "Shipping logistics determine delivery timelines and costs"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese EV manufacturing",
-          "caption": ""
         },
         {
           "type": "table",
@@ -406,6 +402,139 @@
               "Грузия, ОАЭ, Таиланд"
             ]
           ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Модель",
+            "Тип",
+            "Заход (км)",
+            "Цена FOB (USD)",
+            "Лучшие рынки"
+          ],
+          "rows": [
+            [
+              "BYD Han",
+              "Седан EV",
+              "605",
+              "32 999",
+              "Грузия, ОАЭ, Россия"
+            ],
+            [
+              "BYD Atto 3",
+              "Внедорожник EV",
+              "480",
+              "26 999",
+              "Грузия, Казахстан, Бразилия"
+            ],
+            [
+              "BYD Seal",
+              "Седан EV",
+              "700",
+              "35 999",
+              "ОАЭ, Россия, Армения"
+            ],
+            [
+              "BYD Song Plus",
+              "Внедорожник EV",
+              "520",
+              "23 999",
+              "Грузия, Казахстан, Мексика"
+            ],
+            [
+              "BYD Dolphin",
+              "Хэтчбек EV",
+              "420",
+              "18 999",
+              "Грузия, ОАЭ, Таиланд"
+            ],
+            [
+              "Geely Monjaro",
+              "Внедорожник ДВС",
+              "Н/Д",
+              "28 999",
+              "Россия, Казахстан, Грузия"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Регулирование импорта по странам"
+        },
+        {
+          "type": "paragraph",
+          "text": "Каждое направление имеет свои уникальные требования. Вот что вам нужно знать:"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Грузия (ЗСТ с Китаем)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Грузия имеет соглашение о свободной торговле с Китаем, что означает 0% импортной пошлины на электромобили от китайских производителей. Для автомобилей с ДВС применяется таможенный сбор 5%. Обязателен левый руль, автомобили должны соответствовать экологическому стандарту Евро 5. Праворульные автомобили старше 15 лет запрещены."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "ОАЭ"
+        },
+        {
+          "type": "paragraph",
+          "text": "ОАЭ применяют стандартную импортную пошлину 5% на все транспортные средства. Импорт электромобилей быстро растет, Дубай и Абу-Даби активно инвестируют в зарядную инфраструктуру. Для всех импортируемых автомобилей требуется гомологация GCC (стандарты GSO)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Россия"
+        },
+        {
+          "type": "paragraph",
+          "text": "Россия применяет импортные пошлины 15-25% на транспортные средства, хотя китайские бренды пользуются преимуществами благоприятных двусторонних торговых соглашений. Гомологация ЕАЭС (сертификация ТР ТС) обязательна. Продажи китайских электромобилей в России в 2024 году выросли более чем на 500% в годовом исчислении."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Способы доставки и стоимость"
+        },
+        {
+          "type": "paragraph",
+          "text": "Существует три основных варианта доставки китайских автомобилей на экспорт:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "РоRo (ролкер): наиболее экономичный метод для массовых поставок. Автомобили заезжают на специализированные суда. Стоимость: $800-1 500 за автомобиль до крупных портов.",
+            "Контейнерные перевозки: автомобили загружаются в 40-футовые контейнеры (обычно 2-3 автомобиля в контейнер). Более гибкое расписание, немного выше стоимость: $1 200-2 500 за автомобиль.",
+            "Железнодорожные перевозки (Китай-Европа): набирают популярность для среднеазиатских и российских направлений. Время в пути: 15-20 дней по сравнению с 30-45 днями морем."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Необходимые документы"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Коммерческий инвойс (с печатью экспортера)",
+            "Упаковочный лист с VIN-номерами",
+            "Коносамент (оригинал + 3 копии)",
+            "Сертификат происхождения (от CCPIT)",
+            "Свидетельство о регистрации транспортного средства (если подержанное)",
+            "Отчет о проверке качества",
+            "Страховой сертификат (условия CIF)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Как YunBao International Trading может помочь"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем полный спектр экспортных услуг: поиск автомобилей у авторизованных китайских дилеров, проверка качества, экспортная документация, таможенное оформление, организация доставки (RoRo/контейнер/ж/д) и страхование. Получите бесплатное предложение CIF, связавшись с нами через WhatsApp или электронную почту."
         }
       ]
     }
@@ -444,12 +573,6 @@
           "caption": ""
         },
         {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing process",
-          "caption": "OEM manufacturing allows custom branding and quality control"
-        },
-        {
           "type": "paragraph",
           "text": "China's intimate apparel industry is concentrated in several key manufacturing clusters, each with its own strengths:"
         },
@@ -472,12 +595,6 @@
           "src": "/images/blog/georgia-china-trade.jpg",
           "alt": "China-Georgia trade routes",
           "caption": "Understanding trade routes helps optimize supply chain costs"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -524,12 +641,6 @@
           "text": "Quality Control Checklist"
         },
         {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing",
-          "caption": ""
-        },
-        {
           "type": "list",
           "items": [
             "Fabric composition verification (cotton/polyamide/spandex ratios)",
@@ -574,18 +685,6 @@
           "text": "中国内衣制造产业带"
         },
         {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing process",
-          "caption": "OEM manufacturing allows custom branding and quality control"
-        },
-        {
           "type": "paragraph",
           "text": "中国内衣产业集中在几个主要制造集群，每个都有自己的优势：汕头（广东）是中国最大的内衣制造基地，以蕾丝和无缝内衣闻名。中山（广东）专注于中高端文胸制造。义乌（浙江）以高性价比的无缝产品和大产能著称。"
         },
@@ -595,20 +694,89 @@
           "text": "MOQ：最小起订量"
         },
         {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade routes",
-          "caption": "Understanding trade routes helps optimize supply chain costs"
+          "type": "paragraph",
+          "text": "MOQ是新进口商面临的最大挑战之一。现有款式无需定制：200-500件/款，单价$2-8。定制设计：500-1,000件/款，单价$3-12。全OEM（品牌+设计）：1,000-3,000件/款，单价$4-15。"
         },
         {
           "type": "paragraph",
-          "text": "MOQ是新进口商面临的最大挑战之一。现有款式无需定制：200-500件/款，单价$2-8。定制设计：500-1,000件/款，单价$3-12。全OEM（品牌+设计）：1,000-3,000件/款，单价$4-15。"
+          "text": "最小起订量是新进口商面临的最大挑战之一。以下是预期情况："
+        },
+        {
+          "type": "table",
+          "headers": [
+            "订单类型",
+            "典型最小起订量",
+            "单价范围",
+            "交货周期"
+          ],
+          "rows": [
+            [
+              "现有款式（无定制）",
+              "200-500件/款",
+              "$2-8/件",
+              "15-20天"
+            ],
+            [
+              "定制设计（您的款式）",
+              "500-1,000件/款",
+              "$3-12/件",
+              "25-35天"
+            ],
+            [
+              "全OEM（您的品牌+设计）",
+              "1,000-3,000件/款",
+              "$4-15/件",
+              "30-45天"
+            ],
+            [
+              "高端/蕾丝系列",
+              "300-800件/款",
+              "$8-25/件",
+              "35-50天"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "质量控制检查清单"
+        },
+        {
+          "type": "list",
+          "items": [
+            "面料成分验证（棉/聚酰胺/氨纶比例）",
+            "色牢度测试（水洗和摩擦测试）",
+            "缝制质量检验（每英寸针数、接缝强度）",
+            "尺寸精度测量（±1cm公差）",
+            "弹性耐久性测试（100次循环后拉伸恢复）",
+            "标签和包装合规性（洗水标、条形码）"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "运输与物流"
+        },
+        {
+          "type": "paragraph",
+          "text": "内衣重量轻、价值高，空运对于紧急订单具有竞争力。海运适合大批量运输。从广东到第比利斯的典型运输成本："
+        },
+        {
+          "type": "list",
+          "items": [
+            "空运：$4-8/公斤，运输时间7-10天",
+            "海运（拼箱）：$80-150/立方米，25-35天",
+            "快递（DHL/FedEx）：$12-18/公斤，样品3-5天"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "云豹国际贸易如何创造价值"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们将您与中国顶级内衣产业集群的认证制造商对接。我们的服务包括工厂审核、样品协调、质量检验和门到门运输。联系我们开始您的OEM之旅。"
         }
       ],
       "ru": [
@@ -618,26 +786,94 @@
           "text": "Производственные кластеры нижнего белья в Китае"
         },
         {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/lingerie-oem.jpg",
-          "alt": "Lingerie OEM manufacturing process",
-          "caption": "OEM manufacturing allows custom branding and quality control"
-        },
-        {
           "type": "paragraph",
           "text": "Китайская индустрия интимной одежды сосредоточена в нескольких ключевых производственных кластерах. Шаньтоу (Гуандун) — крупнейшая база производства нижнего белья в Китае. Чжуншань (Гуандун) специализируется на производстве бюстгальтеров среднего и высокого класса."
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade routes",
-          "caption": "Understanding trade routes helps optimize supply chain costs"
+          "type": "heading",
+          "level": 2,
+          "text": "Понимание MOQ: минимальные объемы заказа"
+        },
+        {
+          "type": "paragraph",
+          "text": "MOQ — одна из главных проблем для новых импортеров. Вот что ожидать:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Тип заказа",
+            "Типичный MOQ",
+            "Диапазон цен за единицу",
+            "Срок выполнения"
+          ],
+          "rows": [
+            [
+              "Существующая модель (без кастомизации)",
+              "200-500 шт/модель",
+              "$2-8/шт",
+              "15-20 дней"
+            ],
+            [
+              "Индивидуальный дизайн (ваш лекало)",
+              "500-1 000 шт/модель",
+              "$3-12/шт",
+              "25-35 дней"
+            ],
+            [
+              "Полный OEM (ваш бренд + дизайн)",
+              "1 000-3 000 шт/модель",
+              "$4-15/шт",
+              "30-45 дней"
+            ],
+            [
+              "Премиум/Кружевная коллекция",
+              "300-800 шт/модель",
+              "$8-25/шт",
+              "35-50 дней"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Контрольный список контроля качества"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Проверка состава ткани (соотношение хлопка/полиамида/спандекса)",
+            "Тестирование стойкости цвета (тесты на стирку и трение)",
+            "Проверка качества швов (стежков на дюйм, прочность шва)",
+            "Измерение точности размеров (допуск ±1 см)",
+            "Тест на долговечность эластичности (восстановление после 100 циклов растяжения)",
+            "Соответствие этикеток и упаковки (этикетки по уходу, штрих-коды)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Доставка и логистика"
+        },
+        {
+          "type": "paragraph",
+          "text": "Нижнее белье легкое и высокоценное, что делает авиаперевозки конкурентоспособными для срочных заказов. Морские перевозки идеальны для массовых поставок. Типичные расходы на доставку из Гуандуна в Тбилиси:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Авиаперевозка: $4-8/кг, 7-10 дней в пути",
+            "Морская перевозка (сборный груз): $80-150/м³, 25-35 дней",
+            "Экспресс (DHL/FedEx): $12-18/кг, 3-5 дней для образцов"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Как YunBao International Trading добавляет ценность"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы соединяем вас с проверенными производителями в ведущих кластерах нижнего белья Китая. Наши услуги включают аудит фабрик, координацию образцов, проверку качества и доставку от двери до двери. Свяжитесь с нами, чтобы начать ваш OEM-путь."
         }
       ]
     }
@@ -677,12 +913,6 @@
           "caption": ""
         },
         {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security and tactical equipment for export",
-          "caption": "Security equipment export requires compliance with international standards"
-        },
-        {
           "type": "paragraph",
           "text": "China dominates the global security equipment market, accounting for over 50% of worldwide CCTV camera production. Hikvision and Dahua are the world's top two video surveillance manufacturers, while hundreds of specialized factories produce access control systems, alarm equipment, and tactical gear."
         },
@@ -690,12 +920,6 @@
           "type": "heading",
           "level": 2,
           "text": "Top Product Categories"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment export",
-          "caption": ""
         },
         {
           "type": "image",
@@ -717,12 +941,6 @@
           "type": "heading",
           "level": 2,
           "text": "Certification Requirements"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment export",
-          "caption": ""
         },
         {
           "type": "table",
@@ -796,18 +1014,6 @@
           "text": "中国安防设备市场"
         },
         {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment export",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security and tactical equipment for export",
-          "caption": "Security equipment export requires compliance with international standards"
-        },
-        {
           "type": "paragraph",
           "text": "中国主导全球安防设备市场，占全球监控摄像头产量的50%以上。海康威视和大华是全球两大视频监控制造商，同时数百家专业工厂生产门禁系统、报警设备和战术装备。"
         },
@@ -817,20 +1023,77 @@
           "text": "认证要求"
         },
         {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment export",
-          "caption": ""
+          "type": "paragraph",
+          "text": "CE认证适用于欧盟市场，FCC认证适用于美国市场，GOST-R适用于俄罗斯/独联体市场。中国制造商通常已获得CE和FCC认证，可直接向这些市场出口。"
         },
         {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras and surveillance systems",
-          "caption": "Chinese security cameras offer competitive features at lower prices"
+          "type": "heading",
+          "level": 2,
+          "text": "认证要求"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "认证",
+            "适用市场",
+            "所需对象",
+            "处理时间"
+          ],
+          "rows": [
+            [
+              "CE认证",
+              "欧盟",
+              "所有电子设备",
+              "4-8周"
+            ],
+            [
+              "FCC认证",
+              "美国",
+              "射频设备",
+              "3-6周"
+            ],
+            [
+              "GOST-R认证",
+              "俄罗斯/独联体",
+              "安防设备",
+              "4-6周"
+            ],
+            [
+              "ISO 9001认证",
+              "全球（质量）",
+              "工厂资质",
+              "8-12周"
+            ],
+            [
+              "UNGM注册",
+              "联合国采购",
+              "竞标联合国合同",
+              "4-8周"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "UNGM竞标机会"
         },
         {
           "type": "paragraph",
-          "text": "CE认证适用于欧盟市场，FCC认证适用于美国市场，GOST-R适用于俄罗斯/独联体市场。中国制造商通常已获得CE和FCC认证，可直接向这些市场出口。"
+          "text": "联合国全球采购网（UNGM）是安防设备出口商的优秀渠道。联合国机构定期采购闭路电视系统、门禁系统和监控设备，用于维和任务、难民营和外地办事处。拥有CE认证的中国制造商在这些合同竞标中具有优势。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "为什么从中国进口"
+        },
+        {
+          "type": "list",
+          "items": [
+            "价格优势：中国安防设备成本比同等规格的西方产品低30-60%。",
+            "技术领先：AI分析、面部识别和热成像均为标准配置。",
+            "可扩展性：从单摄像头系统到城市级监控系统，中国制造商提供完整解决方案。",
+            "快速交货：大多数产品在订单确认后7-15天内发货。"
+          ]
         }
       ],
       "ru": [
@@ -840,26 +1103,87 @@
           "text": "Рынок оборудования безопасности в Китае"
         },
         {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment export",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security and tactical equipment for export",
-          "caption": "Security equipment export requires compliance with international standards"
-        },
-        {
           "type": "paragraph",
           "text": "Китай доминирует на мировом рынке оборудования безопасности, производя более 50% мировых камер видеонаблюдения. Hikvision и Dahua являются двумя крупнейшими производителями видеонаблюдения в мире."
         },
         {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras and surveillance systems",
-          "caption": "Chinese security cameras offer competitive features at lower prices"
+          "type": "list",
+          "items": [
+            "Камеры видеонаблюдения/IP-камеры: цилиндрические, купольные, PTZ и тепловизионные камеры стоимостью $15-500/шт в зависимости от разрешения и функций.",
+            "NVR/DVR Systems: Network video recorders with 4-64 channels. Support H.265 encoding, AI analytics, and cloud storage.",
+            "Access Control: RFID card readers, biometric scanners, door controllers, and turnstils for commercial and industrial use.",
+            "Alarm Systems: Intrusion detection, fire alarms, and emergency response systems for homes, offices, and warehouses.",
+            "Tactical Equipment: Body armor, tactical vests, flashlights, and communication gear for security personnel."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Требования к сертификации"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Сертификация",
+            "Применимые рынки",
+            "Требуется для",
+            "Срок обработки"
+          ],
+          "rows": [
+            [
+              "CE",
+              "Европейский союз",
+              "Всё электронное оборудование",
+              "4-8 недель"
+            ],
+            [
+              "FCC",
+              "США",
+              "Радиочастотные устройства",
+              "3-6 недель"
+            ],
+            [
+              "ГОСТ-Р",
+              "Россия/СНГ",
+              "Охранное оборудование",
+              "4-6 недель"
+            ],
+            [
+              "ISO 9001",
+              "Глобальный (качество)",
+              "Квалификация завода",
+              "8-12 недель"
+            ],
+            [
+              "Регистрация UNGM",
+              "Закупки ООН",
+              "Участие в тендерах ООН",
+              "4-8 недель"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Возможности торгов через UNGM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Глобальный рынок закупок ООН (UNGM) — отличный канал для экспортеров охранного оборудования. Агентства ООН регулярно закупают системы видеонаблюдения, контроля доступа и surveillance-оборудование для миротворческих миссий, лагерей беженцев и полевых офисов. Китайские производители с сертификацией CE хорошо позиционированы для получения этих контрактов."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Почему стоит импортировать из Китая"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ценовое преимущество: китайское охранное оборудование стоит на 30-60% дешевле западных аналогов с сопоставимыми характеристиками.",
+            "Технологическое лидерство: AI-аналитика, распознавание лиц и тепловизионное изображение являются стандартными функциями.",
+            "Масштабируемость: от систем с одной камеры до городских систем видеонаблюдения — китайские производители предлагают комплексные решения.",
+            "Быстрая доставка: большинство товаров отгружаются в течение 7-15 дней после подтверждения заказа."
+          ]
         }
       ]
     }
@@ -892,18 +1216,6 @@
           "text": "The China-Georgia Free Trade Agreement Advantage"
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade route",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade opportunities overview",
-          "caption": "Growing trade between China and Georgia creates new business opportunities"
-        },
-        {
           "type": "paragraph",
           "text": "Since the China-Georgia Free Trade Agreement came into effect, Georgian importers have enjoyed zero-tariff access to thousands of Chinese product categories. This makes sourcing from China significantly more cost-effective than importing from Europe or the United States."
         },
@@ -923,12 +1235,6 @@
           "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade route",
-          "caption": ""
-        },
-        {
           "type": "list",
           "items": [
             "Automobiles: Chinese EVs (BYD, Geely) are selling rapidly in Tbilisi. The FTA eliminates import duty on EVs from China.",
@@ -942,12 +1248,6 @@
           "type": "heading",
           "level": 2,
           "text": "Getting Started: Step-by-Step"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade route",
-          "caption": ""
         },
         {
           "type": "list",
@@ -967,26 +1267,38 @@
           "text": "中格自由贸易协定优势"
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade route",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade opportunities overview",
-          "caption": "Growing trade between China and Georgia creates new business opportunities"
-        },
-        {
           "type": "paragraph",
           "text": "自中格自由贸易协定生效以来，格鲁吉亚进口商享有数千种中国产品类别的零关税准入。这使得从中国采购比从欧洲或美国进口更具成本效益。"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Import goods arriving at Georgia",
-          "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+          "type": "heading",
+          "level": 2,
+          "text": "格鲁吉亚主要进口品类"
+        },
+        {
+          "type": "list",
+          "items": [
+            "汽车：中国电动汽车（比亚迪、吉利）在第比利斯销售迅速。自贸协定消除了从中国进口电动汽车的关税。",
+            "Electronics & Appliances: Smartphones, home appliances, and IT equipment at 40-60% below European prices.",
+            "Textiles & Clothing: Lingerie, sportswear, and fashion accessories from Shantou and Guangzhou clusters.",
+            "Building Materials: LED lighting, PVC pipes, steel products, and ceramic tiles.",
+            "Security Equipment: CCTV systems, access control, and alarm equipment for Georgia's growing commercial sector."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "入门指南：逐步指导"
+        },
+        {
+          "type": "list",
+          "items": [
+            "确定您的产品类别和目标价格区间",
+            "联系了解中国和格鲁吉亚市场的采购合作伙伴",
+            "Request samples before committing to bulk orders",
+            "Arrange shipping via sea freight (Poti/Batumi ports) or overland through Central Asia",
+            "Handle customs clearance with your Georgian import license"
+          ]
         }
       ],
       "ru": [
@@ -996,26 +1308,38 @@
           "text": "Преимущества соглашения о свободной торговле Китай-Грузия"
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade route",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "China-Georgia trade opportunities overview",
-          "caption": "Growing trade between China and Georgia creates new business opportunities"
-        },
-        {
           "type": "paragraph",
           "text": "С момента вступления в силу соглашения о свободной торговле между Китаем и Грузией грузинские импортеры пользуются беспошлинным доступом к тысячам категорий китайских товаров."
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Import goods arriving at Georgia",
-          "caption": "Georgia strategic location makes it a trade hub between Europe and Asia"
+          "type": "heading",
+          "level": 2,
+          "text": "Основные категории импорта для Грузии"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Автомобили: китайские электромобили (BYD, Geely) быстро продаются в Тбилиси. ЗСТ устраняет импортную пошлину на электромобили из Китая.",
+            "Electronics & Appliances: Smartphones, home appliances, and IT equipment at 40-60% below European prices.",
+            "Textiles & Clothing: Lingerie, sportswear, and fashion accessories from Shantou and Guangzhou clusters.",
+            "Building Materials: LED lighting, PVC pipes, steel products, and ceramic tiles.",
+            "Security Equipment: CCTV systems, access control, and alarm equipment for Georgia's growing commercial sector."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Начало работы: пошаговое руководство"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Определите категорию продукта и целевой ценовой диапазон",
+            "Свяжитесь с партнером по закупкам, который понимает как китайский, так и грузинский рынки",
+            "Request samples before committing to bulk orders",
+            "Arrange shipping via sea freight (Poti/Batumi ports) or overland through Central Asia",
+            "Handle customs clearance with your Georgian import license"
+          ]
         }
       ]
     }
@@ -1053,12 +1377,6 @@
           "caption": ""
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Chinese supplier verification process",
-          "caption": "Verifying Chinese suppliers is essential for quality assurance"
-        },
-        {
           "type": "paragraph",
           "text": "Every legitimate Chinese company has a Unified Social Credit Code (USCC). You can verify it on the National Enterprise Credit Information Publicity System (gsxt.gov.cn). Look for: company name matches, business scope includes your product category, and the license is still valid."
         },
@@ -1068,18 +1386,6 @@
           "text": "Step 2: Request Factory Photos & Video"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification process",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Supply chain and logistics verification",
-          "caption": "Complete supply chain verification prevents delivery delays"
-        },
-        {
           "type": "paragraph",
           "text": "A genuine manufacturer will gladly share photos and live video of their factory floor, warehouse, and quality control area. Be wary of suppliers who only have office photos or refuse to show production facilities."
         },
@@ -1087,12 +1393,6 @@
           "type": "heading",
           "level": 2,
           "text": "Step 3: Third-Party Inspection"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification process",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -1120,26 +1420,35 @@
           "text": "第一步：检查营业执照"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification process",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Chinese supplier verification process",
-          "caption": "Verifying Chinese suppliers is essential for quality assurance"
-        },
-        {
           "type": "paragraph",
           "text": "每家正规中国公司都有统一社会信用代码。你可以在国家企业信用信息公示系统（gsxt.gov.cn）上验证。注意：公司名称是否匹配、业务范围是否包括你的产品类别、执照是否仍然有效。"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Supply chain and logistics verification",
-          "caption": "Complete supply chain verification prevents delivery delays"
+          "type": "paragraph",
+          "text": "真正的制造商很乐意分享其工厂车间、仓库和质量控制区域的实时照片和视频。要警惕那些只有办公室照片或拒绝展示生产设施的供应商。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "第三步：第三方检验"
+        },
+        {
+          "type": "paragraph",
+          "text": "SGS、必维国际检验集团或当地检验公司可以代表您进行工厂审核。费用：每次审核300-800美元。这是验证生产能力和质量控制系统最可靠的方式。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "第四步：安全支付方式"
+        },
+        {
+          "type": "list",
+          "items": [
+            "阿里巴巴贸易保障：通过托管支付保护高达10万美元的订单。",
+            "信用证（L/C）：银行担保支付1万美元以上的订单。",
+            "30%电汇 + 70%凭提单副本付款：已建立合作关系的标准做法。",
+            "PayPal/西联汇款：仅适用于样品，绝不适用于批量订单。"
+          ]
         }
       ],
       "ru": [
@@ -1149,26 +1458,35 @@
           "text": "Шаг 1: Проверка лицензии"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification process",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Chinese supplier verification process",
-          "caption": "Verifying Chinese suppliers is essential for quality assurance"
-        },
-        {
           "type": "paragraph",
           "text": "У каждой законной китайской компании есть Единый код социального кредита. Вы можете проверить его на Национальной информационной системе кредитования предприятий."
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Supply chain and logistics verification",
-          "caption": "Complete supply chain verification prevents delivery delays"
+          "type": "paragraph",
+          "text": "Настоящий производитель с радостью предоставит фотографии и видеотрансляции с производственной площадки, склада и зоны контроля качества. Остерегайтесь поставщиков, у которых есть только фотографии офиса или которые отказываются показывать производственные мощности."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Шаг 3: Независимая инспекция"
+        },
+        {
+          "type": "paragraph",
+          "text": "Такие компании, как SGS, Bureau Veritas или местные инспекционные организации, могут провести аудит завода от вашего имени. Стоимость: $300–800 за аудит. Это самый надёжный способ проверить производственные мощности и системы контроля качества."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Шаг 4: Безопасные способы оплаты"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alibaba Trade Assurance: защищает заказы до $100 000 с использованием эскроу-оплаты.",
+            "Аккредитив (L/C): банковская гарантия оплаты для заказов свыше $10 000.",
+            "30% T/T + 70% против копии коносамента: стандартная практика для установленных отношений.",
+            "PayPal/Western Union: только для образцов, никогда для оптовых заказов."
+          ]
         }
       ]
     }
@@ -1201,18 +1519,6 @@
           "text": "Shipping Routes from China to Georgia"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Cargo container logistics",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping route from China to Georgia",
-          "caption": "Shipping from China to Georgia involves multiple transportation options"
-        },
-        {
           "type": "paragraph",
           "text": "There are three primary routes for getting goods from China to Georgia:"
         },
@@ -1228,18 +1534,6 @@
           "type": "heading",
           "level": 2,
           "text": "Cost Comparison"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Goods arriving at Georgia port",
-          "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Cargo container logistics",
-          "caption": ""
         },
         {
           "type": "table",
@@ -1282,12 +1576,6 @@
           "text": "Customs Clearance in Georgia"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Cargo container logistics",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "Georgia has one of the most business-friendly customs regimes in the region. Required documents: commercial invoice, packing list, bill of lading, certificate of origin, and import declaration. Processing time: 1-3 business days for standard clearance."
         }
@@ -1299,26 +1587,57 @@
           "text": "从中国到格鲁吉亚的运输路线"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Cargo container logistics",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping route from China to Georgia",
-          "caption": "Shipping from China to Georgia involves multiple transportation options"
-        },
-        {
           "type": "paragraph",
           "text": "海运经波季港：中国港口→黑海→波季，30-45天。铁路运输：经中亚走廊，18-25天。空运：5-10天，适合高价值、紧急货物。"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Goods arriving at Georgia port",
-          "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+          "type": "heading",
+          "level": 2,
+          "text": "成本对比"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "方式",
+            "每立方米成本",
+            "运输时间",
+            "适用场景"
+          ],
+          "rows": [
+            [
+              "海运（拼箱LCL）",
+              "$60-120/立方米",
+              "30-45天",
+              "大宗货物，非紧急"
+            ],
+            [
+              "海运（整箱20尺）",
+              "$1,800-3,000",
+              "30-45天",
+              "整箱货物"
+            ],
+            [
+              "铁路货运",
+              "$150-250/立方米",
+              "18-25天",
+              "中亚走廊"
+            ],
+            [
+              "空运",
+              "$4-8/公斤",
+              "5-10天",
+              "高价值，紧急"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "格鲁吉亚海关清关"
+        },
+        {
+          "type": "paragraph",
+          "text": "格鲁吉亚拥有该地区最友好的商业海关制度之一。所需文件：商业发票、装箱单、提单、原产地证和进口申报单。标准清关处理时间：1-3个工作日。"
         }
       ],
       "ru": [
@@ -1328,26 +1647,57 @@
           "text": "Маршруты доставки из Китая в Грузию"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Cargo container logistics",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping route from China to Georgia",
-          "caption": "Shipping from China to Georgia involves multiple transportation options"
-        },
-        {
           "type": "paragraph",
           "text": "Морской транспорт через порт Поти: 30-45 дней. Ж/д через Средний коридор: 18-25 дней. Воздушный транспорт: 5-10 дней."
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Goods arriving at Georgia port",
-          "caption": "Understanding customs procedures at Georgia ports speeds up clearance"
+          "type": "heading",
+          "level": 2,
+          "text": "Сравнение затрат"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Метод",
+            "Стоимость за куб.м",
+            "Срок доставки",
+            "Лучше всего для"
+          ],
+          "rows": [
+            [
+              "Морской фрахт (LCL)",
+              "$60-120/куб.м",
+              "30-45 дней",
+              "Массовые грузы, не срочные"
+            ],
+            [
+              "Морской фрахт (FCL 20')",
+              "$1 800-3 000",
+              "30-45 дней",
+              "Полные контейнеры"
+            ],
+            [
+              "Ж/д фрахт",
+              "$150-250/куб.м",
+              "18-25 дней",
+              "Центральноазиатский коридор"
+            ],
+            [
+              "Авиафрахт",
+              "$4-8/кг",
+              "5-10 дней",
+              "Высокоценные, срочные"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Таможенная очистка в Грузии"
+        },
+        {
+          "type": "paragraph",
+          "text": "Грузия имеет один из самых благоприятных для бизнеса таможенных режимов в регионе. Необходимые документы: коммерческий счёт, упаковочный лист, коносамент, сертификат происхождения и импортная декларация. Срок обработки: 1-3 рабочих дня для стандартной очистки."
         }
       ]
     }
@@ -1386,12 +1736,6 @@
           "caption": ""
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison",
-          "caption": "Total cost comparison between BYD and Tesla in the Georgian market"
-        },
-        {
           "type": "paragraph",
           "text": "Georgia's EV market is experiencing rapid growth in 2026. With 0% import duty on electric vehicles under the Free Trade Agreement with China, Georgian buyers have more choices than ever. The two dominant brands attracting attention are BYD (Build Your Dreams) and Tesla. But which offers the better value for your money?"
         },
@@ -1409,12 +1753,6 @@
           "src": "/images/blog/byd-car-prices-showroom.jpg",
           "alt": "BYD electric vehicle showroom",
           "caption": "BYD offers competitive pricing with growing service network in Georgia"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
         },
         {
           "type": "table",
@@ -1471,12 +1809,6 @@
           "type": "heading",
           "text": "Why BYD Offers Better Value for Georgian Buyers",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
         },
         {
           "type": "list",
@@ -1563,18 +1895,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison",
-          "caption": "Total cost comparison between BYD and Tesla in the Georgian market"
-        },
-        {
           "type": "paragraph",
           "text": "2026年，格鲁吉亚的电动汽车市场正在快速增长。根据中格自由贸易协定，电动汽车享受0%进口关税，格鲁吉亚买家拥有前所未有的选择。BYD（比亚迪）和特斯拉是最受关注的两大品牌。但哪个更划算呢？"
         },
@@ -1586,18 +1906,6 @@
           "type": "heading",
           "text": "车型价格对比",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-car-prices-showroom.jpg",
-          "alt": "BYD electric vehicle showroom",
-          "caption": "BYD offers competitive pricing with growing service network in Georgia"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
         },
         {
           "type": "table",
@@ -1650,12 +1958,6 @@
           "type": "heading",
           "text": "BYD对格鲁吉亚买家的性价比优势",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
         },
         {
           "type": "list",
@@ -1729,6 +2031,15 @@
         {
           "type": "paragraph",
           "text": "我们专注于直接从中国授权经销商采购BYD车辆，提供最优价格。服务包括：车辆选择、质量检测、海关文件和门到门运输至格鲁吉亚。联系我们获取个性化报价。"
+        },
+        {
+          "type": "heading",
+          "text": "云豹国际贸易如何帮助您",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们专注于从中国授权经销商处直接采购比亚迪车辆，提供最优价格。我们的服务包括：车辆选型、质量检验、海关文件和门到门运至格鲁吉亚。联系我们获取个性化报价。"
         }
       ],
       "ru": [
@@ -1738,18 +2049,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison",
-          "caption": "Total cost comparison between BYD and Tesla in the Georgian market"
-        },
-        {
           "type": "paragraph",
           "text": "Рынок электромобилей в Грузии быстро растёт в 2026 году. Благодаря нулевой пошлине на электромобили в рамках Соглашения о свободной торговле с Китаем, у грузинских покупателей больше выбора, чем когда-либо. Два ведущих бренда — BYD и Tesla. Но какой из них предлагает лучшую стоимость?"
         },
@@ -1757,18 +2056,6 @@
           "type": "heading",
           "text": "Сравнение цен по моделям",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-car-prices-showroom.jpg",
-          "alt": "BYD electric vehicle showroom",
-          "caption": "BYD offers competitive pricing with growing service network in Georgia"
         },
         {
           "type": "table",
@@ -1821,12 +2108,6 @@
           "type": "heading",
           "text": "Почему BYD выгоднее для покупателей в Грузии",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla comparison",
-          "caption": ""
         },
         {
           "type": "list",
@@ -1899,6 +2180,50 @@
         {
           "type": "paragraph",
           "text": "Мы специализируемся на поставках автомобилей BYD напрямую от авторизованных китайских дилеров по лучшим ценам. Наши услуги: подбор автомобилей, инспекция качества, таможенное оформление и доставка до двери в Грузии."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Статья затрат",
+            "BYD Atto 3",
+            "Tesla Model 3"
+          ],
+          "rows": [
+            [
+              "Цена покупки",
+              "$32 000",
+              "$40 000"
+            ],
+            [
+              "Страховка (5 лет)",
+              "$4 000",
+              "$5 000"
+            ],
+            [
+              "Обслуживание (5 лет)",
+              "$1 500",
+              "$2 000"
+            ],
+            [
+              "Электроэнергия (100 000 км)",
+              "$6 000",
+              "$5 500"
+            ],
+            [
+              "Итого за 5 лет",
+              "$43 500",
+              "$52 500"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Как YunBao International Trading может помочь",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы специализируемся на поиске автомобилей BYD напрямую у авторизованных китайских дилеров по лучшим доступным ценам. Наши услуги включают: подбор автомобиля, проверку качества, таможенную документацию и доставку от двери до двери в Грузию. Свяжитесь с нами для индивидуального расчёта."
         }
       ]
     }
@@ -1931,18 +2256,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Car import process to Georgia",
-          "caption": "Importing cars to Georgia requires proper documentation and customs clearance"
-        },
-        {
           "type": "paragraph",
           "text": "Georgia has become one of the most attractive countries for importing vehicles, especially from China. The Free Trade Agreement with China (since 2018), 0% import duty on EVs, and a streamlined customs process make it a top choice for buyers across the Caucasus and Eastern Europe."
         },
@@ -1950,18 +2263,6 @@
           "type": "heading",
           "text": "Step 1: Choose Your Vehicle",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "Georgia-China trade route for vehicles",
-          "caption": "China-Georgia trade routes enable efficient vehicle import"
         },
         {
           "type": "paragraph",
@@ -1983,12 +2284,6 @@
           "type": "heading",
           "text": "Step 2: Calculate Total Costs",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
         },
         {
           "type": "table",
@@ -2107,18 +2402,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Car import process to Georgia",
-          "caption": "Importing cars to Georgia requires proper documentation and customs clearance"
-        },
-        {
           "type": "paragraph",
           "text": "格鲁吉亚已成为最具吸引力的汽车进口国之一，尤其是从中国进口。自2018年以来的中格自由贸易协定、电动汽车0%进口关税，以及精简的海关流程，使其成为高加索和东欧买家的首选。"
         },
@@ -2126,18 +2409,6 @@
           "type": "heading",
           "text": "第一步：选择车辆",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "Georgia-China trade route for vehicles",
-          "caption": "China-Georgia trade routes enable efficient vehicle import"
         },
         {
           "type": "list",
@@ -2151,12 +2422,6 @@
           "type": "heading",
           "text": "第二步：计算总成本",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
         },
         {
           "type": "table",
@@ -2248,6 +2513,33 @@
         {
           "type": "paragraph",
           "text": "我们处理一切：中国境内车辆采购、运输安排、海关文件和与格鲁吉亚海关代理协调。一站式全程服务。立即联系我们获取免费咨询。"
+        },
+        {
+          "type": "paragraph",
+          "text": "携带海关清关证明、护照和车辆文件，前往第比利斯或地区办公室的服务机构（საჯარო რეესტრი）办理。您将在1-3个工作日内获得格鲁吉亚车牌。"
+        },
+        {
+          "type": "heading",
+          "text": "重要注意事项",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "根据格鲁吉亚绿色能源政策，电动汽车到2027年享受0%进口关税",
+            "车龄超过10年的车辆可能面临额外限制",
+            "右舵车辆不允许在格鲁吉亚注册",
+            "混合动力车辆被归类为燃油车（不符合0%关税条件）"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "云豹国际贸易如何简化这一流程",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们处理一切：中国车辆采购、运输安排、海关文件以及与格鲁吉亚报关行的协调。一个联系人，端到端服务。今天就联系我们获取免费咨询。"
         }
       ],
       "ru": [
@@ -2257,18 +2549,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Car import process to Georgia",
-          "caption": "Importing cars to Georgia requires proper documentation and customs clearance"
-        },
-        {
           "type": "paragraph",
           "text": "Грузия стала одной из самых привлекательных стран для импорта автомобилей, особенно из Китая. Соглашение о свободной торговле с Китаем, 0% пошлины на электромобили и упрощённый таможенный процесс делают её выбором номер один для покупателей Кавказа и Восточной Европы."
         },
@@ -2276,18 +2556,6 @@
           "type": "heading",
           "text": "Шаг 1: Выбор автомобиля",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/georgia-china-trade.jpg",
-          "alt": "Georgia-China trade route for vehicles",
-          "caption": "China-Georgia trade routes enable efficient vehicle import"
         },
         {
           "type": "list",
@@ -2301,12 +2569,6 @@
           "type": "heading",
           "text": "Шаг 2: Расчёт полной стоимости",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Customs clearance process in Georgia",
-          "caption": ""
         },
         {
           "type": "table",
@@ -2397,6 +2659,33 @@
         {
           "type": "paragraph",
           "text": "Мы берём на себя всё: закупку автомобилей в Китае, организацию доставки, таможенные документы и координацию с грузинскими таможенными брокерами. Один контакт — полное обслуживание."
+        },
+        {
+          "type": "paragraph",
+          "text": "Посетите Агентство обслуживания (საჯარო რეესტრი) в Тбилиси или региональные офисы с таможенным свидетельством, паспортом и документами на автомобиль. Вы получите грузинские номерные знаки в течение 1–3 рабочих дней."
+        },
+        {
+          "type": "heading",
+          "text": "Важные примечания",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Электромобили пользуются ставкой 0% импортной пошлины до 2027 года в рамках политики Грузии в области зелёной энергетики",
+            "Автомобили старше 10 лет могут столкнуться с дополнительными ограничениями",
+            "Праворульные автомобили НЕ допускаются к регистрации в Грузии",
+            "Гибридные автомобили классифицируются как ДВС (не имеют права на пошлину 0%)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Как YunBao International Trading упрощает этот процесс",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы берём на себя всё: поиск автомобиля в Китае, организацию доставки, таможенную документацию и координацию с грузинскими таможенными брокерами. Один контакт — полная услуга от начала до конца. Свяжитесь с нами сегодня для бесплатной консультации."
         }
       ]
     }
@@ -2429,18 +2718,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras comparison",
-          "caption": "Chinese security cameras dominate the global market with competitive features"
-        },
-        {
           "type": "paragraph",
           "text": "Chinese manufacturers dominate the global surveillance camera market, accounting for over 60% of worldwide production. Advanced AI features, competitive pricing, and continuous innovation have made Chinese brands the go-to choice for businesses and homeowners worldwide."
         },
@@ -2448,18 +2725,6 @@
           "type": "heading",
           "text": "#1 Hikvision — Industry Leader",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment installation",
-          "caption": "Proper installation maximizes security camera effectiveness"
         },
         {
           "type": "paragraph",
@@ -2482,12 +2747,6 @@
           "type": "heading",
           "text": "#2 Dahua Technology — Value Champion",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -2635,18 +2894,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras comparison",
-          "caption": "Chinese security cameras dominate the global market with competitive features"
-        },
-        {
           "type": "paragraph",
           "text": "中国制造商主导全球监控摄像头市场，占全球产量的60%以上。先进的AI功能、有竞争力的价格和持续创新，使中国品牌成为全球企业和家庭的首选。"
         },
@@ -2654,18 +2901,6 @@
           "type": "heading",
           "text": "第一名：海康威视 — 行业领导者",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment installation",
-          "caption": "Proper installation maximizes security camera effectiveness"
         },
         {
           "type": "list",
@@ -2684,12 +2919,6 @@
           "type": "heading",
           "text": "第二名：大华科技 — 性价比之王",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
         },
         {
           "type": "list",
@@ -2764,6 +2993,99 @@
         {
           "type": "paragraph",
           "text": "我们以有竞争力的批发价格供应所有主要中国安防品牌。无论您需要4个摄像头用于商店还是200+用于仓库，我们都提供带完整保修和技术支持的定制方案。联系我们获取免费报价。"
+        },
+        {
+          "type": "heading",
+          "text": "#5 TP-Link Tapo — 智能家居入门",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "即插即用设置，无需NVR",
+            "云存储选项含免费层级",
+            "手机App支持实时查看和双向语音",
+            "价格范围：每台$20到$80"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "最适合：家庭用户、小型店铺、DIY安防系统。"
+        },
+        {
+          "type": "heading",
+          "text": "快速对比表",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "品牌",
+            "适用场景",
+            "起步价",
+            "AI功能",
+            "保修"
+          ],
+          "rows": [
+            [
+              "海康威视",
+              "企业级",
+              "$45",
+              "✅ 高级",
+              "2年"
+            ],
+            [
+              "大华",
+              "中小企业/预算型",
+              "$35",
+              "✅ WizSense",
+              "2年"
+            ],
+            [
+              "宇视",
+              "企业级",
+              "$50",
+              "✅ Stellar",
+              "3年"
+            ],
+            [
+              "天地伟业",
+              "高性价比",
+              "$30",
+              "✅ 基础AI",
+              "2年"
+            ],
+            [
+              "TP-Link Tapo",
+              "家庭/SOHO",
+              "$20",
+              "⚠️ 有限",
+              "1年"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "如何选择合适的品牌",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "大型仓库/工业场地 → 海康威视或宇视",
+            "零售店/办公室 → 大华WizSense系列",
+            "住宅小区 → 天地伟业（最佳性价比）",
+            "家庭/小商店 → TP-Link Tapo（最易安装）"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "云豹国际贸易安防解决方案",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供所有主要中国安防品牌，价格具有竞争力的批发价。无论您需要4台摄像头用于店铺还是200+台用于仓库，我们都提供定制解决方案，包含完整保修和技术支持。联系我们获取免费报价。"
         }
       ],
       "ru": [
@@ -2773,18 +3095,6 @@
           "level": 2
         },
         {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras comparison",
-          "caption": "Chinese security cameras dominate the global market with competitive features"
-        },
-        {
           "type": "paragraph",
           "text": "Китайские производители доминируют на мировом рынке камер наблюдения, занимая более 60% мирового производства. Передовые функции ИИ, конкурентоспособные цены и непрерывные инновации сделали китайские бренды выбором номер один."
         },
@@ -2792,18 +3102,6 @@
           "type": "heading",
           "text": "№1 Hikvision — Лидер отрасли",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/security-equipment.jpg",
-          "alt": "Security equipment installation",
-          "caption": "Proper installation maximizes security camera effectiveness"
         },
         {
           "type": "list",
@@ -2818,12 +3116,6 @@
           "type": "heading",
           "text": "№2 Dahua Technology — Чемпион стоимости",
           "level": 2
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/top-security-cameras.jpg",
-          "alt": "Top Chinese security cameras",
-          "caption": ""
         },
         {
           "type": "list",
@@ -2894,6 +3186,127 @@
         {
           "type": "paragraph",
           "text": "Мы поставляем все основные китайские бренды безопасности по конкурентоспособным оптовым ценам. Мы предлагаем индивидуальные решения с полной гарантией и технической поддержкой. Свяжитесь с нами для бесплатной консультации."
+        },
+        {
+          "type": "heading",
+          "text": "#3 Uniview (UNV) — Корпоративный уровень",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Лидерное в отрасли влагозащитное исполнение IP67",
+            "Технология Stellar light: сверхнизкая освещённость для работы",
+            "Мощная экосистема NVR с вариантами от 64 каналов",
+            "Диапазон цен: от $50 до $700"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#4 Tiandy — Восходящая звезда",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Super Starlight: превосходная работа при слабом освещении",
+            "Аналитика на базе ИИ по конкурентоспособным ценам",
+            "Растущее присутствие на международном рынке",
+            "Диапазон цен: от $30 до $500 (лучшее соотношение цены и качества)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "#5 TP-Link Tapo — Умный дом для начинающих",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Настройка plug-and-play, NVR не требуется",
+            "Облачное хранение с бесплатным тарифным уровнем",
+            "Мобильное приложение с живым просмотром и двусторонней аудиосвязью",
+            "Диапазон цен: от $20 до $80 за камеру"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Лучше всего подходит: для домашних пользователей, небольших магазинов, систем безопасности DIY."
+        },
+        {
+          "type": "heading",
+          "text": "Таблица быстрого сравнения",
+          "level": 2
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Бренд",
+            "Для чего",
+            "Начальная цена",
+            "ИИ функции",
+            "Гарантия"
+          ],
+          "rows": [
+            [
+              "Hikvision",
+              "Предприятие",
+              "$45",
+              "✅ Продвинутый",
+              "2 года"
+            ],
+            [
+              "Dahua",
+              "МБ/Бюджет",
+              "$35",
+              "✅ WizSense",
+              "2 года"
+            ],
+            [
+              "Uniview",
+              "Предприятие",
+              "$50",
+              "✅ Stellar",
+              "3 года"
+            ],
+            [
+              "Tiandy",
+              "Ценность",
+              "$30",
+              "✅ Базовый ИИ",
+              "2 года"
+            ],
+            [
+              "TP-Link Tapo",
+              "Дом/SOHO",
+              "$20",
+              "⚠️ Ограничен",
+              "1 год"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Как выбрать правильный бренд",
+          "level": 2
+        },
+        {
+          "type": "list",
+          "items": [
+            "Для крупных складов/промышленных объектов → Hikvision или Uniview",
+            "Для розничных магазинов/офисов → серия Dahua WizSense",
+            "Для жилых зданий → Tiandy (лучшая ценность)",
+            "Для дома/небольшого магазина → TP-Link Tapo (самая простая настройка)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Решения по безопасности YunBao International Trading",
+          "level": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы поставляем все основные китайские бренды систем безопасности по конкурентоспособным оптовым ценам. Если вам нужно 4 камеры для магазина или 200+ для склада, мы предоставляем индивидуальные решения с полной гарантией и технической поддержкой. Свяжитесь с нами для получения бесплатной консультации."
         }
       ]
     }
@@ -2969,12 +3382,6 @@
           "type": "heading",
           "level": 2,
           "text": "Detailed Tax Breakdown"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
         },
         {
           "type": "image",
@@ -3151,12 +3558,6 @@
           "type": "heading",
           "level": 2,
           "text": "Complete Tax Calculations: 5 Real Examples"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -3380,12 +3781,6 @@
           "type": "heading",
           "level": 2,
           "text": "Electric Vehicle Tax Benefits (2026)"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
         },
         {
           "type": "paragraph",
@@ -3785,12 +4180,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-car-import-tax.jpg",
-          "alt": "Car shipping terminal at port - vehicle import and customs inspection",
-          "caption": "Vehicle import and customs inspection at a major shipping port"
-        },
-        {
           "type": "paragraph",
           "text": "Сравнение с соседями: Россия (40-60%), Турция (50-80%), Армения (25-30%), Азербайджан (35-45%)."
         },
@@ -3798,18 +4187,6 @@
           "type": "heading",
           "level": 2,
           "text": "Детальный разбор налогов"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/cif-tema-shipping-container.jpg",
-          "alt": "Container ship at port - international car shipping logistics",
-          "caption": "International car shipping requires understanding of port logistics and documentation"
         },
         {
           "type": "heading",
@@ -3940,12 +4317,6 @@
           "text": "Примеры расчёта"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Пример 1: Geely Emgrand (2021, 1.5L)"
@@ -4067,12 +4438,6 @@
           "type": "heading",
           "level": 2,
           "text": "Льготы для электромобилей"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
         },
         {
           "type": "table",
@@ -4298,6 +4663,186 @@
           "type": "heading",
           "level": 3,
           "text": "Бесплатная оценка"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Страна",
+            "Импортная пошлина",
+            "НДС/Налог с продаж",
+            "Акциз",
+            "Общая нагрузка (типичный автомобиль)"
+          ],
+          "rows": [
+            [
+              "[RU-TODO] 🇬🇪 Georgia",
+              "[RU-TODO] 0.5%",
+              "[RU-TODO] 18%",
+              "[RU-TODO] Low",
+              "[RU-TODO] ~20%"
+            ],
+            [
+              "[RU-TODO] 🇷🇺 Russia",
+              "[RU-TODO] 15-25%",
+              "[RU-TODO] 20%",
+              "[RU-TODO] High",
+              "[RU-TODO] 40-60%"
+            ],
+            [
+              "[RU-TODO] 🇹🇷 Turkey",
+              "[RU-TODO] 10-40%",
+              "[RU-TODO] 20%",
+              "[RU-TODO] High",
+              "[RU-TODO] 50-80%"
+            ],
+            [
+              "[RU-TODO] 🇦🇲 Armenia",
+              "[RU-TODO] 0%",
+              "[RU-TODO] 20%",
+              "[RU-TODO] Medium",
+              "[RU-TODO] 25-30%"
+            ],
+            [
+              "[RU-TODO] 🇦🇿 Azerbaijan",
+              "[RU-TODO] 15%",
+              "[RU-TODO] 18%",
+              "[RU-TODO] Medium",
+              "[RU-TODO] 35-45%"
+            ],
+            [
+              "[RU-TODO] 🇺🇦 Ukraine",
+              "[RU-TODO] 10%",
+              "[RU-TODO] 20%",
+              "[RU-TODO] Medium",
+              "[RU-TODO] 35-40%"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Стратегический вывод: налоговая система Грузии делает её хабом для реэкспорта. Многие импортеры ввозят автомобили в Грузию, а затем реэкспортируют в соседние страны (хотя правила реэкспорта различаются)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Распространённые ошибки и как их избежать"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ошибка",
+            "Последствие",
+            "Решение"
+          ],
+          "rows": [
+            [
+              "[RU-TODO] Under-declaring vehicle value",
+              "[RU-TODO] Penalties, delays, reassessment",
+              "[RU-TODO] Declare realistic market value"
+            ],
+            [
+              "[RU-TODO] Not budgeting for excise tax",
+              "[RU-TODO] Surprise costs at customs",
+              "[RU-TODO] Use the calculator above"
+            ],
+            [
+              "[RU-TODO] Skipping customs broker",
+              "[RU-TODO] 2-3 weeks delay",
+              "[RU-TODO] Hire one ($200-$400)"
+            ],
+            [
+              "[RU-TODO] Wrong engine size declaration",
+              "[RU-TODO] Wrong excise rate, penalties",
+              "[RU-TODO] Verify engine cc from registration"
+            ],
+            [
+              "[RU-TODO] Missing documents",
+              "[RU-TODO] Weeks of delays",
+              "[RU-TODO] Prepare all 6 documents before arrival"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Существуют ли ограничения по возрасту для импорта автомобилей в Грузию?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Официальных ограничений по возрасту нет. Однако транспортные средства старше 10 лет облагаются акцизом с коэффициентом ×3, что значительно удорожает импорт."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Могу ли я импортировать автомобиль с правым рулём?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да, но автомобили с левым рулём предпочтительнее и их проще зарегистрировать. Автомобили с правым рулём должны пройти стандартную техническую инспекцию."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Нужно ли платить налоги при импорте для личного использования?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да, налоги применяются независимо от личного или коммерческого использования. Для импорта транспортных средств нет личных льгот."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Что если таможня не согласна с моей заявленной стоимостью?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Грузинская таможня может провести переоценку, используя свою внутреннюю базу данных. Всегда заявляйте реалистичную рыночную стоимость — занижение грозит штрафами."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Гибриды облагаются налогом иначе?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Для гибридов предусмотрена 50% скидка на акциз. Ввозная пошлина (0,5%) и НДС (18%) остаются неизменными."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В6: Могу ли я получить налоговый возврат при реэкспорте транспортного средства?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: НДС может быть возвращён при определённых процедурах реэкспорта. Для конкретных случаев проконсультируйтесь с таможенным брокером."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Нужна помощь в расчёте импортных налогов?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Бесплатная оценка налогов"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Персональный расчет налогов для любого автомобиля",
+            "Цены CIF в реальном времени",
+            "Рекомендации таможенных брокеров в Поти/Батуми",
+            "Полная разбивка расходов (от FOB до регистрации)"
+          ]
         }
       ],
       "zh": [
@@ -4336,12 +4881,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/georgia-car-import-tax.jpg",
-          "alt": "Car shipping terminal at port - vehicle import and customs inspection",
-          "caption": "Vehicle import and customs inspection at a major shipping port"
-        },
-        {
           "type": "paragraph",
           "text": "与邻国对比： 俄罗斯（40-60%）、土耳其（50-80%）、亚美尼亚（25-30%）、阿塞拜疆（35-45%）。"
         },
@@ -4349,18 +4888,6 @@
           "type": "heading",
           "level": 2,
           "text": "详细税费分解"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/cif-tema-shipping-container.jpg",
-          "alt": "Container ship at port - international car shipping logistics",
-          "caption": "International car shipping requires understanding of port logistics and documentation"
         },
         {
           "type": "heading",
@@ -4491,12 +5018,6 @@
           "text": "真实计算案例"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "案例1：吉利帝豪（2021款，1.5L）"
@@ -4618,12 +5139,6 @@
           "type": "heading",
           "level": 2,
           "text": "电动车优惠政策"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Cars arriving at Port of Poti, Georgia",
-          "caption": ""
         },
         {
           "type": "table",
@@ -4884,6 +5399,128 @@
           "type": "heading",
           "level": 3,
           "text": "免费估算"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见错误及如何避免"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "错误",
+            "后果",
+            "解决方案"
+          ],
+          "rows": [
+            [
+              "[ZH-TODO] Under-declaring vehicle value",
+              "[ZH-TODO] Penalties, delays, reassessment",
+              "[ZH-TODO] Declare realistic market value"
+            ],
+            [
+              "[ZH-TODO] Not budgeting for excise tax",
+              "[ZH-TODO] Surprise costs at customs",
+              "[ZH-TODO] Use the calculator above"
+            ],
+            [
+              "[ZH-TODO] Skipping customs broker",
+              "[ZH-TODO] 2-3 weeks delay",
+              "[ZH-TODO] Hire one ($200-$400)"
+            ],
+            [
+              "[ZH-TODO] Wrong engine size declaration",
+              "[ZH-TODO] Wrong excise rate, penalties",
+              "[ZH-TODO] Verify engine cc from registration"
+            ],
+            [
+              "[ZH-TODO] Missing documents",
+              "[ZH-TODO] Weeks of delays",
+              "[ZH-TODO] Prepare all 6 documents before arrival"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见问题解答"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题1：进口汽车到格鲁吉亚有年龄限制吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：没有官方年龄限制。但10年以上的车辆需缴纳3倍消费税乘数，进口成本大幅增加。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题2：我可以进口右舵车吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：可以，但左舵车更受欢迎且注册更简便。右舵车必须通过标准技术检测。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题3：个人使用进口需要缴税吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：是的，无论个人还是商业用途都需缴税。车辆进口没有个人免税优惠。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题4：如果海关不认可我申报的价值怎么办？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：格鲁吉亚海关可能使用内部数据库重新评估。务必申报合理市场价——低报将面临处罚。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题5：混合动力车税率不同吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：混合动力车消费税减免50%。进口关税（0.5%）和增值税（18%）不变。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题6：如果车辆再出口可以申请退税吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "答：在某些再出口程序下增值税可能可退。具体案例请咨询海关经纪人。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "需要帮助计算您的进口税？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "免费税费估算"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "为任何车辆提供个性化税收计算",
+            "实时CIF报价",
+            "波季/巴统海关经纪人推荐",
+            "完整成本明细（从FOB到注册）"
+          ]
         }
       ]
     }
@@ -4960,21 +5597,9 @@
           "text": "Ghana's Car Import Regulations (2026 Updated)"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Age Limit — Critical Rule"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export documentation and shipping containers",
-          "caption": "Proper documentation is essential for successful car export"
         },
         {
           "type": "table",
@@ -5082,12 +5707,6 @@
           "text": "Best Chinese Cars for the Ghanaian Market"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Top Recommendations"
@@ -5170,12 +5789,6 @@
           "type": "heading",
           "level": 2,
           "text": "Shipping to Ghana: Tema Port Guide"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -5671,32 +6284,14 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/export-cars-to-ghana.jpg",
-          "alt": "Large shipment of cars at port ready for export to Africa",
-          "caption": "Cars prepared for international shipment at a major export port"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Правила импорта авто в Гану (2026)"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Ограничение по возрасту"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export documentation and shipping containers",
-          "caption": "Proper documentation is essential for successful car export"
         },
         {
           "type": "table",
@@ -5763,12 +6358,6 @@
           "text": "Лучшие китайские авто для Ганы"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Ранг",
@@ -5813,12 +6402,6 @@
           "type": "heading",
           "level": 2,
           "text": "Доставка до порта Тема"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
         },
         {
           "type": "table",
@@ -6111,6 +6694,189 @@
           "type": "heading",
           "level": 3,
           "text": "Расчёт для Ганы"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Регистрация транспорта в Гане (DVLA)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Процесс"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Шаг",
+            "Действие",
+            "Стоимость"
+          ],
+          "rows": [
+            [
+              "[RU-TODO] 1",
+              "[RU-TODO] Vehicle inspection at DVLA",
+              "[RU-TODO] $20-$30"
+            ],
+            [
+              "[RU-TODO] 2",
+              "[RU-TODO] Submit customs release + documents",
+              "[RU-TODO] —"
+            ],
+            [
+              "[RU-TODO] 3",
+              "[RU-TODO] Pay registration fee",
+              "[RU-TODO] $50-$100"
+            ],
+            [
+              "[RU-TODO] 4",
+              "[RU-TODO] Receive license plates",
+              "[RU-TODO] $20-$30"
+            ],
+            [
+              "[RU-TODO] 5",
+              "[RU-TODO] Get registration certificate",
+              "[RU-TODO] —"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Необходимые документы для регистрации в DVLA"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Таможенное разрешение",
+            "Оригинал счёта-фактуры на покупку",
+            "Страховой полис (минимум — ответственность перед третьими лицами)",
+            "Действующие водительские права или удостоверение личности",
+            "Свидетельство о постановке на налоговый учёт (TIN)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Распространённые ошибки при импорте в Гану"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ошибка",
+            "Последствия",
+            "Как избежать"
+          ],
+          "rows": [
+            [
+              "[RU-TODO] Importing cars older than 10 years",
+              "[RU-TODO] Rejected at customs",
+              "[RU-TODO] Verify manufacture year before buying"
+            ],
+            [
+              "[RU-TODO] Under-declaring value",
+              "[RU-TODO] Penalties + delays",
+              "[RU-TODO] Declare realistic market value"
+            ],
+            [
+              "[RU-TODO] No TIN",
+              "[RU-TODO] Cannot clear customs",
+              "[RU-TODO] Apply for TIN before shipping"
+            ],
+            [
+              "[RU-TODO] No pre-shipment inspection",
+              "[RU-TODO] Receive damaged car",
+              "[RU-TODO] Always inspect before payment"
+            ],
+            [
+              "[RU-TODO] Wrong port choice",
+              "[RU-TODO] Extra transport costs",
+              "[RU-TODO] Tema is the main auto import port"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Можно ли импортировать б/у автомобиль в Гану?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да, но автомобиль должен быть не старше 10 лет с года выпуска. Для импорта в 2026 году допускаются только модели 2016 года и новее."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Какова общая стоимость?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Рассчитывайте примерно на CIF + 40% для Ганы. Автомобиль с CIF $7 800 обойдётся примерно в $10 800–$11 000 с доставкой в Аккру."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Что такое система ICUMS?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: ICUMS (Integrated Customs Management System) — это онлайн-платформа таможенного декларирования Ганы. Все импортные декларации должны подаваться через ICUMS."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Можно ли сразу начать управлять автомобилем после таможенного оформления?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Нет. Необходимо сначала завершить регистрацию в DVLA (1–2 недели), прежде чем законно управлять автомобилем на дорогах Ганы."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Импорт электромобилей обходится дешевле?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да! Гана предоставляет налоговые льготы для электромобилей — импортная пошлина может составлять всего 0–5%, а экологические сборы могут быть отменены."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В6: Где в Гане можно купить запчасти для китайских автомобилей?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Сеть поставок активно развивается в Аккре (Канеши, Мадинa) и Кумаси. Лучше всего с запчастями обстоит дело у Geely и Chery."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы импортировать из Китая в Гану?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Получите расчёт специально для Ганы"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Актуальные цены CIF Тема для любых китайских автомобилей",
+            "Расчёт налогов Ганы (точный, актуальный)",
+            "Поддержка с документацией ICUMS",
+            "Надёжная доставка в порт Тема",
+            "Координация предотгрузочного осмотра"
+          ]
         }
       ],
       "zh": [
@@ -6118,18 +6884,6 @@
           "type": "heading",
           "level": 2,
           "text": "加纳买家快速答案"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/export-cars-to-ghana.jpg",
-          "alt": "Large shipment of cars at port ready for export to Africa",
-          "caption": "Cars prepared for international shipment at a major export port"
         },
         {
           "type": "paragraph",
@@ -6172,18 +6926,6 @@
           "type": "heading",
           "level": 2,
           "text": "加纳汽车进口规定（2026更新）"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export documentation and shipping containers",
-          "caption": "Proper documentation is essential for successful car export"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -6260,12 +7002,6 @@
           "type": "heading",
           "level": 2,
           "text": "最适合加纳市场的中国汽车"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "EV loading for export shipping",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -6667,6 +7403,79 @@
           "type": "heading",
           "level": 3,
           "text": "获取加纳专属报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：可以，但车龄必须不超过10年。2026年进口只允许2016年及以后的车型。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2：总共要花多少钱？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：预计总成本约 CIF + 40%。CIF $7,800 的车在阿克拉落地约 $10,800-$11,000。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3：什么是ICUMS系统？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：ICUMS（综合海关管理系统）是加纳的在线海关申报平台。所有进口申报必须通过ICUMS提交。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4：清关后可以立即开车上路吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：不可以。必须先完成DVLA注册（1-2周）才能在加纳道路上合法行驶。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5：电动车进口更便宜吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：是的！加纳对电动车有税收优惠——关税可低至0-5%，环境税也可能免除。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q6：在加纳哪里能买到中国车的配件？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：阿克拉（Kaneshie、Madina）和库马西的配件网络正在扩大。吉利和奇瑞的配件最容易买到。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备好从中国进口到加纳？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "获取加纳专属报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "任何中国车型的实时CIF特马报价",
+            "加纳税费精确计算（最新数据）",
+            "ICUMS文件支持",
+            "可靠的海运到特马港",
+            "装船前检验协调"
+          ]
         }
       ]
     }
@@ -6724,31 +7533,13 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/cif-tema-shipping-container.jpg",
-          "alt": "Container ship docked at Tema port Ghana",
-          "caption": "CIF shipping to Tema port involves container loading and ocean freight"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "What Does CIF Mean?"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "CIF stands for Cost, Insurance, and Freight. It's the standard international trade term that includes everything needed to get the vehicle to Tema Port:"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping logistics and cargo management",
-          "caption": "Understanding shipping logistics helps optimize freight costs"
         },
         {
           "type": "table",
@@ -6793,12 +7584,6 @@
           "type": "heading",
           "level": 2,
           "text": "Shipping Cost Breakdown to Tema"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -6873,12 +7658,6 @@
           "type": "heading",
           "level": 2,
           "text": "Insurance Costs"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "table",
@@ -7210,31 +7989,13 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/cif-tema-shipping-container.jpg",
-          "alt": "Container ship docked at Tema port Ghana",
-          "caption": "CIF shipping to Tema port involves container loading and ocean freight"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Что такое CIF?"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "CIF = Cost, Insurance, and Freight (Стоимость, Страховка, Фрахт)"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping logistics and cargo management",
-          "caption": "Understanding shipping logistics helps optimize freight costs"
         },
         {
           "type": "table",
@@ -7279,12 +8040,6 @@
           "type": "heading",
           "level": 2,
           "text": "Стоимость доставки до Темы"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "table",
@@ -7345,12 +8100,6 @@
           "type": "heading",
           "level": 2,
           "text": "Примеры CIF для Ганы"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -7548,6 +8297,115 @@
           "type": "heading",
           "level": 3,
           "text": "Получить цену"
+        },
+        {
+          "type": "paragraph",
+          "text": "Рекомендация: Для импортеров в Гану впервые, CIF безопаснее и проще."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Как получить лучшую цену CIF для темы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5 советов по экономии денег"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Совет",
+            "Экономия",
+            "Как"
+          ],
+          "rows": [
+            [
+              "[RU-TODO] 1. Compare 3+ suppliers",
+              "[RU-TODO] 5-15%",
+              "[RU-TODO] Different suppliers have different shipping contracts"
+            ],
+            [
+              "[RU-TODO] 2. Ship off-peak",
+              "[RU-TODO] 10-20%",
+              "[RU-TODO] Avoid Dec-Jan (Chinese New Year) and Sep-Oct (peak)"
+            ],
+            [
+              "[RU-TODO] 3. Group orders",
+              "[RU-TODO] 20-40% per unit",
+              "[RU-TODO] Fill a 40ft container with 3-4 cars"
+            ],
+            [
+              "[RU-TODO] 4. Choose nearest Chinese port",
+              "[RU-TODO] $100-$300",
+              "[RU-TODO] Supplier near Shanghai/Shenzhen"
+            ],
+            [
+              "[RU-TODO] 5. Negotiate insurance",
+              "[RU-TODO] 10-30%",
+              "[RU-TODO] Shop around for marine insurance rates"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Включает ли CIF таможенные пошлины Ганы?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Нет. CIF покрывает только доставку до порта Тема. Импортные пошлины Ганы оплачиваются отдельно (примерно 35-45% от стоимости CIF)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Сколько времени занимает доставка CIF в Гану?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: 30-50 дней в зависимости от порта отправления и способа доставки."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Могу ли я отследить свой груз в Тему?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да. Вы получите название судна, номер рейса и номер контейнера для онлайн-отслеживания."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Что делать, если автомобиль поврежден до прибытия в Тему?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Морская страховка покрывает повреждения при транспортировке. Подайте претензию в течение 7 дней с фотографиями и документами."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: CIF дороже, чем самостоятельная организация доставки?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Обычно нет. Поставщики получают скидки за объём у судоходных линий. Однако опытные импортеры могут сэкономить 5-10% при наличии собственных контактов."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы получить расценки CIF Tema?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Получить цены в реальном времени"
         }
       ],
       "zh": [
@@ -7581,31 +8439,13 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/cif-tema-shipping-container.jpg",
-          "alt": "Container ship docked at Tema port Ghana",
-          "caption": "CIF shipping to Tema port involves container loading and ocean freight"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "CIF是什么意思？"
         },
         {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "CIF = Cost, Insurance, and Freight（成本、保险加运费）"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Shipping logistics and cargo management",
-          "caption": "Understanding shipping logistics helps optimize freight costs"
         },
         {
           "type": "table",
@@ -7650,12 +8490,6 @@
           "type": "heading",
           "level": 2,
           "text": "到特马港运费明细"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "table",
@@ -7716,12 +8550,6 @@
           "type": "heading",
           "level": 2,
           "text": "CIF真实案例"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/shipping-logistics.jpg",
-          "alt": "Container ship at port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -7919,6 +8747,115 @@
           "type": "heading",
           "level": 3,
           "text": "获取实时价格"
+        },
+        {
+          "type": "paragraph",
+          "text": "建议：对于首次进口到加纳的买家，CIF更安全、更简单。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "如何获得特马CIF最优价格"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5个省钱技巧"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "建议",
+            "节省金额",
+            "操作方法"
+          ],
+          "rows": [
+            [
+              "[ZH-TODO] 1. Compare 3+ suppliers",
+              "[ZH-TODO] 5-15%",
+              "[ZH-TODO] Different suppliers have different shipping contracts"
+            ],
+            [
+              "[ZH-TODO] 2. Ship off-peak",
+              "[ZH-TODO] 10-20%",
+              "[ZH-TODO] Avoid Dec-Jan (Chinese New Year) and Sep-Oct (peak)"
+            ],
+            [
+              "[ZH-TODO] 3. Group orders",
+              "[ZH-TODO] 20-40% per unit",
+              "[ZH-TODO] Fill a 40ft container with 3-4 cars"
+            ],
+            [
+              "[ZH-TODO] 4. Choose nearest Chinese port",
+              "[ZH-TODO] $100-$300",
+              "[ZH-TODO] Supplier near Shanghai/Shenzhen"
+            ],
+            [
+              "[ZH-TODO] 5. Negotiate insurance",
+              "[ZH-TODO] 10-30%",
+              "[ZH-TODO] Shop around for marine insurance rates"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见问题解答"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q1：CIF包含加纳关税吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：不包含。CIF仅涵盖运至特马港的费用。您仍需支付加纳进口关税（约为CIF价值的35-45%）。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q2：CIF运输到加纳需要多长时间？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：30-50天，具体取决于出发港口和运输方式。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q3：我可以追踪运往特马的货物吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：可以。您将收到船名、航次号和集装箱号，方便在线追踪。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q4：如果车辆在到达特马之前受损怎么办？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：海运保险涵盖运输途中的损坏。请在7天内凭照片和文件提交索赔。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Q5：CIF比自己安排运输更贵吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "A：通常不会。供应商从船公司获得批量折扣。不过，有经验的进口商通过自己的运输渠道可能节省5-10%。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备好获取您的特马CIF报价了吗？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "获取实时报价"
         }
       ]
     }
@@ -8016,18 +8953,6 @@
           "type": "heading",
           "level": 2,
           "text": "Step 1: Verify the Business License"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification and business documentation review",
-          "caption": "Thorough supplier verification protects against fraud and quality issues"
         },
         {
           "type": "heading",
@@ -8139,12 +9064,6 @@
           "text": "Step 2: Verify Export Credentials"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Used Car Export License"
@@ -8195,12 +9114,6 @@
           "type": "heading",
           "level": 2,
           "text": "Step 3: Check Online Reputation"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -8922,12 +9835,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-chinese-car-supplier.jpg",
-          "alt": "Modern car manufacturing facility in China",
-          "caption": "Verifying suppliers includes checking manufacturing facilities and quality control"
-        },
-        {
           "type": "paragraph",
           "text": "Красные флаги — УХОДИТЕ: 100% предоплата, нет лицензии, отказ от осмотра, только Western Union."
         },
@@ -8935,18 +9842,6 @@
           "type": "heading",
           "level": 2,
           "text": "Шаг 1: Проверка бизнес-лицензии"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification and business documentation review",
-          "caption": "Thorough supplier verification protects against fraud and quality issues"
         },
         {
           "type": "heading",
@@ -9050,12 +9945,6 @@
           "text": "Шаг 2: Экспортная лицензия"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "Китай требует специальную авторизацию для экспорта б/у авто."
         },
@@ -9084,12 +9973,6 @@
           "type": "heading",
           "level": 2,
           "text": "Шаг 3: Онлайн репутация"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -9530,6 +10413,189 @@
           "type": "heading",
           "level": 3,
           "text": "Бесплатная проверка"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Оценочный лист проверки поставщика"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Оцените потенциального поставщика (по 5-балльной шкале)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Критерий",
+            "Балл",
+            "Примечания"
+          ],
+          "rows": [
+            [
+              "Бизнес-лицензия проверена (срок, капитал, сфера)",
+              "/5",
+              "Проверить на gsxt.gov.cn"
+            ],
+            [
+              "Экспортные полномочия подтверждены (в официальном реестре)",
+              "/5",
+              "Министерство коммерции КНР"
+            ],
+            [
+              "Репутация на платформе (рейтинг и отзывы Alibaba)",
+              "/5",
+              "≥3 лет, ≥95% положительных"
+            ],
+            [
+              "Прошла сторонняя инспекция",
+              "/5",
+              "Отчет SGS/BV/CCIC"
+            ],
+            [
+              "Условия оплаты разумные (не 100% предоплата)",
+              "/5",
+              "Предпочтителен раздел 30/70"
+            ],
+            [
+              "Коммуникация оперативная и профессиональная",
+              "/5",
+              "Быстрые, четкие ответы"
+            ],
+            [
+              "Договор полный (все ключевые пункты)",
+              "/5",
+              "Двуязычный, полный"
+            ],
+            [
+              "Есть рекомендации (от предыдущих покупателей)",
+              "/5",
+              "Могут рекомендовать поставщика"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Руководство по оценке"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Общий балл",
+            "Оценка",
+            "Действие"
+          ],
+          "rows": [
+            [
+              "35-40",
+              "Отличный поставщик",
+              "Работайте смело"
+            ],
+            [
+              "28-34",
+              "Хороший поставщик",
+              "Незначительные вопросы, действуйте осторожно"
+            ],
+            [
+              "20-27",
+              "Средний поставщик",
+              "Решите вопросы перед продолжением"
+            ],
+            [
+              "Ниже 20",
+              "Плохой поставщик",
+              "🚫 ОТКАЖИТЕСЬ — найдите другого"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Могу ли я посетить поставщика лично?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да, и это ЛУЧШИЙ метод проверки. Убедитесь, что фактический адрес совпадает с бизнес-лицензией и что у них есть реальный склад."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Что если поставщик отказывается от сторонней инспекции?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Это серьезный тревожный сигнал. Легитимный поставщик не имеет ничего скрывать. Найдите другого поставщика немедленно."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Как проверить банковский счет?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Название банковского счета ДОЛЖНО совпадать с названием компании в бизнес-лицензии. Сверьте оба документа перед оплатой."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Поставщики с Trade Assurance на Alibaba на 100% безопасны?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Trade Assurance обеспечивает защиту покупателя до покрытой суммы, но не гарантирует качество. Все равно проводите проверку и инспекцию."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Что если я обнаружу мошенничество после оплаты?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Немедленно свяжитесь с платформой (Alibaba) для подачи претензии по Trade Assurance",
+            "Сообщите в китайскую полицию (经侦大队 — отдел расследования экономических преступлений)",
+            "Обратитесь в посольство вашей страны в Китае",
+            "Рассмотрите судебные действия с китайским юристом"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В6: Стоит ли использовать поискового агента?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Авторитетный поисковый агент может помочь проверить поставщиков и координировать инспекции. Обычно они берут 3-5% от стоимости заказа. Однако вам все равно нужно проверить полномочия агента."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы проверить своего поставщика?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Получить бесплатную проверку поставщика"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Проверка бизнес-лицензии и экспортных полномочий",
+            "Координация сторонней инспекции (SGS/BV/CCIC)",
+            "Безопасная оплата через Trade Assurance Alibaba",
+            "Составление и проверка двуязычного договора",
+            "Проверка качества перед отгрузкой"
+          ]
         }
       ],
       "zh": [
@@ -9591,12 +10657,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-chinese-car-supplier.jpg",
-          "alt": "Modern car manufacturing facility in China",
-          "caption": "Verifying suppliers includes checking manufacturing facilities and quality control"
-        },
-        {
           "type": "paragraph",
           "text": "红色警报——立即走人： 要求100%预付、无营业执照、拒绝检测、只收Western Union。"
         },
@@ -9604,18 +10664,6 @@
           "type": "heading",
           "level": 2,
           "text": "第一步：核实营业执照"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Supplier verification and business documentation review",
-          "caption": "Thorough supplier verification protects against fraud and quality issues"
         },
         {
           "type": "heading",
@@ -9719,12 +10767,6 @@
           "text": "第二步：核实出口资质"
         },
         {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
-        },
-        {
           "type": "paragraph",
           "text": "中国对二手车出口有专门授权。检查供应商是否在二手车出口试点企业名单上。"
         },
@@ -9753,12 +10795,6 @@
           "type": "heading",
           "level": 2,
           "text": "第三步：检查网络信誉"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/verify-suppliers.jpg",
-          "alt": "Vehicle quality inspection in China",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -10199,6 +11235,189 @@
           "type": "heading",
           "level": 3,
           "text": "免费供应商核实"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "供应商验证评分表"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "对潜在供应商进行评分（每项1-5分）"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "评估标准",
+            "评分",
+            "备注"
+          ],
+          "rows": [
+            [
+              "营业执照已验证（成立时间、注册资本、经营范围）",
+              "/5分",
+              "查询gsxt.gov.cn"
+            ],
+            [
+              "出口资质已确认（在官方名单中）",
+              "/5分",
+              "商务部"
+            ],
+            [
+              "平台信誉（阿里巴巴评分、评价）",
+              "/5分",
+              "≥3年，≥95%好评"
+            ],
+            [
+              "通过第三方检验",
+              "/5分",
+              "SGS/BV/CCIC报告"
+            ],
+            [
+              "付款条款合理（非100%预付）",
+              "/5分",
+              "建议30/70分期"
+            ],
+            [
+              "沟通响应及时且专业",
+              "/5分",
+              "回复快速、清晰"
+            ],
+            [
+              "合同完整（包含所有关键条款）",
+              "/5分",
+              "双语、完整"
+            ],
+            [
+              "可提供参考（过往买家）",
+              "/5分",
+              "能为供应商作证"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "评分指南"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "总分",
+            "评估结果",
+            "行动建议"
+          ],
+          "rows": [
+            [
+              "35-40分",
+              "优秀供应商",
+              "放心合作"
+            ],
+            [
+              "28-34分",
+              "良好供应商",
+              "有少量顾虑，谨慎合作"
+            ],
+            [
+              "20-27分",
+              "一般供应商",
+              "先解决问题再合作"
+            ],
+            [
+              "20分以下",
+              "劣质供应商",
+              "🚫 立即放弃——另找供应商"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见问题"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题1：我可以亲自拜访供应商吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：可以，而且这是最好的验证方法。检查他们的实际地址是否与营业执照一致，以及是否有实际库存。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题2：如果供应商拒绝第三方检验怎么办？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：这是重大危险信号。正规供应商没有什么可隐瞒的。立即另找供应商。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题3：如何验证银行账户？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：银行账户名称必须与营业执照上的公司名称一致。付款前交叉核对两份文件。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题4：阿里巴巴信用保障供应商是否100%安全？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：信用保障在覆盖金额内提供买家保护，但不保证质量。仍需进行尽职调查和检验。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题5：付款后发现欺诈怎么办？"
+        },
+        {
+          "type": "list",
+          "items": [
+            "立即联系平台（阿里巴巴）提交信用保障索赔",
+            "向中国警方报案（经侦大队）",
+            "联系您所在国家的中国驻外使领馆",
+            "考虑与中国律师采取法律行动"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题6：我应该使用采购代理吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：信誉良好的采购代理可以帮助验证供应商并协调检验。他们通常收取订单价值的3-5%作为费用。不过，您仍需验证代理的资质。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备验证您的供应商？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "获取免费供应商验证检查"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "营业执照和出口资质验证",
+            "第三方检验协调（SGS/BV/CCIC）",
+            "通过阿里巴巴信用保障安全付款",
+            "双语合同起草和审核",
+            "发货前质量验证"
+          ]
         }
       ]
     }
@@ -10285,18 +11504,6 @@
           "text": "Why Inspection Is Non-Negotiable"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Imported cars arriving at destination port",
-          "caption": "Quality inspection before export prevents costly issues at destination"
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "Common Issues Found During Pre-Shipment Inspections"
@@ -10356,12 +11563,6 @@
           "type": "heading",
           "level": 2,
           "text": "Pre-Inspection Preparation"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -10441,12 +11642,6 @@
           "type": "heading",
           "level": 2,
           "text": "Complete Inspection Checklist"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -11138,12 +12333,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/used-car-inspection.jpg",
-          "alt": "Cars in a used vehicle lot awaiting inspection",
-          "caption": "Used car inspection requires systematic evaluation of condition and history"
-        },
-        {
           "type": "paragraph",
           "text": "Общее время: ~2 часа."
         },
@@ -11151,18 +12340,6 @@
           "type": "heading",
           "level": 2,
           "text": "Частые проблемы при осмотре"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Imported cars arriving at destination port",
-          "caption": "Quality inspection before export prevents costly issues at destination"
         },
         {
           "type": "table",
@@ -11203,12 +12380,6 @@
           "type": "heading",
           "level": 2,
           "text": "Полный чек-лист осмотра"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -11498,12 +12669,6 @@
           "text": "Кто проводит осмотр?"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Компания",
@@ -11578,6 +12743,121 @@
           "type": "heading",
           "level": 3,
           "text": "Организация профессионального осмотра"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Сколько лет опыта проверки автомобилей?",
+            "Предоставляете ли письменные отчеты с фотографиями?",
+            "Можете ли проверить на наличие повреждений от ДТП и затопления?",
+            "Проверяете ли VIN и документацию?",
+            "Можете ли провести тест-драйв?",
+            "Как быстро вы можете предоставить отчет?",
+            "Предлагаете ли видеоинспекцию (прямая трансляция)?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Совет: запросите видеоинспекцию через WeChat/WhatsApp. Вы можете наблюдать за проверкой автомобиля в реальном времени и задавать вопросы."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Шаблон отчета об инспекции"
+        },
+        {
+          "type": "paragraph",
+          "text": "Используйте этот шаблон для документирования результатов:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Могу ли я провести инспекцию самостоятельно?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Если вы находитесь в Китае, да. Но профессиональный инспектор имеет специализированные инструменты (толщиномер, OBD-сканер, подъемник для днища) и опыт. За $150-$300 это разумная инвестиция."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Что если инспекция выявит проблемы?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: У вас три варианта:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Договориться о снижении цены — используйте оценку стоимости ремонта как рычаг",
+            "Потребовать ремонт перед отправкой — поставщик устраняет проблемы за свой счет",
+            "Отказаться — если проблемы серьезные (повреждение рамы, затопление, проблемы с двигателем)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Стоит ли проводить инспекцию до или после оплаты?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Идеально: внести небольшой депозит (10-30%) → инспекция → оплата остатка. Это дает вам рычаг для переговоров или отказа."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Сколько времени занимает тщательная инспекция?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: 1,5-2 часа для полной инспекции, включая тест-драйв и проверку документации."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Какая самая важная часть инспекции?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Днище и проверка VIN. Скрытые повреждения рамы и подделка VIN — самые дорогие и труднообнаружимые проблемы."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В6: Может ли поставщик организовать инспекцию?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Они могут координировать, но ВЫ должны нанять и оплатить инспектора напрямую. Это гарантирует, что инспектор работает на вас, а не на поставщика."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы проверить ваш автомобиль?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Организовать профессиональную предотгрузочную инспекцию"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Координация сторонней инспекции (SGS/BV/CCIC)",
+            "Двуязычные отчеты об инспекции с фотографиями",
+            "Видеоинспекция в реальном времени через WhatsApp/WeChat",
+            "Инспекция перед оплатой (депозит → инспекция → остаток)"
+          ]
         }
       ],
       "zh": [
@@ -11626,12 +12906,6 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/used-car-inspection.jpg",
-          "alt": "Cars in a used vehicle lot awaiting inspection",
-          "caption": "Used car inspection requires systematic evaluation of condition and history"
-        },
-        {
           "type": "paragraph",
           "text": "总检验时间：约2小时。"
         },
@@ -11639,18 +12913,6 @@
           "type": "heading",
           "level": 2,
           "text": "检验中常见问题"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Imported cars arriving at destination port",
-          "caption": "Quality inspection before export prevents costly issues at destination"
         },
         {
           "type": "table",
@@ -11691,12 +12953,6 @@
           "type": "heading",
           "level": 2,
           "text": "完整检验清单"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -11986,12 +13242,6 @@
           "text": "谁来做检验？"
         },
         {
-          "type": "image",
-          "src": "/images/blog/import-cars-georgia.jpg",
-          "alt": "Used car inspection at Chinese port",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "机构",
@@ -12066,6 +13316,121 @@
           "type": "heading",
           "level": 3,
           "text": "专业装船前检验"
+        },
+        {
+          "type": "list",
+          "items": [
+            "有多少年汽车检验经验？",
+            "是否提供带照片的书面报告？",
+            "能否检测事故和水淹损伤？",
+            "是否验证车架号和文件？",
+            "能否进行路试？",
+            "多快能提供报告？",
+            "是否提供视频检验（直播）？"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "专业提示：通过微信/WhatsApp要求视频检验。您可以实时观看检验员检查车辆并提出问题。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "检验报告模板"
+        },
+        {
+          "type": "paragraph",
+          "text": "使用此模板记录检验结果："
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见问题"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题1：我自己可以做检验吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：如果您在中国境内，可以。但专业检验员有专用工具（漆膜仪、OBD扫描仪、底盘升降机）和专业经验。花费150-300美元是非常值得的投资。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题2：如果检验发现问题怎么办？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：您有三个选择："
+        },
+        {
+          "type": "list",
+          "items": [
+            "协商降价——用维修成本估算作为谈判筹码",
+            "要求发货前维修——供应商自费修复问题",
+            "放弃交易——如果问题严重（车架损伤、水淹、发动机问题）"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题3：应该在付款前还是付款后检验？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：理想做法：支付小额定金（10-30%）→ 检验 → 支付尾款。这样您有谈判或放弃的主动权。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题4：全面检验需要多长时间？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：全面检验（包括路试和文件审核）需要1.5-2小时。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题5：检验中最重要的部分是什么？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：底盘和车架号验证。隐藏的车架损伤和车架号欺诈是最昂贵且最难发现的问题。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题6：供应商可以安排检验吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：他们可以协调安排，但您应该直接雇佣并支付检验员费用。这确保检验员为您工作，而不是为供应商。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备检验您的车辆？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "安排专业发货前检验"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "第三方检验协调（SGS/BV/CCIC）",
+            "带照片的双语检验报告",
+            "通过WhatsApp/微信实时视频检验",
+            "付款前检验（付定金→检验→付尾款）"
+          ]
         }
       ]
     }
@@ -12158,32 +13523,14 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-car-prices-showroom.jpg",
-          "alt": "Electric vehicle charging station with modern EV",
-          "caption": "BYD electric vehicles offer competitive pricing in the Georgian market"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Why BYD Is Growing Fast in Georgia"
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
-        },
-        {
           "type": "heading",
           "level": 3,
           "text": "EV Tax Advantages in Georgia (2026)"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison analysis",
-          "caption": "Comparing total cost of ownership between BYD and Tesla in Georgia"
         },
         {
           "type": "table",
@@ -12237,12 +13584,6 @@
           "type": "heading",
           "level": 2,
           "text": "Detailed Model Breakdown"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -12518,12 +13859,6 @@
           "type": "heading",
           "level": 2,
           "text": "BYD vs Competitors in Georgia"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -12848,21 +14183,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-car-prices-showroom.jpg",
-          "alt": "Electric vehicle charging station with modern EV",
-          "caption": "BYD electric vehicles offer competitive pricing in the Georgian market"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Преимущества ЭМ BYD в Грузии"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "table",
@@ -12895,21 +14218,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison analysis",
-          "caption": "Comparing total cost of ownership between BYD and Tesla in Georgia"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Детали моделей"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -13087,12 +14398,6 @@
           "text": "BYD vs конкуренты в Грузии"
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Модель",
@@ -13207,6 +14512,200 @@
           "type": "heading",
           "level": 3,
           "text": "Цены и наличие"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ключевой вывод: электромобили BYD предлагают на 30-40% лучшую стоимость в Грузии по сравнению с европейскими/американскими конкурентами."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Где купить BYD в Грузии"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Варианты покупки"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Вариант",
+            "Преимущества",
+            "Недостатки"
+          ],
+          "rows": [
+            [
+              "Импорт б/у из Китая",
+              "Самый дешевый (экономия 30-40%), широкий выбор",
+              "Ожидание 6-10 недель"
+            ],
+            [
+              "Местные дилеры (новые)",
+              "Немедленная доставка, местная гарантия",
+              "Наценка 20-30%"
+            ],
+            [
+              "Импорт новых из Китая",
+              "Лучше местной цены, полная гарантия",
+              "Все еще требует времени на доставку"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Рекомендуемый подход"
+        },
+        {
+          "type": "paragraph",
+          "text": "Для лучшей стоимости импортируйте б/у BYD возрастом 1-3 года из Китая:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Уже поглотил наибольшую амортизацию",
+            "Все еще имеет хорошее состояние батареи (80%+ емкости)",
+            "Значительная экономия по сравнению с покупкой нового на месте"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Гарантия и послепродажное обслуживание BYD в Грузии"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Компонент",
+            "Гарантийный срок"
+          ],
+          "rows": [
+            [
+              "Автомобиль",
+              "3 года / 100 000 км"
+            ],
+            [
+              "Батарея (ЭМ)",
+              "8 лет / 150 000 км"
+            ],
+            [
+              "Электродвигатель",
+              "8 лет / 150 000 км"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Вопросы обслуживания"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Фактор",
+            "Статус в Грузии"
+          ],
+          "rows": [
+            [
+              "Официальный дилер BYD",
+              "Растущее присутствие в Тбилиси"
+            ],
+            [
+              "Доступность запчастей",
+              "Улучшается"
+            ],
+            [
+              "Независимые автомастерские",
+              "Ограниченный опыт с ЭМ"
+            ],
+            [
+              "Обслуживание батареи",
+              "Нужно обращаться в авторизованный центр"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Часто задаваемые вопросы"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В1: Надежны ли электромобили BYD?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да. Технология Blade Battery от BYD прошла тест на пробивание гвоздем (строгий тест безопасности). Более 1 миллиона электромобилей BYD продано по всему миру с отличной репутацией надежности."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В2: Могу ли я получить гарантию BYD при импорте из Китая?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Обычно действует международная гарантия BYD. Подтвердите в BYD Грузия перед импортом. Некоторые гарантии могут быть региональными."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Какой самый дешевый BYD импортировать в Грузию?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: BYD F3 (бензин) б/у за $4 500-$6 500. Для электромобилей — BYD Dolphin б/у за $12 000-$16 000."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Сколько служат батареи электромобилей BYD?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: BYD гарантирует 8 лет / 150 000 км. На практике батареи сохраняют 80%+ емкости после 10 лет."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Есть ли зарядная инфраструктура в Грузии?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Да, быстро расширяется:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Тбилиси: 50+ общественных зарядных станций",
+            "Батуми: 20+ общественных зарядных станций",
+            "Шоссейные коридоры: быстрые зарядки каждые 100-150 км",
+            "Домашняя зарядка: подходит обычная розетка 220В"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы заказать BYD?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Получить цены и наличие BYD"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Актуальные цены BYD (FOB + CIF в Поти)",
+            "Отчеты об инспекции автомобиля",
+            "Проверка здоровья батареи (для электромобилей)",
+            "Полная импортная документация"
+          ]
         }
       ],
       "zh": [
@@ -13269,21 +14768,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-car-prices-showroom.jpg",
-          "alt": "Electric vehicle charging station with modern EV",
-          "caption": "BYD electric vehicles offer competitive pricing in the Georgian market"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "电动车在格鲁吉亚的税收优势"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "table",
@@ -13316,21 +14803,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD vs Tesla cost comparison analysis",
-          "caption": "Comparing total cost of ownership between BYD and Tesla in Georgia"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "各车型详解"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -13508,12 +14983,6 @@
           "text": "BYD vs 竞争对手（格鲁吉亚）"
         },
         {
-          "type": "image",
-          "src": "/images/blog/byd-vs-tesla.jpg",
-          "alt": "BYD electric vehicle lineup",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "车型",
@@ -13628,6 +15097,200 @@
           "type": "heading",
           "level": 3,
           "text": "获取报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "关键洞察：在格鲁吉亚，比亚迪电动汽车比欧美竞争对手提供30-40%的更高性价比。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "在格鲁吉亚哪里购买比亚迪"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "购买方式"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "方式",
+            "优势",
+            "劣势"
+          ],
+          "rows": [
+            [
+              "从中国进口二手车",
+              "最便宜（节省30-40%），选择广泛",
+              "需等待6-10周"
+            ],
+            [
+              "本地经销商（新车）",
+              "即时交付，本地保修",
+              "加价20-30%"
+            ],
+            [
+              "从中国进口新车",
+              "比本地价格更优，完整保修",
+              "仍需运输时间"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "推荐方案"
+        },
+        {
+          "type": "paragraph",
+          "text": "为获得最佳性价比，从中国进口1-3年车龄的二手比亚迪："
+        },
+        {
+          "type": "list",
+          "items": [
+            "已承担最大幅度的折旧",
+            "电池健康度良好（容量80%+）",
+            "相比本地购买新车大幅节省成本"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "比亚迪在格鲁吉亚的保修与售后服务"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "部件",
+            "保修范围"
+          ],
+          "rows": [
+            [
+              "整车",
+              "3年/100,000公里"
+            ],
+            [
+              "电池（电动车）",
+              "8年/150,000公里"
+            ],
+            [
+              "电动机",
+              "8年/150,000公里"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "服务注意事项"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "因素",
+            "在格鲁吉亚的现状"
+          ],
+          "rows": [
+            [
+              "比亚迪官方经销商",
+              "在第比利斯不断扩展"
+            ],
+            [
+              "零部件供应",
+              "持续改善中"
+            ],
+            [
+              "独立维修店",
+              "电动车专业知识有限"
+            ],
+            [
+              "电池维修",
+              "必须前往授权中心"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "常见问题"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题1：比亚迪电动车可靠吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：是的。比亚迪刀片电池技术通过了针刺测试（严格的安测试）。全球已售出超过100万辆比亚迪电动车，可靠性记录良好。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题2：从中国进口能获得比亚迪保修吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：通常适用比亚迪国际保修。进口前请与比亚迪格鲁吉亚确认。部分保修可能因地区而异。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题3：进口到格鲁吉亚最便宜的比亚迪是哪款？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：二手比亚迪F3（燃油车）4,500-6,500美元。电动车方面，二手比亚迪海豚12,000-16,000美元。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题4：比亚迪电动车电池能用多久？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：比亚迪保修8年/150,000公里。实际使用中，电池10年后仍能保持80%+容量。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题5：格鲁吉亚有充电基础设施吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：是的，正在快速扩展："
+        },
+        {
+          "type": "list",
+          "items": [
+            "第比利斯：50+公共充电桩",
+            "巴统：20+公共充电桩",
+            "高速公路走廊：每100-150公里有快充站",
+            "家庭充电：标准220V插座即可"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备订购比亚迪？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "获取比亚迪报价和库存"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "实时比亚迪报价（FOB + CIF波季港）",
+            "车辆检验报告",
+            "电池健康度验证（针对电动车）",
+            "完整进口文件"
+          ]
         }
       ]
     }
@@ -13711,12 +15374,6 @@
           "text": "Why Geely Works in African Markets"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Factor",
@@ -13746,21 +15403,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export guide documentation for vehicle shipping",
-          "caption": "Export documentation and compliance for African market entry"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Country-by-Country Import Guide"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -14048,12 +15693,6 @@
           "text": "Shipping Routes to Africa"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Chinese Port",
@@ -14294,21 +15933,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/geely-car-export-africa.jpg",
-          "alt": "Aerial view of car parking lot with vehicles ready for export",
-          "caption": "Geely vehicles prepared for export to African markets"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "Почему Geely популярен в Африке"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
         },
         {
           "type": "table",
@@ -14340,21 +15967,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export guide documentation for vehicle shipping",
-          "caption": "Export documentation and compliance for African market entry"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "По странам"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -14573,12 +16188,6 @@
           "text": "Маршруты доставки"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "Порт Китая",
@@ -14734,6 +16343,56 @@
           "type": "heading",
           "level": 3,
           "text": "Получить расчёт"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В3: Какая модель Geely самая популярная в Африке?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Geely Emgrand (седан) и Geely GX3 (компактный внедорожник) наиболее популярны благодаря доступности и практичности."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В4: Сколько времени занимает доставка в Африку?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: 20-40 дней в зависимости от порта назначения и способа доставки."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "В5: Стоит ли покупать новый или б/у Geely для экспорта в Африку?"
+        },
+        {
+          "type": "paragraph",
+          "text": "О: Для Африки б/у Geely (1-3 года) предлагают лучшую стоимость. Они уже поглотили начальную амортизацию, но все еще в хорошем состоянии."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Готовы экспортировать Geely в Африку?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Получить экспортное предложение Geely"
+        },
+        {
+          "type": "paragraph",
+          "text": "Мы предоставляем:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Рекомендации моделей Geely для вашего рынка",
+            "Актуальные цены FOB + CIF",
+            "Инспекция и проверка автомобиля",
+            "Организация доставки в африканские порты"
+          ]
         }
       ],
       "zh": [
@@ -14783,21 +16442,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/geely-car-export-africa.jpg",
-          "alt": "Aerial view of car parking lot with vehicles ready for export",
-          "caption": "Geely vehicles prepared for export to African markets"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "为什么吉利在非洲受欢迎"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
         },
         {
           "type": "table",
@@ -14829,21 +16476,9 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Export guide documentation for vehicle shipping",
-          "caption": "Export documentation and compliance for African market entry"
-        },
-        {
           "type": "heading",
           "level": 2,
           "text": "各国进口指南"
-        },
-        {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
         },
         {
           "type": "heading",
@@ -15062,12 +16697,6 @@
           "text": "shipping 路线"
         },
         {
-          "type": "image",
-          "src": "/images/blog/ev-export-guide.jpg",
-          "alt": "Chinese vehicles ready for Africa export",
-          "caption": ""
-        },
-        {
           "type": "table",
           "headers": [
             "中国港口",
@@ -15223,6 +16852,56 @@
           "type": "heading",
           "level": 3,
           "text": "获取报价"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题3：非洲最受欢迎的吉利车型是哪款？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：吉利帝豪（轿车）和吉利GX3（紧凑型SUV）因价格实惠和实用性强而最受欢迎。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题4：运往非洲需要多长时间？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：20-40天，具体取决于目的港和运输方式。"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "问题5：出口非洲应该买新车还是二手车？"
+        },
+        {
+          "type": "paragraph",
+          "text": "回答：对于非洲市场，1-3年车龄的二手吉利性价比最高。它们已承担初始折旧，但车况仍然良好。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "准备将吉利出口到非洲？"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "获取吉利出口报价"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们提供："
+        },
+        {
+          "type": "list",
+          "items": [
+            "针对您市场的吉利车型推荐",
+            "实时FOB + CIF报价",
+            "车辆检验和验证",
+            "非洲港口运输安排"
+          ]
         }
       ]
     }
