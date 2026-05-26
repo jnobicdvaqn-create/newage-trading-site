@@ -33,20 +33,57 @@ const indexSchema: Record<string, unknown> = {
   "name": "YunBao International Trading",
   "url": "https://newage-trading.com",
   "logo": "https://newage-trading.com/images/logo.png",
+  "image": "https://newage-trading.com/images/og-default.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Beijing",
     "addressCountry": "China"
   },
-};
-if (contact.whatsappNumber !== 'WHATSAPP_NUMBER') {
-  indexSchema.contactPoint = {
+  "contactPoint": {
     "@type": "ContactPoint",
     "telephone": `+${contact.whatsappNumber}`,
     "contactType": "sales",
     "availableLanguage": ["English", "Russian", "Chinese"]
-  };
-}
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "Worldwide"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 25,
+          "maxValue": 35,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnDays": null,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+};
 
 const services = [
   {

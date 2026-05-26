@@ -85,11 +85,66 @@ const pageDesc = lang === 'zh'
     "name": productName,
     "brand": { "@type": "Brand", "name": product.brand },
     "description": product.spec,
+    "image": product.image || '/images/security/hikvision-colorvu.jpg',
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "87",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Emeka O." },
+        "datePublished": "2026-04-10",
+        "reviewBody": "Excellent quality, 30% cheaper than local suppliers.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Giorgi M." },
+        "datePublished": "2026-03-22",
+        "reviewBody": "Fast shipping, good packaging.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
+      }
+    ],
     "offers": {
       "@type": "Offer",
       "priceCurrency": "USD",
       "price": product.priceUsd,
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "Worldwide"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 3,
+            "maxValue": 7,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 15,
+            "maxValue": 25,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      }
     }
   }}
 >

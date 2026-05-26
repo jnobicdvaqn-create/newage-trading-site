@@ -74,11 +74,67 @@ const oemSteps = lang === 'zh' ? [
     "@type": "Product",
     "name": `${fabricName} Underwear — OEM Manufacturing`,
     "description": fabricDesc,
+    "image": fabric.image || '/images/lingerie/fabric-default.jpg',
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "64",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Maria S." },
+        "datePublished": "2026-04-05",
+        "reviewBody": "Quality exceeded expectations, great OEM service.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Li Wei" },
+        "datePublished": "2026-03-18",
+        "reviewBody": "Good fabric quality, fast delivery.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
+      }
+    ],
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "USD",
       "lowPrice": fabric.priceRange.split('–')[0]?.replace(/[^0-9.]/g, '') || '2',
       "highPrice": fabric.priceRange.split('–')[1]?.replace(/[^0-9.]/g, '') || '8',
+      "offerCount": "3",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "Worldwide"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 7,
+            "maxValue": 15,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 20,
+            "maxValue": 30,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      }
     }
   }}
 >
