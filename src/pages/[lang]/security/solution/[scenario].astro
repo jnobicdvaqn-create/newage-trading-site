@@ -71,22 +71,28 @@ const descText = lang === 'zh'
 
   <!-- Hero -->
   <section class="bg-gradient-to-br from-[#0f2440] to-[#1e3a5f] text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-6xl block mb-4">{scenario.icon}</span>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">{scName}</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">{scDesc}</p>
-      <div class="flex flex-wrap justify-center gap-6">
-        <div class="bg-white/10 rounded-lg px-6 py-4">
-          <div class="text-sm text-gray-400">{lang === 'zh' ? '摄像头' : lang === 'ru' ? 'Камеры' : 'Cameras'}</div>
-          <div class="text-xl font-bold text-[#c4a35a]">{scCameraCount}</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">{scName}</h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-8">{scDesc}</p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-6">
+            <div class="bg-white/10 rounded-lg px-6 py-4">
+              <div class="text-sm text-gray-400">{lang === 'zh' ? '摄像头' : lang === 'ru' ? 'Камеры' : 'Cameras'}</div>
+              <div class="text-xl font-bold text-[#c4a35a]">{scCameraCount}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-6 py-4">
+              <div class="text-sm text-gray-400">{lang === 'zh' ? '存储' : lang === 'ru' ? 'Хранилище' : 'Storage'}</div>
+              <div class="text-lg font-bold">{scStorage}</div>
+            </div>
+            <div class="bg-white/10 rounded-lg px-6 py-4">
+              <div class="text-sm text-gray-400">{lang === 'zh' ? '预算' : lang === 'ru' ? 'Бюджет' : 'Budget'}</div>
+              <div class="text-xl font-bold text-[#c4a35a]">{scCost}</div>
+            </div>
+          </div>
         </div>
-        <div class="bg-white/10 rounded-lg px-6 py-4">
-          <div class="text-sm text-gray-400">{lang === 'zh' ? '存储' : lang === 'ru' ? 'Хранилище' : 'Storage'}</div>
-          <div class="text-lg font-bold">{scStorage}</div>
-        </div>
-        <div class="bg-white/10 rounded-lg px-6 py-4">
-          <div class="text-sm text-gray-400">{lang === 'zh' ? '预算' : lang === 'ru' ? 'Бюджет' : 'Budget'}</div>
-          <div class="text-xl font-bold text-[#c4a35a]">{scCost}</div>
+        <div class="rounded-2xl overflow-hidden">
+          <img src={`/images/security/${scenario.id}.jpg`} alt={scName} class="w-full h-80 object-cover" />
         </div>
       </div>
     </div>
@@ -113,12 +119,16 @@ const descText = lang === 'zh'
       <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8">{lang === 'zh' ? '推荐设备' : lang === 'ru' ? 'Рекомендуемое оборудование' : 'Recommended Equipment'}</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {recommendedProducts.map(p => (
-          <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6 group">
-            <span class="text-3xl block mb-3">📷</span>
+          <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
+            <div class="h-40 overflow-hidden">
+              <img src={`/images/security/${p.image || 'hikvision-colorvu.jpg'}`} alt={tData(p, 'name', lang)} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
             <div class="text-xs text-[#c4a35a] font-bold mb-1">{p.brand}</div>
             <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm mb-2">{tData(p, 'name', lang)}</h3>
             <p class="text-xs text-gray-500 mb-2">{p.spec}</p>
             <p class="text-lg font-bold text-[#c4a35a]">${p.priceUsd}</p>
+            </div>
           </a>
         ))}
       </div>
@@ -192,9 +202,13 @@ const descText = lang === 'zh'
       <h2 class="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">{lang === 'zh' ? '其他安防方案' : lang === 'ru' ? 'Другие решения' : 'Other Security Solutions'}</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {otherSolutions.map(s => (
-          <a href={`/${lang}/security/solution/${s.id}/`} class="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow text-center group">
-            <span class="text-3xl block mb-2">{s.icon}</span>
+          <a href={`/${lang}/security/solution/${s.id}/`} class="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow group">
+            <div class="h-32 overflow-hidden">
+              <img src={`/images/security/${s.id}.jpg`} alt={tData(s, 'name', lang)} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-4 text-center">
             <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm">{tData(s, 'name', lang)}</h3>
+            </div>
           </a>
         ))}
       </div>

@@ -14,9 +14,10 @@ const {
   subtitle = t('home.blogSubtitle', lang),
 } = Astro.props;
 
-// Latest blog posts
+// Latest blog posts with cover images
 const posts = [
   {
+    image: '/images/blog/export-cars-to-ghana.jpg',
     date: '2026-05-20',
     category: { en: 'Cars', ru: 'Автомобили', zh: '汽车' },
     title: {
@@ -32,6 +33,7 @@ const posts = [
     link: `/${lang}/blog/africa-zero-tariff-2026/`,
   },
   {
+    image: '/images/blog/top-security-cameras.jpg',
     date: '2026-05-18',
     category: { en: 'Security', ru: 'Безопасность', zh: '安防' },
     title: {
@@ -63,16 +65,25 @@ const readMoreText = t('common.readMore', lang);
         href={post.link}
         class="group flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-white transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-primary)]/10"
       >
-        <!-- Header -->
-        <div class="flex items-center gap-3 px-6 pt-6">
-          <span class="rounded-full bg-[var(--color-accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--color-accent)]">
-            {post.category[lang] || post.category.en}
-          </span>
-          <span class="text-xs text-[var(--color-text-light)]">{post.date}</span>
+        <!-- 封面图 -->
+        <div class="relative h-48 overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.title[lang] || post.title.en}
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
 
-        <!-- Content -->
-        <div class="flex flex-1 flex-col p-6 pt-4">
+        <!-- 内容 -->
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="rounded-full bg-[var(--color-accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--color-accent)]">
+              {post.category[lang] || post.category.en}
+            </span>
+            <span class="text-xs text-[var(--color-text-light)]">{post.date}</span>
+          </div>
           <h3 class="text-lg font-bold font-[var(--font-heading)] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
             {post.title[lang] || post.title.en}
           </h3>
