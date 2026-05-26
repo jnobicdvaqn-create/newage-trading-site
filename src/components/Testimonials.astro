@@ -1,0 +1,102 @@
+---
+import type { Locale } from '@i18n/types';
+import { t } from '@i18n/index';
+
+export interface Props {
+  lang?: Locale;
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  lang = 'en' as Locale,
+  title = t('home.testimonialsTitle', lang),
+  subtitle = t('home.testimonialsSubtitle', lang),
+} = Astro.props;
+
+// Customer testimonials with flags and ratings
+const testimonials = [
+  {
+    quote: {
+      en: '"Great service, fast delivery to Tbilisi. The BYD Seal arrived in perfect condition."',
+      ru: '"Отличный сервис, быстрая доставка в Тбилиси. BYD Seal пришёл в идеальном состоянии."',
+      zh: '"服务很好，运到第比利斯很快。比亚迪海豹完好无损。"',
+    },
+    name: 'Giorgi M.',
+    location: { en: 'Tbilisi, Georgia', ru: 'Тбилиси, Грузия', zh: '第比利斯，格鲁吉亚' },
+    flag: '🇬🇪',
+    rating: 5,
+  },
+  {
+    quote: {
+      en: '"Found reliable lingerie factory through YunBao. Quality exceeded our expectations."',
+      ru: '"Нашли надёжную фабрику белья через YunBao. Качество превзошло наши ожидания."',
+      zh: '"通过云豹找到了靠谱的内衣工厂。质量超出预期。"',
+    },
+    name: 'Maria S.',
+    location: { en: 'São Paulo, Brazil', ru: 'Сан-Паулу, Бразилия', zh: '圣保罗，巴西' },
+    flag: '🇧🇷',
+    rating: 5,
+  },
+  {
+    quote: {
+      en: '"Security equipment prices 30% lower than local suppliers. Will reorder."',
+      ru: '"Цены на安防 оборудование на 30% ниже местных поставщиков. закажу ещё."',
+      zh: '"安防设备价格比本地供应商低30%。会再次下单。"',
+    },
+    name: 'Emeka O.',
+    location: { en: 'Lagos, Nigeria', ru: 'Лагос, Нигерия', zh: '拉各斯，尼日利亚' },
+    flag: '🇳🇬',
+    rating: 4,
+  },
+];
+
+const basedOnFeedback = t('home.testimonialsNote', lang);
+---
+
+<section class="container-section">
+  <div class="text-center mb-12">
+    <h2 class="section-title mb-4">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {testimonials.map((item) => (
+      <div class="flex flex-col rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-sm">
+        <!-- Stars -->
+        <div class="mb-4 flex gap-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              class={`h-5 w-5 ${i < item.rating ? 'text-yellow-400' : 'text-gray-200'}`}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+
+        <!-- Quote -->
+        <blockquote class="flex-1 text-[var(--color-text-light)] leading-relaxed">
+          {item.quote[lang] || item.quote.en}
+        </blockquote>
+
+        <!-- Author -->
+        <div class="mt-6 flex items-center gap-3 border-t border-[var(--color-border)] pt-4">
+          <span class="text-2xl">{item.flag}</span>
+          <div>
+            <div class="font-semibold text-[var(--color-text)]">{item.name}</div>
+            <div class="text-sm text-[var(--color-text-light)]">
+              {item.location[lang] || item.location.en}
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Disclaimer -->
+  <p class="mt-8 text-center text-xs text-[var(--color-text-light)]">
+    {basedOnFeedback}
+  </p>
+</section>
