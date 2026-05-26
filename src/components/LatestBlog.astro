@@ -1,0 +1,94 @@
+---
+import type { Locale } from '@i18n/types';
+import { t } from '@i18n/index';
+
+export interface Props {
+  lang?: Locale;
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  lang = 'en' as Locale,
+  title = t('home.blogTitle', lang),
+  subtitle = t('home.blogSubtitle', lang),
+} = Astro.props;
+
+// Latest blog posts
+const posts = [
+  {
+    date: '2026-05-20',
+    category: { en: 'Cars', ru: 'Автомобили', zh: '汽车' },
+    title: {
+      en: 'Africa Zero-Tariff Policy 2026: What It Means for Importers',
+      ru: 'Политика нулевых тарифов в Африке 2026: что значит для импортеров',
+      zh: '2026非洲零关税新政：进口商机遇解读',
+    },
+    excerpt: {
+      en: 'Understanding the latest export policy changes and market opportunities.',
+      ru: 'Понимание последних изменений экспортной политики и рыночных возможностей.',
+      zh: '解读最新出口政策变化和市场机遇。',
+    },
+    link: `/${lang}/blog/africa-zero-tariff-2026/`,
+  },
+  {
+    date: '2026-05-18',
+    category: { en: 'Security', ru: 'Безопасность', zh: '安防' },
+    title: {
+      en: 'Thermal Camera Export Compliance Guide',
+      ru: 'Руководство по экспорту тепловизоров',
+      zh: '热成像仪出口合规指南',
+    },
+    excerpt: {
+      en: 'Learn about dual-use item regulations and certification requirements.',
+      ru: 'Узнайте о правилах двойного назначения и требованиях к сертификации.',
+      zh: '了解两用物项管制要求和认证流程。',
+    },
+    link: `/${lang}/blog/thermal-camera-export-guide/`,
+  },
+];
+
+const readMoreText = t('common.readMore', lang);
+---
+
+<section class="container-section bg-[var(--color-bg)]">
+  <div class="text-center mb-12">
+    <h2 class="section-title mb-4">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {posts.map((post) => (
+      <a
+        href={post.link}
+        class="group flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-white transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-primary)]/10"
+      >
+        <!-- Header -->
+        <div class="flex items-center gap-3 px-6 pt-6">
+          <span class="rounded-full bg-[var(--color-accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--color-accent)]">
+            {post.category[lang] || post.category.en}
+          </span>
+          <span class="text-xs text-[var(--color-text-light)]">{post.date}</span>
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-1 flex-col p-6 pt-4">
+          <h3 class="text-lg font-bold font-[var(--font-heading)] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
+            {post.title[lang] || post.title.en}
+          </h3>
+          <p class="mt-2 text-sm text-[var(--color-text-light)] line-clamp-2">
+            {post.excerpt[lang] || post.excerpt.en}
+          </p>
+          <div class="mt-auto pt-4">
+            <span class="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]">
+              {readMoreText}
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

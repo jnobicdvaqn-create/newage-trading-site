@@ -3,6 +3,10 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/Hero.astro';
 import ServiceCard from '@components/ServiceCard.astro';
 import TrustBadges from '@components/TrustBadges.astro';
+import FeaturedProducts from '@components/FeaturedProducts.astro';
+import Testimonials from '@components/Testimonials.astro';
+import PartnerLogos from '@components/PartnerLogos.astro';
+import LatestBlog from '@components/LatestBlog.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
 import { contact } from '@config/contact';
@@ -136,4 +140,16 @@ const services = [
     subtitle={t('home.trustDesc', lang)}
     items={trustItems}
   />
+
+  <!-- Featured Products -->
+  <FeaturedProducts lang={lang} />
+
+  <!-- Testimonials -->
+  <Testimonials lang={lang} />
+
+  <!-- Partners & Certifications -->
+  <PartnerLogos lang={lang} />
+
+  <!-- Latest Blog Posts -->
+  <LatestBlog lang={lang} />
 </BaseLayout>
