@@ -106,6 +106,22 @@ const langOg: Record<string, string> = {
     <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", ...schema })} />
   )}
 
+  <!-- Organization Schema (Merchant Info for GSC) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "YunBao International Trading",
+    "url": "https://newage-trading.com",
+    "image": "https://newage-trading.com/images/og-default.jpg",
+    "logo": "https://newage-trading.com/images/og-default.jpg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "url": "https://newage-trading.com/en/contact/",
+      "availableLanguage": ["English", "Chinese", "Russian"]
+    }
+  })} />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFZWMWJRKX"></script>
   <script is:inline>
