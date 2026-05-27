@@ -35,7 +35,7 @@ const currentPath = Astro.url.pathname;
 // Fix trailing slash / double slash
 const cleanPath = currentPath.replace(/\/$/, '').replace(/\/\//g, '/');
 const fullUrl = canonical || `${siteUrl}${cleanPath}`;
-const ogImage = image || `${siteUrl}/images/og-default.jpg`;
+const ogImage = image || `${siteUrl}/images/og-default.svg`;
 const altLinks = alternates(
   lang,
   currentPath === `/${lang}/` ? '/' : currentPath.replace(`/${lang}`, '')
@@ -112,8 +112,8 @@ const langOg: Record<string, string> = {
     "@type": "Organization",
     "name": "YunBao International Trading",
     "url": "https://newage-trading.com",
-    "image": "https://newage-trading.com/images/og-default.jpg",
-    "logo": "https://newage-trading.com/images/og-default.jpg",
+    "image": "https://newage-trading.com/images/og-default.svg",
+    "logo": "https://newage-trading.com/images/og-default.svg",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
