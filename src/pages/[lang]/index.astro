@@ -25,7 +25,7 @@ const trustItems = [
   { title: t('home.trustQuality', lang), description: t('home.trustQualityDesc', lang), icon: 'quality' as const },
   { title: t('home.trustLogistics', lang), description: t('home.trustLogisticsDesc', lang), icon: 'logistics' as const },
   { title: t('home.trustSupport', lang), description: t('home.trustSupportDesc', lang), icon: 'support' as const },
-  { title: t('home.trustQuality', lang), description: 'ISO 9001, CE, FCC certified partners', icon: 'certified' as const },
+  { title: t('home.trustCertified', lang), description: t('home.trustCertifiedDesc', lang), icon: 'certified' as const },
 ];
 
 const indexSchema: Record<string, unknown> = {
@@ -138,7 +138,7 @@ const services = [
       <h2 class="section-title mb-4">{t('home.servicesTitle', lang)}</h2>
       <p class="section-subtitle">{t('home.servicesSubtitle', lang)}</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {services.map(service => (
         <ServiceCard
           image={service.image}

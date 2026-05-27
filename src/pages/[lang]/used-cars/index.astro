@@ -15,35 +15,49 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Locale };
 
 const models = [
-  { name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', image: '/images/cars/used-toyota-corolla.jpg', category: 'fuel' },
+  { name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts available globally', reasonZh: '可靠、省油、配件全球可达', reasonRu: 'Надежный, экономичный, запчасти доступны везде', image: '/images/cars/used-toyota-corolla.jpg', category: 'fuel' },
   { name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', image: '/images/cars/used-nissan-sunny.jpg', category: 'fuel' },
-  { name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', image: '/images/cars/used-honda-fit.jpg', category: 'fuel' },
-  { name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', image: '/images/cars/used-greatwall-pickup.jpg', category: 'truck' },
+  { name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия топлива', image: '/images/cars/used-honda-fit.jpg', category: 'fuel' },
+  { name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступная цена', image: '/images/cars/used-greatwall-pickup.jpg', category: 'truck' },
   { name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', image: '/images/cars/used-jmc-pickup.jpg', category: 'truck' },
-  { name: 'BYD Qin Plus / EV Sedan', nameZh: '比亚迪秦 Plus / 电动轿车', nameRu: 'BYD Qin Plus / EV седан', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', image: '/images/cars/used-byd-e6.jpg', category: 'ev' },
+  { name: 'BYD Qin Plus / EV Sedan', nameZh: '比亚迪秦 Plus / 电动轿车', nameRu: 'BYD Qin Plus / EV седан', year: '2022-2024', price: '$8,000-15,000', reason: 'Low running cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость эксплуатации, будущее', image: '/images/cars/used-byd-e6.jpg', category: 'ev' },
 ];
 
 const countries = [
-  { name: 'Nigeria', nameZh: '尼日利亚', nameRu: 'Нигерия', priority: 5, cert: 'SONCAP', reason: 'Largest population, biggest demand' },
-  { name: 'Ghana', nameZh: '加纳', nameRu: 'Гана', priority: 5, cert: 'None required', reason: 'Friendly policy, smooth clearance' },
-  { name: 'Kenya', nameZh: '肯尼亚', nameRu: 'Кения', priority: 4, cert: 'PVOC', reason: 'East Africa hub, mature market' },
-  { name: 'Egypt', nameZh: '埃及', nameRu: 'Египет', priority: 3, cert: 'GOEIC', reason: '100M+ population, NEV tariff-free' },
-  { name: 'Ivory Coast', nameZh: '科特迪瓦', nameRu: 'Кот-д\'Ивуар', priority: 2, cert: 'Pre-shipment', reason: 'Francophone West Africa' },
-  { name: 'Senegal', nameZh: '塞内加尔', nameRu: 'Сенегал', priority: 2, cert: 'Pre-shipment', reason: 'Francophone West Africa' },
+  { name: 'Nigeria', nameZh: '尼日利亚', nameRu: 'Нигерия', priority: 5, cert: 'SONCAP', reason: 'Largest population, strong demand for sedans and pickups', reasonZh: '人口基数大，轿车、皮卡和商用车需求强，认证和清关要求需提前核验', reasonRu: 'Крупнейшее население, высокий спрос на седаны и пикапы' },
+  { name: 'Ghana', nameZh: '加纳', nameRu: 'Гана', priority: 5, cert: '需确认', reason: 'Tema port has mature import routes, ideal for West African market entry', reasonZh: 'Tema 港具备较成熟的进口路径，适合作为西非市场试单和样板市场', reasonRu: 'Порт Тема имеет зрелые импортные маршруты' },
+  { name: 'Kenya', nameZh: '肯尼亚', nameRu: 'Кения', priority: 4, cert: 'PVOC', reason: 'East Africa hub, mature market with age and inspection requirements', reasonZh: '东非重要汽车消费和转口市场，二手车年限、检测和认证要求需重点确认', reasonRu: 'Восточноафриканский хаб, зрелый рынок' },
+  { name: 'Egypt', nameZh: '埃及', nameRu: 'Египет', priority: 3, cert: 'GOEIC', reason: 'Large North African market, NEV and fuel policies differ significantly', reasonZh: '北非大市场，新能源车和燃油车政策差异较大，需逐单确认进口条件', reasonRu: 'Крупный рынок Северной Африки' },
+  { name: 'Ivory Coast', nameZh: '科特迪瓦', nameRu: 'Кот-д\'Ивуар', priority: 2, cert: '装运前检验', reason: 'Francophone West Africa, expand after establishing base in Ghana', reasonZh: '法语西非市场，可作为区域拓展市场，需结合当地代理能力推进', reasonRu: 'Франкоязычная Западная Африка' },
+  { name: 'Senegal', nameZh: '塞内加尔', nameRu: 'Сенегал', priority: 2, cert: '装运前检验', reason: 'Francophone West Africa, suitable expansion after Ghana/Côte d\'Ivoire', reasonZh: '法语西非市场，适合在加纳或科特迪瓦样板跑通后再扩展', reasonRu: 'Франкоязычная Западная Африка' },
 ];
 
 const steps = [
-  { title: 'Qualification & Certification', titleZh: '资质与认证', titleRu: 'Квалификация и сертификация', desc: 'Verify export qualification and obtain target country certifications (SONCAP, PVOC, etc.)', descZh: '确认出口资质，办理目标国认证（SONCAP/PVOC等）', descRu: 'Проверьте квалификацию экспорта и получите сертификацию', icon: '📋' },
-  { title: 'Vehicle Sourcing & Inspection', titleZh: '车辆采购与检测', titleRu: 'Закупка и проверка', desc: 'Source vehicles from verified suppliers, conduct thorough inspection and battery health check', descZh: '从认证供应商采购，进行全面检测和电池健康检查', descRu: 'Закупка у проверенных поставщиков, полная проверка', icon: '🔍' },
+  { title: 'Qualification & Certification', titleZh: '资质与认证', titleRu: 'Квалификация и сертификация', desc: 'Verify export qualification and obtain target country certifications (SONCAP, PVOC, etc.)', descZh: '确认出口资质，办理目标国认证（SONCAP/PVOC等），各国要求不同需逐单确认', descRu: 'Проверьте квалификацию экспорта и получите сертификацию', icon: '📋' },
+  { title: 'Vehicle Sourcing & Inspection', titleZh: '车辆采购与检测', titleRu: 'Закупка и проверка', desc: 'Source vehicles from verified suppliers, conduct thorough inspection and battery health check', descZh: '从认证供应商采购，进行全面检测和电池健康检查（新能源车）', descRu: 'Закупка у проверенных поставщиков, полная проверка', icon: '🔍' },
   { title: 'Shipping & Customs', titleZh: '运输与清关', titleRu: 'Доставка и таможня', desc: 'Arrange RoRo or container shipping, handle export/import customs clearance', descZh: '安排滚装船或集装箱运输，办理进出口清关', descRu: 'Организация доставки и таможенного оформления', icon: '🚢' },
   { title: 'Delivery & After-Sales', titleZh: '交付与售后', titleRu: 'Доставка и послепродажное обслуживание', desc: 'Local partner delivery, spare parts supply, and after-sales support', descZh: '本地合作伙伴交付、配件供应和售后支持', descRu: 'Доставка местным партнером, запчасти, поддержка', icon: '🤝' },
 ];
 
 const paymentMethods = [
-  { method: 'Letter of Credit (L/C)', methodZh: '信用证 (L/C)', methodRu: 'Аккредитив (L/C)', desc: 'Bank guarantee, safest', descZh: '银行兜底，最安全', descRu: 'Банковская гарантия', priority: '✅ First Choice', priorityZh: '✅ 首选', priorityRu: '✅ Первый выбор' },
-  { method: 'T/T (Pre-payment)', methodZh: 'T/T 预付款', methodRu: 'T/T (Предоплата)', desc: '100% before shipment', descZh: '发货前全款，适合老客户', descRu: '100% предоплата', priority: '⚠️ Conditional', priorityZh: '⚠️ 有条件', priorityRu: '⚠️ С условиями' },
-  { method: 'T/T (Post-payment)', methodZh: 'T/T 后付款', methodRu: 'T/T (Постоплата)', desc: 'Payment after delivery', descZh: '后付款，拖欠风险高', descRu: 'Оплата после', priority: '❌ Avoid', priorityZh: '❌ 避免', priorityRu: '❌ Избегать' },
+  { method: 'Letter of Credit (L/C)', methodZh: '信用证 (L/C)', methodRu: 'Аккредитив (L/C)', desc: 'Bank guarantee, safest for both parties', descZh: '银行兜底，对双方最安全', descRu: 'Банковская гарантия, самый безопасный', priority: '✅ 首选', priorityZh: '✅ 首选', priorityRu: '✅ Первый выбор' },
+  { method: 'T/T (Pre-payment)', methodZh: 'T/T 预付款', methodRu: 'T/T (Предоплата)', desc: 'Suitable for established clients', descZh: '适合老客户，发货前全款', descRu: '100% предоплата', priority: '⚠️ 有条件', priorityZh: '⚠️ 有条件', priorityRu: '⚠️ С условиями' },
+  { method: 'T/T (Post-payment)', methodZh: 'T/T 后付款', methodRu: 'T/T (Постоплата)', desc: 'High risk of delayed payment', descZh: '后付款，拖欠风险高，谨慎使用', descRu: 'Оплата после доставки, высокий риск', priority: '❌ 避免', priorityZh: '❌ 避免', priorityRu: '❌ Избегать' },
 ];
+
+// 多语言业务定位扩展
+const marketExtension = {
+  en: 'In addition to African markets, we can also evaluate vehicle sourcing, cost structures, and entry conditions for Georgia, Central Asia, West Asia, Russia, and select European markets based on customer requirements.',
+  zh: '除非洲市场外，我们也可根据客户需求，对格鲁吉亚、中亚、西亚、俄罗斯及欧洲部分市场进行车型适配、费用结构和准入条件评估。',
+  ru: 'Помимо африканских рынков, мы также можем оценить подбор автомобилей, структуру расходов и условия входа для Грузии, Центральной Азии, Западной Азии, России и отдельных европейских рынков.',
+};
+
+// 免责声明
+const disclaimer = {
+  en: 'Vehicle import policies, certification requirements, age limits, emission standards, taxes, and customs clearance procedures in each country may change at any time. The content on this page is for preliminary business communication only and does not constitute a final quotation, customs clearance commitment, or legal/tax advice. Before formal shipment, the destination country\'s customs broker, inspection agency, importer, and our team should jointly review all details.',
+  zh: '各国车辆进口政策、认证要求、车龄限制、排放标准、税费和清关流程可能随时调整。页面内容仅用于初步业务沟通，不构成最终报价、清关承诺或法律/税务意见。正式发货前，应由目的国清关代理、检测机构、进口商和我方共同复核。',
+  ru: 'Политика импорта автомобилей, требования сертификации, возрастные ограничения, стандарты выбросов, налоги и таможенные процедуры в каждой стране могут изменяться в любое время. Содержание этой страницы предназначено только для предварительного делового общения.',
+};
 ---
 
 <BaseLayout
@@ -66,7 +80,7 @@ const paymentMethods = [
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{t('usedCars.heroTitle', lang)}</h1>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">{t('usedCars.heroSubtitle', lang)}</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '获取免费报价' : lang === 'ru' ? 'Получить报价' : 'Get Free Quote'}</a>
+        <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '获取免费报价' : lang === 'ru' ? 'Получить расчёт' : 'Get Free Quote'}</a>
         <a href={`/${lang}/cars/`} class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-white hover:text-[var(--color-primary)]">{lang === 'zh' ? '查看新车出口' : lang === 'ru' ? 'Новые автомобили' : 'View New Car Export'}</a>
       </div>
     </div>
@@ -83,7 +97,14 @@ const paymentMethods = [
         {models.map((model) => (
           <div class="bg-white rounded-xl overflow-hidden border border-[var(--color-border)] hover:shadow-lg hover:-translate-y-1 transition-all">
             <div class="relative h-48 overflow-hidden">
-              <img src={model.image} alt={lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name} class="w-full h-full object-cover" loading="lazy" />
+              <img 
+                src={model.image} 
+                alt={lang === 'zh' ? `${model.nameZh} 二手车` : lang === 'ru' ? `${model.nameRu} б/у автомобиль` : `${model.name} used car`} 
+                class="w-full h-full object-cover" 
+                loading="lazy" 
+                width="800"
+                height="450"
+              />
             </div>
             <div class="p-6">
             <h3 class="text-xl font-bold text-[var(--color-text)] mb-1">{lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}</h3>
@@ -115,10 +136,10 @@ const paymentMethods = [
               <h3 class="text-xl font-bold text-[var(--color-text)]">{lang === 'zh' ? c.nameZh : lang === 'ru' ? c.nameRu : c.name}</h3>
               <span class="text-lg">{'⭐'.repeat(c.priority)}</span>
             </div>
-            <p class="text-[var(--color-text-light)] text-sm mb-3">{c.reason}</p>
+            <p class="text-[var(--color-text-light)] text-sm mb-3">{lang === 'zh' ? c.reasonZh : lang === 'ru' ? c.reasonRu : c.reason}</p>
             <div class="flex items-center gap-2 text-sm">
-              <span class="text-muted">{lang === 'zh' ? '认证：' : lang === 'ru' ? 'Сертификация: ' : 'Cert: '}</span>
-              <span class="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 font-medium">{c.cert}</span>
+              <span class="text-muted">{lang === 'zh' ? '认证/准入：' : lang === 'ru' ? 'Сертификация: ' : 'Cert/Entry: '}</span>
+              <span class="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 font-medium">{lang === 'zh' ? `需按目的国政策、车辆年份和排放标准逐单确认（参考：${c.cert}）` : lang === 'ru' ? `Требуется подтверждение по каждой партии (справка: ${c.cert})` : `Subject to destination policy, vehicle year, and emission standards (ref: ${c.cert})`}</span>
             </div>
           </div>
         ))}
@@ -153,26 +174,36 @@ const paymentMethods = [
     </div>
   </section>
 
+  <!-- Market Extension Note -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-[var(--color-text-light)] text-base leading-relaxed">
+        {marketExtension[lang as 'en' | 'zh' | 'ru'] ?? marketExtension.en}
+      </p>
+    </div>
+  </section>
+
   <!-- Certification & Payment -->
   <section class="container-section">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div class="bg-white rounded-xl p-8 border border-[var(--color-border)]">
           <h3 class="text-2xl font-bold text-[var(--color-text)] mb-4">{lang === 'zh' ? '📜 认证支持' : lang === 'ru' ? '📜 Сертификация' : '📜 Certification'}</h3>
-          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '非洲各国对进口汽车有严格的认证要求。没有认证就发货会导致车辆到港被扣，罚款+仓储费一单亏损十万起步。我们提供全套认证代办服务。' : lang === 'ru' ? 'Африканские страны требуют строгую сертификацию. Без сертификации товар будет задержан в порту.' : 'African countries have strict certification requirements. Shipping without certification results in cargo seizure at port.'}</p>
+          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '各国对进口汽车有不同认证要求。提前确认认证条件可避免车辆到港被扣、罚款和额外仓储费用。我们提供认证咨询和代办服务，具体要求和周期因目的国而异。' : lang === 'ru' ? 'Разные страны требуют разной сертификации. Заблаговременное подтверждение поможет избежать задержек в порту.' : 'Different countries have different certification requirements. Advance confirmation helps avoid port delays and penalties.'}</p>
           <table class="w-full text-sm">
-            <thead class="bg-gray-50"><tr><th class="px-4 py-2 text-left">{lang === 'zh' ? '国家' : lang === 'ru' ? 'Страна' : 'Country'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '认证' : lang === 'ru' ? 'Сертификация' : 'Certification'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '周期' : lang === 'ru' ? 'Срок' : 'Timeline'}</th></tr></thead>
+            <thead class="bg-gray-50"><tr><th class="px-4 py-2 text-left">{lang === 'zh' ? '国家' : lang === 'ru' ? 'Страна' : 'Country'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '参考认证' : lang === 'ru' ? 'Справочная сертификация' : 'Ref. Certification'}</th><th class="px-4 py-2 text-left">{lang === 'zh' ? '参考周期' : lang === 'ru' ? 'Справочный срок' : 'Ref. Timeline'}</th></tr></thead>
             <tbody class="divide-y">
-              <tr><td class="px-4 py-2">Nigeria</td><td class="px-4 py-2">SONCAP</td><td class="px-4 py-2">2-4 weeks</td></tr>
-              <tr><td class="px-4 py-2">Kenya</td><td class="px-4 py-2">PVOC</td><td class="px-4 py-2">2-3 weeks</td></tr>
-              <tr><td class="px-4 py-2">Egypt</td><td class="px-4 py-2">GOEIC</td><td class="px-4 py-2">3-4 weeks</td></tr>
-              <tr><td class="px-4 py-2">South Africa</td><td class="px-4 py-2">SABS</td><td class="px-4 py-2">4-6 weeks</td></tr>
+              <tr><td class="px-4 py-2">Nigeria</td><td class="px-4 py-2">SONCAP</td><td class="px-4 py-2">2-4 周</td></tr>
+              <tr><td class="px-4 py-2">Kenya</td><td class="px-4 py-2">PVOC</td><td class="px-4 py-2">2-3 周</td></tr>
+              <tr><td class="px-4 py-2">Egypt</td><td class="px-4 py-2">GOEIC</td><td class="px-4 py-2">3-4 周</td></tr>
+              <tr><td class="px-4 py-2">South Africa</td><td class="px-4 py-2">SABS</td><td class="px-4 py-2">4-6 周</td></tr>
             </tbody>
           </table>
+          <p class="text-xs text-muted mt-4 italic">{lang === 'zh' ? '注：以上认证信息仅供参考，实际要求需根据车辆年份、排放标准和进口商资质逐单确认。' : lang === 'ru' ? 'Примечание: вышеуказанная информация носит справочный характер.' : 'Note: Certification info above is for reference only.'}</p>
         </div>
         <div class="bg-white rounded-xl p-8 border border-[var(--color-border)]">
           <h3 class="text-2xl font-bold text-[var(--color-text)] mb-4">{lang === 'zh' ? '💰 安全收款' : lang === 'ru' ? '💰 Безопасные платежи' : '💰 Secure Payment'}</h3>
-          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '非洲多国货币波动剧烈，外汇紧张。部分国家后付款拖欠三个月至半年是常态。我们建议以下收款方式：' : lang === 'ru' ? 'Валюты африканских стран нестабильны. Мы рекомендуем следующие способы оплаты:' : 'African currencies are volatile. We recommend the following payment methods:'}</p>
+          <p class="text-[var(--color-text-light)] mb-6">{lang === 'zh' ? '部分国家货币波动剧烈、外汇紧张。我们建议优先使用银行信用证，保障交易安全。' : lang === 'ru' ? 'В некоторых странах валюты нестабильны. Мы рекомендуем аккредитив для безопасности.' : 'Some currencies are volatile. We recommend L/C for transaction security.'}</p>
           <div class="space-y-3">
             {paymentMethods.map((p) => (
               <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
@@ -189,12 +220,28 @@ const paymentMethods = [
     </div>
   </section>
 
+  <!-- Disclaimer -->
+  <section class="py-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-lg border border-gray-200 p-6 bg-white">
+        <p class="text-xs text-gray-500 leading-relaxed">
+          <strong>{lang === 'zh' ? '免责声明：' : lang === 'ru' ? 'Отказ от ответственности: ' : 'Disclaimer: '}</strong>
+          {disclaimer[lang as 'en' | 'zh' | 'ru'] ?? disclaimer.en}
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="bg-primary py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-4">{t('usedCars.ctaTitle', lang)}</h2>
       <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{t('usedCars.ctaText', lang)}</p>
-      <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '立即联系' : lang === 'ru' ? 'Связаться' : t('contact.title', lang)}</a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`/${lang}/contact/`} class="btn-primary">{lang === 'zh' ? '立即联系' : lang === 'ru' ? 'Связаться сейчас' : 'Contact Us'}</a>
+        <a href="https://wa.me/+8617072783745" target="_blank" rel="noopener noreferrer" class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-green-600 hover:border-green-600">WhatsApp</a>
+        <a href="https://t.me/richzhu001" target="_blank" rel="noopener noreferrer" class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-blue-500 hover:border-blue-500">Telegram</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
