@@ -15,12 +15,12 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Locale };
 
 const models = [
-  { name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', image: '/images/cars/used-toyota-corolla.jpg', category: 'fuel' },
-  { name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', image: '/images/cars/used-nissan-sunny.jpg', category: 'fuel' },
-  { name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', image: '/images/cars/used-honda-fit.jpg', category: 'fuel' },
-  { name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', image: '/images/cars/used-greatwall-pickup.jpg', category: 'truck' },
-  { name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', image: '/images/cars/used-jmc-pickup.jpg', category: 'truck' },
-  { name: 'BYD Qin Plus / EV Sedan', nameZh: '比亚迪秦 Plus / 电动轿车', nameRu: 'BYD Qin Plus / EV седан', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', image: '/images/cars/used-byd-e6.jpg', category: 'ev' },
+  { name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', category: 'fuel', icon: '🚗' },
+  { name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', category: 'fuel', icon: '🚗' },
+  { name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', category: 'fuel', icon: '🚙' },
+  { name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', category: 'truck', icon: '🛻' },
+  { name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', category: 'truck', icon: '🛻' },
+  { name: 'BYD E6 / Aion S', nameZh: '比亚迪E6 / 广汽埃安', nameRu: 'BYD E6 / Aion S', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', category: 'ev', icon: '⚡' },
 ];
 
 const countries = [
@@ -82,18 +82,32 @@ const paymentMethods = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {models.map((model) => (
           <div class="bg-white rounded-xl overflow-hidden border border-[var(--color-border)] hover:shadow-lg hover:-translate-y-1 transition-all">
-            <div class="relative h-48 overflow-hidden">
-              <img src={model.image} alt={lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name} class="w-full h-full object-cover" loading="lazy" />
+            <!-- Professional card header with gradient -->
+            <div class={`relative h-48 flex items-center justify-center ${
+              model.category === 'fuel' ? 'bg-gradient-to-br from-slate-700 to-slate-900' :
+              model.category === 'truck' ? 'bg-gradient-to-br from-amber-700 to-amber-900' :
+              'bg-gradient-to-br from-blue-600 to-blue-900'
+            }`}>
+              <div class="text-center">
+                <div class="text-7xl mb-2">{model.icon}</div>
+                <div class="text-white text-lg font-bold">{lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}</div>
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class={`px-2 py-1 rounded-full text-xs font-bold text-white ${
+                  model.category === 'fuel' ? 'bg-green-600/80' :
+                  model.category === 'truck' ? 'bg-orange-600/80' :
+                  'bg-blue-400/80'
+                }`}>
+                  {model.category === 'fuel' ? (lang === 'zh' ? '燃油' : lang === 'ru' ? 'Топливный' : 'Fuel') :
+                   model.category === 'truck' ? (lang === 'zh' ? '皮卡' : lang === 'ru' ? 'Пикап' : 'Pickup') :
+                   (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
+                </span>
+              </div>
             </div>
             <div class="p-6">
             <h3 class="text-xl font-bold text-[var(--color-text)] mb-1">{lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}</h3>
-            <div class="text-sm text-muted mb-3">{model.year} · {model.price}</div>
+            <div class="text-sm text-muted mb-3">{model.year} · <span class="text-[var(--color-primary)] font-semibold">{model.price}</span></div>
             <p class="text-[var(--color-text-light)] text-sm">{lang === 'zh' ? model.reasonZh : lang === 'ru' ? model.reasonRu : model.reason}</p>
-            <div class="mt-4 flex items-center gap-2">
-              <span class={`px-2 py-0.5 rounded-full text-xs font-medium ${model.category === 'fuel' ? 'bg-green-100 text-green-700' : model.category === 'truck' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>
-                {model.category === 'fuel' ? (lang === 'zh' ? '燃油刚需' : lang === 'ru' ? 'Топливный' : 'Fuel') : model.category === 'truck' ? (lang === 'zh' ? '皮卡/轻卡' : lang === 'ru' ? 'Пикап' : 'Pickup') : (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
-              </span>
-            </div>
             </div>
           </div>
         ))}

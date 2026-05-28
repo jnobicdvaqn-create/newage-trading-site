@@ -7533,6 +7533,12 @@
           ]
         },
         {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Container ship carrying vehicles to Tema Port, Ghana",
+          "caption": "RoRo and container shipping are the two main methods to reach Tema Port"
+        },
+        {
           "type": "heading",
           "level": 2,
           "text": "What Does CIF Mean?"
@@ -7697,6 +7703,12 @@
           "type": "heading",
           "level": 3,
           "text": "What's NOT Covered"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/export-cars-to-ghana.jpg",
+          "alt": "Cars ready for export to Ghana at Chinese port",
+          "caption": "Vehicles inspected and prepared before loading onto RoRo ships"
         },
         {
           "type": "list",
@@ -7989,6 +8001,12 @@
           ]
         },
         {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "Контейнеровоз с автомобилями до порта Тема, Гана",
+          "caption": "RoRo и контейнерные перевозки — два основных способа доставки в порт Тема"
+        },
+        {
           "type": "heading",
           "level": 2,
           "text": "Что такое CIF?"
@@ -8181,6 +8199,12 @@
           "type": "heading",
           "level": 2,
           "text": "CIF vs FOB: Что выбрать?"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/export-cars-to-ghana.jpg",
+          "alt": "Автомобили готовы к экспорту в Гану в китайском порту",
+          "caption": "Транспортные средства проверены и подготовлены перед погрузкой на суда RoRo"
         },
         {
           "type": "table",
@@ -8439,6 +8463,12 @@
           ]
         },
         {
+          "type": "image",
+          "src": "/images/blog/shipping-logistics.jpg",
+          "alt": "滚装船将车辆运往加纳特马港",
+          "caption": "滚装船和集装箱是到达特马港的两种主要方式"
+        },
+        {
           "type": "heading",
           "level": 2,
           "text": "CIF是什么意思？"
@@ -8631,6 +8661,12 @@
           "type": "heading",
           "level": 2,
           "text": "CIF vs FOB：怎么选？"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/export-cars-to-ghana.jpg",
+          "alt": "在中国港口准备出口到加纳的汽车",
+          "caption": "车辆在装载到滚装船前进行检查和准备"
         },
         {
           "type": "table",
