@@ -65,29 +65,45 @@ const rowAccess = tp('securityRowAccess', lang);
   <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
-          <span class="text-4xl mb-3 block">📷</span>
-          <h3 class="font-bold text-[#0a1628] mb-2">{catCamera}</h3>
-          <p class="text-xs text-gray-500 mb-3">{catCameraPrice}</p>
-          <p class="text-sm text-gray-600">{catCameraDesc}</p>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/security/hikvision-colorvu.jpg" alt={catCamera} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-[#0a1628] mb-2">{catCamera}</h3>
+            <p class="text-xs text-gray-500 mb-3">{catCameraPrice}</p>
+            <p class="text-sm text-gray-600">{catCameraDesc}</p>
+          </div>
         </div>
-        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
-          <span class="text-4xl mb-3 block">🖥️</span>
-          <h3 class="font-bold text-[#0a1628] mb-2">{catNvr}</h3>
-          <p class="text-xs text-gray-500 mb-3">{catNvrPrice}</p>
-          <p class="text-sm text-gray-600">{catNvrDesc}</p>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/security/hikvision-nvr.jpg" alt={catNvr} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-[#0a1628] mb-2">{catNvr}</h3>
+            <p class="text-xs text-gray-500 mb-3">{catNvrPrice}</p>
+            <p class="text-sm text-gray-600">{catNvrDesc}</p>
+          </div>
         </div>
-        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
-          <span class="text-4xl mb-3 block">🚪</span>
-          <h3 class="font-bold text-[#0a1628] mb-2">{catAccess}</h3>
-          <p class="text-xs text-gray-500 mb-3">{catAccessPrice}</p>
-          <p class="text-sm text-gray-600">{catAccessDesc}</p>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/security/access-control.jpg" alt={catAccess} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-[#0a1628] mb-2">{catAccess}</h3>
+            <p class="text-xs text-gray-500 mb-3">{catAccessPrice}</p>
+            <p class="text-sm text-gray-600">{catAccessDesc}</p>
+          </div>
         </div>
-        <div class="p-6 bg-gray-50 rounded-2xl text-center hover:shadow-md transition-shadow">
-          <span class="text-4xl mb-3 block">🔧</span>
-          <h3 class="font-bold text-[#0a1628] mb-2">{catInstall}</h3>
-          <p class="text-xs text-gray-500 mb-3">{catInstallPrice}</p>
-          <p class="text-sm text-gray-600">{catInstallDesc}</p>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/security/dahua-ptz.jpg" alt={catInstall} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-[#0a1628] mb-2">{catInstall}</h3>
+            <p class="text-xs text-gray-500 mb-3">{catInstallPrice}</p>
+            <p class="text-sm text-gray-600">{catInstallDesc}</p>
+          </div>
         </div>
       </div>
     </div>

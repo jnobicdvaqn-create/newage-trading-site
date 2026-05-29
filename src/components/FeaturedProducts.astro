@@ -1,0 +1,119 @@
+---
+import type { Locale } from '@i18n/types';
+import { t } from '@i18n/index';
+
+export interface Props {
+  lang?: Locale;
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  lang = 'en' as Locale,
+  title = t('home.featuredTitle', lang),
+  subtitle = t('home.featuredSubtitle', lang),
+} = Astro.props;
+
+// Featured products across business lines
+const products = [
+  {
+    image: '/images/products/byd-seal.jpg?v=20260526',
+    name: { en: 'BYD Seal', ru: 'BYD Seal', zh: '比亚迪海豹' },
+    price: { en: 'From $28,000', ru: 'От $28 000', zh: '起价 $28,000' },
+    badge: { en: 'Hot', ru: 'Хит', zh: '热门' },
+    category: 'cars',
+    link: `/${lang}/cars/`,
+  },
+  {
+    image: '/images/products/geely-monjaro.jpg?v=20260526',
+    name: { en: 'Geely Monjaro', ru: 'Geely Monjaro', zh: '吉利星越L' },
+    price: { en: 'From $25,500', ru: 'От $25 500', zh: '起价 $25,500' },
+    badge: { en: 'Popular', ru: 'Популярно', zh: '热销' },
+    category: 'cars',
+    link: `/${lang}/cars/`,
+  },
+  {
+    image: '/images/products/hikvision-ds-2cd.jpg?v=20260526',
+    name: { en: 'Hikvision Thermal Camera', ru: 'Тепловизор Hikvision', zh: '海康热成像仪' },
+    price: { en: 'From $380', ru: 'От $380', zh: '起价 $380' },
+    badge: { en: 'New', ru: 'Новинка', zh: '新品' },
+    category: 'security',
+    link: `/${lang}/security/`,
+  },
+  {
+    image: '/images/products/lingerie-set.jpg?v=20260526',
+    name: { en: 'Lingerie OEM Set', ru: 'Комплект белья OEM', zh: '内衣OEM套装' },
+    price: { en: 'From $8.50/piece', ru: 'От $8.50/шт', zh: '起价 $8.50/件' },
+    badge: { en: 'OEM', ru: 'OEM', zh: '代工' },
+    category: 'lingerie',
+    link: `/${lang}/lingerie/`,
+  },
+  {
+    image: '/images/products/used-toyota.jpg?v=20260526',
+    name: { en: 'Toyota Camry 2022', ru: 'Toyota Camry 2022', zh: '丰田凯美瑞 2022' },
+    price: { en: 'From $18,200', ru: 'От $18 200', zh: '起价 $18,200' },
+    badge: { en: 'Used', ru: 'Б/У', zh: '二手' },
+    category: 'used-cars',
+    link: `/${lang}/used-cars/`,
+  },
+  {
+    image: '/images/products/security-kit.jpg?v=20260526',
+    name: { en: 'Access Control Kit', ru: 'Комплект СКУД', zh: '门禁系统套装' },
+    price: { en: 'From $520', ru: 'От $520', zh: '起价 $520' },
+    badge: { en: 'Solution', ru: 'Решение', zh: '方案' },
+    category: 'security',
+    link: `/${lang}/security/`,
+  },
+];
+
+const inquiryText = t('common.inquiry', lang);
+---
+
+<section class="container-section bg-[var(--color-bg)]">
+  <div class="text-center mb-12">
+    <h2 class="section-title mb-4">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {products.map((product) => (
+      <a
+        href={product.link}
+        class="group relative flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-white transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-primary)]/10"
+      >
+        <!-- Image -->
+        <div class="relative aspect-[4/3] overflow-hidden bg-[var(--color-bg)]">
+          <img
+            src={product.image}
+            alt={product.name[lang] || product.name.en}
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+          />
+          <!-- Badge -->
+          <span class="absolute left-3 top-3 rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-semibold text-[var(--color-bg-dark)]">
+            {product.badge[lang] || product.badge.en}
+          </span>
+          <!-- Price -->
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-8">
+            <span class="text-lg font-bold text-white">{product.price[lang] || product.price.en}</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-1 flex-col p-5">
+          <h3 class="text-lg font-bold font-[var(--font-heading)] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
+            {product.name[lang] || product.name.en}
+          </h3>
+          <div class="mt-auto pt-4">
+            <span class="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]">
+              {inquiryText}
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

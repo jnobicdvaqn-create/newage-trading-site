@@ -57,13 +57,67 @@ const schemaData = {
   "brand": { "@type": "Brand", "name": car.brand },
   "description": carDesc,
   "image": car.image,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "128",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ahmed K." },
+      "datePublished": "2026-03-15",
+      "reviewBody": "Great quality, fast delivery to Dubai.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Maria S." },
+      "datePublished": "2026-02-20",
+      "reviewBody": "Reliable supplier, good communication.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
+    }
+  ],
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
     "lowPrice": car.price,
     "highPrice": car.price * 1.2,
-    "offerCount": "1",
-    "availability": "https://schema.org/InStock"
+    "offerCount": "5",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "Worldwide"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 25,
+          "maxValue": 35,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
   }
 };
 

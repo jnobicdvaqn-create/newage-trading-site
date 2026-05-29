@@ -39,7 +39,15 @@
       "ctaTitle": "Ready to Start?",
       "ctaDesc": "Contact us today for a free consultation and quote within 24 hours",
       "usedCarsTitle": "Used Car Export to Africa",
-      "usedCarsDesc": "Zero-tariff to 53 African countries since May 2026. Toyota, Nissan, Honda — reliable, fuel-efficient, parts everywhere."
+      "usedCarsDesc": "Zero-tariff to 53 African countries since May 2026. Toyota, Nissan, Honda — reliable, fuel-efficient, parts everywhere.",
+      "featuredTitle": "Featured Products",
+      "featuredSubtitle": "Popular items across our business lines — from vehicles to security equipment",
+      "testimonialsTitle": "What Our Clients Say",
+      "testimonialsSubtitle": "Real feedback from businesses we've worked with worldwide",
+      "testimonialsNote": "Based on customer feedback. Individual experiences may vary.",
+      "partnersTitle": "Trusted Brands & Certifications",
+      "blogTitle": "Latest Insights",
+      "blogSubtitle": "Industry news, export guides, and market updates"
     },
     "about": {
       "title": "About YunBao International Trading",
@@ -198,7 +206,8 @@
       "ctaTitle": "Have Questions?",
       "ctaDesc": "We're ready to help with your sourcing needs. Reach out anytime.",
       "viewDetails": "View Details",
-      "more": "more"
+      "more": "more",
+      "inquiry": "Inquiry"
     },
     "privacy": {
       "description": "Privacy Policy of YunBao International Trading — how we collect, use, and protect your personal information.",
@@ -307,7 +316,15 @@
       "ctaTitle": "Готовы начать?",
       "ctaDesc": "Свяжитесь с нами сегодня для бесплатной консультации",
       "usedCarsTitle": "Экспорт б/у авто в Африку",
-      "usedCarsDesc": "Нулевой тариф в 53 страны Африки с мая 2026. Toyota, Nissan, Honda — надёжные, экономичные."
+      "usedCarsDesc": "Нулевой тариф в 53 страны Африки с мая 2026. Toyota, Nissan, Honda — надёжные, экономичные.",
+      "featuredTitle": "Популярные товары",
+      "featuredSubtitle": "Популярные товары из наших бизнес-направлений — от автомобилей до安防 оборудования",
+      "testimonialsTitle": "Отзывы клиентов",
+      "testimonialsSubtitle": "Реальные отзывы от компаний, с которыми мы работали",
+      "testimonialsNote": "На основе отзывов клиентов. Индивидуальный опыт может отличаться.",
+      "partnersTitle": "Проверенные бренды и сертификаты",
+      "blogTitle": "Последние материалы",
+      "blogSubtitle": "Отраслевые новости, руководства по экспорту и обновления рынка"
     },
     "about": {
       "title": "О компании YunBao International Trading",
@@ -466,7 +483,8 @@
       "ctaDesc": "Мы готовы помочь. Свяжитесь с нами в любое время.",
       "allRightsReserved": "Все права защищены.",
       "viewDetails": "Подробнее",
-      "more": "ещё"
+      "more": "ещё",
+      "inquiry": "Запрос"
     },
     "privacy": {
       "description": "Политика конфиденциальности YunBao International Trading — как мы собираем, используем и защищаем вашу личную информацию.",
@@ -585,7 +603,15 @@
       "ctaTitle": "准备好开始了吗？",
       "ctaDesc": "立即联系我们，24小时内获得免费咨询和报价",
       "usedCarsTitle": "非洲二手车出口",
-      "usedCarsDesc": "2026年5月起53国零关税。丰田、日产、本田——可靠省油、配件满地。"
+      "usedCarsDesc": "2026年5月起53国零关税。丰田、日产、本田——可靠省油、配件满地。",
+      "featuredTitle": "精选产品",
+      "featuredSubtitle": "各业务线热门商品——从汽车到安防设备",
+      "testimonialsTitle": "客户评价",
+      "testimonialsSubtitle": "来自全球合作企业的真实反馈",
+      "testimonialsNote": "基于客户反馈。个体体验可能有所不同。",
+      "partnersTitle": "合作品牌与认证",
+      "blogTitle": "最新资讯",
+      "blogSubtitle": "行业新闻、出口指南和市场动态"
     },
     "about": {
       "title": "关于YunBao International Trading",
@@ -744,7 +770,8 @@
       "ctaDesc": "我们随时准备帮助您解决采购需求。随时联系我们。",
       "allRightsReserved": "版权所有。",
       "viewDetails": "查看详情",
-      "more": "更多"
+      "more": "更多",
+      "inquiry": "询价"
     },
     "privacy": {
       "description": "YunBao International Trading 隐私政策 — 我们如何收集、使用和保护您的个人信息。",

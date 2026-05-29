@@ -3,6 +3,10 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/Hero.astro';
 import ServiceCard from '@components/ServiceCard.astro';
 import TrustBadges from '@components/TrustBadges.astro';
+import FeaturedProducts from '@components/FeaturedProducts.astro';
+import Testimonials from '@components/Testimonials.astro';
+import PartnerLogos from '@components/PartnerLogos.astro';
+import LatestBlog from '@components/LatestBlog.astro';
 import { t } from '@i18n/index';
 import type { Locale } from '@i18n/types';
 import { contact } from '@config/contact';
@@ -28,43 +32,84 @@ const indexSchema: Record<string, unknown> = {
   "@type": "Organization",
   "name": "YunBao International Trading",
   "url": "https://newage-trading.com",
-  "logo": "https://newage-trading.com/images/logo.png",
+  "logo": "https://newage-trading.com/images/logo.svg",
+  "image": "https://newage-trading.com/images/og-default.svg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Beijing",
     "addressCountry": "China"
   },
-};
-if (contact.whatsappNumber !== 'WHATSAPP_NUMBER') {
-  indexSchema.contactPoint = {
+  "contactPoint": {
     "@type": "ContactPoint",
     "telephone": `+${contact.whatsappNumber}`,
     "contactType": "sales",
     "availableLanguage": ["English", "Russian", "Chinese"]
-  };
-}
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "Worldwide"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 25,
+          "maxValue": 35,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnDays": null,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+};
 
 const services = [
   {
-    icon: 'car' as const,
+    image: '/images/cars/byd-seal.jpg?v=20260526',
+    imageAlt: { en: 'Chinese Car Export', ru: 'Экспорт автомобилей из Китая', zh: '中国汽车出口' }[lang] || 'Chinese Car Export',
     title: t('home.carsTitle', lang),
     description: t('home.carsDesc', lang),
     href: `/${lang}/cars/`,
   },
   {
-    icon: 'used-car' as const,
+    image: '/images/cars/mg4-ev.jpg?v=20260526',
+    imageAlt: { en: 'Used Car Export to Africa', ru: 'Экспорт б/у авто в Африку', zh: '二手车出口非洲' }[lang] || 'Used Car Export to Africa',
     title: t('home.usedCarsTitle', lang),
     description: t('home.usedCarsDesc', lang),
     href: `/${lang}/used-cars/`,
   },
   {
-    icon: 'lingerie' as const,
+    image: '/images/lingerie/silk_new.jpg?v=20260526',
+    imageAlt: { en: 'Lingerie OEM Manufacturing', ru: 'OEM производство белья', zh: '内衣OEM代工' }[lang] || 'Lingerie OEM Manufacturing',
     title: t('home.lingerieTitle', lang),
     description: t('home.lingerieDesc', lang),
     href: `/${lang}/lingerie/`,
   },
   {
-    icon: 'security' as const,
+    image: '/images/security/hikvision-colorvu.jpg?v=20260526',
+    imageAlt: { en: 'Security Equipment Wholesale', ru: 'Оптовые продажи оборудования безопасности', zh: '安防设备批发' }[lang] || 'Security Equipment Wholesale',
     title: t('home.securityTitle', lang),
     description: t('home.securityDesc', lang),
     href: `/${lang}/security/`,
@@ -96,7 +141,8 @@ const services = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {services.map(service => (
         <ServiceCard
-          icon={service.icon}
+          image={service.image}
+          imageAlt={service.imageAlt}
           title={service.title}
           description={service.description}
           href={service.href}
@@ -136,4 +182,16 @@ const services = [
     subtitle={t('home.trustDesc', lang)}
     items={trustItems}
   />
+
+  <!-- Featured Products -->
+  <FeaturedProducts lang={lang} />
+
+  <!-- Testimonials -->
+  <Testimonials lang={lang} />
+
+  <!-- Partners & Certifications -->
+  <PartnerLogos lang={lang} />
+
+  <!-- Latest Blog Posts -->
+  <LatestBlog lang={lang} />
 </BaseLayout>
