@@ -11,7 +11,7 @@
     "certifications": ["CE", "FCC", "UL", "RoHS"],
     "description": "Hikvision ColorVu bullet camera delivers full-color 24/7 surveillance with exceptional detail at 8MP resolution. Built-in AcuSense AI reduces false alerts by distinguishing humans and vehicles.",
     "useCases": ["Perimeter monitoring", "Parking lots", "Warehouse exterior", "Retail storefronts"],
-    "image": "/images/security/hikvision-colorvu.jpg"
+    "image": "/images/security/hikvision-darkfighter.jpg"
   },
   {
     "id": "hikvision-darkfighter",
