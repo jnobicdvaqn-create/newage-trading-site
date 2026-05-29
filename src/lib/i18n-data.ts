@@ -94,7 +94,6 @@ export const uiLabels: Record<string, Record<Locale, string>> = {
   cars: { en: 'Car Export', zh: '汽车出口', ru: 'Экспорт авто' },
   lingerie: { en: 'Lingerie OEM', zh: '内衣 OEM', ru: 'Бельё OEM' },
   security: { en: 'Security Equipment', zh: '安防设备', ru: 'Оборудование безопасности' },
-};
 
   // Testimonials page
   testimonialsTitle: { en: 'Client Testimonials', zh: '客户评价', ru: 'Отзывы клиентов' },
