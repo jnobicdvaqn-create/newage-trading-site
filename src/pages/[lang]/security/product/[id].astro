@@ -85,7 +85,7 @@ const pageDesc = lang === 'zh'
     "name": productName,
     "brand": { "@type": "Brand", "name": product.brand },
     "description": product.spec,
-    "image": product.image || '/images/security/hikvision-colorvu.jpg',
+    "image": product.image || '/images/security/hikvision-darkfighter.jpg',
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.6",
@@ -180,7 +180,7 @@ const pageDesc = lang === 'zh'
           <a href={`/${lang}/contact/`} class="inline-block bg-[#c4a35a] hover:bg-[#d4b36a] text-[#1e3a5f] font-bold px-8 py-3 rounded-lg transition-colors">{label('requestBulk', lang)}</a>
         </div>
         <div class="bg-white/5 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
-          <img src={`${product.image || '/images/security/hikvision-colorvu.jpg'}?v=20260514`} alt={productName} class="max-h-[300px] object-contain rounded-lg" loading="lazy" />
+          <img src={`${product.image || '/images/security/hikvision-darkfighter.jpg'}?v=20260514`} alt={productName} class="max-h-[300px] object-contain rounded-lg" loading="lazy" />
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@ const pageDesc = lang === 'zh'
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {related.map(p => (
             <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6 group">
-              <img src={`${p.image || '/images/security/hikvision-colorvu.jpg'}?v=20260514`} alt={tData(p, 'name', lang)} class="w-full h-32 object-cover rounded-lg mb-3" loading="lazy" />
+              <img src={`${p.image || '/images/security/hikvision-darkfighter.jpg'}?v=20260514`} alt={tData(p, 'name', lang)} class="w-full h-32 object-cover rounded-lg mb-3" loading="lazy" />
               <h3 class="font-bold text-[#1e3a5f] group-hover:text-[#c4a35a] transition-colors text-sm">{tData(p, 'name', lang)}</h3>
               <p class="text-xs text-gray-500 mt-1">{p.model}</p>
               <p class="text-[#c4a35a] font-bold mt-2">${p.priceUsd}</p>
