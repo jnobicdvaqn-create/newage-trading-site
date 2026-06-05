@@ -24,7 +24,7 @@
     "priceUsd": 68,
     "nameEn": "4MP Indoor/Outdoor Dual-Light Network Camera",
     "nameZh": "4MP室内外双光网络摄像机",
-    "image": "/images/security/hikvision-colorvu.jpg"
+    "image": "/images/security/hikvision-dome.jpg"
   },
   {
     "id": "ip-camera-8mp",
@@ -321,7 +321,7 @@
     "priceUsd": 310,
     "nameEn": "Body-Worn Camera (Law Enforcement)",
     "nameZh": "执法记录仪",
-    "image": "/images/security/hikvision-colorvu.jpg"
+    "image": "/images/security/access-control.jpg"
   },
   {
     "id": "hikvision-colorvu-8mp",
@@ -348,7 +348,7 @@
       "120dB WDR"
     ],
     "priceUsd": 189,
-    "image": "/images/security/hikvision-colorvu.jpg",
+    "image": "/images/security/hikvision-darkfighter.jpg",
     "description": "Hikvision ColorVu bullet camera delivers full-color 24/7 surveillance with exceptional detail at 8MP resolution. Built-in AcuSense AI reduces false alerts by distinguishing humans and vehicles.",
     "useCases": [
       "Perimeter monitoring",

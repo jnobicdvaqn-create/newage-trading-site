@@ -6,12 +6,28 @@
     "type": "Bullet Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["ColorVu technology", "AcuSense AI", "120dB WDR", "Smart IR up to 40m", "H.265+"],
+    "features": [
+      "ColorVu technology",
+      "AcuSense AI",
+      "120dB WDR",
+      "Smart IR up to 40m",
+      "H.265+"
+    ],
     "price": "$189",
-    "certifications": ["CE", "FCC", "UL", "RoHS"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL",
+      "RoHS"
+    ],
     "description": "Hikvision ColorVu bullet camera delivers full-color 24/7 surveillance with exceptional detail at 8MP resolution. Built-in AcuSense AI reduces false alerts by distinguishing humans and vehicles.",
-    "useCases": ["Perimeter monitoring", "Parking lots", "Warehouse exterior", "Retail storefronts"],
-    "image": "/images/security/hikvision-colorvu.jpg"
+    "useCases": [
+      "Perimeter monitoring",
+      "Parking lots",
+      "Warehouse exterior",
+      "Retail storefronts"
+    ],
+    "image": "/images/security/hikvision-colorvu-8mp.jpg"
   },
   {
     "id": "hikvision-darkfighter",
@@ -20,11 +36,26 @@
     "type": "Bullet Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["DarkFighter technology", "AcuSense", "30m IR", "IP67 weatherproof", "Audio/Alarm I/O"],
+    "features": [
+      "DarkFighter technology",
+      "AcuSense",
+      "30m IR",
+      "IP67 weatherproof",
+      "Audio/Alarm I/O"
+    ],
     "price": "$159",
-    "certifications": ["CE", "FCC", "UL"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL"
+    ],
     "description": "Hikvision DarkFighter bullet camera excels in ultra-low-light environments, producing usable color images even at near-zero lux levels.",
-    "useCases": ["Low-light areas", "Night surveillance", "Industrial sites", "Street monitoring"],
+    "useCases": [
+      "Low-light areas",
+      "Night surveillance",
+      "Industrial sites",
+      "Street monitoring"
+    ],
     "image": "/images/security/hikvision-darkfighter.jpg"
   },
   {
@@ -34,11 +65,27 @@
     "type": "Dome Camera",
     "category": "IP Camera",
     "resolution": "5MP",
-    "features": ["AcuSense", "ColorVu", "20m IR", "IK10 vandal resistant", "Built-in mic"],
+    "features": [
+      "AcuSense",
+      "ColorVu",
+      "20m IR",
+      "IK10 vandal resistant",
+      "Built-in mic"
+    ],
     "price": "$139",
-    "certifications": ["CE", "FCC", "IK10", "IP67"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "IK10",
+      "IP67"
+    ],
     "description": "Hikvision dome camera with ColorVu and AcuSense for indoor/outdoor applications. Vandal-resistant design makes it suitable for high-risk areas.",
-    "useCases": ["Office interiors", "Retail stores", "School hallways", "Hotel lobbies"],
+    "useCases": [
+      "Office interiors",
+      "Retail stores",
+      "School hallways",
+      "Hotel lobbies"
+    ],
     "image": "/images/security/hikvision-dome.jpg"
   },
   {
@@ -48,11 +95,26 @@
     "type": "PTZ Camera",
     "category": "IP Camera",
     "resolution": "4MP",
-    "features": ["12x optical zoom", "360° endless rotation", "AcuSense", "150m IR", "Auto-tracking"],
+    "features": [
+      "12x optical zoom",
+      "360° endless rotation",
+      "AcuSense",
+      "150m IR",
+      "Auto-tracking"
+    ],
     "price": "$599",
-    "certifications": ["CE", "FCC", "IP66"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "IP66"
+    ],
     "description": "Hikvision PTZ camera with 12x optical zoom and auto-tracking for comprehensive large-area surveillance. Covers wide areas with minimal blind spots.",
-    "useCases": ["Large warehouses", "Construction sites", "Campus monitoring", "Perimeter security"],
+    "useCases": [
+      "Large warehouses",
+      "Construction sites",
+      "Campus monitoring",
+      "Perimeter security"
+    ],
     "image": "/images/security/hikvision-ptz.jpg"
   },
   {
@@ -62,11 +124,25 @@
     "type": "NVR",
     "category": "Recorder",
     "resolution": "Up to 12MP per channel",
-    "features": ["16-channel PoE", "H.265 Pro+", "eSATA expansion", "ANPR support", "RAID 0/1/5"],
+    "features": [
+      "16-channel PoE",
+      "H.265 Pro+",
+      "eSATA expansion",
+      "ANPR support",
+      "RAID 0/1/5"
+    ],
     "price": "$499",
-    "certifications": ["CE", "FCC", "UL"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL"
+    ],
     "description": "Hikvision 16-channel PoE NVR with H.265 Pro+ compression saves up to 80% storage. Supports ANPR and people counting analytics.",
-    "useCases": ["Multi-camera deployment", "Enterprise security", "Large facility monitoring"],
+    "useCases": [
+      "Multi-camera deployment",
+      "Enterprise security",
+      "Large facility monitoring"
+    ],
     "image": "/images/security/hikvision-nvr.jpg"
   },
   {
@@ -76,11 +152,27 @@
     "type": "Bullet Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["WizSense AI", "Starlight Technology", "Smart IR 50m", "IP67", "ePoE"],
+    "features": [
+      "WizSense AI",
+      "Starlight Technology",
+      "Smart IR 50m",
+      "IP67",
+      "ePoE"
+    ],
     "price": "$169",
-    "certifications": ["CE", "FCC", "UL", "RoHS"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL",
+      "RoHS"
+    ],
     "description": "Dahua WizSense 8MP bullet camera with AI-powered human/vehicle detection and Starlight technology for superior low-light performance.",
-    "useCases": ["Commercial security", "Building perimeter", "Industrial facilities", "Smart city"],
+    "useCases": [
+      "Commercial security",
+      "Building perimeter",
+      "Industrial facilities",
+      "Smart city"
+    ],
     "image": "/images/security/dahua-wizsense.jpg"
   },
   {
@@ -90,11 +182,27 @@
     "type": "Dome Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["WizSense AI", "Starlight", "20m IR", "IK10 vandal proof", "Two-way audio"],
+    "features": [
+      "WizSense AI",
+      "Starlight",
+      "20m IR",
+      "IK10 vandal proof",
+      "Two-way audio"
+    ],
     "price": "$159",
-    "certifications": ["CE", "FCC", "IK10", "IP67"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "IK10",
+      "IP67"
+    ],
     "description": "Dahua WizSense dome camera with 8MP resolution and vandal-resistant housing. Ideal for indoor surveillance requiring discreet yet powerful monitoring.",
-    "useCases": ["Retail stores", "Office buildings", "Banks", "Hospitals"],
+    "useCases": [
+      "Retail stores",
+      "Office buildings",
+      "Banks",
+      "Hospitals"
+    ],
     "image": "/images/security/dahua-dome.jpg"
   },
   {
@@ -104,11 +212,26 @@
     "type": "PTZ Camera",
     "category": "IP Camera",
     "resolution": "2MP (Full HD)",
-    "features": ["25x optical zoom", "Auto-tracking", "Starlight", "150m IR", "IVS analytics"],
+    "features": [
+      "25x optical zoom",
+      "Auto-tracking",
+      "Starlight",
+      "150m IR",
+      "IVS analytics"
+    ],
     "price": "$449",
-    "certifications": ["CE", "FCC", "IP66"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "IP66"
+    ],
     "description": "Dahua PTZ with 25x optical zoom for long-range surveillance. Advanced IVS analytics reduce false alarms in complex outdoor environments.",
-    "useCases": ["Large perimeters", "Highway monitoring", "Ports and harbors", "Border security"],
+    "useCases": [
+      "Large perimeters",
+      "Highway monitoring",
+      "Ports and harbors",
+      "Border security"
+    ],
     "image": "/images/security/dahua-ptz.jpg"
   },
   {
@@ -118,11 +241,24 @@
     "type": "XVR",
     "category": "Recorder",
     "resolution": "Up to 8MP per channel",
-    "features": ["16-channel Hybrid", "AI encoding", "HDCVI/AHD/TVI/CVBS/IP", "Built-in AI", "eSATA"],
+    "features": [
+      "16-channel Hybrid",
+      "AI encoding",
+      "HDCVI/AHD/TVI/CVBS/IP",
+      "Built-in AI",
+      "eSATA"
+    ],
     "price": "$349",
-    "certifications": ["CE", "FCC"],
+    "certifications": [
+      "CE",
+      "FCC"
+    ],
     "description": "Dahua 16-channel hybrid XVR supports multiple analog and IP camera formats. Built-in AI analytics enable intelligent search and alert generation.",
-    "useCases": ["System upgrade from analog", "Hybrid deployments", "Cost-effective solutions"],
+    "useCases": [
+      "System upgrade from analog",
+      "Hybrid deployments",
+      "Cost-effective solutions"
+    ],
     "image": "/images/security/dahua-xvr.jpg"
   },
   {
@@ -132,11 +268,26 @@
     "type": "NVR",
     "category": "Recorder",
     "resolution": "Up to 12MP",
-    "features": ["32-channel", "4 HDD bays", "RAID 0/1/5/10", "HDMI 4K output", "Face detection"],
+    "features": [
+      "32-channel",
+      "4 HDD bays",
+      "RAID 0/1/5/10",
+      "HDMI 4K output",
+      "Face detection"
+    ],
     "price": "$699",
-    "certifications": ["CE", "FCC", "UL"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL"
+    ],
     "description": "Dahua 32-channel NVR with 4 HDD bays for large-scale deployments. Supports face detection and heat mapping analytics.",
-    "useCases": ["Large enterprise", "Smart city", "Multi-site monitoring", "Government facilities"],
+    "useCases": [
+      "Large enterprise",
+      "Smart city",
+      "Multi-site monitoring",
+      "Government facilities"
+    ],
     "image": "/images/security/dahua-nvr.jpg"
   },
   {
@@ -146,11 +297,27 @@
     "type": "Bullet Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["AI ISP", "Smart IR 40m", "True WDR 120dB", "IK10", "IP67", "H.265"],
+    "features": [
+      "AI ISP",
+      "Smart IR 40m",
+      "True WDR 120dB",
+      "IK10",
+      "IP67",
+      "H.265"
+    ],
     "price": "$149",
-    "certifications": ["CE", "FCC", "UL"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "UL"
+    ],
     "description": "Uniview bullet camera with AI ISP for clear imaging in challenging lighting conditions. Cost-effective 4K solution with enterprise-grade features.",
-    "useCases": ["Small business", "Residential", "Warehouse", "Retail"],
+    "useCases": [
+      "Small business",
+      "Residential",
+      "Warehouse",
+      "Retail"
+    ],
     "image": "/images/security/uniview-bullet.jpg"
   },
   {
@@ -160,11 +327,26 @@
     "type": "Bullet Camera",
     "category": "IP Camera",
     "resolution": "8MP (4K)",
-    "features": ["AI SSA", "Smart IR 40m", "120dB WDR", "IP67", "Audio I/O", "Alarm I/O"],
+    "features": [
+      "AI SSA",
+      "Smart IR 40m",
+      "120dB WDR",
+      "IP67",
+      "Audio I/O",
+      "Alarm I/O"
+    ],
     "price": "$129",
-    "certifications": ["CE", "FCC"],
+    "certifications": [
+      "CE",
+      "FCC"
+    ],
     "description": "Tiandy 8MP AI bullet camera with SSA (Scene Self-Adaption) technology for optimal image quality in varying conditions. Best value in its class.",
-    "useCases": ["Budget-conscious projects", "Small retail", "Storage facilities", "Parking areas"],
+    "useCases": [
+      "Budget-conscious projects",
+      "Small retail",
+      "Storage facilities",
+      "Parking areas"
+    ],
     "image": "/images/security/tiandy-bullet.jpg"
   },
   {
@@ -174,11 +356,26 @@
     "type": "Access Control",
     "category": "Access Control",
     "resolution": "2MP camera",
-    "features": ["Face recognition", "Fingerprint", "Card reader", "PIN code", "TCP/IP", "Wiegand output"],
+    "features": [
+      "Face recognition",
+      "Fingerprint",
+      "Card reader",
+      "PIN code",
+      "TCP/IP",
+      "Wiegand output"
+    ],
     "price": "$349",
-    "certifications": ["CE", "FCC"],
+    "certifications": [
+      "CE",
+      "FCC"
+    ],
     "description": "Hikvision face recognition terminal with multiple authentication modes. 2MP wide-angle camera captures faces even at tall person heights.",
-    "useCases": ["Office entry", "Factory gates", "Staff attendance", "VIP areas"],
+    "useCases": [
+      "Office entry",
+      "Factory gates",
+      "Staff attendance",
+      "VIP areas"
+    ],
     "image": "/images/security/access-control.jpg"
   },
   {
@@ -188,11 +385,26 @@
     "type": "Alarm System",
     "category": "Alarm",
     "resolution": "N/A",
-    "features": ["32 wireless zones", "App control", "GSM/4G backup", "Siren 110dB", "PET immune"],
+    "features": [
+      "32 wireless zones",
+      "App control",
+      "GSM/4G backup",
+      "Siren 110dB",
+      "PET immune"
+    ],
     "price": "$249",
-    "certifications": ["CE", "FCC", "EN 50131 Grade 2"],
+    "certifications": [
+      "CE",
+      "FCC",
+      "EN 50131 Grade 2"
+    ],
     "description": "Hikvision wireless alarm system with 32 zones for comprehensive intrusion detection. Mobile app allows remote arming/disarming and real-time alerts.",
-    "useCases": ["Home security", "Small office", "Retail shops", "Warehouse perimeter"],
+    "useCases": [
+      "Home security",
+      "Small office",
+      "Retail shops",
+      "Warehouse perimeter"
+    ],
     "image": "/images/security/alarm-system.jpg"
   }
 ]

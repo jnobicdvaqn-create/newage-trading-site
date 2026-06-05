@@ -276,10 +276,10 @@
       "size_kb": 268.2,
       "format": "JPEG",
       "quality": "hd",
-      "verified": false,
+      "verified": true,
       "claimed_model": null,
-      "actual_model": null,
-      "match_status": "pending",
+      "actual_model": "White Great Wall Poer/P300 pickup truck",
+      "match_status": "matched",
       "exif_description": null,
       "referenced_by": [
         "./public/images/cars/image-registry.json",
@@ -287,7 +287,7 @@
       ],
       "replacement_needed": false,
       "replacement_suggestion": null,
-      "notes": ""
+      "notes": "Original image restored from 2026-05-15 backup. Verified: Great Wall P300/Poer dual-cab pickup."
     },
     {
       "filename": "li-auto-l9.jpg",

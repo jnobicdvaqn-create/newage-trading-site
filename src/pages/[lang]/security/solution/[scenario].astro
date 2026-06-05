@@ -121,7 +121,7 @@ const descText = lang === 'zh'
         {recommendedProducts.map(p => (
           <a href={`/${lang}/security/product/${p.id}/`} class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
             <div class="h-40 overflow-hidden">
-              <img src={`/images/security/${p.image || 'hikvision-colorvu.jpg'}`} alt={tData(p, 'name', lang)} class="w-full h-full object-cover" loading="lazy" />
+              <img src={`/images/security/${p.image || 'hikvision-darkfighter.jpg'}`} alt={tData(p, 'name', lang)} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
             <div class="text-xs text-[#c4a35a] font-bold mb-1">{p.brand}</div>

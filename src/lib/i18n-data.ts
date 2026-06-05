@@ -94,6 +94,11 @@ export const uiLabels: Record<string, Record<Locale, string>> = {
   cars: { en: 'Car Export', zh: '汽车出口', ru: 'Экспорт авто' },
   lingerie: { en: 'Lingerie OEM', zh: '内衣 OEM', ru: 'Бельё OEM' },
   security: { en: 'Security Equipment', zh: '安防设备', ru: 'Оборудование безопасности' },
+
+  // Testimonials page
+  testimonialsTitle: { en: 'Client Testimonials', zh: '客户评价', ru: 'Отзывы клиентов' },
+  testimonialsDesc: { en: 'What our global partners say about working with YunBao International Trading', zh: '全球合作伙伴对云豹国际贸易的评价', ru: 'Что говорят наши глобальные партнёры о работе с YunBao International Trading' },
+  testimonialsSubtitle: { en: 'Real feedback from clients across automotive, lingerie, and security industries', zh: '来自汽车、内衣和安防行业客户的真实反馈', ru: 'Реальные отзывы клиентов из автомобильной, бельевой и охранной отраслей' },
 };
 
 export function label(key: string, lang: Locale): string {
