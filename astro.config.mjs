@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  site: "https://www.newage-trading.com",
+  site: "https://newage-trading.com",
   integrations: [
     sitemap({
       i18n: {
