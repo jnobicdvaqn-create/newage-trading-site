@@ -1,0 +1,38 @@
+---
+/**
+ * /insights/ — Blog & Insights hub page (EN/RU/ZH)
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import LatestBlog from '@components/LatestBlog.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+---
+
+<BaseLayout
+  title={lang === 'zh' ? '资讯 — YunBao International Trading' : lang === 'ru' ? 'Аналитика — YunBao International Trading' : 'Insights — YunBao International Trading'}
+  description={lang === 'zh' ? '行业新闻、出口指南和市场动态' : lang === 'ru' ? 'Отраслевые новости, руководства по экспорту и обновления рынка' : 'Industry news, export guides, and market updates'}
+  lang={lang}
+  canonical={`https://newage-trading.com/${lang}/insights/`}
+>
+  <Hero
+    title={lang === 'zh' ? '资讯与洞察' : lang === 'ru' ? 'Аналитика и инсайты' : 'Insights & Analysis'}
+    subtitle={lang === 'zh' ? '行业新闻、出口指南和市场动态' : lang === 'ru' ? 'Отраслевые новости, руководства по экспорту и обновления рынка' : 'Industry news, export guides, and market updates'}
+    ctaText={t('home.heroCTA', lang)}
+    ctaLink={`/${lang}/contact/`}
+    lang={lang}
+    size="compact"
+  />
+
+  <LatestBlog lang={lang} />
+</BaseLayout>
