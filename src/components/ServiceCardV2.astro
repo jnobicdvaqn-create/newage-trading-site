@@ -1,0 +1,136 @@
+---
+import type { Locale } from '@i18n/types';
+
+export interface Props {
+  service: {
+    id: string;
+    title: Record<string, string>;
+    images: string[];
+    short_description: Record<string, string>;
+    specifications: Record<string, unknown>;
+    destination_availability?: string[];
+    inquiry_reference?: string;
+  };
+  lang: Locale;
+}
+
+const { service, lang } = Astro.props;
+
+const title = service.title[lang] || service.title.en || service.id;
+const description = service.short_description[lang] || service.short_description.en || '';
+const imageUrl = service.images[0] || '';
+
+// Extract process steps if available
+const processSteps = Array.isArray(service.specifications?.process)
+  ? service.specifications.process as string[]
+  : [];
+
+const detailLink = `/${lang}/products/${service.id}`;
+---
+
+<article
+  class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-300"
+  aria-label={title}
+>
+  <div class="flex flex-col md:flex-row">
+    <!-- Image -->
+    <div class="relative w-full md:w-64 h-48 md:h-auto overflow-hidden bg-blue-50 flex-shrink-0">
+      {imageUrl ? (
+        <img
+          src={imageUrl}
+          alt={title}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+      ) : (
+        <div class="w-full h-full flex items-center justify-center text-gray-400">
+          <span class="text-5xl">📦</span>
+        </div>
+      )}
+      <!-- Service badge -->
+      <div class="absolute top-3 left-3">
+        <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-600 text-white">
+          {lang === 'zh' ? '服务' : lang === 'ru' ? 'Услуга' : 'Service'}
+        </span>
+      </div>
+      {service.inquiry_reference && (
+        <div class="absolute top-3 right-3">
+          <span class="px-2 py-0.5 text-[10px] font-mono text-gray-500 bg-white/80 rounded">
+            {service.inquiry_reference}
+          </span>
+        </div>
+      )}
+    </div>
+
+    <!-- Content -->
+    <div class="p-5 flex flex-col flex-1">
+      <h3 class="text-lg font-semibold text-[#0a1628] mb-2 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p class="text-sm text-gray-600 leading-relaxed mb-4">
+        {description}
+      </p>
+
+      <!-- Process steps -->
+      {processSteps.length > 0 && (
+        <div class="mb-4">
+          <span class="text-xs text-gray-400 uppercase tracking-wide block mb-2">
+            {lang === 'zh' ? '服务流程' : lang === 'ru' ? 'Процесс' : 'Process'}
+          </span>
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            {processSteps.map((step, i) => (
+              <li class="flex items-center gap-2">
+                <span class="flex items-center justify-center w-5 h-5 text-[10px] font-bold rounded-full bg-blue-100 text-blue-600">
+                  {i + 1}
+                </span>
+                <span class="text-xs text-gray-600">{step}</span>
+                {i < processSteps.length - 1 && (
+                  <svg class="w-3 h-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      <!-- Coverage / Lead time -->
+      <div class="flex flex-wrap gap-4 mt-auto pt-3 border-t border-gray-100">
+        {service.specifications?.lead_time && (
+          <div>
+            <span class="text-xs text-gray-400 block">
+              {lang === 'zh' ? '周期' : lang === 'ru' ? 'Срок' : 'Lead Time'}
+            </span>
+            <span class="text-sm font-semibold text-[#0a1628]">
+              {service.specifications.lead_time}
+            </span>
+          </div>
+        )}
+        {service.specifications?.coverage_regions && (
+          <div>
+            <span class="text-xs text-gray-400 block">
+              {lang === 'zh' ? '覆盖' : lang === 'ru' ? 'Покрытие' : 'Coverage'}
+            </span>
+            <span class="text-sm font-semibold text-[#0a1628]">
+              {(service.specifications.coverage_regions as string[]).join(', ')}
+            </span>
+          </div>
+        )}
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-4">
+        <a
+          href={detailLink}
+          class="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 group/link"
+        >
+          {lang === 'zh' ? '了解详情' : lang === 'ru' ? 'Подробнее' : 'Learn More'}
+          <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

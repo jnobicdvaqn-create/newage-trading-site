@@ -1,0 +1,26 @@
+keyword,search_volume_estimate,competition,target_page,locale,intent,primary_h1
+Chinese car export,1000-5000,medium,/en/vehicles/,en,commercial,Vehicle Export
+BYD export price,500-1000,low,/en/cars/,en,commercial,Chinese Automobile Export
+Geely Monjaro export,200-500,low,/en/cars/,en,commercial,Chinese Automobile Export
+Used cars Africa export,500-1000,medium,/en/used-cars/,en,commercial,Used Car Export to Africa
+Zero tariff Africa cars,100-200,low,/en/used-cars/,en,informational,Used Car Export to Africa
+Lingerie OEM China,1000-5000,high,/en/textiles/,en,commercial,Lingerie OEM / ODM Manufacturing
+Chinese underwear manufacturer,500-1000,medium,/en/lingerie/,en,commercial,Lingerie OEM / ODM Manufacturing
+CCTV camera wholesale China,500-1000,medium,/en/security/,en,commercial,Security Equipment Wholesale
+China sourcing agent,1000-5000,high,/en/supply-chain/,en,commercial,Supply Chain Services
+Quality inspection China,500-1000,medium,/en/supply-chain/,en,commercial,Supply Chain Services
+Экспорт авто из Китая,500-1000,medium,/ru/vehicles/,ru,commercial,Экспорт автомобилей
+Китайские автомобили цена,500-1000,medium,/ru/cars/,ru,commercial,Экспорт китайских автомобилей
+Б/у авто из Китая в Африку,200-500,low,/ru/used-cars/,ru,commercial,Экспорт подержанных авто в Африку
+OEM нижнее белье Китай,200-500,low,/ru/textiles/,ru,commercial,OEM/ODM производство нижнего белья
+Оборудование безопасности Китай,200-500,low,/ru/security/,ru,commercial,Оптовая продажа оборудования безопасности
+中国汽车出口,1000-5000,medium,/zh/vehicles/,zh,commercial,汽车出口
+比亚迪出口价格,500-1000,low,/zh/cars/,zh,commercial,中国汽车出口
+内衣OEM代工,500-1000,medium,/zh/textiles/,zh,commercial,内衣OEM / ODM制造
+安防设备批发中国,200-500,low,/zh/security/,zh,commercial,安防设备批发
+供应链服务中国,500-1000,medium,/zh/supply-chain/,zh,commercial,供应链服务
+BYD Han CIF price,200-500,low,/en/cars/price/byd-han,en,transactional,Price in [Country]
+BYD Atto 3 export,200-500,low,/en/cars/price/byd-atto3,en,transactional,Price in [Country]
+Modal fabric lingerie,100-200,low,/en/textiles/,en,commercial,Textiles & OEM
+Cotton underwear wholesale,200-500,medium,/en/lingerie/,en,commercial,Lingerie OEM / ODM Manufacturing
+Hikvision distributor China,100-200,low,/en/security/,en,commercial,Security Equipment Wholesale
