@@ -1,0 +1,23 @@
+old_url_pattern,new_url_pattern,redirect_type,reason
+/pricing/,/{lang}/contact/,301,Merged into contact/inquiry
+/security-solutions/,/{lang}/security/,301,Consolidated into security page
+/underwear-oem/,/{lang}/lingerie/,301,Consolidated into lingerie page
+/vehicles-from-china/,/{lang}/cars/,301,Consolidated into cars page
+/var/www/newage-trading.com/pricing/,/{lang}/contact/,301,Legacy redirect
+/var/www/newage-trading.com/security-solutions/,/{lang}/security/,301,Legacy redirect
+/var/www/newage-trading.com/underwear-oem/,/{lang}/lingerie/,301,Legacy redirect
+/var/www/newage-trading.com/vehicles-from-china/,/{lang}/cars/,301,Legacy redirect
+/en/pricing/,/en/contact/,301,Legacy redirect
+/ru/pricing/,/ru/contact/,301,Legacy redirect
+/zh/pricing/,/zh/contact/,301,Legacy redirect
+/en/security-solutions/,/en/security/,301,Legacy redirect
+/ru/security-solutions/,/ru/security/,301,Legacy redirect
+/zh/security-solutions/,/zh/security/,301,Legacy redirect
+/en/underwear-oem/,/en/lingerie/,301,Legacy redirect
+/ru/underwear-oem/,/ru/lingerie/,301,Legacy redirect
+/zh/underwear-oem/,/zh/lingerie/,301,Legacy redirect
+/en/vehicles-from-china/,/en/cars/,301,Legacy redirect
+/ru/vehicles-from-china/,/ru/cars/,301,Legacy redirect
+/zh/vehicles-from-china/,/zh/cars/,301,Legacy redirect
+/calculator/,/{lang}/calculator/,301,Locale prefix added
+/faq/pricing/,/{lang}/faq/pricing/,301,Locale prefix added

@@ -5,27 +5,24 @@
  * Step 2: Requirement details
  * Step 3: Contact info + preview
  * 
- * Uses mock/stub for local testing — NO real email submission.
+ * Connects to /api/contact for real submission.
  * 
  * Props:
  *   - lang: Locale
- *   - action: form action URL (defaults to mock)
- *   - endpoint: backend endpoint (defaults to /mock/inquiry)
+ *   - endpoint: backend endpoint (defaults to /api/contact)
  */
 import type { Locale } from '@i18n/types';
 import { t } from '@i18n/index';
 
 export interface Props {
   lang: Locale;
-  action?: string;
   endpoint?: string;
   preselectedCategory?: string;
 }
 
 const {
   lang,
-  action = '/mock/inquiry',
-  endpoint = '/mock/inquiry',
+  endpoint = '/api/contact',
   preselectedCategory = '',
 } = Astro.props;
 
@@ -107,10 +104,10 @@ const stepLabels = [
   </div>
 
   <!-- Form -->
-  <form id="inquiry-form" action={action} method="POST" class="space-y-6">
+  <form id="inquiry-form" action={endpoint} method="POST" class="space-y-6">
     <!-- Hidden fields -->
     <input type="hidden" name="_subject" value="New Inquiry from Website" />
-    <input type="hidden" name="_next" value={`/mock/thanks`} />
+    <input type="hidden" name="_lang" value={lang} />
     <input type="hidden" name="page_slug" value="inquiry-builder" />
     <input type="hidden" name="language" value={lang} />
     <input type="hidden" name="inquiry_step1_category" id="field-category" value={preselectedCategory} />
@@ -361,13 +358,13 @@ const stepLabels = [
     </div>
   </form>
 
-  <!-- Mock submission notice -->
-  <div class="mt-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-xs text-blue-700">
+  <!-- Privacy notice -->
+  <div class="mt-4 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-xs text-gray-500">
     {lang === 'zh'
-      ? '🔒 本地测试模式：询盘数据不会真实发送。'
+      ? '🔒 您的信息将被安全保护，仅用于回复您的询盘。'
       : lang === 'ru'
-      ? '🔒 Локальный тестовый режим: запрос не будет отправлен.'
-      : '🔒 Local test mode: inquiry will not be sent to any real endpoint.'}
+      ? '🔒 Ваша информация защищена и используется только для ответа на запрос.'
+      : '🔒 Your information is secure and used only to respond to your inquiry.'}
   </div>
 </div>
 
@@ -549,32 +546,74 @@ const stepLabels = [
   // Prev button step 3 → 2
   document.getElementById('btn-prev-3')?.addEventListener('click', () => showStep(2));
 
-  // Form submission (mock only)
-  form.addEventListener('submit', (e) => {
+  // Form submission — sends to real /api/contact endpoint
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     const data: Record<string, string> = {};
     formData.forEach((value, key) => { data[key] = value as string; });
 
-    console.log('[InquiryBuilder] Mock submission (no real data sent):', data);
+    const submitBtn = document.getElementById('btn-submit');
+    if (submitBtn) submitBtn.disabled = true;
 
-    // Show success message
-    const builder = document.getElementById('inquiry-builder');
-    if (builder) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const builder = document.getElementById('inquiry-builder');
+      if (!builder) return;
+
+      if (res.ok) {
+        builder.innerHTML = `
+          <div class="rounded-xl border-2 border-green-300 bg-green-50 p-10 text-center">
+            <div class="mb-4 text-5xl">✅</div>
+            <h3 class="text-2xl font-bold text-green-800">
+              ${lang === 'zh' ? '询盘已提交' : lang === 'ru' ? 'Запрос отправлен' : 'Inquiry Submitted'}
+            </h3>
+            <p class="mt-3 text-sm text-green-700">
+              ${lang === 'zh' ? '感谢您的询盘！我们将在24小时内回复您。' :
+                lang === 'ru' ? 'Спасибо за ваш запрос! Мы ответим вам в течение 24 часов.' :
+                'Thank you for your inquiry! We will get back to you within 24 hours.'}
+            </p>
+          </div>
+        `;
+      } else {
+        const errData = await res.json().catch(() => ({}));
+        builder.innerHTML = `
+          <div class="rounded-xl border-2 border-red-300 bg-red-50 p-10 text-center">
+            <div class="mb-4 text-5xl">⚠️</div>
+            <h3 class="text-2xl font-bold text-red-800">
+              ${lang === 'zh' ? '提交失败' : lang === 'ru' ? 'Ошибка отправки' : 'Submission Failed'}
+            </h3>
+            <p class="mt-3 text-sm text-red-700">
+              ${lang === 'zh' ? (errData.error || '提交失败，请稍后重试或直接联系我们。') :
+                lang === 'ru' ? (errData.error || 'Ошибка отправки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.') :
+                (errData.error || 'Failed to submit. Please try again later or contact us directly.')}
+            </p>
+          </div>
+        `;
+      }
+    } catch (err) {
+      const builder = document.getElementById('inquiry-builder');
+      if (!builder) return;
       builder.innerHTML = `
-        <div class="rounded-xl border-2 border-green-300 bg-green-50 p-10 text-center">
-          <div class="mb-4 text-5xl">✅</div>
-          <h3 class="text-2xl font-bold text-green-800">
-            ${lang === 'zh' ? '询盘已提交（测试模式）' : lang === 'ru' ? 'Запрос отправлен (тестовый режим)' : 'Inquiry Submitted (Test Mode)'}
+        <div class="rounded-xl border-2 border-red-300 bg-red-50 p-10 text-center">
+          <div class="mb-4 text-5xl">⚠️</div>
+          <h3 class="text-2xl font-bold text-red-800">
+            ${lang === 'zh' ? '网络错误' : lang === 'ru' ? 'Ошибка сети' : 'Network Error'}
           </h3>
-          <p class="mt-3 text-sm text-green-700">
-            ${lang === 'zh' ? '这是本地测试，数据未真实发送。生产环境将连接到真实后端。' :
-              lang === 'ru' ? 'Это локальный тест, данные не были отправлены. В продакшене будет подключен реальный бэкенд.' :
-              'This is a local test — no data was sent. In production, this will connect to a real backend.'}
+          <p class="mt-3 text-sm text-red-700">
+            ${lang === 'zh' ? '网络错误，请稍后重试或直接通过WhatsApp/邮件联系我们。' :
+              lang === 'ru' ? 'Ошибка сети. Пожалуйста, попробуйте позже или свяжитесь с нами через WhatsApp/Email.' :
+              'Network error. Please try again later or contact us via WhatsApp/Email.'}
           </p>
-          <pre class="mt-4 rounded-lg bg-gray-900 p-4 text-left text-xs text-green-300 overflow-auto max-h-64">${JSON.stringify(data, null, 2)}</pre>
         </div>
       `;
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 
