@@ -8,3 +8,12 @@ node_modules/
 dist/
 .env.local
 .env.*.local
+
+# 备份和临时文件
+*.bak
+*.tmp
+*.old
+*.cache
+.cif_cache/
+dist/
+node_modules/

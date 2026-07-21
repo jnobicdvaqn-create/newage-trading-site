@@ -1,0 +1,86 @@
+[
+  {
+    "page": "en_vehicles",
+    "url": "http://127.0.0.1:4322/en/vehicles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "ru_vehicles",
+    "url": "http://127.0.0.1:4322/ru/vehicles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "zh_vehicles",
+    "url": "http://127.0.0.1:4322/zh/vehicles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "en_textiles",
+    "url": "http://127.0.0.1:4322/en/textiles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "ru_textiles",
+    "url": "http://127.0.0.1:4322/ru/textiles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "zh_textiles",
+    "url": "http://127.0.0.1:4322/zh/textiles/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  },
+  {
+    "page": "en_supply_chain",
+    "url": "http://127.0.0.1:4322/en/supply-chain/",
+    "title": "",
+    "h1_count": 0,
+    "has_canonical": false,
+    "has_hreflang": false,
+    "has_filters": false,
+    "has_articles": false,
+    "console_errors": 0,
+    "screenshot_saved": false
+  }
+]
