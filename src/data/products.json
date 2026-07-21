@@ -1,0 +1,316 @@
+{
+  "products": [
+    {
+      "id": "byd-atto3",
+      "category": "vehicles.new.ev",
+      "type": "vehicle",
+      "title": {
+        "en": "BYD Atto 3",
+        "ru": "BYD Atto 3",
+        "zh": "比亚迪 元PLUS"
+      },
+      "images": ["/images/cars/byd-atto3.webp"],
+      "short_description": {
+        "en": "Best-selling compact electric SUV with 420km range and Blade Battery technology.",
+        "ru": "Бестселлер компактных электрических SUV с запасом хода 420 км и технологией Blade Battery.",
+        "zh": "畅销紧凑型电动SUV，续航420公里，搭载刀片电池技术。"
+      },
+      "specifications": {
+        "range": "420km",
+        "power": "150kW",
+        "seats": 5,
+        "battery": "49.92kWh Blade Battery",
+        "top_speed": "160 km/h",
+        "acceleration": "7.3s (0-100km/h)",
+        "drive_type": "FWD"
+      },
+      "moq": "1 unit",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "VEH-ATA3"
+    },
+    {
+      "id": "byd-seal",
+      "category": "vehicles.new.ev",
+      "type": "vehicle",
+      "title": {
+        "en": "BYD Seal",
+        "ru": "BYD Seal",
+        "zh": "比亚迪 海豹"
+      },
+      "images": ["/images/cars/byd-seal.webp"],
+      "short_description": {
+        "en": "Premium electric sedan with sporty design, e-Platform 3.0, and up to 570km range.",
+        "ru": "Премиальный электрический седан с спортивным дизайном, платформой e-Platform 3.0 и запасом хода до 570 км.",
+        "zh": "高端电动轿车，运动设计，e平台3.0，续航最高570公里。"
+      },
+      "specifications": {
+        "range": "570km",
+        "power": "230kW",
+        "seats": 5,
+        "battery": "82.5kWh Blade Battery",
+        "top_speed": "180 km/h",
+        "acceleration": "5.9s (0-100km/h)",
+        "drive_type": "RWD"
+      },
+      "moq": "1 unit",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "VEH-SEAL"
+    },
+    {
+      "id": "geely-monjaro",
+      "category": "vehicles.new.ice",
+      "type": "vehicle",
+      "title": {
+        "en": "Geely Monjaro",
+        "ru": "Geely Monjaro",
+        "zh": "吉利 星越L"
+      },
+      "images": ["/images/cars/geely-monjaro.webp"],
+      "short_description": {
+        "en": "Mid-size SUV with Volvo-derived 2.0T engine, premium interior, and advanced safety features.",
+        "ru": "Среднеразмерный SUV с двигателем 2.0T от Volvo, премиальным интерьером и расширенными функциями безопасности.",
+        "zh": "中型SUV，沃尔沃同源2.0T发动机，豪华内饰，高级安全配置。"
+      },
+      "specifications": {
+        "engine": "2.0T Turbo",
+        "power": "187kW",
+        "seats": 5,
+        "transmission": "8AT",
+        "top_speed": "210 km/h",
+        "acceleration": "7.6s (0-100km/h)",
+        "drive_type": "AWD"
+      },
+      "moq": "1 unit",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "VEH-MONJ"
+    },
+    {
+      "id": "haval-jolion",
+      "category": "vehicles.new.ice",
+      "type": "vehicle",
+      "title": {
+        "en": "Haval Jolion",
+        "ru": "Haval Jolion",
+        "zh": "哈弗 初恋"
+      },
+      "images": ["/images/cars/haval-jolion.webp"],
+      "short_description": {
+        "en": "Compact crossover SUV with bold design, smart connectivity, and excellent value for money.",
+        "ru": "Компактный кроссовер SUV с дерзким дизайном, умной связью и отличным соотношением цены и качества.",
+        "zh": "紧凑型跨界SUV，大胆设计，智能互联，性价比极高。"
+      },
+      "specifications": {
+        "engine": "1.5T Turbo",
+        "power": "135kW",
+        "seats": 5,
+        "transmission": "7DCT",
+        "top_speed": "190 km/h",
+        "acceleration": "9.5s (0-100km/h)",
+        "drive_type": "FWD"
+      },
+      "moq": "1 unit",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "VEH-JOL"
+    },
+    {
+      "id": "changan-deepal-s7",
+      "category": "vehicles.new.erev",
+      "type": "vehicle",
+      "title": {
+        "en": "Changan Deepal S7",
+        "ru": "Changan Deepal S7",
+        "zh": "长安 深蓝S7"
+      },
+      "images": ["/images/cars/changan-deepal-s7.webp"],
+      "short_description": {
+        "en": "Smart EREV SUV combining electric driving with range-extender flexibility for zero-range-anxiety travel.",
+        "ru": "Умный EREV SUV, сочетающий электрическую езду с гибридностью без беспокойства о запасе хода.",
+        "zh": "智能增程SUV，纯电驾驶+增程器灵活补能，告别里程焦虑。"
+      },
+      "specifications": {
+        "range": "200km EV / 1120km combined",
+        "power": "175kW",
+        "seats": 5,
+        "battery": "18.99kWh",
+        "top_speed": "180 km/h",
+        "acceleration": "7.6s (0-100km/h)",
+        "drive_type": "RWD"
+      },
+      "moq": "1 unit",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "VEH-DPS7"
+    },
+    {
+      "id": "modal-lingerie-set",
+      "category": "textiles.lingerie.set",
+      "type": "textile",
+      "title": {
+        "en": "Modal Lingerie Set",
+        "ru": "Комплект белья из модала",
+        "zh": "莫代尔内衣套装"
+      },
+      "images": ["/images/lingerie/modal-set.webp"],
+      "short_description": {
+        "en": "Ultra-soft modal fabric lingerie set with breathable comfort and elegant lace trim.",
+        "ru": "Комплект белья из ультрамягкого модала с дышащим комфортом и элегантной кружевной отделкой.",
+        "zh": "超柔莫代尔面料内衣套装，透气舒适，精致蕾丝镶边。"
+      },
+      "specifications": {
+        "material": "95% Modal + 5% Spandex",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "Nude", "Wine Red", "Sky Blue"],
+        "oem_odm": true,
+        "certifications": ["OEKO-TEX Standard 100"]
+      },
+      "moq": "100 sets",
+      "destination_availability": ["Georgia", "Russia", "UAE"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "TEX-MOD"
+    },
+    {
+      "id": "cotton-briefs",
+      "category": "textiles.underwear.briefs",
+      "type": "textile",
+      "title": {
+        "en": "Cotton Briefs",
+        "ru": "Хлопковые трусы",
+        "zh": "纯棉内裤"
+      },
+      "images": ["/images/lingerie/cotton-briefs.webp"],
+      "short_description": {
+        "en": "Premium 100% combed cotton briefs with tagless design, ideal for everyday comfort.",
+        "ru": "Премиальные трусы из 100% гребенного хлопка с безбирковым дизайном, идеально для повседневного комфорта.",
+        "zh": "100%精梳棉内裤，无标签设计，日常舒适首选。"
+      },
+      "specifications": {
+        "material": "100% Combed Cotton",
+        "sizes": ["M", "L", "XL", "XXL", "XXXL"],
+        "colors": ["White", "Black", "Gray", "Navy"],
+        "oem_odm": true,
+        "certifications": ["OEKO-TEX Standard 100"]
+      },
+      "moq": "500 pieces",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "TEX-COT"
+    },
+    {
+      "id": "lace-bra",
+      "category": "textiles.underwear.bra",
+      "type": "textile",
+      "title": {
+        "en": "Lace Bra",
+        "ru": "Кружевной бюстгальтер",
+        "zh": "蕾丝文胸"
+      },
+      "images": ["/images/lingerie/lace-bra.webp"],
+      "short_description": {
+        "en": "Delicate French lace bra with wireless comfort and seamless cup design.",
+        "ru": "Изящный кружевной бюстгальтер с французским кружевом, бескаркасным комфортом и бесшовной чашкой.",
+        "zh": "精致法式蕾丝文胸，无钢圈舒适，无缝罩杯设计。"
+      },
+      "specifications": {
+        "material": "82% Nylon + 18% Spandex",
+        "sizes": ["70B", "75B", "75C", "80B", "80C", "85B"],
+        "colors": ["Black", "White", "Rose Pink", "Champagne"],
+        "oem_odm": true,
+        "certifications": ["OEKO-TEX Standard 100"]
+      },
+      "moq": "200 pieces",
+      "destination_availability": ["Georgia", "Russia", "UAE"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "TEX-LAC"
+    },
+    {
+      "id": "service-sourcing",
+      "category": "supply-chain.sourcing",
+      "type": "service",
+      "title": {
+        "en": "Product Sourcing",
+        "ru": "Поиск товаров",
+        "zh": "产品采购"
+      },
+      "images": ["/images/services/sourcing.webp"],
+      "short_description": {
+        "en": "End-to-end sourcing from verified Chinese manufacturers. We find, vet, and negotiate the best deals for your market.",
+        "ru": "Поиск товаров от проверенных китайских производителей. Находим, проверяем и договариваемся о лучших ценах для вашего рынка.",
+        "zh": "从认证中国制造商端到端采购。我们为您寻找、审核、谈判最优价格。"
+      },
+      "specifications": {
+        "process": ["Requirement analysis", "Supplier matching", "Quality verification", "Price negotiation", "Contract finalization"],
+        "coverage_regions": ["Automotive", "Textiles & Underwear", "Security Equipment", "Consumer Electronics"],
+        "lead_time": "3-7 business days for supplier shortlist"
+      },
+      "moq": "Per project",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "SVC-SRC"
+    },
+    {
+      "id": "service-quality-inspection",
+      "category": "supply-chain.inspection",
+      "type": "service",
+      "title": {
+        "en": "Quality Inspection",
+        "ru": "Контроль качества",
+        "zh": "质量检验"
+      },
+      "images": ["/images/services/inspection.webp"],
+      "short_description": {
+        "en": "Pre-shipment quality inspection by certified inspectors. Photo/video documentation with detailed reports.",
+        "ru": "Предотгрузочный контроль качества сертифицированными инспекторами. Фото/видео документация с подробными отчетами.",
+        "zh": "认证检验员出货前质量检验。提供照片/视频记录和详细报告。"
+      },
+      "specifications": {
+        "process": ["Inspection scheduling", "On-site inspection", "Testing & verification", "Report generation", "Issue resolution"],
+        "coverage_regions": ["Guangdong", "Zhejiang", "Jiangsu", "Fujian", "Shandong"],
+        "lead_time": "1-3 business days"
+      },
+      "moq": "Per shipment",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "SVC-QCI"
+    },
+    {
+      "id": "service-logistics",
+      "category": "supply-chain.logistics",
+      "type": "service",
+      "title": {
+        "en": "Logistics & Shipping",
+        "ru": "Логистика и доставка",
+        "zh": "物流与运输"
+      },
+      "images": ["/images/services/logistics.webp"],
+      "short_description": {
+        "en": "Door-to-door shipping with customs clearance support. Sea, rail, and air freight options.",
+        "ru": "Доставка от двери до двери с поддержкой таможенного оформления. Морские, железнодорожные и авиа перевозки.",
+        "zh": "门到门运输，含清关支持。海运、铁路、空运多种选择。"
+      },
+      "specifications": {
+        "process": ["Cargo booking", "Container loading", "Customs export", "International transit", "Customs import", "Final delivery"],
+        "coverage_regions": ["Sea Freight", "Rail Freight (China-Europe)", "Air Freight", "Border Trucking"],
+        "lead_time": "25-35 days (sea), 15-20 days (rail), 5-7 days (air)"
+      },
+      "moq": "Per shipment",
+      "destination_availability": ["Georgia", "Russia", "UAE", "Kazakhstan", "Ghana"],
+      "locale": "en",
+      "verification_status": "unverified",
+      "inquiry_reference": "SVC-LOG"
+    }
+  ]
+}

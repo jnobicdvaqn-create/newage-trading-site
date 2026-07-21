@@ -1,0 +1,592 @@
+---
+/**
+ * InquiryBuilder — 3-step structured inquiry form
+ * Step 1: Business line selection
+ * Step 2: Requirement details
+ * Step 3: Contact info + preview
+ * 
+ * Uses mock/stub for local testing — NO real email submission.
+ * 
+ * Props:
+ *   - lang: Locale
+ *   - action: form action URL (defaults to mock)
+ *   - endpoint: backend endpoint (defaults to /mock/inquiry)
+ */
+import type { Locale } from '@i18n/types';
+import { t } from '@i18n/index';
+
+export interface Props {
+  lang: Locale;
+  action?: string;
+  endpoint?: string;
+  preselectedCategory?: string;
+}
+
+const {
+  lang,
+  action = '/mock/inquiry',
+  endpoint = '/mock/inquiry',
+  preselectedCategory = '',
+} = Astro.props;
+
+const businessLines = [
+  {
+    id: 'vehicles',
+    icon: '🚗',
+    title: { en: 'Vehicle Export', ru: 'Экспорт транспорта', zh: '汽车出口' },
+    description: {
+      en: 'New energy vehicles & used cars for global markets',
+      ru: 'Новые энергетические автомобили и подержанные автомобили для мировых рынков',
+      zh: '新能源车和二手车出口全球市场',
+    },
+    options: [
+      { id: 'new-cars', label: { en: 'New Cars', ru: 'Новые авто', zh: '新车' } },
+      { id: 'used-cars', label: { en: 'Used Cars', ru: 'Авто б/у', zh: '二手车' } },
+      { id: 'ev', label: { en: 'Electric Vehicles', ru: 'Электромобили', zh: '电动车' } },
+    ],
+  },
+  {
+    id: 'textiles',
+    icon: '👗',
+    title: { en: 'Textiles & OEM', ru: 'Текстиль и OEM', zh: '纺织品与OEM' },
+    description: {
+      en: 'Lingerie & apparel manufacturing — OEM/ODM',
+      ru: 'Производство нижнего белья и одежды — OEM/ODM',
+      zh: '内衣和服装制造 — OEM/ODM',
+    },
+    options: [
+      { id: 'oem', label: { en: 'OEM Manufacturing', ru: 'OEM производство', zh: 'OEM代工' } },
+      { id: 'odm', label: { en: 'ODM Design', ru: 'ODM дизайн', zh: 'ODM设计' } },
+      { id: 'wholesale', label: { en: 'Wholesale', ru: 'Опт', zh: '批发' } },
+    ],
+  },
+  {
+    id: 'supply-chain',
+    icon: '🔗',
+    title: { en: 'Supply Chain Services', ru: 'Цепочка поставок', zh: '供应链服务' },
+    description: {
+      en: 'Sourcing, QC, logistics & customs clearance',
+      ru: 'Поиск поставщиков, контроль качества, логистика и таможенное оформление',
+      zh: '采购、质检、物流和清关',
+    },
+    options: [
+      { id: 'sourcing', label: { en: 'Product Sourcing', ru: 'Поиск товаров', zh: '产品采购' } },
+      { id: 'qc', label: { en: 'Quality Inspection', ru: 'Контроль качества', zh: '质检' } },
+      { id: 'logistics', label: { en: 'Logistics & Shipping', ru: 'Логистика и доставка', zh: '物流和运输' } },
+    ],
+  },
+];
+
+const stepLabels = [
+  { en: 'Business Line', ru: 'Направление', zh: '业务线' },
+  { en: 'Requirements', ru: 'Требования', zh: '需求详情' },
+  { en: 'Contact Info', ru: 'Контакты', zh: '联系信息' },
+];
+---
+
+<div class="mx-auto max-w-3xl" id="inquiry-builder" data-lang={lang}>
+  <!-- Step Indicator -->
+  <div class="mb-8 flex items-center justify-center">
+    {stepLabels.map((label, i) => (
+      <div class="flex items-center">
+        <div class={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-colors ${
+          i === 0 ? 'bg-[var(--color-primary)] text-white' : 'bg-gray-200 text-gray-500'
+        }`} data-step={i}>
+          {i + 1}
+        </div>
+        <span class={`ml-2 text-sm font-medium ${
+          i === 0 ? 'text-[var(--color-primary)]' : 'text-gray-400'
+        }`} data-step-label={i}>
+          {label[lang] || label.en}
+        </span>
+        {i < stepLabels.length - 1 && (
+          <div class="mx-4 h-0.5 w-12 bg-gray-200"></div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <!-- Form -->
+  <form id="inquiry-form" action={action} method="POST" class="space-y-6">
+    <!-- Hidden fields -->
+    <input type="hidden" name="_subject" value="New Inquiry from Website" />
+    <input type="hidden" name="_next" value={`/mock/thanks`} />
+    <input type="hidden" name="page_slug" value="inquiry-builder" />
+    <input type="hidden" name="language" value={lang} />
+    <input type="hidden" name="inquiry_step1_category" id="field-category" value={preselectedCategory} />
+    <input type="hidden" name="inquiry_step2_details" id="field-details" />
+    <input type="hidden" name="inquiry_step2_options" id="field-options" />
+
+    <!-- Step 1: Business Line Selection -->
+    <div id="inquiry-step-1" class="space-y-4">
+      <h3 class="text-xl font-bold text-[var(--color-text)]">
+        {lang === 'zh' ? '选择您的业务需求' : lang === 'ru' ? 'Выберите направление' : 'Select Your Business Need'}
+      </h3>
+      <div class="grid gap-4 sm:grid-cols-3">
+        {businessLines.map((line) => (
+          <label class={`group flex cursor-pointer flex-col items-center rounded-xl border-2 border-gray-200 p-5 text-center transition-all hover:border-[var(--color-primary)] hover:shadow-md ${
+            preselectedCategory === line.id ? 'border-[var(--color-primary)] bg-[var(--color-primary)]/5' : ''
+          }`}>
+            <input
+              type="radio"
+              name="business_line"
+              value={line.id}
+              class="sr-only"
+              checked={preselectedCategory === line.id}
+              data-step="1"
+            />
+            <span class="mb-2 text-3xl">{line.icon}</span>
+            <span class="font-bold text-[var(--color-text)] group-hover:text-[var(--color-primary)]">
+              {line.title[lang] || line.title.en}
+            </span>
+            <span class="mt-1 text-xs text-gray-500">
+              {line.description[lang] || line.description.en}
+            </span>
+          </label>
+        ))}
+      </div>
+
+      <!-- Sub-options (shown after selection) -->
+      <div id="step1-suboptions" class="hidden space-y-3 pt-2">
+        <h4 class="text-sm font-semibold text-gray-600">
+          {lang === 'zh' ? '具体需求类型' : lang === 'ru' ? 'Тип запроса' : 'Specific Request Type'}
+        </h4>
+        <div id="suboptions-container" class="flex flex-wrap gap-2">
+          <!-- Populated by JS based on selection -->
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-4">
+        <button
+          type="button"
+          id="btn-next-1"
+          class="rounded-lg bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-primary)]/90 disabled:cursor-not-allowed disabled:opacity-50"
+          disabled
+        >
+          {lang === 'zh' ? '下一步 →' : lang === 'ru' ? 'Далее →' : 'Next →'}
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Requirement Details -->
+    <div id="inquiry-step-2" class="hidden space-y-4">
+      <h3 class="text-xl font-bold text-[var(--color-text)]">
+        {lang === 'zh' ? '填写需求详情' : lang === 'ru' ? 'Подробности запроса' : 'Requirement Details'}
+      </h3>
+
+      <div class="space-y-4">
+        <div>
+          <label class="mb-1.5 block text-sm font-medium text-gray-700">
+            {lang === 'zh' ? '产品/服务描述' : lang === 'ru' ? 'Описание продукта/услуги' : 'Product/Service Description'}
+          </label>
+          <textarea
+            id="field-description"
+            name="description"
+            rows="4"
+            class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            placeholder={lang === 'zh' ? '请描述您的需求...' : lang === 'ru' ? 'Опишите ваш запрос...' : 'Describe your requirements...'}
+          />
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '目标数量' : lang === 'ru' ? 'Целевое количество' : 'Target Quantity'}
+            </label>
+            <input
+              type="text"
+              id="field-quantity"
+              name="quantity"
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+              placeholder={lang === 'zh' ? '例：10台 / 500件' : lang === 'ru' ? 'Напр.: 10 шт / 500 шт' : 'e.g., 10 units / 500 pcs'}
+            />
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '目标目的地' : lang === 'ru' ? 'Целевой пункт назначения' : 'Destination'}
+            </label>
+            <input
+              type="text"
+              id="field-destination"
+              name="destination"
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+              placeholder={lang === 'zh' ? '例：格鲁吉亚' : lang === 'ru' ? 'Напр.: Грузия' : 'e.g., Georgia'}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="mb-1.5 block text-sm font-medium text-gray-700">
+            {lang === 'zh' ? '预算范围（可选）' : lang === 'ru' ? 'Бюджет (опционально)' : 'Budget Range (optional)'}
+          </label>
+          <select
+            id="field-budget"
+            name="budget"
+            class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+          >
+            <option value="">{lang === 'zh' ? '请选择' : lang === 'ru' ? 'Выберите' : 'Select'}</option>
+            <option value="<5000">{lang === 'zh' ? '< $5,000' : lang === 'ru' ? '< $5,000' : '< $5,000'}</option>
+            <option value="5000-20000">{lang === 'zh' ? '$5,000 - $20,000' : lang === 'ru' ? '$5,000 - $20,000' : '$5,000 - $20,000'}</option>
+            <option value="20000-50000">{lang === 'zh' ? '$20,000 - $50,000' : lang === 'ru' ? '$20,000 - $50,000' : '$20,000 - $50,000'}</option>
+            <option value=">50000">{lang === 'zh' ? '> $50,000' : lang === 'ru' ? '> $50,000' : '> $50,000'}</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="mb-1.5 block text-sm font-medium text-gray-700">
+            {lang === 'zh' ? '附加说明' : lang === 'ru' ? 'Дополнительные комментарии' : 'Additional Notes'}
+          </label>
+          <textarea
+            id="field-notes"
+            name="notes"
+            rows="3"
+            class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            placeholder={lang === 'zh' ? '任何额外信息...' : lang === 'ru' ? 'Любая дополнительная информация...' : 'Any additional information...'}
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button
+          type="button"
+          id="btn-prev-2"
+          class="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
+        >
+          ← {lang === 'zh' ? '上一步' : lang === 'ru' ? 'Назад' : 'Back'}
+        </button>
+        <button
+          type="button"
+          id="btn-next-2"
+          class="rounded-lg bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-primary)]/90"
+        >
+          {lang === 'zh' ? '下一步 →' : lang === 'ru' ? 'Далее →' : 'Next →'}
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Contact Info + Preview -->
+    <div id="inquiry-step-3" class="hidden space-y-4">
+      <h3 class="text-xl font-bold text-[var(--color-text)]">
+        {lang === 'zh' ? '联系信息' : lang === 'ru' ? 'Контактная информация' : 'Contact Information'}
+      </h3>
+
+      <!-- Preview Summary -->
+      <div id="inquiry-preview" class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+        <h4 class="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500">
+          {lang === 'zh' ? '询盘摘要' : lang === 'ru' ? 'Сводка запроса' : 'Inquiry Summary'}
+        </h4>
+        <div id="preview-content" class="space-y-2 text-sm">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '姓名 *' : lang === 'ru' ? 'Имя *' : 'Name *'}
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            />
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '公司名' : lang === 'ru' ? 'Компания' : 'Company'}
+            </label>
+            <input
+              type="text"
+              name="company"
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            />
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '邮箱 *' : lang === 'ru' ? 'Email *' : 'Email *'}
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            />
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-gray-700">
+              {lang === 'zh' ? '电话/WhatsApp' : lang === 'ru' ? 'Телефон/WhatsApp' : 'Phone/WhatsApp'}
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="mb-1.5 block text-sm font-medium text-gray-700">
+            {lang === 'zh' ? 'WhatsApp / Telegram' : lang === 'ru' ? 'WhatsApp / Telegram' : 'WhatsApp / Telegram'}
+          </label>
+          <input
+            type="text"
+            name="messenger"
+            class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition-colors focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+            placeholder="WhatsApp username or Telegram @username"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-between pt-4">
+        <button
+          type="button"
+          id="btn-prev-3"
+          class="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
+        >
+          ← {lang === 'zh' ? '上一步' : lang === 'ru' ? 'Назад' : 'Back'}
+        </button>
+        <button
+          type="submit"
+          id="btn-submit"
+          class="rounded-lg bg-[var(--color-accent)] px-8 py-3 text-sm font-bold text-[var(--color-bg-dark)] transition-colors hover:bg-[var(--color-accent-light)]"
+        >
+          {lang === 'zh' ? '提交询盘' : lang === 'ru' ? 'Отправить запрос' : 'Submit Inquiry'}
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Mock submission notice -->
+  <div class="mt-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-xs text-blue-700">
+    {lang === 'zh'
+      ? '🔒 本地测试模式：询盘数据不会真实发送。'
+      : lang === 'ru'
+      ? '🔒 Локальный тестовый режим: запрос не будет отправлен.'
+      : '🔒 Local test mode: inquiry will not be sent to any real endpoint.'}
+  </div>
+</div>
+
+<script>
+(function() {
+  const form = document.getElementById('inquiry-form');
+  if (!form) return;
+
+  const lang = document.getElementById('inquiry-builder')?.dataset.lang || 'en';
+  let currentStep = 1;
+  let selectedCategory = '';
+  let selectedSubOptions: string[] = [];
+
+  const businessLines = [
+    { id: 'vehicles', options: ['new-cars', 'used-cars', 'ev'] },
+    { id: 'textiles', options: ['oem', 'odm', 'wholesale'] },
+    { id: 'supply-chain', options: ['sourcing', 'qc', 'logistics'] },
+  ];
+
+  const optionLabels: Record<string, Record<string, string>> = {
+    'new-cars': { en: 'New Cars', ru: 'Новые авто', zh: '新车' },
+    'used-cars': { en: 'Used Cars', ru: 'Авто б/у', zh: '二手车' },
+    'ev': { en: 'Electric Vehicles', ru: 'Электромобили', zh: '电动车' },
+    'oem': { en: 'OEM Manufacturing', ru: 'OEM производство', zh: 'OEM代工' },
+    'odm': { en: 'ODM Design', ru: 'ODM дизайн', zh: 'ODM设计' },
+    'wholesale': { en: 'Wholesale', ru: 'Опт', zh: '批发' },
+    'sourcing': { en: 'Product Sourcing', ru: 'Поиск товаров', zh: '产品采购' },
+    'qc': { en: 'Quality Inspection', ru: 'Контроль качества', zh: '质检' },
+    'logistics': { en: 'Logistics & Shipping', ru: 'Логистика и доставка', zh: '物流和运输' },
+  };
+
+  function showStep(step: number) {
+    currentStep = step;
+    for (let i = 1; i <= 3; i++) {
+      const stepEl = document.getElementById(`inquiry-step-${i}`);
+      if (stepEl) {
+        stepEl.classList.toggle('hidden', i !== step);
+      }
+    }
+    // Update step indicators
+    document.querySelectorAll('[data-step]').forEach(el => {
+      const s = parseInt(el.getAttribute('data-step') || '0');
+      const circle = el as HTMLElement;
+      const label = document.querySelector(`[data-step-label="${s}"]`) as HTMLElement;
+      if (s < step) {
+        circle.className = 'flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-colors bg-[var(--color-primary)] text-white';
+        if (label) label.className = 'ml-2 text-sm font-medium text-[var(--color-primary)]';
+      } else if (s === step) {
+        circle.className = 'flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-colors bg-[var(--color-primary)] text-white';
+        if (label) label.className = 'ml-2 text-sm font-medium text-[var(--color-primary)]';
+      } else {
+        circle.className = 'flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-colors bg-gray-200 text-gray-500';
+        if (label) label.className = 'ml-2 text-sm font-medium text-gray-400';
+      }
+    });
+  }
+
+  function updateSubOptions(categoryId: string) {
+    const container = document.getElementById('suboptions-container');
+    const wrapper = document.getElementById('step1-suboptions');
+    if (!container || !wrapper) return;
+
+    const line = businessLines.find(l => l.id === categoryId);
+    if (!line) {
+      wrapper.classList.add('hidden');
+      return;
+    }
+
+    container.innerHTML = '';
+    line.options.forEach(optId => {
+      const label = optionLabels[optId]?.[lang] || optionLabels[optId]?.en || optId;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `rounded-lg border px-4 py-2 text-sm font-medium transition-all ${
+        selectedSubOptions.includes(optId)
+          ? 'border-[var(--color-primary)] bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+          : 'border-gray-300 text-gray-600 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]'
+      }`;
+      btn.textContent = label;
+      btn.addEventListener('click', () => {
+        if (selectedSubOptions.includes(optId)) {
+          selectedSubOptions = selectedSubOptions.filter(o => o !== optId);
+        } else {
+          selectedSubOptions.push(optId);
+        }
+        btn.className = `rounded-lg border px-4 py-2 text-sm font-medium transition-all ${
+          selectedSubOptions.includes(optId)
+            ? 'border-[var(--color-primary)] bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+            : 'border-gray-300 text-gray-600 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]'
+        }`;
+      });
+      container.appendChild(btn);
+    });
+
+    wrapper.classList.remove('hidden');
+  }
+
+  function updatePreview() {
+    const preview = document.getElementById('preview-content');
+    if (!preview) return;
+
+    const desc = (document.getElementById('field-description') as HTMLTextAreaElement)?.value || '';
+    const quantity = (document.getElementById('field-quantity') as HTMLInputElement)?.value || '';
+    const destination = (document.getElementById('field-destination') as HTMLInputElement)?.value || '';
+    const budget = (document.getElementById('field-budget') as HTMLSelectElement)?.value || '';
+
+    const categoryLabels: Record<string, Record<string, string>> = {
+      'vehicles': { en: 'Vehicle Export', ru: 'Экспорт транспорта', zh: '汽车出口' },
+      'textiles': { en: 'Textiles & OEM', ru: 'Текстиль и OEM', zh: '纺织品与OEM' },
+      'supply-chain': { en: 'Supply Chain Services', ru: 'Цепочка поставок', zh: '供应链服务' },
+    };
+
+    const catLabel = categoryLabels[selectedCategory]?.[lang] || categoryLabels[selectedCategory]?.en || selectedCategory;
+    const subOptionsText = selectedSubOptions.map(o => optionLabels[o]?.[lang] || optionLabels[o]?.en || o).join(', ');
+
+    preview.innerHTML = `
+      <div class="flex justify-between border-b border-gray-200 pb-2">
+        <span class="text-gray-500">${lang === 'zh' ? '业务线' : lang === 'ru' ? 'Направление' : 'Business Line'}</span>
+        <span class="font-medium">${catLabel}</span>
+      </div>
+      ${subOptionsText ? `<div class="flex justify-between border-b border-gray-200 pb-2 pt-2">
+        <span class="text-gray-500">${lang === 'zh' ? '需求类型' : lang === 'ru' ? 'Тип запроса' : 'Request Type'}</span>
+        <span class="font-medium">${subOptionsText}</span>
+      </div>` : ''}
+      ${desc ? `<div class="border-b border-gray-200 pb-2 pt-2">
+        <span class="text-gray-500">${lang === 'zh' ? '描述' : lang === 'ru' ? 'Описание' : 'Description'}</span>
+        <p class="font-medium">${desc}</p>
+      </div>` : ''}
+      ${quantity ? `<div class="flex justify-between border-b border-gray-200 pb-2 pt-2">
+        <span class="text-gray-500">${lang === 'zh' ? '数量' : lang === 'ru' ? 'Количество' : 'Quantity'}</span>
+        <span class="font-medium">${quantity}</span>
+      </div>` : ''}
+      ${destination ? `<div class="flex justify-between border-b border-gray-200 pb-2 pt-2">
+        <span class="text-gray-500">${lang === 'zh' ? '目的地' : lang === 'ru' ? 'Назначение' : 'Destination'}</span>
+        <span class="font-medium">${destination}</span>
+      </div>` : ''}
+      ${budget ? `<div class="flex justify-between pb-2 pt-2">
+        <span class="text-gray-500">${lang === 'zh' ? '预算' : lang === 'ru' ? 'Бюджет' : 'Budget'}</span>
+        <span class="font-medium">${budget}</span>
+      </div>` : ''}
+    `;
+  }
+
+  // Radio button selection for step 1
+  form.querySelectorAll('input[name="business_line"][data-step="1"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      selectedCategory = (e.target as HTMLInputElement).value;
+      selectedSubOptions = [];
+      (document.getElementById('field-category') as HTMLInputElement).value = selectedCategory;
+      updateSubOptions(selectedCategory);
+      (document.getElementById('btn-next-1') as HTMLButtonElement).disabled = false;
+    });
+  });
+
+  // Next button step 1 → 2
+  document.getElementById('btn-next-1')?.addEventListener('click', () => {
+    if (!selectedCategory) return;
+    (document.getElementById('field-options') as HTMLInputElement).value = selectedSubOptions.join(',');
+    showStep(2);
+  });
+
+  // Next button step 2 → 3
+  document.getElementById('btn-next-2')?.addEventListener('click', () => {
+    const desc = (document.getElementById('field-description') as HTMLTextAreaElement)?.value || '';
+    (document.getElementById('field-details') as HTMLInputElement).value = JSON.stringify({
+      description: desc,
+      quantity: (document.getElementById('field-quantity') as HTMLInputElement)?.value || '',
+      destination: (document.getElementById('field-destination') as HTMLInputElement)?.value || '',
+      budget: (document.getElementById('field-budget') as HTMLSelectElement)?.value || '',
+      notes: (document.getElementById('field-notes') as HTMLTextAreaElement)?.value || '',
+    });
+    updatePreview();
+    showStep(3);
+  });
+
+  // Prev button step 2 → 1
+  document.getElementById('btn-prev-2')?.addEventListener('click', () => showStep(1));
+
+  // Prev button step 3 → 2
+  document.getElementById('btn-prev-3')?.addEventListener('click', () => showStep(2));
+
+  // Form submission (mock only)
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => { data[key] = value as string; });
+
+    console.log('[InquiryBuilder] Mock submission (no real data sent):', data);
+
+    // Show success message
+    const builder = document.getElementById('inquiry-builder');
+    if (builder) {
+      builder.innerHTML = `
+        <div class="rounded-xl border-2 border-green-300 bg-green-50 p-10 text-center">
+          <div class="mb-4 text-5xl">✅</div>
+          <h3 class="text-2xl font-bold text-green-800">
+            ${lang === 'zh' ? '询盘已提交（测试模式）' : lang === 'ru' ? 'Запрос отправлен (тестовый режим)' : 'Inquiry Submitted (Test Mode)'}
+          </h3>
+          <p class="mt-3 text-sm text-green-700">
+            ${lang === 'zh' ? '这是本地测试，数据未真实发送。生产环境将连接到真实后端。' :
+              lang === 'ru' ? 'Это локальный тест, данные не были отправлены. В продакшене будет подключен реальный бэкенд.' :
+              'This is a local test — no data was sent. In production, this will connect to a real backend.'}
+          </p>
+          <pre class="mt-4 rounded-lg bg-gray-900 p-4 text-left text-xs text-green-300 overflow-auto max-h-64">${JSON.stringify(data, null, 2)}</pre>
+        </div>
+      `;
+    }
+  });
+
+  // Initialize: if preselected category, auto-select
+  if (preselectedCategory) {
+    selectedCategory = preselectedCategory;
+    const radio = form.querySelector(`input[value="${preselectedCategory}"]`) as HTMLInputElement;
+    if (radio) {
+      radio.checked = true;
+      updateSubOptions(preselectedCategory);
+      (document.getElementById('btn-next-1') as HTMLButtonElement).disabled = false;
+    }
+  }
+})();
+</script>

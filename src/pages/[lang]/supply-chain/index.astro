@@ -1,0 +1,134 @@
+---
+/**
+ * /supply-chain/ — Supply Chain Services hub page (EN/RU/ZH)
+ * Service cards — NOT disguised as physical products.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import InquiryBuilder from '@components/InquiryBuilder.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const services = [
+  {
+    icon: '🔍',
+    title: { en: 'Product Sourcing', ru: 'Поиск товаров', zh: '产品采购' },
+    description: {
+      en: 'We find and vet manufacturers for your specific product requirements. From raw materials to finished goods.',
+      ru: 'Мы находим и проверяем производителей для ваших конкретных требований. От сырья до готовой продукции.',
+      zh: '为您的具体产品需求寻找和审核制造商。从原材料到成品。',
+    },
+    features: {
+      en: ['Factory audits', 'Price negotiation', 'Sample coordination', 'Supplier verification'],
+      ru: ['Аудит заводов', 'Переговоры о цене', 'Координация образцов', 'Проверка поставщиков'],
+      zh: ['工厂审核', '价格谈判', '样品协调', '供应商验证'],
+    },
+  },
+  {
+    icon: '✅',
+    title: { en: 'Quality Inspection', ru: 'Контроль качества', zh: '质量检验' },
+    description: {
+      en: 'Pre-shipment inspection, production monitoring, and quality assurance at every stage of manufacturing.',
+      ru: 'Предотгрузочный контроль, мониторинг производства и обеспечение качества на каждом этапе.',
+      zh: '装运前检验、生产监控和制造每个阶段的质量保证。',
+    },
+    features: {
+      en: ['Pre-shipment inspection', 'Production monitoring', 'Lab testing', 'Quality reports'],
+      ru: ['Предотгрузочный контроль', 'Мониторинг производства', 'Лабораторные тесты', 'Отчеты о качестве'],
+      zh: ['装运前检验', '生产监控', '实验室测试', '质量报告'],
+    },
+  },
+  {
+    icon: '🚢',
+    title: { en: 'Logistics & Shipping', ru: 'Логистика и доставка', zh: '物流和运输' },
+    description: {
+      en: 'End-to-end logistics from factory door to your destination. Sea freight, air freight, and customs clearance.',
+      ru: 'Логистика под ключ от завода до вашего назначения. Морские и авиаперевозки, таможенное оформление.',
+      zh: '从工厂到目的地的端到端物流。海运、空运和清关。',
+    },
+    features: {
+      en: ['Sea freight (FCL/LCL)', 'Air freight', 'Customs clearance', 'Door-to-door delivery'],
+      ru: ['Морские перевозки (FCL/LCL)', 'Авиаперевозки', 'Таможенное оформление', 'Доставка до двери'],
+      zh: ['海运（整箱/拼箱）', '空运', '清关', '送货上门'],
+    },
+  },
+];
+---
+
+<BaseLayout
+  title={lang === 'zh' ? '供应链服务 — YunBao International Trading' : lang === 'ru' ? 'Цепочка поставок — YunBao International Trading' : 'Supply Chain Services — YunBao International Trading'}
+  description={t('home.supplyChainIntroDesc', lang)}
+  lang={lang}
+  canonical={`https://newage-trading.com/${lang}/supply-chain/`}
+>
+  <Hero
+    title={t('home.supplyChainIntroTitle', lang)}
+    subtitle={t('home.supplyChainIntroDesc', lang)}
+    ctaText={t('home.heroCTA', lang)}
+    ctaLink={`/${lang}/contact/`}
+    lang={lang}
+    size="compact"
+  />
+
+  <!-- Service Cards -->
+  <section class="container-section">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">
+        {lang === 'zh' ? '我们的供应链服务' : lang === 'ru' ? 'Наши услуги цепочки поставок' : 'Our Supply Chain Services'}
+      </h2>
+      <p class="section-subtitle">
+        {lang === 'zh' ? '端到端中国采购解决方案' : lang === 'ru' ? 'Комплексное решение для закупок в Китае' : 'End-to-end China sourcing solution'}
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div class="rounded-xl border border-[var(--color-border)] bg-white p-6 transition-all hover:shadow-lg hover:shadow-[var(--color-primary)]/10">
+          <span class="mb-4 block text-4xl">{service.icon}</span>
+          <h3 class="mb-3 text-lg font-bold font-[var(--font-heading)] text-[var(--color-text)]">
+            {service.title[lang] || service.title.en}
+          </h3>
+          <p class="mb-4 text-sm text-gray-500">
+            {service.description[lang] || service.description.en}
+          </p>
+          <ul class="space-y-2">
+            {(service.features[lang] || service.features.en).map(feature => (
+              <li class="flex items-center gap-2 text-sm text-gray-600">
+                <svg class="h-4 w-4 shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Inquiry Builder -->
+  <section class="container-section bg-[var(--color-bg)]">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">
+        {lang === 'zh' ? '提交供应链服务询盘' : lang === 'ru' ? 'Отправить запрос на услуги' : 'Submit Supply Chain Inquiry'}
+      </h2>
+      <p class="section-subtitle">
+        {lang === 'zh' ? '选择服务类型，填写需求，获取当前报价' : lang === 'ru' ? 'Выберите тип услуги, укажите требования, получите актуальную цену' : 'Select service type, specify requirements, get current pricing'}
+      </p>
+    </div>
+    <InquiryBuilder lang={lang} preselectedCategory="supply-chain" />
+  </section>
+
+  <div class="mx-auto max-w-3xl px-4 pb-12 text-center text-xs text-gray-400">
+    {t('home.verificationDisclaimer', lang)}
+  </div>
+</BaseLayout>
