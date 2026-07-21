@@ -51,42 +51,25 @@ const faqItems = lang === 'zh' ? [
   { question: `How do I get a quote for ${carName}?`, answer: `Contact us via WhatsApp, Telegram, or email with your target model, quantity, and destination. We'll provide a detailed quote within 24 hours.` },
 ];
 
+// Product Schema — Google-compliant (no fake reviews/ratings)
+// Reference: https://developers.google.com/search/docs/appearance/structured-data/product
 const schemaData = {
   "@type": "Product",
-  "name": `${carName} — Export from China`,
+  "name": `${carName}`,
   "brand": { "@type": "Brand", "name": car.brand },
   "description": carDesc,
-  "image": car.image,
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "reviewCount": "128",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Ahmed K." },
-      "datePublished": "2026-03-15",
-      "reviewBody": "Great quality, fast delivery to Dubai.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Maria S." },
-      "datePublished": "2026-02-20",
-      "reviewBody": "Reliable supplier, good communication.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
-    }
-  ],
+  "image": `https://newage-trading.com${car.image}`,
+  "category": carCategory,
   "offers": {
-    "@type": "AggregateOffer",
+    "@type": "Offer",
     "priceCurrency": "USD",
-    "lowPrice": car.price,
-    "highPrice": car.price * 1.2,
-    "offerCount": "5",
+    "price": `${car.price}`,
     "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "YunBao International Trading",
+      "url": "https://newage-trading.com"
+    },
     "shippingDetails": {
       "@type": "OfferShippingDetails",
       "shippingRate": {
@@ -113,10 +96,6 @@ const schemaData = {
           "unitCode": "DAY"
         }
       }
-    },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
     }
   }
 };

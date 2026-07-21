@@ -1,0 +1,89 @@
+---
+/**
+ * /textiles/ — Textiles & OEM hub page (EN/RU/ZH)
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProductCardV2 from '@components/ProductCardV2.astro';
+import ProductFilters from '@components/ProductFilters.astro';
+import InquiryBuilder from '@components/InquiryBuilder.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import productsData from '@data/products.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+// Load products from products.json and filter for textiles
+const allProducts = (productsData as any).products || [];
+const textileProducts = allProducts.filter((p: any) => p.category.startsWith('textiles.'));
+---
+
+<BaseLayout
+  title={t('lingerie.title', lang)}
+  description={t('lingerie.subtitle', lang)}
+  lang={lang}
+  canonical={`https://newage-trading.com/${lang}/textiles/`}
+>
+  <Hero
+    title={t('home.textilesIntroTitle', lang)}
+    subtitle={t('home.textilesIntroDesc', lang)}
+    ctaText={t('home.textilesCTA', lang)}
+    ctaLink={`/${lang}/contact/`}
+    lang={lang}
+    size="compact"
+  />
+
+  <section class="container-section">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">{t('home.featuredTitle', lang)}</h2>
+      <p class="section-subtitle">{t('home.featuredSubtitle', lang)}</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="mb-8">
+      <ProductFilters lang={lang} businessLine="textiles" />
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {textileProducts.map(product => (
+        <ProductCardV2
+          category="textiles"
+          title={product.title}
+          images={product.images}
+          shortDescription={product.short_description}
+          specifications={product.specifications}
+          moq={product.moq}
+          destinationAvailability={product.destination_availability}
+          locale={lang}
+          verificationStatus={product.verification_status}
+          inquiryReference={product.inquiry_reference}
+          link={`/${lang}/lingerie/`}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="container-section bg-[var(--color-bg)]">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">
+        {lang === 'zh' ? '提交纺织品询盘' : lang === 'ru' ? 'Отправить запрос на текстиль' : 'Submit Textile Inquiry'}
+      </h2>
+      <p class="section-subtitle">
+        {lang === 'zh' ? '选择OEM/ODM/批发，填写需求，获取当前报价' : lang === 'ru' ? 'Выберите OEM/ODM/опт, укажите требования, получите актуальную цену' : 'Select OEM/ODM/wholesale, specify requirements, get current pricing'}
+      </p>
+    </div>
+    <InquiryBuilder lang={lang} preselectedCategory="textiles" />
+  </section>
+
+  <div class="mx-auto max-w-3xl px-4 pb-12 text-center text-xs text-gray-400">
+    {t('home.verificationDisclaimer', lang)}
+  </div>
+</BaseLayout>

@@ -1,0 +1,138 @@
+---
+/**
+ * /vehicles/ — Vehicle Export hub page (EN/RU/ZH)
+ * Consolidates new car export + used cars to Africa under one navigation item.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProductCardV2 from '@components/ProductCardV2.astro';
+import ProductFilters from '@components/ProductFilters.astro';
+import InquiryBuilder from '@components/InquiryBuilder.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import productsData from '@data/products.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+// Load products from products.json and filter for vehicles
+const allProducts = (productsData as any).products || [];
+const vehicleProducts = allProducts.filter((p: any) => p.category.startsWith('vehicles.'));
+
+const featuredProducts = [
+  {
+    category: 'cars' as const,
+    title: { en: 'BYD Seal', ru: 'BYD Seal', zh: '比亚迪海豹' },
+    images: ['/images/cars/byd-seal.jpg?v=20260529'],
+    shortDescription: { en: 'Premium electric sedan with 570km range', ru: 'Премиальный электрический седан с запасом хода 570 км', zh: ' premium电动轿车，续航570公里' },
+    specifications: { 'Range': '570km', 'Power': '150kW', 'Drive': 'FWD' },
+    moq: '1 unit',
+    destinationAvailability: ['Georgia', 'Russia', 'UAE', 'Kazakhstan', 'Ghana'],
+    locale: lang,
+    verificationStatus: 'verified' as const,
+    inquiryReference: 'VB-BYD-SEAL-001',
+    link: `/${lang}/cars/`,
+    badge: { en: 'Hot', ru: 'Хит', zh: '热门' },
+  },
+  {
+    category: 'cars' as const,
+    title: { en: 'Geely Monjaro', ru: 'Geely Monjaro', zh: '吉利星越L' },
+    images: ['/images/cars/geely-monjaro.jpg?v=20260529'],
+    shortDescription: { en: 'Mid-size SUV with Volvo technology', ru: 'Среднеразмерный внедорожник с технологией Volvo', zh: '搭载沃尔沃技术的中型SUV' },
+    specifications: { 'Engine': '2.0T', 'Power': '187kW', 'Drive': 'AWD' },
+    moq: '1 unit',
+    destinationAvailability: ['Georgia', 'Russia', 'UAE', 'Central Asia'],
+    locale: lang,
+    verificationStatus: 'verified' as const,
+    inquiryReference: 'VB-GLY-MJR-001',
+    link: `/${lang}/cars/`,
+    badge: { en: 'Popular', ru: 'Популярно', zh: '热销' },
+  },
+  {
+    category: 'cars' as const,
+    title: { en: 'Toyota Camry 2022', ru: 'Toyota Camry 2022', zh: '丰田凯美瑞 2022' },
+    images: ['/images/cars/used/toyota-corolla.jpg?v=20260529'],
+    shortDescription: { en: 'Reliable used sedan for African markets', ru: 'Надежный подержанный седан для африканских рынков', zh: '适合非洲市场的可靠二手轿车' },
+    specifications: { 'Year': '2022', 'Mileage': '<30K km', 'Fuel': 'Gasoline' },
+    moq: '1 unit',
+    destinationAvailability: ['Nigeria', 'Kenya', 'Ghana', 'Tanzania'],
+    locale: lang,
+    verificationStatus: 'pending' as const,
+    inquiryReference: 'VB-USED-TCR-001',
+    link: `/${lang}/used-cars/`,
+    badge: { en: 'Used', ru: 'Б/У', zh: '二手' },
+  },
+];
+---
+
+<BaseLayout
+  title={t('cars.title', lang)}
+  description={t('cars.subtitle', lang)}
+  lang={lang}
+  canonical={`https://newage-trading.com/${lang}/vehicles/`}
+>
+  <Hero
+    title={t('home.vehiclesIntroTitle', lang)}
+    subtitle={t('home.vehiclesIntroDesc', lang)}
+    ctaText={t('home.heroCTA', lang)}
+    ctaLink={`/${lang}/contact/`}
+    lang={lang}
+    size="compact"
+  />
+
+  <!-- Product Grid -->
+  <section class="container-section">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">{t('home.featuredTitle', lang)}</h2>
+      <p class="section-subtitle">{t('home.featuredSubtitle', lang)}</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="mb-8">
+      <ProductFilters lang={lang} businessLine="vehicles" />
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {vehicleProducts.map(product => (
+        <ProductCardV2
+          category="cars"
+          title={product.title}
+          images={product.images}
+          shortDescription={product.short_description}
+          specifications={product.specifications}
+          moq={product.moq}
+          destinationAvailability={product.destination_availability}
+          locale={lang}
+          verificationStatus={product.verification_status}
+          inquiryReference={product.inquiry_reference}
+          link={`/${lang}/cars/`}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Inquiry Builder -->
+  <section class="container-section bg-[var(--color-bg)]">
+    <div class="text-center mb-12">
+      <h2 class="section-title mb-4">
+        {lang === 'zh' ? '提交车辆询盘' : lang === 'ru' ? 'Отправить запрос на автомобиль' : 'Submit Vehicle Inquiry'}
+      </h2>
+      <p class="section-subtitle">
+        {lang === 'zh' ? '选择车型，填写需求，获取当前报价' : lang === 'ru' ? 'Выберите модель, укажите требования, получите актуальную цену' : 'Select model, specify requirements, get current pricing'}
+      </p>
+    </div>
+    <InquiryBuilder lang={lang} preselectedCategory="vehicles" />
+  </section>
+
+  <!-- Verification Disclaimer -->
+  <div class="mx-auto max-w-3xl px-4 pb-12 text-center text-xs text-gray-400">
+    {t('home.verificationDisclaimer', lang)}
+  </div>
+</BaseLayout>
