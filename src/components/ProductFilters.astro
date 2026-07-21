@@ -1,0 +1,388 @@
+---
+import type { Locale } from '@i18n/types';
+
+export interface Props {
+  lang: Locale;
+  /** Which business line to filter: 'vehicles' | 'textiles' | 'services' | 'all' */
+  businessLine?: string;
+}
+
+const { lang, businessLine = 'all' } = Astro.props;
+
+const labels = {
+  vehicles: {
+    title: { en: 'Filter Vehicles', ru: 'Фильтр авто', zh: '筛选汽车' },
+    category: { en: 'Category', ru: 'Категория', zh: '品类' },
+    allVehicles: { en: 'All Vehicles', ru: 'Все авто', zh: '全部汽车' },
+    newEv: { en: 'New EV', ru: 'Новые EV', zh: '新车-电动' },
+    newPhev: { en: 'New PHEV', ru: 'Новые PHEV', zh: '新车-插混' },
+    newErev: { en: 'New EREV', ru: 'Новые EREV', zh: '新车-增程' },
+    newIce: { en: 'New ICE', ru: 'Новые ДВС', zh: '新车-燃油' },
+    used: { en: 'Used Cars', ru: 'Б/У авто', zh: '二手车' },
+    energyType: { en: 'Energy Type', ru: 'Тип энергии', zh: '能源类型' },
+  },
+  textiles: {
+    title: { en: 'Filter Textiles', ru: 'Фильтр текстиля', zh: '筛选纺织品' },
+    category: { en: 'Category', ru: 'Категория', zh: '品类' },
+    allTextiles: { en: 'All Textiles', ru: 'Весь текстиль', zh: '全部纺织品' },
+    lingerie: { en: 'Lingerie', ru: 'Бельё', zh: '内衣' },
+    underwear: { en: 'Underwear', ru: 'Нижнее бельё', zh: '内裤' },
+    material: { en: 'Material', ru: 'Материал', zh: '材质' },
+    oemOdm: { en: 'OEM/ODM', ru: 'OEM/ODM', zh: 'OEM/ODM' },
+    yes: { en: 'Yes', ru: 'Да', zh: '支持' },
+  },
+  services: {
+    title: { en: 'Filter Services', ru: 'Фильтр услуг', zh: '筛选服务' },
+    category: { en: 'Service Type', ru: 'Тип услуги', zh: '服务类型' },
+    allServices: { en: 'All Services', ru: 'Все услуги', zh: '全部服务' },
+    sourcing: { en: 'Sourcing', ru: 'Поиск товаров', zh: '产品采购' },
+    inspection: { en: 'Quality Inspection', ru: 'Контроль качества', zh: '质量检验' },
+    logistics: { en: 'Logistics', ru: 'Логистика', zh: '物流运输' },
+  },
+};
+
+// Determine which filter groups to show
+const showVehicles = businessLine === 'vehicles' || businessLine === 'all';
+const showTextiles = businessLine === 'textiles' || businessLine === 'all';
+const showServices = businessLine === 'services' || businessLine === 'all';
+---
+
+<div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+  <h3 class="text-sm font-semibold text-[#0a1628] mb-4">
+    {lang === 'zh' ? '筛选' : lang === 'ru' ? 'Фильтр' : 'Filters'}
+  </h3>
+
+  <div class="space-y-4">
+    <!-- Vehicle Filters -->
+    {showVehicles && (
+      <div class="space-y-2">
+        <label class="text-xs font-medium text-gray-500 uppercase tracking-wide">
+          {labels.vehicles.category[lang] || labels.vehicles.category.en}
+        </label>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-filter="vehicles-all"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.vehicles.allVehicles[lang]}
+          </button>
+          <button type="button" data-filter="vehicles-ev"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.vehicles.newEv[lang]}
+          </button>
+          <button type="button" data-filter="vehicles-erev"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.vehicles.newErev[lang]}
+          </button>
+          <button type="button" data-filter="vehicles-ice"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.vehicles.newIce[lang]}
+          </button>
+          <button type="button" data-filter="vehicles-used"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.vehicles.used[lang]}
+          </button>
+        </div>
+      </div>
+    )}
+
+    <!-- Textile Filters -->
+    {showTextiles && (
+      <div class="space-y-2">
+        <label class="text-xs font-medium text-gray-500 uppercase tracking-wide">
+          {labels.textiles.category[lang] || labels.textiles.category.en}
+        </label>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-filter="textiles-all"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.textiles.allTextiles[lang]}
+          </button>
+          <button type="button" data-filter="textiles-lingerie"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.textiles.lingerie[lang]}
+          </button>
+          <button type="button" data-filter="textiles-underwear"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.textiles.underwear[lang]}
+          </button>
+        </div>
+
+        <label class="text-xs font-medium text-gray-500 uppercase tracking-wide mt-2 block">
+          {labels.textiles.oemOdm[lang]}
+        </label>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-filter="oem-yes"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            ✓ {labels.textiles.yes[lang]}
+          </button>
+        </div>
+      </div>
+    )}
+
+    <!-- Service Filters -->
+    {showServices && (
+      <div class="space-y-2">
+        <label class="text-xs font-medium text-gray-500 uppercase tracking-wide">
+          {labels.services.category[lang] || labels.services.category.en}
+        </label>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-filter="services-all"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.services.allServices[lang]}
+          </button>
+          <button type="button" data-filter="services-sourcing"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.services.sourcing[lang]}
+          </button>
+          <button type="button" data-filter="services-inspection"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.services.inspection[lang]}
+          </button>
+          <button type="button" data-filter="services-logistics"
+            class="filter-chip px-3 py-1.5 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent hover:text-accent transition-colors">
+            {labels.services.logistics[lang]}
+          </button>
+        </div>
+      </div>
+    )}
+  </div>
+</div>
+
+<script>
+(function() {
+  const container = document.currentScript?.previousElementSibling?.closest('.container-section') ||
+    document.currentScript?.closest('section');
+  if (!container) return;
+
+  const grid = container.querySelector('.grid');
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('article'));
+  if (cards.length === 0) return;
+
+  // Determine business line from filter data attributes
+  const allChips = container.querySelectorAll('.filter-chip');
+  const activeFilters = new Set<string>();
+
+  // Check if this is a vehicles, textiles, or services filter set
+  const hasVehicleChips = Array.from(allChips).some(c => c.getAttribute('data-filter')?.startsWith('vehicles-'));
+  const hasTextileChips = Array.from(allChips).some(c => c.getAttribute('data-filter')?.startsWith('textiles-') || c.getAttribute('data-filter')?.startsWith('oem-'));
+  const hasServiceChips = Array.from(allChips).some(c => c.getAttribute('data-filter')?.startsWith('services-'));
+
+  // Add result count display
+  const resultCount = document.createElement('div');
+  resultCount.className = 'text-sm text-gray-500 mt-3';
+  resultCount.setAttribute('data-result-count', 'true');
+  const filterSection = container.querySelector('.space-y-4');
+  if (filterSection) {
+    filterSection.appendChild(resultCount);
+  }
+
+  // Add "Clear all" button
+  const clearBtn = document.createElement('button');
+  clearBtn.type = 'button';
+  clearBtn.className = 'text-sm text-[var(--color-primary)] hover:underline mt-2 hidden';
+  clearBtn.textContent = 'Clear all';
+  clearBtn.setAttribute('data-clear-filters', 'true');
+  if (filterSection) {
+    filterSection.appendChild(clearBtn);
+  }
+
+  // Add no-results message
+  const noResults = document.createElement('div');
+  noResults.className = 'col-span-full text-center py-12 text-gray-500 hidden';
+  noResults.setAttribute('data-no-results', 'true');
+  noResults.innerHTML = `
+    <div class="text-4xl mb-3">🔍</div>
+    <p class="text-lg font-medium">No products match your filters</p>
+    <p class="text-sm text-gray-400 mt-1">Try adjusting your selection</p>
+  `;
+  grid.appendChild(noResults);
+
+  function getCardFilterTypes(card: Element): string[] {
+    const types: string[] = [];
+    // Check category badge text
+    const badge = card.querySelector('span[class*="absolute"]');
+    if (badge) {
+      const text = badge.textContent?.trim() || '';
+      if (text.includes('汽车') || text.includes('Auto') || text.includes('vehicle') || text.includes('Экспорт')) {
+        types.push('vehicle');
+      }
+      if (text.includes('纺织') || text.includes('Textile') || text.includes('Текстиль') || text.includes('内衣') || text.includes('бель')) {
+        types.push('textile');
+      }
+      if (text.includes('服务') || text.includes('Service') || text.includes('Услуг') || text.includes('供应链')) {
+        types.push('service');
+      }
+    }
+    // Check img alt for product type hints
+    const img = card.querySelector('img');
+    if (img?.alt) {
+      const alt = img.alt.toLowerCase();
+      if (alt.includes('used') || alt.includes('二手') || alt.includes('б/у') || alt.includes('б у')) {
+        types.push('used');
+      }
+      if (alt.includes('ev') || alt.includes('电动') || alt.includes('электро')) {
+        types.push('ev');
+      }
+      if (alt.includes('erev') || alt.includes('增程') || alt.includes('гибрид')) {
+        types.push('erev');
+      }
+      if (alt.includes('ice') || alt.includes('燃油') || alt.includes('двс')) {
+        types.push('ice');
+      }
+      if (alt.includes('phev') || alt.includes('插混') || alt.includes('гибрид')) {
+        types.push('phev');
+      }
+    }
+    // Check link href for category
+    const link = card.querySelector('a');
+    if (link?.href) {
+      if (link.href.includes('/used-cars/') || link.href.includes('/二手车/')) {
+        types.push('used');
+      }
+      if (link.href.includes('/cars/') && !link.href.includes('/used-cars/')) {
+        if (!types.includes('ev') && !types.includes('erev') && !types.includes('ice')) {
+          types.push('ev'); // default new car to ev
+        }
+      }
+    }
+    if (types.length === 0) types.push('vehicle'); // default
+    return [...new Set(types)];
+  }
+
+  function applyFilters() {
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardTypes = getCardFilterTypes(card);
+      let show = true;
+
+      if (activeFilters.size > 0) {
+        // Check if any active filter matches this card
+        let matched = false;
+        activeFilters.forEach(filter => {
+          if (filter === 'vehicles-all' || filter === 'textiles-all' || filter === 'services-all') {
+            matched = true;
+          } else if (filter.startsWith('vehicles-') && (cardTypes.includes('vehicle') || cardTypes.includes('used') || cardTypes.includes('ev') || cardTypes.includes('erev') || cardTypes.includes('ice') || cardTypes.includes('phev'))) {
+            // Extract the specific filter
+            const subFilter = filter.replace('vehicles-', '');
+            if (subFilter === 'all' || cardTypes.includes(subFilter)) {
+              matched = true;
+            }
+            // Special case: 'used' filter
+            if (subFilter === 'used' && cardTypes.includes('used')) {
+              matched = true;
+            }
+            // Special case: 'ev' filter matches ev, phev
+            if (subFilter === 'ev' && (cardTypes.includes('ev') || cardTypes.includes('phev'))) {
+              matched = true;
+            }
+          } else if (filter.startsWith('textiles-') && cardTypes.includes('textile')) {
+            matched = true;
+          } else if (filter.startsWith('oem-') && cardTypes.includes('textile')) {
+            matched = true;
+          } else if (filter.startsWith('services-') && cardTypes.includes('service')) {
+            matched = true;
+          }
+        });
+        show = matched;
+      }
+
+      card.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    // Update result count
+    const totalText = cards.length;
+    resultCount.textContent = `Showing ${visibleCount} of ${totalText} products`;
+    resultCount.classList.toggle('hidden', activeFilters.size === 0);
+    clearBtn.classList.toggle('hidden', activeFilters.size === 0);
+    noResults.classList.toggle('hidden', visibleCount > 0);
+  }
+
+  // Attach click handlers
+  allChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const filter = chip.getAttribute('data-filter') || '';
+
+      // Handle "All" buttons — clear all filters in this group
+      if (filter.endsWith('-all')) {
+        const prefix = filter.replace('-all', '');
+        // Remove all filters from this group
+        const toRemove = Array.from(activeFilters).filter(f => f.startsWith(prefix));
+        toRemove.forEach(f => activeFilters.delete(f));
+        // Re-add the "all" button
+        activeFilters.add(filter);
+
+        // Reset visual state for this group
+        allChips.forEach(c => {
+          const cf = c.getAttribute('data-filter') || '';
+          if (cf.startsWith(prefix)) {
+            c.classList.remove('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+            c.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+          }
+        });
+        chip.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+        chip.classList.add('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+      } else {
+        // Toggle specific filter
+        // First remove the "all" button for this group
+        const prefix = filter.split('-').slice(0, -1).join('-') + '-all';
+        activeFilters.delete(prefix);
+
+        if (activeFilters.has(filter)) {
+          activeFilters.delete(filter);
+          chip.classList.remove('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+          chip.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+        } else {
+          activeFilters.add(filter);
+          chip.classList.add('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+          chip.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+        }
+      }
+
+      applyFilters();
+    });
+  });
+
+  // Clear all button
+  clearBtn.addEventListener('click', () => {
+    activeFilters.clear();
+    allChips.forEach(c => {
+      c.classList.remove('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+      c.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+    });
+    // Re-activate "all" buttons
+    allChips.forEach(c => {
+      const f = c.getAttribute('data-filter') || '';
+      if (f.endsWith('-all')) {
+        activeFilters.add(f);
+        c.classList.add('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+        c.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+      }
+    });
+    applyFilters();
+  });
+
+  // Keyboard support
+  allChips.forEach(chip => {
+    chip.setAttribute('tabindex', '0');
+    chip.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        chip.click();
+      }
+    });
+  });
+
+  // Initialize: activate "all" buttons
+  allChips.forEach(c => {
+    const f = c.getAttribute('data-filter') || '';
+    if (f.endsWith('-all')) {
+      activeFilters.add(f);
+      c.classList.add('bg-[var(--color-primary)]', 'text-white', 'border-[var(--color-primary)]');
+      c.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+    }
+  });
+  applyFilters();
+})();
+</script>

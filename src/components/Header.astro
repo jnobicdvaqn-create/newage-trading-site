@@ -11,14 +11,19 @@ export interface Props {
 const { lang, currentPath = '/' } = Astro.props;
 
 const navItems = [
-  { key: 'nav.home', path: `/${lang}/` },
+  { key: 'nav.vehicles', path: `/${lang}/vehicles/` },
+  { key: 'nav.textiles', path: `/${lang}/textiles/` },
+  { key: 'nav.supplyChain', path: `/${lang}/supply-chain/` },
+  { key: 'nav.insights', path: `/${lang}/insights/` },
+  { key: 'nav.about', path: `/${lang}/about/` },
+  { key: 'nav.contact', path: `/${lang}/contact/` },
+];
+
+const moreItems = [
   { key: 'nav.cars', path: `/${lang}/cars/` },
   { key: 'nav.usedCars', path: `/${lang}/used-cars/` },
-  { key: 'nav.lingerie', path: `/${lang}/lingerie/` },
   { key: 'nav.security', path: `/${lang}/security/` },
-  { key: 'nav.about', path: `/${lang}/about/` },
-  { key: 'nav.blog', path: `/${lang}/blog/` },
-  { key: 'nav.contact', path: `/${lang}/contact/` },
+  { key: 'nav.lingerie', path: `/${lang}/lingerie/` },
 ];
 
 const isActive = (href: string): boolean => {
@@ -53,6 +58,37 @@ const isActive = (href: string): boolean => {
           {t(item.key, lang)}
         </a>
       ))}
+      <!-- More Dropdown -->
+      <div class="relative" id="more-dropdown">
+        <button
+          class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
+          id="more-btn"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          {t('nav.more', lang)}
+          <svg class="inline-block h-4 w-4 ml-1 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div
+          class="absolute right-0 top-full z-50 mt-1 hidden min-w-[200px] rounded-lg border border-gray-200 bg-white py-2 shadow-lg"
+          id="more-menu"
+        >
+          {moreItems.map((item) => (
+            <a
+              href={item.path}
+              class={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                isActive(item.path)
+                  ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+                  : 'text-gray-700 hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]'
+              }`}
+            >
+              {t(item.key, lang)}
+            </a>
+          ))}
+        </div>
+      </div>
     </nav>
 
     <!-- Right: Language Switcher + Mobile Toggle -->
@@ -98,6 +134,20 @@ const isActive = (href: string): boolean => {
         {t(item.key, lang)}
       </a>
     ))}
+    <div class="border-t border-gray-100 my-2"></div>
+    <p class="px-4 py-1 text-xs font-semibold uppercase tracking-wider text-gray-400">{t('nav.more', lang)}</p>
+    {moreItems.map((item) => (
+      <a
+        href={item.path}
+        class={`flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+          isActive(item.path)
+            ? 'bg-[var(--color-primary)] text-white'
+            : 'text-gray-700 hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]'
+        }`}
+      >
+        {t(item.key, lang)}
+      </a>
+    ))}
   </div>
   <!-- Mobile Language Switcher -->
   <div class="border-t border-gray-200 px-5 py-4">
@@ -107,6 +157,7 @@ const isActive = (href: string): boolean => {
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu
     const toggle = document.getElementById('mobile-toggle');
     const close = document.getElementById('mobile-close');
     const panel = document.getElementById('mobile-panel');
@@ -127,6 +178,23 @@ const isActive = (href: string): boolean => {
       close.addEventListener('click', closeMenu);
       overlay.addEventListener('click', closeMenu);
       panel.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    }
+
+    // More dropdown
+    const moreBtn = document.getElementById('more-btn');
+    const moreMenu = document.getElementById('more-menu');
+    if (moreBtn && moreMenu) {
+      moreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const expanded = moreBtn.getAttribute('aria-expanded') === 'true';
+        moreBtn.setAttribute('aria-expanded', String(!expanded));
+        moreMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        moreBtn.setAttribute('aria-expanded', 'false');
+        moreMenu.classList.add('hidden');
+      });
+      moreMenu.addEventListener('click', (e) => e.stopPropagation());
     }
   });
 </script>

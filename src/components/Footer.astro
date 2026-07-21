@@ -66,16 +66,19 @@ const { lang } = Astro.props;
       <div>
         <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-white">{t('common.quickLinks', lang)}</h3>
         <ul class="space-y-2.5 text-sm">
-          {(['nav.cars', 'nav.usedCars', 'nav.lingerie', 'nav.security', 'nav.about', 'nav.blog', 'nav.contact'] as const).map((key) => (
+          {(['nav.vehicles', 'nav.textiles', 'nav.supplyChain', 'nav.about', 'nav.contact'] as const).map((key) => (
             <li>
               <a
-                href={`/${lang}/${key === 'nav.cars' ? 'cars' : key === 'nav.usedCars' ? 'used-cars' : key === 'nav.lingerie' ? 'lingerie' : key === 'nav.security' ? 'security' : key === 'nav.about' ? 'about' : key === 'nav.blog' ? 'blog' : 'contact'}/`}
+                href={`/${lang}/${key === 'nav.vehicles' ? 'vehicles' : key === 'nav.textiles' ? 'textiles' : key === 'nav.supplyChain' ? 'supply-chain' : key === 'nav.about' ? 'about' : 'contact'}/`}
                 class="text-gray-400 transition-colors hover:text-[var(--color-accent)]"
               >
                 {t(key, lang)}
               </a>
             </li>
           ))}
+          <li><a href={`/${lang}/cars/`} class="text-gray-400 transition-colors hover:text-[var(--color-accent)]">{t('nav.cars', lang)}</a></li>
+          <li><a href={`/${lang}/used-cars/`} class="text-gray-400 transition-colors hover:text-[var(--color-accent)]">{t('nav.usedCars', lang)}</a></li>
+          <li><a href={`/${lang}/security/`} class="text-gray-400 transition-colors hover:text-[var(--color-accent)]">{t('nav.security', lang)}</a></li>
           <li><a href={`/${lang}/privacy/`} class="text-gray-400 transition-colors hover:text-[var(--color-accent)]">{t('nav.privacy', lang)}</a></li>
           <li><a href={`/${lang}/terms/`} class="text-gray-400 transition-colors hover:text-[var(--color-accent)]">{t('nav.terms', lang)}</a></li>
         </ul>
