@@ -1,0 +1,87 @@
+[
+  {
+    "id": "changan-suzuki-cng",
+    "name": "Changan Suzuki CNG",
+    "nameZh": "长安铃木CNG双动力",
+    "nameRu": "Changan Suzuki CNG",
+    "year": "2020-2022",
+    "price": "$4,500-5,000",
+    "reason": "CNG+Gasoline dual-fuel, ultra-low operating cost, fleet-retired & refurbished",
+    "reasonZh": "CNG+汽油双动力、运营成本极低、营运车退役已翻新",
+    "reasonRu": "CNG+Бензин двухтопливный, низкая стоимость эксплуатации, обновлён",
+    "category": "fuel",
+    "image": "/images/cars/used/changan-suzuki-cng.jpg",
+    "images": [
+      "/images/cars/used/changan-suzuki-cng.jpg",
+      "/images/cars/used/changan-suzuki-cng-02.jpg",
+      "/images/cars/used/changan-suzuki-cng-03.jpg",
+      "/images/cars/used/changan-suzuki-cng-04.jpg",
+      "/images/cars/used/changan-suzuki-cng-05.jpg",
+      "/images/cars/used/changan-suzuki-cng-06.jpg",
+      "/images/cars/used/changan-suzuki-cng-07.jpg",
+      "/images/cars/used/changan-suzuki-cng-08.jpg",
+      "/images/cars/used/changan-suzuki-cng-09.jpg",
+      "/images/cars/used/changan-suzuki-cng-10.jpg"
+    ],
+    "specs": {
+      "Drive Type": "Front-wheel drive",
+      "Manufacturing Year": "2020-2022",
+      "Mileage": "350,000-700,000 km (actual)",
+      "Engine Displacement": "1.6L",
+      "Fuel Tank": "55L",
+      "Keys": "1 or 2 keys",
+      "Condition": "Refurbished",
+      "Colors": "White, Black, Silver, Yellow",
+      "FOB Price": "$4,500-5,000",
+      "FOB Port": "Horgos / Ningbo"
+    },
+    "specsZh": {
+      "驱动方式": "两驱",
+      "出厂时间": "2020-2022",
+      "行驶里程": "实表35万-70万公里",
+      "车辆排量": "1.6L",
+      "油箱容量": "55L",
+      "钥匙": "随机1把或2把",
+      "车况": "已翻新",
+      "颜色": "白色、黑色、银色、黄色",
+      "FOB价格": "$4,500-5,000",
+      "FOB港口": "霍尔果斯 / 宁波"
+    },
+    "specsRu": {
+      "Тип привода": "Передний привод",
+      "Год выпуска": "2020-2022",
+      "Пробег": "350 000-700 000 км (фактический)",
+      "Объем двигателя": "1.6L",
+      "Топливный бак": "55L",
+      "Ключи": "1 или 2 ключа",
+      "Состояние": "Обновлён",
+      "Цвета": "Белый, Черный, Серебристый, Желтый",
+      "Цена FOB": "$4 500-5 000",
+      "Порт FOB": "Хоргос / Нинбо"
+    },
+    "highlights": [
+      "CNG + Gasoline dual-fuel system — ultra-low fuel cost for commercial use",
+      "Fleet-retired vehicle, professionally refurbished",
+      "1.6L engine — reliable, easy to maintain, parts widely available",
+      "Multiple colors available — White / Black / Silver / Yellow",
+      "Ideal for taxi / ride-hailing / commercial fleet in Africa & CIS",
+      "FOB from Horgos (Central Asia) or Ningbo (sea freight)"
+    ],
+    "highlightsZh": [
+      "CNG+汽油双动力系统 — 运营成本极低",
+      "营运车退役，专业翻新",
+      "1.6L发动机 — 可靠、维护简单、配件充足",
+      "多色可选 — 白/黑/银/黄",
+      "适合非洲/独联体出租车/网约车/商业车队",
+      "霍尔果斯（中亚陆运）或宁波（海运）FOB出口"
+    ],
+    "highlightsRu": [
+      "Система CNG+Бензин — сверхнизкая стоимость топлива",
+      "Обновлённый автомобиль из коммерческого парка",
+      "Двигатель 1.6L — надежный, простой в обслуживании",
+      "Несколько цветов — Белый / Черный / Серебристый / Желтый",
+      "Идеально для такси / каршеринга / коммерческого парка",
+      "FOB из Хоргоса (наземный) или Нинбо (морской)"
+    ]
+  }
+]

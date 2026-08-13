@@ -1,0 +1,194 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTASection from '@components/CTASection.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+import usedCars from '@data/used-cars.json';
+
+export function getStaticPaths() {
+  const langs: Locale[] = ['en', 'ru', 'zh'];
+  return langs.flatMap(lang =>
+    usedCars.map(v => ({
+      params: { lang, id: v.id },
+      props: { vehicle: v, lang },
+    }))
+  );
+}
+
+const { vehicle, lang } = Astro.props as { vehicle: typeof usedCars[0]; lang: Locale };
+
+const carName = lang === 'zh' ? vehicle.nameZh : lang === 'ru' ? vehicle.nameRu : vehicle.name;
+const specs = lang === 'zh' ? vehicle.specsZh : lang === 'ru' ? vehicle.specsRu : vehicle.specs;
+const highlights = lang === 'zh' ? vehicle.highlightsZh : lang === 'ru' ? vehicle.highlightsRu : vehicle.highlights;
+const related = usedCars.filter(v => v.id !== vehicle.id).slice(0, 3);
+const currentPrice = vehicle.price;
+const currentYear = vehicle.year;
+
+const faqItems = lang === 'zh' ? [
+  { q: `${carName} 的里程是否真实？`, a: '所有里程均为实表读数，未经调表。该车为营运车退役，高里程属正常。' },
+  { q: `翻新包含哪些内容？`, a: '翻新包括外观喷漆、内饰清洁、发动机保养、刹车系统检查等基础整备。' },
+  { q: `CNG系统在海外能用吗？`, a: 'CNG功能取决于当地加气站基础设施。在加气站稀少的地区，车辆可纯汽油使用。' },
+  { q: `如何获取报价？`, a: '通过WhatsApp、Telegram或邮件联系我们，告知目标车型、数量和目的地，24小时内报价。' },
+] : lang === 'ru' ? [
+  { q: `Реальный ли пробег у ${carName}?`, a: 'Все показания одометра фактические, без скручивания. Автомобиль из коммерческого парка, высокий пробег нормален.' },
+  { q: `Что включает обновление?`, a: 'Обновление включает покраску кузова, чистку салона, обслуживание двигателя, проверку тормозной системы.' },
+  { q: `Можно ли использовать CNG за рубежом?`, a: 'Функция CNG зависит от инфраструктуры заправочных станций. В регионах с редкими станциями автомобиль работает на бензине.' },
+  { q: `Как получить предложение?`, a: 'Свяжитесь с нами через WhatsApp, Telegram или email. Предложение в течение 24 часов.' },
+] : [
+  { q: `Is the mileage real?`, a: 'All odometer readings are actual, not rolled back. This is a fleet-retired vehicle — high mileage is normal.' },
+  { q: `What does refurbishment include?`, a: 'Refurbishment includes exterior painting, interior cleaning, engine maintenance, and brake system inspection.' },
+  { q: `Can the CNG system be used overseas?`, a: 'CNG functionality depends on local refueling infrastructure. In areas without CNG stations, the vehicle runs on gasoline only.' },
+  { q: `How to get a quote?`, a: 'Contact us via WhatsApp, Telegram, or email with your target model, quantity, and destination. Quote within 24 hours.' },
+];
+---
+
+<BaseLayout
+  title={`${carName} — Used Car Export | New Age Trading`}
+  description={`${carName} (${currentYear}), ${currentPrice} FOB. Fleet-retired & refurbished.`}
+  lang={lang}
+  breadcrumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.usedCars', lang), path: `/${lang}/used-cars/` },
+    { name: carName, path: `/${lang}/used-cars/${vehicle.id}/` },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: t('nav.home', lang), path: `/${lang}/` },
+    { name: t('nav.usedCars', lang), path: `/${lang}/used-cars/` },
+    { name: carName, path: `/${lang}/used-cars/${vehicle.id}/` },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <!-- Main image -->
+        <div>
+          <img src={vehicle.image} alt={carName} class="w-full rounded-xl shadow-lg" />
+        </div>
+        <!-- Info -->
+        <div class="text-white">
+          <div class="flex items-center gap-3 mb-4">
+            <span class={`px-3 py-1 rounded-full text-sm font-bold ${
+              vehicle.category === 'fuel' ? 'bg-green-600/80' :
+              vehicle.category === 'truck' ? 'bg-orange-600/80' :
+              'bg-blue-400/80'
+            }`}>
+              {vehicle.category === 'fuel' ? (lang === 'zh' ? '燃油车' : lang === 'ru' ? 'Топливный' : 'Fuel') :
+               vehicle.category === 'truck' ? (lang === 'zh' ? '皮卡' : lang === 'ru' ? 'Пикап' : 'Pickup') :
+               (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
+            </span>
+            <span class="text-sm opacity-80">{currentYear}</span>
+          </div>
+          <h1 class="text-4xl font-bold mb-4">{carName}</h1>
+          <div class="text-3xl font-bold text-yellow-300 mb-6">{currentPrice} <span class="text-lg text-gray-300 font-normal">FOB</span></div>
+          <p class="text-lg text-gray-200 mb-8">{lang === 'zh' ? vehicle.reasonZh : lang === 'ru' ? vehicle.reasonRu : vehicle.reason}</p>
+
+          <!-- Specs table -->
+          <div class="bg-white/10 rounded-xl p-6 mb-6 backdrop-blur-sm">
+            <h3 class="text-lg font-bold mb-4">{lang === 'zh' ? '📋 车辆参数' : lang === 'ru' ? '📋 Характеристики' : '📋 Vehicle Specs'}</h3>
+            <div class="grid grid-cols-2 gap-3">
+              {Object.entries(specs).map(([key, val]) => (
+                <div class="flex justify-between border-b border-white/20 pb-2">
+                  <span class="text-sm text-gray-300">{key}</span>
+                  <span class="text-sm font-medium">{val}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Highlights -->
+          <div class="mb-6">
+            <h3 class="text-lg font-bold mb-3">{lang === 'zh' ? '✨ 核心卖点' : lang === 'ru' ? '✨ Ключевые преимущества' : '✨ Key Highlights'}</h3>
+            <ul class="space-y-2">
+              {highlights.map(h => (
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-0.5">✓</span>
+                  <span class="text-sm text-gray-200">{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/+8617072783745" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              WhatsApp
+            </a>
+            <a href="https://t.me/richzhu001" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              Telegram
+            </a>
+            <a href={`/${lang}/contact/`} class="bg-white text-primary px-6 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100">
+              {lang === 'zh' ? '获取报价' : lang === 'ru' ? 'Получить报价' : 'Get Quote'}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-[var(--color-text)] mb-8 text-center">
+        {lang === 'zh' ? '📸 实拍图片' : lang === 'ru' ? '📸 Фотографии' : '📸 Photo Gallery'}
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {vehicle.images.map((img, i) => (
+          <div class="rounded-lg overflow-hidden border border-[var(--color-border)] hover:shadow-lg transition-shadow">
+            <img src={img} alt={`${carName} - ${i + 1}`} class="w-full aspect-square object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container-section">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-[var(--color-text)] mb-8 text-center">
+        {lang === 'zh' ? '❓ 常见问题' : lang === 'ru' ? '❓ Частые вопросы' : '❓ FAQ'}
+      </h2>
+      <div class="space-y-4">
+        {faqItems.map(faq => (
+          <details class="bg-white rounded-xl border border-[var(--color-border)] overflow-hidden">
+            <summary class="px-6 py-4 font-medium text-[var(--color-text)] cursor-pointer hover:bg-gray-50">
+              {faq.q}
+            </summary>
+            <div class="px-6 pb-4 text-[var(--color-text-light)] text-sm border-t">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related models -->
+  {related.length > 0 && (
+    <section class="bg-surface py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-[var(--color-text)] mb-8 text-center">
+          {lang === 'zh' ? '🔗 相关推荐' : lang === 'ru' ? '🔗 Похожие модели' : '🔗 Related Models'}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {related.map(m => (
+            <a href={`/${lang}/used-cars/${m.id}/`} class="bg-white rounded-xl overflow-hidden border border-[var(--color-border)] hover:shadow-lg transition-all no-underline text-inherit">
+              <div class="relative h-40 bg-gray-100">
+                <img src={m.image} alt={lang === 'zh' ? m.nameZh : lang === 'ru' ? m.nameRu : m.name} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-[var(--color-text)]">{lang === 'zh' ? m.nameZh : lang === 'ru' ? m.nameRu : m.name}</h3>
+                <div class="text-sm text-muted">{m.year} · <span class="text-[var(--color-primary)] font-semibold">{m.price}</span></div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <CTASection lang={lang} />
+</BaseLayout>
