@@ -14,21 +14,16 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Locale };
 
-// Models with detail pages (data available)
-const activeModels = [
+// All used car models — set available: true when detail page is ready
+const usedCarModels = [
   { id: 'changan-suzuki-cng', name: 'Changan Suzuki CNG', nameZh: '长安铃木CNG双动力', nameRu: 'Changan Suzuki CNG', year: '2020-2022', price: '$4,500-5,000', reason: 'CNG+Gasoline dual-fuel, ultra-low operating cost, fleet-retired & refurbished', reasonZh: 'CNG+汽油双动力、运营成本极低、营运车退役已翻新', reasonRu: 'CNG+Бензин двухтопливный, низкая стоимость эксплуатации, обновлён', category: 'fuel', image: '/images/cars/used/changan-suzuki-cng.jpg', available: true },
+  { id: 'toyota-corolla', name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', category: 'fuel', image: '/images/cars/used/toyota-corolla.jpg', available: false },
+  { id: 'nissan-sunny', name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', category: 'fuel', image: '/images/cars/used/nissan-sunny.jpg', available: false },
+  { id: 'honda-fit', name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', category: 'fuel', image: '/images/cars/used/honda-fit.jpg', available: false },
+  { id: 'greatwall-pickup', name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', category: 'truck', image: '/images/cars/used/greatwall-pickup.jpg', available: false },
+  { id: 'jmc-pickup', name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', category: 'truck', image: '/images/cars/used/jmc-pickup.jpg', available: false },
+  { id: 'byd-e6', name: 'BYD E6 / Aion S', nameZh: '比亚迪E6 / 广汽埃安', nameRu: 'BYD E6 / Aion S', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', category: 'ev', image: '/images/cars/used/byd-e6.jpg', available: false },
 ];
-
-// Models coming soon (no detail page yet)
-const comingSoonModels = [
-  { id: 'toyota-corolla', name: 'Toyota Corolla', nameZh: '丰田卡罗拉', nameRu: 'Toyota Corolla', year: '2020-2023', price: '$5,500-8,500', reason: 'Reliable, fuel-efficient, parts everywhere', reasonZh: '可靠、省油、配件随处可见', reasonRu: 'Надежный, экономичный, запчасти везде', category: 'fuel', image: '/images/cars/used/toyota-corolla.jpg' },
-  { id: 'nissan-sunny', name: 'Nissan Sunny', nameZh: '日产轩逸', nameRu: 'Nissan Sunny', year: '2019-2023', price: '$4,800-7,500', reason: 'Comfortable, low maintenance, popular in Africa', reasonZh: '舒适、维护成本低、非洲受欢迎', reasonRu: 'Комфортный, низкие расходы, популярен в Африке', category: 'fuel', image: '/images/cars/used/nissan-sunny.jpg' },
-  { id: 'honda-fit', name: 'Honda Fit/Jazz', nameZh: '本田飞度', nameRu: 'Honda Fit/Jazz', year: '2020-2023', price: '$5,000-7,800', reason: 'Compact, durable, excellent fuel economy', reasonZh: '紧凑、耐用、油耗极低', reasonRu: 'Компактный, надежный, отличная экономия', category: 'fuel', image: '/images/cars/used/honda-fit.jpg' },
-  { id: 'greatwall-pickup', name: 'Great Wall Pickup', nameZh: '长城皮卡', nameRu: 'Great Wall Pickup', year: '2021-2024', price: '$7,000-12,000', reason: 'Work truck, cargo capacity, affordable', reasonZh: '工程用车、载货量大、价格实惠', reasonRu: 'Рабочий грузовик, вместимость, доступный', category: 'truck', image: '/images/cars/used/greatwall-pickup.jpg' },
-  { id: 'jmc-pickup', name: 'JMC Pickup', nameZh: '江铃皮卡', nameRu: 'JMC Pickup', year: '2021-2024', price: '$6,500-11,000', reason: 'Strong engine, off-road capable', reasonZh: '发动机强劲、越野能力强', reasonRu: 'Мощный двигатель, внедорожные способности', category: 'truck', image: '/images/cars/used/jmc-pickup.jpg' },
-  { id: 'byd-e6', name: 'BYD E6 / Aion S', nameZh: '比亚迪E6 / 广汽埃安', nameRu: 'BYD E6 / Aion S', year: '2022-2024', price: '$8,000-15,000', reason: 'Low electricity cost, future-ready', reasonZh: '电费极低、面向未来', reasonRu: 'Низкая стоимость электричества, будущее', category: 'ev', image: '/images/cars/used/byd-e6.jpg' },
-];
-const allModels = [...activeModels, ...comingSoonModels];
 
 const countries = [
   { name: 'Nigeria', nameZh: '尼日利亚', nameRu: 'Нигерия', priority: 5, cert: 'SONCAP', reason: 'Largest population, biggest demand' },
@@ -87,35 +82,34 @@ const paymentMethods = [
         <p class="text-[var(--color-text-light)]">{t('usedCars.modelsSubtitle', lang)}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {allModels.map((model) => (
+        {usedCarModels.map((model) => (
           <div class={`rounded-xl overflow-hidden border border-[var(--color-border)] transition-all ${
             model.available
-              ? 'bg-white hover:shadow-lg hover:-translate-y-1 cursor-pointer'
-              : 'bg-gray-50 opacity-70 cursor-default'
+              ? 'bg-white hover:shadow-lg hover:-translate-y-1'
+              : 'bg-gray-50 cursor-default'
           }`}>
-            <div class="relative h-48 bg-gray-100 overflow-hidden">
-              <img src={model.image} alt={lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}
-                   class="w-full h-full object-cover"
-                   loading="lazy" />
-              <div class="absolute top-3 right-3">
-                <span class={`px-2 py-1 rounded-full text-xs font-bold text-white ${
-                  model.category === 'fuel' ? 'bg-green-600/80' :
-                  model.category === 'truck' ? 'bg-orange-600/80' :
-                  'bg-blue-400/80'
-                }`}>
-                  {model.category === 'fuel' ? (lang === 'zh' ? '燃油' : lang === 'ru' ? 'Топливный' : 'Fuel') :
-                   model.category === 'truck' ? (lang === 'zh' ? '皮卡' : lang === 'ru' ? 'Пикап' : 'Pickup') :
-                   (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
-                </span>
-              </div>
-              {!model.available && (
-                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <span class="bg-white/90 text-gray-800 px-4 py-2 rounded-lg font-bold text-sm">
-                    {lang === 'zh' ? '即将上线' : lang === 'ru' ? 'Скоро' : 'Coming Soon'}
+            <a
+              href={model.available ? `/${lang}/used-cars/${model.id}/` : undefined}
+              class={`block ${model.available ? 'cursor-pointer' : 'cursor-default'}`}
+              aria-disabled={!model.available}
+            >
+              <div class="relative h-48 bg-gray-100 overflow-hidden">
+                <img src={model.image} alt={lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}
+                     class="w-full h-full object-cover"
+                     loading="lazy" />
+                <div class="absolute top-3 right-3">
+                  <span class={`px-2 py-1 rounded-full text-xs font-bold text-white ${
+                    model.category === 'fuel' ? 'bg-green-600/80' :
+                    model.category === 'truck' ? 'bg-orange-600/80' :
+                    'bg-blue-400/80'
+                  }`}>
+                    {model.category === 'fuel' ? (lang === 'zh' ? '燃油' : lang === 'ru' ? 'Топливный' : 'Fuel') :
+                     model.category === 'truck' ? (lang === 'zh' ? '皮卡' : lang === 'ru' ? 'Пикап' : 'Pickup') :
+                     (lang === 'zh' ? '新能源' : lang === 'ru' ? 'Электромобиль' : 'EV')}
                   </span>
                 </div>
-              )}
-            </div>
+              </div>
+            </a>
             <div class="p-6">
             <h3 class="text-xl font-bold text-[var(--color-text)] mb-1">{lang === 'zh' ? model.nameZh : lang === 'ru' ? model.nameRu : model.name}</h3>
             <div class="text-sm text-muted mb-3">{model.year} · <span class="text-[var(--color-primary)] font-semibold">{model.price}</span></div>
