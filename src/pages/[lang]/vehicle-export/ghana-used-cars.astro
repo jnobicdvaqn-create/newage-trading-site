@@ -1,0 +1,194 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+// R1B: EN-only — RU/ZH content not yet translated
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const schema: Record<string, unknown> = {
+  "@type": "WebPage",
+  "name": "Used Car Export from China to Ghana",
+  "description": "Quality used vehicle procurement and export from China to Ghana (Tema/Takoradi). Toyota, Nissan, Honda, Hyundai.",
+  "url": `https://newage-trading.com/${lang}/vehicle-export/ghana-used-cars/`,
+  "publisher": {
+    "@type": "Organization",
+    "name": "YunBao International Trading",
+    "url": "https://newage-trading.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Used Car Export from China to Ghana | YunBao International"
+  description="Quality used vehicle procurement and export from China to Ghana. Toyota, Nissan, Honda, Hyundai — direct sourcing, full export docs, Tema/Takoradi delivery."
+  lang={lang}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-primary to-primary-dark text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Used Car Export from China to Ghana
+      </h1>
+      <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+        Quality pre-owned vehicles · Direct China sourcing · Tema / Takoradi delivery
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`/${lang}/contact/`} class="btn-primary">
+          Request Available Vehicles
+        </a>
+        <a href={`/${lang}/used-cars/`} class="btn-outline text-white border-white hover:bg-white hover:text-primary">
+          Browse Used Cars
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do / Don't Do -->
+  <section class="container-section">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">What We Provide</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Vehicle sourcing</strong> — quality used cars from verified Chinese dealers and auctions</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Condition verification</strong> — photo documentation, mileage confirmation, basic inspection report</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Export documentation</strong> — commercial invoice, packing list, certificate of origin, customs declaration</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Shipping arrangement</strong> — RORO or container to Tema / Takoradi ports</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">What We Do Not Provide</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Ghana customs clearance</strong> — you or your local clearing agent handle import at destination</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Ghana vehicle registration</strong> — not included in our service scope</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Age/duty guarantee</strong> — Ghana import regulations (age limits, duty rates) are your responsibility to verify</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Online payment</strong> — all transactions via bank transfer with PI/contract</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Scenarios -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Two Ways We Can Help</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Scenario A: I Need to Buy + Export</h3>
+          <p class="text-gray-600 mb-4">
+            You tell us what you want (model, year, budget, quantity) and we source it from China, handle all export documentation, and ship to Tema or Takoradi.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• You specify: model, year range, budget, quantity</li>
+            <li>• We provide: candidate vehicle options with photos and specs</li>
+            <li>• You confirm: select vehicles and place order</li>
+            <li>• We handle: procurement, inspection, export docs, shipping</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Scenario B: I Already Have a Car — Just Ship It</h3>
+          <p class="text-gray-600 mb-4">
+            You've already purchased a vehicle in China (or through another supplier) and need us to arrange export documentation and shipping to Ghana.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• You provide: vehicle details, current location, purchase documents</li>
+            <li>• We provide: export documentation, customs clearance, shipping arrangement</li>
+            <li>• You confirm: shipping method (RORO/container) and port</li>
+            <li>• We handle: all logistics from China port to Ghana</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="container-section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Inquiry</h3>
+        <p class="text-gray-600 text-sm">Tell us your requirements: model, year, budget, quantity, destination port</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Quotation</h3>
+        <p class="text-gray-600 text-sm">We provide EXW/FOB/CIF quotation with cost breakdown and validity period</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Procurement & Loading</h3>
+        <p class="text-gray-600 text-sm">Vehicle sourced, inspected, documented, and loaded on vessel</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Delivery</h3>
+        <p class="text-gray-600 text-sm">Shipped to Tema/Takoradi, original documents sent to you for clearance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Note -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+        <h3 class="font-semibold text-yellow-800 mb-2">⚠️ Pricing Disclaimer</h3>
+        <p class="text-yellow-700 text-sm">
+          All prices shown on this website are <strong>indicative only</strong> and based on market conditions at the time of posting.
+          Actual pricing depends on vehicle condition, mileage, specification, exchange rates, and order quantity.
+          Shipping costs vary by port, vessel schedule, and fuel surcharges.
+          The final price is confirmed only in the official Proforma Invoice (PI).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-gray-200 mb-8">
+        Tell us what you need — model, budget, quantity, destination — and we'll provide available options within 24 hours.
+      </p>
+      <a href={`/${lang}/contact/`} class="btn-primary bg-accent text-primary hover:bg-accent/90">
+        Request Available Vehicles
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -25,7 +25,6 @@ const trustItems = [
   { title: t('home.trustQuality', lang), description: t('home.trustQualityDesc', lang), icon: 'quality' as const },
   { title: t('home.trustLogistics', lang), description: t('home.trustLogisticsDesc', lang), icon: 'logistics' as const },
   { title: t('home.trustSupport', lang), description: t('home.trustSupportDesc', lang), icon: 'support' as const },
-  { title: t('home.trustQuality', lang), description: 'ISO 9001, CE, FCC certified partners', icon: 'certified' as const },
 ];
 
 const indexSchema: Record<string, unknown> = {
@@ -45,50 +44,25 @@ const indexSchema: Record<string, unknown> = {
     "contactType": "sales",
     "availableLanguage": ["English", "Russian", "Chinese"]
   },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "USD"
-      },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "Worldwide"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 3,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 25,
-          "maxValue": 35,
-          "unitCode": "DAY"
-        }
-      }
+  "makesOffer": [
+    {
+      "@type": "Service",
+      "serviceType": "Vehicle Export & Procurement",
+      "areaServed": ["Georgia", "Ghana", "Nigeria", "Kenya"]
     },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-      "merchantReturnDays": null,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
+    {
+      "@type": "Service",
+      "serviceType": "Lingerie OEM/ODM",
+      "areaServed": "Worldwide"
     }
-  }
+  ]
 };
 
-const services = [
+// Primary CTA: Vehicle Export (new + used combined)
+const primaryServices = [
   {
     image: '/images/cars/byd-seal.jpg?v=20260526',
-    imageAlt: { en: 'Chinese Car Export', ru: 'Экспорт автомобилей из Китая', zh: '中国汽车出口' }[lang] || 'Chinese Car Export',
+    imageAlt: { en: 'New Car Export', ru: 'Экспорт новых автомобилей', zh: '新车出口' }[lang] || 'New Car Export',
     title: t('home.carsTitle', lang),
     description: t('home.carsDesc', lang),
     href: `/${lang}/cars/`,
@@ -100,6 +74,10 @@ const services = [
     description: t('home.usedCarsDesc', lang),
     href: `/${lang}/used-cars/`,
   },
+];
+
+// Secondary: Lingerie OEM
+const secondaryServices = [
   {
     image: '/images/lingerie/silk.jpg?v=20260529',
     imageAlt: { en: 'Lingerie OEM Manufacturing', ru: 'OEM производство белья', zh: '内衣OEM代工' }[lang] || 'Lingerie OEM Manufacturing',
@@ -107,6 +85,10 @@ const services = [
     description: t('home.lingerieDesc', lang),
     href: `/${lang}/lingerie/`,
   },
+];
+
+// Other: Security (not promoted in hero or primary CTA)
+const otherServices = [
   {
     image: '/images/security/hikvision-darkfighter.jpg?v=20260529',
     imageAlt: { en: 'Security Equipment Wholesale', ru: 'Оптовые продажи оборудования безопасности', zh: '安防设备批发' }[lang] || 'Security Equipment Wholesale',
@@ -128,18 +110,18 @@ const services = [
     title={t('home.heroTitle', lang)}
     subtitle={t('home.heroSubtitle', lang)}
     ctaText={t('home.heroCTA', lang)}
-    ctaLink={`/${lang}/contact/`}
+    ctaLink={`/${lang}/cars/`}
     lang={lang}
   />
 
-  <!-- Services Section -->
+  <!-- Primary Services: Vehicle Export -->
   <section class="container-section">
     <div class="text-center mb-12">
       <h2 class="section-title mb-4">{t('home.servicesTitle', lang)}</h2>
       <p class="section-subtitle">{t('home.servicesSubtitle', lang)}</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {services.map(service => (
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {primaryServices.map(service => (
         <ServiceCard
           image={service.image}
           imageAlt={service.imageAlt}
@@ -152,25 +134,63 @@ const services = [
     </div>
   </section>
 
-  <!-- Stats Section -->
+  <!-- Secondary: Lingerie OEM -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title mb-4">{t('home.lingerieTitle', lang)}</h2>
+        <p class="section-subtitle">{t('home.lingerieDesc', lang)}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {secondaryServices.map(service => (
+          <ServiceCard
+            image={service.image}
+            imageAlt={service.imageAlt}
+            title={service.title}
+            description={service.description}
+            href={service.href}
+            ctaText={t('common.learnMore', lang)}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Services (Security) -->
+  <section class="container-section">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">{t('home.securityTitle', lang)}</h2>
+      <p class="text-gray-600">{t('home.securityDesc', lang)}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {otherServices.map(service => (
+        <ServiceCard
+          image={service.image}
+          imageAlt={service.imageAlt}
+          title={service.title}
+          description={service.description}
+          href={service.href}
+          ctaText={t('common.learnMore', lang)}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Capabilities Section -->
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">500+</div>
-          <div class="text-gray-400 text-sm">{t('about.clients', lang)}</div>
+          <div class="text-lg font-semibold text-accent mb-2">{t('about.clients', lang)}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">30+</div>
-          <div class="text-gray-400 text-sm">{t('about.countries', lang)}</div>
+          <div class="text-lg font-semibold text-accent mb-2">{t('about.countries', lang)}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">8+</div>
-          <div class="text-gray-400 text-sm">{t('about.years', lang)}</div>
+          <div class="text-lg font-semibold text-accent mb-2">{t('about.years', lang)}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">50K+</div>
-          <div class="text-gray-400 text-sm">{t('about.products', lang)}</div>
+          <div class="text-lg font-semibold text-accent mb-2">{t('about.products', lang)}</div>
         </div>
       </div>
     </div>

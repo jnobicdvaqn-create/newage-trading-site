@@ -1,0 +1,156 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+// R1B: EN-only — RU/ZH content not yet translated
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const schema: Record<string, unknown> = {
+  "@type": "WebPage",
+  "name": "New Car Export from China to Georgia",
+  "description": "Professional vehicle procurement and export service from China to Georgia (Poti/Batumi).",
+  "url": `https://newage-trading.com/${lang}/vehicle-export/georgia-new-cars/`,
+  "publisher": {
+    "@type": "Organization",
+    "name": "YunBao International Trading",
+    "url": "https://newage-trading.com"
+  }
+};
+---
+
+<BaseLayout
+  title="New Car Export from China to Georgia | YunBao International"
+  description="Professional new car procurement and export service from China to Georgia. BYD, Geely, Great Wall, Changan — direct factory pricing, full export documentation, port-to-port delivery."
+  lang={lang}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-primary to-primary-dark text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        New Car Export from China to Georgia
+      </h1>
+      <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+        Direct factory sourcing · Full export documentation · Poti / Batumi delivery
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`/${lang}/contact/`} class="btn-primary">
+          Request a Quote
+        </a>
+        <a href={`/${lang}/cars/`} class="btn-outline text-white border-white hover:bg-white hover:text-primary">
+          Browse Available Models
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do / Don't Do -->
+  <section class="container-section">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">What We Provide</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Vehicle procurement</strong> — new cars from authorized Chinese dealers and factories (BYD, Geely, Great Wall, Changan, etc.)</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Export documentation</strong> — commercial invoice, packing list, certificate of origin, customs declaration</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Shipping arrangement</strong> — RORO or container to Poti / Batumi ports</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Pre-shipment inspection</strong> — photo documentation and condition verification before loading</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">What We Do Not Provide</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Georgian customs clearance</strong> — you or your local agent handle import clearance at destination</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Vehicle registration in Georgia</strong> — not included in our service scope</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Warranty service in Georgia</strong> — warranty terms depend on manufacturer policy</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span><strong>Online payment</strong> — all transactions via bank transfer with PI/contract</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Inquiry & Requirements</h3>
+          <p class="text-gray-600 text-sm">Tell us the model, quantity, target price, and delivery timeline</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Quotation</h3>
+          <p class="text-gray-600 text-sm">We provide EXW/FOB/CIF quotation with validity period and cost breakdown</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Procurement & Inspection</h3>
+          <p class="text-gray-600 text-sm">Vehicle sourced, inspected, and documented before shipment</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Shipping & Delivery</h3>
+          <p class="text-gray-600 text-sm">Loaded on vessel, shipped to Poti/Batumi, documents sent to you</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Note -->
+  <section class="container-section">
+    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+      <h3 class="font-semibold text-yellow-800 mb-2">⚠️ Pricing Disclaimer</h3>
+      <p class="text-yellow-700 text-sm">
+        All prices shown on this website are <strong>indicative only</strong> and based on market conditions at the time of posting.
+        Actual pricing depends on exchange rates, model availability, specification, and order quantity.
+        Prices are quoted in <strong>USD</strong> and may change without notice.
+        The final price is confirmed only in the official Proforma Invoice (PI).
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get a Quote?</h2>
+      <p class="text-gray-200 mb-8">
+        Tell us your requirements — model, quantity, destination port — and we'll provide a detailed quotation within 24 hours.
+      </p>
+      <a href={`/${lang}/contact/`} class="btn-primary bg-accent text-primary hover:bg-accent/90">
+        Request Vehicle Quote
+      </a>
+    </div>
+  </section>
+</BaseLayout>

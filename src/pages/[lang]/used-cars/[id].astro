@@ -45,7 +45,7 @@ const faqItems = lang === 'zh' ? [
 
 <BaseLayout
   title={`${carName} — Used Car Export | New Age Trading`}
-  description={`${carName} (${currentYear}), ${currentPrice} FOB. Fleet-retired & refurbished.`}
+  description={`${carName} (${currentYear}). ${currentPrice ? 'Indicative FOB price, confirmed by quotation.' : 'Request current quote.'} Fleet-retired & refurbished.`}
   lang={lang}
   breadcrumbs={[
     { name: t('nav.home', lang), path: `/${lang}/` },
@@ -82,7 +82,14 @@ const faqItems = lang === 'zh' ? [
             <span class="text-sm opacity-80">{currentYear}</span>
           </div>
           <h1 class="text-4xl font-bold mb-4">{carName}</h1>
-          <div class="text-3xl font-bold text-yellow-300 mb-6">{currentPrice} <span class="text-lg text-gray-300 font-normal">FOB</span></div>
+          <div class="mb-6">
+            <div class="text-3xl font-bold text-yellow-300">{currentPrice} <span class="text-lg text-gray-300 font-normal">FOB</span></div>
+            {vehicle.priceNote && vehicle.priceNoteZh && vehicle.priceNoteRu && (
+              <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+                {lang === 'zh' ? vehicle.priceNoteZh : lang === 'ru' ? vehicle.priceNoteRu : vehicle.priceNote}
+              </p>
+            )}
+          </div>
           <p class="text-lg text-gray-200 mb-8">{lang === 'zh' ? vehicle.reasonZh : lang === 'ru' ? vehicle.reasonRu : vehicle.reason}</p>
 
           <!-- Specs table -->
@@ -120,7 +127,7 @@ const faqItems = lang === 'zh' ? [
               Telegram
             </a>
             <a href={`/${lang}/contact/`} class="bg-white text-primary px-6 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100">
-              {lang === 'zh' ? '获取报价' : lang === 'ru' ? 'Получить报价' : 'Get Quote'}
+              {lang === 'zh' ? '获取报价' : lang === 'ru' ? 'Получить предложение' : 'Get Quote'}
             </a>
           </div>
         </div>

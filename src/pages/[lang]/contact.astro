@@ -15,6 +15,31 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Locale };
 
+const formActionUrl = '/api/contact';
+
+const contactSchema: Record<string, unknown> = {
+  "@type": "ContactPage",
+  "name": "Contact Us",
+  "url": `https://newage-trading.com/${lang}/contact/`,
+  "publisher": {
+    "@type": "Organization",
+    "name": "YunBao International Trading",
+    "email": contact.email,
+    "url": "https://newage-trading.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beijing",
+      "addressCountry": "China"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": `+${contact.whatsappNumber}`,
+      "contactType": "sales",
+      "availableLanguage": ["English", "Russian", "Chinese"]
+    }
+  }
+};
+
 const contactMethods = [
   {
     label: t('contact.whatsapp', lang),
@@ -35,30 +60,12 @@ const contactMethods = [
     icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
   },
 ];
-
-const contactSchema = {
-  "@type": "ContactPage",
-  name: `Contact YunBao International Trading`,
-  description: t('contact.subtitle', lang),
-  mainEntity: {
-    "@type": "Organization",
-    name: "YunBao International Trading",
-    email: contact.email,
-    ...(isWhatsAppConfigured() ? { telephone: `+${contact.whatsappNumber}` } : {}),
-  },
-};
-
-const formActionUrl = '/api/contact';
 ---
 
 <BaseLayout
   title={t('contact.title', lang)}
   description={t('contact.subtitle', lang)}
   lang={lang}
-  breadcrumbs={[
-    { name: t('nav.home', lang), path: `/${lang}/` },
-    { name: t('nav.contact', lang), path: `/${lang}/contact/` },
-  ]}
   schema={contactSchema}
 >
   <Breadcrumb crumbs={[
@@ -77,34 +84,180 @@ const formActionUrl = '/api/contact';
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Contact Form -->
       <div>
-        <h2 class="text-2xl font-bold mb-6">{t('contact.formTitle', lang)}</h2>
+        <h2 class="text-2xl font-bold mb-2">{t('contact.formTitle', lang)}</h2>
+        <p class="text-gray-600 mb-6 text-sm">{lang === 'zh' ? '请选择您的业务类型，以便我们更好地为您服务。' : lang === 'ru' ? 'Выберите тип вашего бизнеса для более точного обслуживания.' : 'Please select your business type to help us serve you better.'}</p>
+
+        <!-- Business Line Selector -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-primary mb-2">{lang === 'zh' ? '业务类型 *' : lang === 'ru' ? 'Тип бизнеса *' : 'Business Type *'}</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" id="btnVehicle" class="biz-btn px-4 py-3 rounded-lg border-2 border-accent bg-accent/10 text-accent font-semibold text-center" onclick="selectBiz('vehicle')">
+              🚗 {lang === 'zh' ? '汽车出口' : lang === 'ru' ? 'Экспорт автомобилей' : 'Vehicle Export'}
+            </button>
+            <button type="button" id="btnLingerie" class="biz-btn px-4 py-3 rounded-lg border-2 border-gray-300 text-gray-600 font-semibold text-center" onclick="selectBiz('lingerie')">
+              👗 {lang === 'zh' ? '内衣OEM' : lang === 'ru' ? 'Одежда для белья OEM' : 'Lingerie OEM'}
+            </button>
+          </div>
+        </div>
+
         <form id="contactForm" class="space-y-4" action={formActionUrl} method="POST">
-          <!-- Self-hosted API fields -->
+          <!-- Hidden fields for tracking -->
           <input type="hidden" name="_subject" value="New Contact Form Submission — YunBao International Trading" />
           <input type="hidden" name="_lang" value={lang} />
+          <input type="hidden" name="_business_line" id="fieldBizLine" value="" />
+          <input type="hidden" name="_source_page" id="fieldSourcePage" value="" />
+          <input type="hidden" name="_lead_id" id="fieldLeadId" value="" />
           <!-- Honeypot field (anti-spam) -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <div>
-            <label class="block text-sm font-medium text-primary mb-1">{t('contact.formName', lang)}</label>
-            <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+
+          <!-- Vehicle Export Fields -->
+          <div id="vehicleFields" class="biz-fields">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Destination Country *</label>
+                <input type="text" name="destination_country" placeholder="e.g. Georgia, Ghana" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Destination Port</label>
+                <input type="text" name="destination_port" placeholder="e.g. Poti, Tema" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-primary mb-1">Service Type *</label>
+              <select name="service_type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                <option value="">-- Select --</option>
+                <option value="procurement_and_export">Procurement + Export</option>
+                <option value="export_only">Already Have Vehicle — Export Only</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Brand / Model</label>
+                <input type="text" name="vehicle_model" placeholder="e.g. BYD Seal, Toyota Camry" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Year Range</label>
+                <input type="text" name="vehicle_year" placeholder="e.g. 2022-2024" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Quantity</label>
+                <input type="text" name="quantity" placeholder="e.g. 1, 5, 10+" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Budget / Target Cost</label>
+                <input type="text" name="budget" placeholder="e.g. $15,000-20,000 per unit" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-primary mb-1">Expected Purchase Timeline</label>
+              <select name="timeline" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                <option value="">-- Select --</option>
+                <option value="immediate">Immediate (within 1 week)</option>
+                <option value="1_month">Within 1 month</option>
+                <option value="3_months">Within 3 months</option>
+                <option value="exploring">Just exploring / no timeline yet</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-primary mb-1">{t('contact.formEmail', lang)}</label>
-            <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+
+          <!-- Lingerie OEM Fields -->
+          <div id="lingerieFields" class="biz-fields hidden">
+            <div>
+              <label class="block text-sm font-medium text-primary mb-1">Product Type *</label>
+              <input type="text" name="product_type" placeholder="e.g. Seamless underwear, Lace bra, Sports bra" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Estimated Quantity / MOQ</label>
+                <input type="text" name="estimated_qty" placeholder="e.g. 500 pcs, 1000 pcs" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Target Market</label>
+                <input type="text" name="target_market" placeholder="e.g. Russia, EU, Africa" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-primary mb-1">Services Needed</label>
+              <div class="grid grid-cols-2 gap-2 mt-1">
+                <label class="flex items-center"><input type="checkbox" name="services" value="design" class="mr-2" /> Design support</label>
+                <label class="flex items-center"><input type="checkbox" name="services" value="sampling" class="mr-2" /> Sampling</label>
+                <label class="flex items-center"><input type="checkbox" name="services" value="fabric_advice" class="mr-2" /> Fabric advice</label>
+                <label class="flex items-center"><input type="checkbox" name="services" value="full_production" class="mr-2" /> Full production</label>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Target Price Range</label>
+                <input type="text" name="target_price" placeholder="e.g. $3-5 per unit" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Timeline</label>
+                <input type="text" name="lingerie_timeline" placeholder="e.g. Q4 2026" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-primary mb-1">{t('contact.formPhone', lang)}</label>
-            <input type="tel" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+
+          <!-- Common Fields -->
+          <div class="border-t pt-4 mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">{t('contact.formName', lang)} *</label>
+                <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">Company (optional)</label>
+                <input type="text" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">{t('contact.formEmail', lang)} *</label>
+                <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-primary mb-1">{t('contact.formPhone', lang)} / WhatsApp</label>
+                <input type="tel" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-primary mb-1">{t('contact.formMessage', lang)} *</label>
+              <textarea name="message" rows={4} required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="Any additional details, specific requirements, or questions..."></textarea>
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-primary mb-1">{t('contact.formMessage', lang)}</label>
-            <textarea name="message" rows={5} required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none"></textarea>
+
+          <!-- Privacy Notice -->
+          <div class="bg-gray-50 rounded-lg p-4 text-sm text-gray-600">
+            <p>By submitting this form, you agree that we may contact you regarding your inquiry via email, WhatsApp, or Telegram. We will not share your information with third parties. See our <a href={`/${lang}/privacy/`} class="text-accent underline">Privacy Policy</a>.</p>
           </div>
+
           <button type="submit" id="submitBtn" class="btn-primary w-full">{t('contact.formSubmit', lang)}</button>
           <div id="formStatus" class="hidden text-center py-3 px-4 rounded-lg"></div>
         </form>
 
         <script>
+          // Business line selection
+          let selectedBiz = '';
+          function selectBiz(type) {
+            selectedBiz = type;
+            document.getElementById('fieldBizLine').value = type;
+            document.getElementById('btnVehicle').className = type === 'vehicle'
+              ? 'biz-btn px-4 py-3 rounded-lg border-2 border-accent bg-accent/10 text-accent font-semibold text-center'
+              : 'biz-btn px-4 py-3 rounded-lg border-2 border-gray-300 text-gray-600 font-semibold text-center';
+            document.getElementById('btnLingerie').className = type === 'lingerie'
+              ? 'biz-btn px-4 py-3 rounded-lg border-2 border-accent bg-accent/10 text-accent font-semibold text-center'
+              : 'biz-btn px-4 py-3 rounded-lg border-2 border-gray-300 text-gray-600 font-semibold text-center';
+            document.getElementById('vehicleFields').classList.toggle('hidden', type !== 'vehicle');
+            document.getElementById('lingerieFields').classList.toggle('hidden', type !== 'lingerie');
+          }
+          // Default to vehicle
+          selectBiz('vehicle');
+
+          // Set source page and lead ID
+          document.getElementById('fieldSourcePage').value = window.location.pathname;
+          document.getElementById('fieldLeadId').value = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+
           // Self-hosted AJAX submission
           document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -113,6 +266,13 @@ const formActionUrl = '/api/contact';
             const status = document.getElementById('formStatus');
             const originalText = btn.textContent;
             const lang = document.documentElement.lang || 'en';
+
+            if (!selectedBiz) {
+              status.classList.remove('hidden');
+              status.classList.add('bg-yellow-50', 'text-yellow-700');
+              status.textContent = lang === 'zh' ? '请选择业务类型（汽车出口或内衣OEM）。' : lang === 'ru' ? 'Выберите тип бизнеса (Экспорт автомобилей или Одежда для белья OEM).' : 'Please select a business type (Vehicle Export or Lingerie OEM).';
+              return;
+            }
 
             btn.disabled = true;
             btn.textContent = '...';
@@ -131,8 +291,9 @@ const formActionUrl = '/api/contact';
               if (res.ok) {
                 status.classList.remove('hidden');
                 status.classList.add('bg-green-50', 'text-green-700');
-                status.textContent = lang === 'zh' ? '✅ 消息已发送！我们将在24小时内回复您。' : lang === 'ru' ? '✅ Сообщение отправлено! Мы ответим вам в течение 24 часов.' : '✅ Message sent successfully! We will get back to you within 24 hours.';
+                status.textContent = lang === 'zh' ? '✅ 询盘已提交！我们将在24小时内回复您。' : lang === 'ru' ? '✅ Запрос отправлен! Мы ответим вам в течение 24 часов.' : '✅ Inquiry submitted! We will get back to you within 24 hours.';
                 form.reset();
+                selectBiz('vehicle');
               } else {
                 const errData = await res.json().catch(() => ({}));
                 status.classList.remove('hidden');
