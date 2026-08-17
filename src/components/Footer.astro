@@ -118,22 +118,16 @@ const { lang } = Astro.props;
         </ul>
       </div>
 
-      <!-- Newsletter -->
+      <!-- Contact CTA -->
       <div>
-        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-white">{t('footer.newsletter', lang)}</h3>
-        <form class="flex flex-col gap-2">
-          <input
-            type="email"
-            placeholder={t('footer.newsletterPlaceholder', lang)}
-            class="rounded-lg border border-gray-600 bg-gray-800 px-3 py-2.5 text-sm text-white placeholder-gray-400 transition-colors focus:border-[var(--color-accent)] focus:outline-none"
-          />
-          <button
-            type="submit"
-            class="rounded-lg bg-[var(--color-accent)] px-4 py-2.5 text-sm font-semibold text-[var(--color-bg-dark)] transition-colors hover:bg-[var(--color-accent-light)]"
-          >
-            {t('footer.newsletterCTA', lang)}
-          </button>
-        </form>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-white">{lang === 'zh' ? '联系我们' : lang === 'ru' ? 'Связаться' : 'Get In Touch'}</h3>
+        <p class="text-sm text-gray-400 mb-3">{lang === 'zh' ? '有询价或合作意向？' : lang === 'ru' ? 'Есть запрос или предложение о сотрудничестве?' : 'Have an inquiry or partnership interest?'}</p>
+        <a
+          href={`/${lang}/contact/`}
+          class="inline-block rounded-lg bg-[var(--color-accent)] px-4 py-2.5 text-sm font-semibold text-[var(--color-bg-dark)] transition-colors hover:bg-[var(--color-accent-light)]"
+        >
+          {lang === 'zh' ? '联系我们' : lang === 'ru' ? 'Связаться' : 'Contact Us'}
+        </a>
       </div>
     </div>
   </div>

@@ -1,0 +1,117 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const brands = [
+  { name: 'BYD', models: 'Seal, Song Plus, Atto 3', image: '/images/brands/byd.svg' },
+  { name: 'Geely', models: 'Monjaro, Emgrand, Preface', image: '/images/brands/geely.svg' },
+  { name: 'Great Wall', models: 'Haval H6, Jolion, Poer', image: '/images/brands/greatwall.svg' },
+  { name: 'Changan', models: 'UNI-T, Alsvin, Eado', image: '/images/brands/changan.svg' },
+];
+
+const routes = [
+  { from: 'Shanghai / Ningbo', to: 'Poti → Tbilisi (rail)', mode: 'RoRo / Container', est: '25-35 days' },
+  { from: 'Qingdao / Tianjin', to: 'Poti → Tbilisi (rail)', mode: 'RoRo / Container', est: '25-35 days' },
+  { from: 'Guangzhou / Shenzhen', to: 'Batumi', mode: 'RoRo', est: '25-35 days' },
+];
+---
+
+<BaseLayout
+  title="New Car Export to Georgia — China Sourcing"
+  description="BYD, Geely, Great Wall, Changan — FOB China to Poti/Batumi, then rail to Tbilisi. Full export documentation and customs support."
+  lang={lang}
+  breadcrumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'Vehicle Export', path: '/en/vehicle-export/' },
+    { name: 'Georgia New Cars', path: '/en/vehicle-export/georgia-new-cars/' },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'Vehicle Export', path: '/en/vehicle-export/' },
+    { name: 'Georgia New Cars', path: '/en/vehicle-export/georgia-new-cars/' },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">New Car Export to Georgia</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">China-sourced new vehicles delivered to Tbilisi, Batumi, and across Georgia. BYD, Geely, Great Wall, Changan and more.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/en/contact/" class="btn-primary">Request a Quote</a>
+        <a href="/en/used-cars/" class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-white hover:text-[var(--color-primary)]">View Used Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="container-section py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-[var(--color-text)] mb-12">Available Brands</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {brands.map((b) => (
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border)] text-center">
+            <h3 class="text-xl font-bold text-[var(--color-text)] mb-2">{b.name}</h3>
+            <p class="text-sm text-[var(--color-text-light)]">{b.models}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Shipping Routes -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-[var(--color-text)] mb-12">Shipping Routes</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left">China Port</th>
+              <th class="px-4 py-3 text-left">Destination</th>
+              <th class="px-4 py-3 text-left">Mode</th>
+              <th class="px-4 py-3 text-left">Est. Transit</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            {routes.map((r) => (
+              <tr>
+                <td class="px-4 py-3">{r.from}</td>
+                <td class="px-4 py-3">{r.to}</td>
+                <td class="px-4 py-3">{r.mode}</td>
+                <td class="px-4 py-3">{r.est}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-400 mt-4 text-center">Transit times are estimates and subject to carrier schedules and customs processing.</p>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="container-section py-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm text-gray-500">Pricing, availability, and specifications are subject to change. All quotes are provided on a case-by-case basis. Contact us for current information.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get a Custom Quote for Georgia</h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Tell us your target model, quantity, and destination. We respond within 24 hours.</p>
+      <a href="/en/contact/" class="btn-primary">Request Current Quote</a>
+    </div>
+  </section>
+</BaseLayout>

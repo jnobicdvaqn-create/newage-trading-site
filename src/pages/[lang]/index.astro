@@ -4,7 +4,6 @@ import Hero from '@components/Hero.astro';
 import ServiceCard from '@components/ServiceCard.astro';
 import TrustBadges from '@components/TrustBadges.astro';
 import FeaturedProducts from '@components/FeaturedProducts.astro';
-import Testimonials from '@components/Testimonials.astro';
 import PartnerLogos from '@components/PartnerLogos.astro';
 import LatestBlog from '@components/LatestBlog.astro';
 import { t } from '@i18n/index';
@@ -25,7 +24,6 @@ const trustItems = [
   { title: t('home.trustQuality', lang), description: t('home.trustQualityDesc', lang), icon: 'quality' as const },
   { title: t('home.trustLogistics', lang), description: t('home.trustLogisticsDesc', lang), icon: 'logistics' as const },
   { title: t('home.trustSupport', lang), description: t('home.trustSupportDesc', lang), icon: 'support' as const },
-  { title: t('home.trustQuality', lang), description: 'ISO 9001, CE, FCC certified partners', icon: 'certified' as const },
 ];
 
 const indexSchema: Record<string, unknown> = {
@@ -155,22 +153,22 @@ const services = [
   <!-- Stats Section -->
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">500+</div>
-          <div class="text-gray-400 text-sm">{t('about.clients', lang)}</div>
+          <div class="text-2xl font-bold text-accent mb-2">🚗</div>
+          <div class="text-gray-400 text-sm">{lang === 'zh' ? '车辆出口' : lang === 'ru' ? 'Экспорт автомобилей' : 'Vehicle Export'}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">30+</div>
-          <div class="text-gray-400 text-sm">{t('about.countries', lang)}</div>
+          <div class="text-2xl font-bold text-accent mb-2">👗</div>
+          <div class="text-gray-400 text-sm">{lang === 'zh' ? '内衣OEM/ODM' : lang === 'ru' ? 'Женское белье OEM/ODM' : 'Lingerie OEM/ODM'}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">8+</div>
-          <div class="text-gray-400 text-sm">{t('about.years', lang)}</div>
+          <div class="text-2xl font-bold text-accent mb-2">🔒</div>
+          <div class="text-gray-400 text-sm">{lang === 'zh' ? '安防设备' : lang === 'ru' ? 'Охранным оборудованием' : 'Security Equipment'}</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-accent mb-2">50K+</div>
-          <div class="text-gray-400 text-sm">{t('about.products', lang)}</div>
+          <div class="text-2xl font-bold text-accent mb-2">🌐</div>
+          <div class="text-gray-400 text-sm">{lang === 'zh' ? '中国采购' : lang === 'ru' ? 'Закупки в Китае' : 'China-Based Sourcing'}</div>
         </div>
       </div>
     </div>
@@ -185,9 +183,6 @@ const services = [
 
   <!-- Featured Products -->
   <FeaturedProducts lang={lang} />
-
-  <!-- Testimonials -->
-  <Testimonials lang={lang} />
 
   <!-- Partners & Certifications -->
   <PartnerLogos lang={lang} />
