@@ -1,0 +1,106 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const destinations = [
+  { country: 'Ghana', port: 'Tema', cert: 'None required', note: 'Friendly import policy, smooth clearance' },
+  { country: 'Nigeria', port: 'Lagos (Apapa)', cert: 'SONCAP', note: 'Largest market, highest demand' },
+  { country: 'Kenya', port: 'Mombasa', cert: 'PVOC', note: 'East Africa hub, mature market' },
+  { country: 'Egypt', port: 'Alexandria', cert: 'GOEIC', note: '100M+ population' },
+];
+
+const process = [
+  { step: '1', title: 'Select Your Vehicle', desc: 'Browse our used car catalog or tell us your target model and budget.' },
+  { step: '2', title: 'Receive FOB + Freight Quote', desc: 'We provide itemized pricing: vehicle cost, inspection, port handling, ocean freight, and insurance.' },
+  { step: '3', title: 'Inspection & Loading', desc: 'Third-party inspection with photos. Container or RoRo loading supervised.' },
+  { step: '4', title: 'Delivery to Destination', desc: 'We coordinate with your clearing agent at the destination port.' },
+];
+---
+
+<BaseLayout
+  title="Used Car Export to Ghana & Africa — China Sourcing"
+  description="Quality used cars from China shipped to Tema, Lagos, Mombasa, and across West & East Africa. FOB pricing, full documentation support."
+  lang={lang}
+  breadcrumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'Vehicle Export', path: '/en/vehicle-export/' },
+    { name: 'Ghana Used Cars', path: '/en/vehicle-export/ghana-used-cars/' },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'Vehicle Export', path: '/en/vehicle-export/' },
+    { name: 'Ghana Used Cars', path: '/en/vehicle-export/ghana-used-cars/' },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Used Cars to Ghana & Africa</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">Quality Chinese-market used vehicles shipped to West and East Africa. FOB China port pricing, full export documentation.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/en/contact/" class="btn-primary">Request a Quote</a>
+        <a href="/en/used-cars/" class="inline-block rounded-lg border-2 border-white px-6 py-3 text-white font-medium transition-colors hover:bg-white hover:text-[var(--color-primary)]">Browse Used Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section class="container-section py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-[var(--color-text)] mb-12">Popular Destinations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {destinations.map((d) => (
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border)]">
+            <h3 class="text-xl font-bold text-[var(--color-text)] mb-2">{d.country}</h3>
+            <p class="text-sm text-muted mb-2">Port: {d.port}</p>
+            <p class="text-sm text-muted mb-2">Cert: {d.cert}</p>
+            <p class="text-xs text-[var(--color-text-light)]">{d.note}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-[var(--color-text)] mb-12">How We Ship to Africa</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {process.map((p) => (
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border)]">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mb-4">{p.step}</div>
+            <h3 class="text-lg font-bold text-[var(--color-text)] mb-2">{p.title}</h3>
+            <p class="text-sm text-[var(--color-text-light)]">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="container-section py-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm text-gray-500">All prices are indicative and subject to change. Certification requirements and import duties vary by country. Contact us for current, destination-specific information.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get a Quote for Your Destination</h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Tell us your target model, budget, and destination port. We respond within 24 hours.</p>
+      <a href="/en/contact/" class="btn-primary">Request Current Quote</a>
+    </div>
+  </section>
+</BaseLayout>

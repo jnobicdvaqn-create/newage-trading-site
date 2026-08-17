@@ -1,0 +1,101 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { t } from '@i18n/index';
+import type { Locale } from '@i18n/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const steps = [
+  {
+    step: 1,
+    title: 'Tell Us What You Need',
+    desc: 'Share your target product, quantity, destination country, and any specific requirements. We accept inquiries via WhatsApp, Telegram, or the contact form.',
+    icon: '📋',
+  },
+  {
+    step: 2,
+    title: 'Receive a Detailed Quotation',
+    desc: 'Within 24 hours we return a line-item quote: FOB price, packaging, inspection, port fees, ocean/road freight, insurance, and estimated delivery window. All figures are sourced from live supplier and carrier rates.',
+    icon: '💰',
+  },
+  {
+    step: 3,
+    title: 'Confirm Order & Pay Deposit',
+    desc: 'After you approve the quote, we issue a proforma invoice. A deposit (typically 30 %) secures the order. We accept T/T and L/C.',
+    icon: '✅',
+  },
+  {
+    step: 4,
+    title: 'Production, Inspection & Loading',
+    desc: 'We monitor production milestones, arrange third-party inspection when required, and supervise container loading with photos for your records.',
+    icon: '🏭',
+  },
+  {
+    step: 5,
+    title: 'Shipping & Customs Clearance',
+    desc: 'We book RoRo or container space, handle export documentation, and coordinate with your destination agent for smooth customs clearance.',
+    icon: '🚢',
+  },
+  {
+    step: 6,
+    title: 'Delivery & After-Sales Support',
+    desc: 'Once the cargo arrives, we stay available for spare parts, warranty claims, and your next order.',
+    icon: '🤝',
+  },
+];
+---
+
+<BaseLayout
+  title="How It Works — Export Process"
+  description="Step-by-step guide from inquiry to delivery. China-based sourcing for vehicles, lingerie, and security equipment."
+  lang={lang}
+  breadcrumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'How It Works', path: '/en/how-it-works/' },
+  ]}
+>
+  <Breadcrumb crumbs={[
+    { name: 'Home', path: '/en/' },
+    { name: 'How It Works', path: '/en/how-it-works/' },
+  ]} />
+
+  <!-- Hero -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">How It Works</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">From first inquiry to final delivery — a transparent, step-by-step process.</p>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {steps.map((s) => (
+          <div class="relative bg-white rounded-xl p-6 border border-[var(--color-border)]">
+            <div class="absolute -top-3 -left-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm">{s.step}</div>
+            <div class="text-3xl mb-4">{s.icon}</div>
+            <h3 class="text-lg font-bold text-[var(--color-text)] mb-2">{s.title}</h3>
+            <p class="text-[var(--color-text-light)] text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Send us your inquiry and receive a detailed quotation within 24 hours.</p>
+      <a href="/en/contact/" class="btn-primary">Contact Us</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -49,6 +49,14 @@ const contactSchema = {
 };
 
 const formActionUrl = '/api/contact';
+
+const businessLines = [
+  { value: 'new-vehicle-export', label: { en: 'New Vehicle Export', zh: '新车出口', ru: 'Экспорт новых автомобилей' } },
+  { value: 'used-cars-africa', label: { en: 'Used Cars to Africa', zh: '二手车出口非洲', ru: 'Подержанные автомобили в Африку' } },
+  { value: 'lingerie-oem-odm', label: { en: 'Lingerie OEM/ODM', zh: '内衣OEM/ODM', ru: 'Женское белье OEM/ODM' } },
+  { value: 'security-equipment', label: { en: 'Security Equipment', zh: '安防设备', ru: 'Охранным оборудованием' } },
+  { value: 'other', label: { en: 'Other', zh: '其他', ru: 'Другое' } },
+];
 ---
 
 <BaseLayout
@@ -97,8 +105,37 @@ const formActionUrl = '/api/contact';
             <input type="tel" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
           </div>
           <div>
+            <label class="block text-sm font-medium text-primary mb-1">{lang === 'zh' ? '业务线' : lang === 'ru' ? 'Направление' : 'Business Line'}</label>
+            <select name="business_line" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+              <option value="">{lang === 'zh' ? '请选择' : lang === 'ru' ? 'Выберите' : 'Select...'}</option>
+              {businessLines.map((bl) => (
+                <option value={bl.value}>{bl.label[lang as Locale] || bl.label.en}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-primary mb-1">{lang === 'zh' ? '目的地国家' : lang === 'ru' ? 'Страна назначения' : 'Destination Country'}</label>
+            <input type="text" name="destination_country" placeholder={lang === 'zh' ? '如：格鲁吉亚' : lang === 'ru' ? 'Например: Грузия' : 'e.g. Georgia'} class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-primary mb-1">{lang === 'zh' ? '产品/型号' : lang === 'ru' ? 'Продукт / Модель' : 'Product / Model'}</label>
+            <input type="text" name="product_model" placeholder={lang === 'zh' ? '如：BYD Seal 2024' : lang === 'ru' ? 'Например: BYD Seal 2024' : 'e.g. BYD Seal 2024'} class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-primary mb-1">{lang === 'zh' ? '数量或预算' : lang === 'ru' ? 'Количество или бюджет' : 'Quantity or Budget'}</label>
+            <input type="text" name="quantity_budget" placeholder={lang === 'zh' ? '如：10台 / $50,000' : lang === 'ru' ? 'Например: 10 единиц / $50,000' : 'e.g. 10 units / $50,000'} class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-primary mb-1">{lang === 'zh' ? '偏好港口/贸易术语' : lang === 'ru' ? 'Предпочитаемый порт / Инкотермс' : 'Preferred Port / Incoterm'}</label>
+            <input type="text" name="port_incoterm" placeholder={lang === 'zh' ? '如：FOB Shanghai / CIF Tema' : lang === 'ru' ? 'Например: FOB Shanghai / CIF Tema' : 'e.g. FOB Shanghai / CIF Tema'} class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+          </div>
+          <div>
             <label class="block text-sm font-medium text-primary mb-1">{t('contact.formMessage', lang)}</label>
             <textarea name="message" rows={5} required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none"></textarea>
+          </div>
+          <div class="flex items-start gap-2">
+            <input type="checkbox" name="privacy_consent" required class="mt-1" />
+            <label class="text-xs text-gray-500">{lang === 'zh' ? '我同意贵方处理我的个人信息以回复询盘。我们不会将您的信息分享给第三方。' : lang === 'ru' ? 'Я согласен на обработку моих персональных данных для ответа на запрос. Мы не передаём ваши данные третьим лицам.' : 'I consent to having my personal data processed to respond to this inquiry. We do not share your information with third parties.'}</label>
           </div>
           <button type="submit" id="submitBtn" class="btn-primary w-full">{t('contact.formSubmit', lang)}</button>
           <div id="formStatus" class="hidden text-center py-3 px-4 rounded-lg"></div>
@@ -133,6 +170,11 @@ const formActionUrl = '/api/contact';
                 status.classList.add('bg-green-50', 'text-green-700');
                 status.textContent = lang === 'zh' ? '✅ 消息已发送！我们将在24小时内回复您。' : lang === 'ru' ? '✅ Сообщение отправлено! Мы ответим вам в течение 24 часов.' : '✅ Message sent successfully! We will get back to you within 24 hours.';
                 form.reset();
+                // GA4: submit_inquiry + generate_lead only on API success
+                if (typeof gtag === 'function') {
+                  gtag('event', 'submit_inquiry', { page: window.location.pathname });
+                  gtag('event', 'generate_lead', { page: window.location.pathname });
+                }
               } else {
                 const errData = await res.json().catch(() => ({}));
                 status.classList.remove('hidden');

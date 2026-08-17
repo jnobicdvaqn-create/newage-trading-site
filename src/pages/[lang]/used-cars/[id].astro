@@ -45,7 +45,7 @@ const faqItems = lang === 'zh' ? [
 
 <BaseLayout
   title={`${carName} — Used Car Export | New Age Trading`}
-  description={`${carName} (${currentYear}), ${currentPrice} FOB. Fleet-retired & refurbished.`}
+  description={`${carName} (${currentYear}). Indicative FOB price ${currentPrice}. Availability and configuration confirmed by quotation.`}
   lang={lang}
   breadcrumbs={[
     { name: t('nav.home', lang), path: `/${lang}/` },
@@ -82,7 +82,10 @@ const faqItems = lang === 'zh' ? [
             <span class="text-sm opacity-80">{currentYear}</span>
           </div>
           <h1 class="text-4xl font-bold mb-4">{carName}</h1>
-          <div class="text-3xl font-bold text-yellow-300 mb-6">{currentPrice} <span class="text-lg text-gray-300 font-normal">FOB</span></div>
+          <div class="text-3xl font-bold text-yellow-300 mb-2">{currentPrice} <span class="text-lg text-gray-300 font-normal">FOB</span></div>
+          <p class="text-sm text-gray-300 mb-2">
+            {lang === 'zh' ? '参考价格，具体配置和可供状态以报价单为准，目的地费用另计。' : lang === 'ru' ? 'Ориентировочная цена. Комплектация и наличие подтверждаются предложением. Расходы назначения отдельно.' : 'Indicative price — availability and configuration confirmed by quotation. Destination charges separate.'}
+          </p>
           <p class="text-lg text-gray-200 mb-8">{lang === 'zh' ? vehicle.reasonZh : lang === 'ru' ? vehicle.reasonRu : vehicle.reason}</p>
 
           <!-- Specs table -->
@@ -180,7 +183,11 @@ const faqItems = lang === 'zh' ? [
               </div>
               <div class="p-4">
                 <h3 class="font-bold text-[var(--color-text)]">{lang === 'zh' ? m.nameZh : lang === 'ru' ? m.nameRu : m.name}</h3>
-                <div class="text-sm text-muted">{m.year} · <span class="text-[var(--color-primary)] font-semibold">{m.price}</span></div>
+                <div class="text-sm text-muted">{m.year}
+                  {m.price
+                    ? <span> · <span class="text-[var(--color-primary)] font-semibold">{m.price}</span></span>
+                    : <span> · <span class="text-[var(--color-primary)] font-semibold">{lang === 'zh' ? '请询价' : lang === 'ru' ? 'Запросите цену' : 'Request Current Quote'}</span></span>}
+                </div>
               </div>
             </a>
           ))}
